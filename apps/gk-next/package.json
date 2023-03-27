@@ -1,0 +1,28 @@
+{
+    "name": "gk-next",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "next build",
+        "dev": "next dev",
+        "lint": "next lint",
+        "start": "next start"
+    },
+    "dependencies": {
+        "next": "^13.2.4",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.17",
+        "@types/react": "^18.0.26",
+        "@types/react-dom": "^18.0.9",
+        "autoprefixer": "^10.4.13",
+        "eslint-config-custom": "workspace:*",
+        "postcss": "^8.4.20",
+        "tailwind-config": "workspace:*",
+        "tailwindcss": "^3.2.7",
+        "tsconfig": "workspace:*",
+        "typescript": "^4.9.4"
+    }
+}
