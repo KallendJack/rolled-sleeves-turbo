@@ -2,8 +2,10 @@ import '../styles/global.css'
 import Header from './components/header/Header'
 
 export const metadata = {
-    title: 'Garrett Kitchens',
-    description: 'This is the default description',
+    title: {
+        default: 'Garrett Kitchens',
+        template: '%s | Garrett Kitchens',
+    },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

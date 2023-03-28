@@ -36,7 +36,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Header() {
+const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
@@ -267,3 +267,5 @@ export default function Header() {
         </header>
     )
 }
+
+export default Header

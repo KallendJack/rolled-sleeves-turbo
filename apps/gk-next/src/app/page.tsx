@@ -1,3 +1,13 @@
+import Hero from './components/hero/Hero'
+
+export const metadata = {
+    title: 'Home',
+}
+
 export default function Page() {
-    return <h1>Garrett Kitchens</h1>
+    return (
+        <>
+            <Hero />
+        </>
+    )
 }
