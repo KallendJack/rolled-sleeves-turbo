@@ -1,11 +1,14 @@
+import Image from 'next/image'
+
 const Hero = () => {
     return (
         <section className="relative bg-gray-900">
             {/* Decorative image and overlay */}
             <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-                <img
-                    src="https://garrettkitchens.co.uk/wp-content/uploads/2021/12/Clarendon-Hartforth-Blue-Kitchen.webp"
-                    alt=""
+                <Image
+                    fill
+                    src="/assets/home/hero.png"
+                    alt="Hero Image"
                     className="object-cover object-center w-full h-full"
                 />
             </div>
