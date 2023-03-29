@@ -9,7 +9,7 @@
         "lint": "turbo run lint",
         "lint-staged-husky": "lint-staged",
         "prepare": "husky install",
-        "sort-package-json-files": "sort-package-json 'package.json' 'packages/*/package.json' 'apps/*/package.json'"
+        "sort-package-jsons": "sort-package-json 'package.json' 'packages/*/package.json' 'apps/*/package.json'"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.5.0",
