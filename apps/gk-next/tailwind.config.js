@@ -9,9 +9,9 @@ module.exports = {
             colors: {
                 brand: {
                     primary: '#038F99',
+                    secondary: '#35414c',
                     white: '#FFFFFF',
                     grey: '#F3F3F3',
-                    text: '#35414c',
                 },
             },
         },
