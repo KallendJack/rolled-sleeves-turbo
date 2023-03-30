@@ -9,11 +9,11 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 const kitchens = [
     {
         name: 'Modern Kitchens',
-        href: '/modern-kitchens',
+        href: '/kitchen-ranges/modern-kitchens',
     },
     {
         name: 'Traditional Kitchens',
-        href: '/traditional-kitchens',
+        href: '/kitchen-ranges/traditional-kitchens',
     },
 ]
 
