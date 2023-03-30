@@ -1,28 +1,13 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
-
 export const metadata = {
-    title: 'Contact Us',
+    title: 'Contact Us | Garrett Kitchens',
 }
 
 export default function Page() {
     return (
-        <div className="relative bg-white">
-            <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
-                <div className="px-6 col-end-6 grid-cols-2 lg:px-8">
-                    <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-md xl:max-w-lg">
+        <section className="relative bg-white">
+            <div className="pt-16 pb-24 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
+                <div className="grid-cols-2 col-end-6 px-6 lg:px-8">
+                    <div className="max-w-xl mx-auto lg:mx-0 lg:max-w-md xl:max-w-lg">
                         <h2 className="text-3xl font-bold tracking-tight text-gray-900">
                             Contact Us
                         </h2>
@@ -45,7 +30,7 @@ export default function Page() {
                                             name="first-name"
                                             id="first-name"
                                             autoComplete="given-name"
-                                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                                         />
                                     </div>
                                 </div>
@@ -62,7 +47,7 @@ export default function Page() {
                                             name="last-name"
                                             id="last-name"
                                             autoComplete="family-name"
-                                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                                         />
                                     </div>
                                 </div>
@@ -79,7 +64,7 @@ export default function Page() {
                                             name="email"
                                             type="email"
                                             autoComplete="email"
-                                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                                         />
                                     </div>
                                 </div>
@@ -102,7 +87,7 @@ export default function Page() {
                                             id="phone"
                                             autoComplete="tel"
                                             aria-describedby="phone-description"
-                                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                                         />
                                     </div>
                                 </div>
@@ -124,7 +109,7 @@ export default function Page() {
                                             name="message"
                                             rows={4}
                                             aria-describedby="message-description"
-                                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                                             defaultValue={''}
                                         />
                                     </div>
@@ -147,15 +132,15 @@ export default function Page() {
                                             name="expected-budget"
                                             id="expected-budget"
                                             autoComplete="expected-budget"
-                                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                                         />
                                     </div>
                                 </div>
                             </div>
-                            <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
+                            <div className="flex justify-end pt-8 mt-10 border-t border-gray-900/10">
                                 <button
                                     type="submit"
-                                    className="rounded-md bg-brand-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    className="rounded-md bg-brand-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-brand-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
                                 >
                                     Send message
                                 </button>
@@ -166,11 +151,11 @@ export default function Page() {
             </div>
             <div className="lg:absolute lg:inset-0 lg:right-1/2">
                 <img
-                    className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"
+                    className="object-cover w-full h-64 bg-gray-50 sm:h-80 lg:absolute lg:h-full"
                     src="/assets/home/hero/hero.png"
                     alt=""
                 />
             </div>
-        </div>
+        </section>
     )
 }
