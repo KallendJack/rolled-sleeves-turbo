@@ -20,10 +20,12 @@ export default function Footer() {
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 xl:pt-32">
+            <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 xl:pt-24">
                 <div className="lg:grid lg:grid-cols-2  col-span-2 xl:gap-8">
-                    <div className="space-y-8">
-                        <Image width="175" height="66" src="/assets/logos/logo.png" alt="Logo" />
+                    <div className="space-y-4">
+                        <h3 className="text-xl lg:text-2xl font-semibold leading-6 text-brand-primary">
+                            About Us
+                        </h3>
 
                         <p className="text-sm leading-6 text-brand-secondary">
                             Garrett Kitchens are an independent kitchen retailer who design, supply
@@ -74,16 +76,29 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-12 border-t flex flex-col gap-8 gap-y-2 md:flex-row md:justify-between border-white/10 sm:mt-16 lg:mt-24">
-                    <p className="text-xs leading-5 text-brand-secondary">
-                        Garrett Kitchens is a trading name of Garrett Appliances Limited; a company
-                        registered in England.<br></br>© Copyright 2013-23, Garrett Appliances Ltd -
-                        All Rights Reserved.
-                    </p>
+            </div>
+            <div className="bg-brand-grey py-4 lg:py-6">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div className="border-t flex flex-col bg-brand-grey md:items-end gap-8 gap-y-2 md:flex-row md:justify-between border-white/10">
+                        <div>
+                            <Image
+                                width="175"
+                                height="66"
+                                src="/assets/logos/logo.png"
+                                alt="Logo"
+                            />
 
-                    <p className="text-xs leading-5 text-brand-secondary">
-                        Company Reg. No. 8585642<br></br>VAT Reg. No. GB 165 4164 09
-                    </p>
+                            <p className="text-xs leading-5 text-brand-secondary pt-4">
+                                Garrett Kitchens is a trading name of Garrett Appliances Limited; a
+                                company registered in England.<br></br>© Copyright 2013-23, Garrett
+                                Appliances Ltd - All Rights Reserved.
+                            </p>
+                        </div>
+
+                        <p className="text-xs leading-5 text-brand-secondary">
+                            Company Reg. No. 8585642<br></br>VAT Reg. No. GB 165 4164 09
+                        </p>
+                    </div>
                 </div>
             </div>
         </footer>
