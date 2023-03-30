@@ -24,7 +24,7 @@ export default function Page() {
                 <div className="px-6 col-end-6 grid-cols-2 lg:px-8">
                     <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-md xl:max-w-lg">
                         <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-                            Let's work together
+                            Contact Us
                         </h2>
                         <p className="mt-2 text-lg leading-8 text-gray-600">
                             Get in touch with one of our friendly kitchen designers about how we can
