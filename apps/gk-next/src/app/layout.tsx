@@ -3,10 +3,7 @@ import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 
 export const metadata = {
-    title: {
-        default: 'Garrett Kitchens',
-        template: '%s | Garrett Kitchens',
-    },
+    title: 'Garrett Kitchens',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Button from 'components/button/Button'
 
 export const metadata = {
-    title: 'Home',
+    title: 'Home | Garrett Kitchens',
 }
 
 export default function Page() {

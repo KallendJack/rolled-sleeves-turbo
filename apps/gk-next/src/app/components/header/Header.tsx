@@ -6,6 +6,8 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
+import { classNames } from 'utils/classNames'
+
 const kitchens = [
     {
         name: 'Modern Kitchens',
@@ -31,10 +33,6 @@ const bookings = [
         href: '/advice-consultation',
     },
 ]
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
 
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
