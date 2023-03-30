@@ -34,7 +34,7 @@ const bookings = [
     },
 ]
 
-const Header = () => {
+export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
@@ -61,7 +61,7 @@ const Header = () => {
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
                     <Popover className="relative">
-                        <Popover.Button className="flex items-center text-sm font-semibold leading-6 text-brand-secondary gap-x-1">
+                        <Popover.Button className="flex items-center text-sm font-semibold leading-6 text-gray-900 gap-x-1">
                             Kitchens
                             <ChevronDownIcon
                                 className="flex-none w-5 h-5 text-gray-400"
@@ -87,7 +87,7 @@ const Header = () => {
                                             <div className="flex-auto">
                                                 <a
                                                     href={item.href}
-                                                    className="block font-semibold text-brand-secondary"
+                                                    className="block font-semibold text-gray-900"
                                                 >
                                                     {item.name}
                                                     <span className="absolute inset-0" />
@@ -99,20 +99,14 @@ const Header = () => {
                             </Popover.Panel>
                         </Transition>
                     </Popover>
-                    <a
-                        href="/brochure"
-                        className="text-sm font-semibold leading-6 text-brand-secondary"
-                    >
+                    <a href="/brochure" className="text-sm font-semibold leading-6 text-gray-900">
                         Brochure
                     </a>
-                    <a
-                        href="/projects"
-                        className="text-sm font-semibold leading-6 text-brand-secondary"
-                    >
+                    <a href="/projects" className="text-sm font-semibold leading-6 text-gray-900">
                         Our Projects
                     </a>
                     <Popover className="relative">
-                        <Popover.Button className="flex items-center text-sm font-semibold leading-6 text-brand-secondary gap-x-1">
+                        <Popover.Button className="flex items-center text-sm font-semibold leading-6 text-gray-900 gap-x-1">
                             Bookings
                             <ChevronDownIcon
                                 className="flex-none w-5 h-5 text-gray-400"
@@ -138,7 +132,7 @@ const Header = () => {
                                             <div className="flex-auto">
                                                 <a
                                                     href={item.href}
-                                                    className="block font-semibold text-brand-secondary"
+                                                    className="block font-semibold text-gray-900"
                                                 >
                                                     {item.name}
                                                     <span className="absolute inset-0" />
@@ -152,10 +146,7 @@ const Header = () => {
                     </Popover>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a
-                        href="/contact-us"
-                        className="text-sm font-semibold leading-6 text-brand-secondary"
-                    >
+                    <a href="/contact-us" className="text-sm font-semibold leading-6 text-gray-900">
                         Contact Us <span aria-hidden="true">&rarr;</span>
                     </a>
                 </div>
@@ -209,7 +200,7 @@ const Header = () => {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
-                                                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-brand-secondary rounded-lg hover:bg-gray-50"
+                                                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
                                                     >
                                                         {item.name}
                                                     </Disclosure.Button>
@@ -220,13 +211,13 @@ const Header = () => {
                                 </Disclosure>
                                 <a
                                     href="/brochure"
-                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-brand-secondary rounded-lg hover:bg-gray-50"
+                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
                                 >
                                     Brochure
                                 </a>
                                 <a
                                     href="/projects"
-                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-brand-secondary rounded-lg hover:bg-gray-50"
+                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
                                 >
                                     Projects
                                 </a>
@@ -249,7 +240,7 @@ const Header = () => {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
-                                                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-brand-secondary rounded-lg hover:bg-gray-50"
+                                                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
                                                     >
                                                         {item.name}
                                                     </Disclosure.Button>
@@ -262,7 +253,7 @@ const Header = () => {
                             <div className="py-6">
                                 <a
                                     href="/contact-us"
-                                    className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-brand-secondary hover:bg-gray-50"
+                                    className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Contact Us
                                 </a>
@@ -274,5 +265,3 @@ const Header = () => {
         </header>
     )
 }
-
-export default Header

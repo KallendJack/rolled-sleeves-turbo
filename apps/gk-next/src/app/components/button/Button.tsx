@@ -6,7 +6,7 @@ type ButtonProps = LinkHTMLAttributes<HTMLAnchorElement> & {
     children: React.ReactNode
 }
 
-const Button = (props: ButtonProps) => {
+export default function Button(props: ButtonProps) {
     const { type = 'link', variant = 'light', children, ...restProps } = props
 
     return (
@@ -18,5 +18,3 @@ const Button = (props: ButtonProps) => {
         </a>
     )
 }
-
-export default Button

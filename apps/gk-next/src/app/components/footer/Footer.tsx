@@ -11,7 +11,8 @@ const navigation = {
         { name: 'Buy Appliances Online', target: '_blank', href: 'https://www.gadirect.co.uk/' },
     ],
 }
-const Footer = () => {
+
+export default function Footer() {
     return (
         <footer className="bg-brand-white" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
@@ -23,7 +24,7 @@ const Footer = () => {
                         <h3 className="text-xl font-semibold leading-6 lg:text-2xl text-brand-primary">
                             About Us
                         </h3>
-                        <p className="mt-4 text-sm text-brand-secondary">
+                        <p className="mt-4 text-sm text-gray-900">
                             Garrett Kitchens are an independent kitchen retailer who design, supply
                             &amp; install kitchens and other built in furniture. Working with
                             international manufactures allows us to provide exceptional value for a
@@ -41,7 +42,7 @@ const Footer = () => {
                                         <li key={item.name}>
                                             <a
                                                 href={item.href}
-                                                className="text-sm leading-6 text-brand-secondary hover:underline"
+                                                className="text-sm leading-6 text-gray-900 hover:underline"
                                             >
                                                 {item.name}
                                             </a>
@@ -61,7 +62,7 @@ const Footer = () => {
                                             <a
                                                 href={item.href}
                                                 target={item?.target}
-                                                className="text-sm leading-6 text-brand-secondary hover:underline"
+                                                className="text-sm leading-6 text-gray-900 hover:underline"
                                             >
                                                 {item.name}
                                             </a>
@@ -77,14 +78,14 @@ const Footer = () => {
                 <div className="px-6 mx-auto max-w-7xl lg:px-8">
                     <div className="flex flex-col gap-8 border-t bg-brand-grey md:items-end gap-y-2 md:flex-row md:justify-between border-white/10">
                         <div>
-                            <p className="text-xs leading-5 text-brand-secondary">
+                            <p className="text-xs leading-5 text-gray-900">
                                 Garrett Kitchens is a trading name of Garrett Appliances Limited; a
                                 company registered in England.<br></br>© Copyright 2013-23, Garrett
                                 Appliances Ltd - All Rights Reserved.
                             </p>
                         </div>
 
-                        <p className="text-xs leading-5 text-brand-secondary">
+                        <p className="text-xs leading-5 text-gray-900">
                             Company Reg. No. 8585642<br></br>VAT Reg. No. GB 165 4164 09
                         </p>
                     </div>
@@ -93,5 +94,3 @@ const Footer = () => {
         </footer>
     )
 }
-
-export default Footer
