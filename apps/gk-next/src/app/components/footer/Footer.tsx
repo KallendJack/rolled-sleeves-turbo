@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 const navigation = {
     ourKitchens: [
         { name: 'Real Kitchens', href: '/real-kitchens' },
@@ -13,32 +11,29 @@ const navigation = {
         { name: 'Buy Appliances Online', target: '_blank', href: 'https://www.gadirect.co.uk/' },
     ],
 }
-
-export default function Footer() {
+const Footer = () => {
     return (
         <footer className="bg-brand-white" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-
-            <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:py-28">
-                <div className="lg:grid lg:grid-cols-2 col-span-2 xl:gap-8">
+            <div className="px-6 pt-16 pb-8 mx-auto max-w-7xl sm:pt-24 lg:px-8 lg:py-28">
+                <div className="col-span-2 lg:grid lg:grid-cols-2 xl:gap-8">
                     <div>
-                        <h3 className="text-xl lg:text-2xl font-semibold leading-6 text-brand-primary">
+                        <h3 className="text-xl font-semibold leading-6 lg:text-2xl text-brand-primary">
                             About Us
                         </h3>
-
-                        <p className="text-sm mt-4 text-brand-secondary">
+                        <p className="mt-4 text-sm text-brand-secondary">
                             Garrett Kitchens are an independent kitchen retailer who design, supply
                             &amp; install kitchens and other built in furniture. Working with
                             international manufactures allows us to provide exceptional value for a
                             range of styles and budgets.
                         </p>
                     </div>
-                    <div className="mt-12 grid grid-cols-2 gap-8 justify-items-start lg:justify-items-end lg:mt-0">
+                    <div className="grid grid-cols-2 gap-8 mt-12 justify-items-start lg:justify-items-end lg:mt-0">
                         <div className="md:grid md:grid-cols-1 md:gap-8">
                             <div className="mt-4 md:mt-0">
-                                <h3 className="text-xl lg:text-2xl font-semibold leading-6 text-brand-primary">
+                                <h3 className="text-xl font-semibold leading-6 lg:text-2xl text-brand-primary">
                                     Our Kitchens
                                 </h3>
                                 <ul role="list" className="mt-4 space-y-3">
@@ -57,7 +52,7 @@ export default function Footer() {
                         </div>
                         <div className="md:grid md:grid-cols-1 md:gap-8">
                             <div className="mt-4 md:mt-0">
-                                <h3 className="text-xl lg:text-2xl font-semibold leading-6 text-brand-primary">
+                                <h3 className="text-xl font-semibold leading-6 lg:text-2xl text-brand-primary">
                                     Useful Links
                                 </h3>
                                 <ul role="list" className="mt-4 space-y-3">
@@ -78,9 +73,9 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="bg-brand-grey py-4 lg:py-6">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className="border-t flex flex-col bg-brand-grey md:items-end gap-8 gap-y-2 md:flex-row md:justify-between border-white/10">
+            <div className="py-4 bg-brand-grey lg:py-6">
+                <div className="px-6 mx-auto max-w-7xl lg:px-8">
+                    <div className="flex flex-col gap-8 border-t bg-brand-grey md:items-end gap-y-2 md:flex-row md:justify-between border-white/10">
                         <div>
                             <p className="text-xs leading-5 text-brand-secondary">
                                 Garrett Kitchens is a trading name of Garrett Appliances Limited; a
@@ -98,3 +93,5 @@ export default function Footer() {
         </footer>
     )
 }
+
+export default Footer
