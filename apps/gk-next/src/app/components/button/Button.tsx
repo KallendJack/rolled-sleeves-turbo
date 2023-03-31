@@ -11,7 +11,7 @@ export default function Button(props: ButtonProps) {
 
     return (
         <a
-            className="inline-block px-8 py-3 mt-8 text-base font-medium text-gray-900 border border-transparent rounded-md bg-brand-white hover:bg-gray-100"
+            className="inline-block px-8 py-3 mt-8 text-base font-medium text-gray-900 border border-transparent rounded-md bg-white hover:bg-gray-100"
             {...restProps}
         >
             {children}

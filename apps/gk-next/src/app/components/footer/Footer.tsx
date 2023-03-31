@@ -14,17 +14,17 @@ const navigation = {
 
 export default function Footer() {
     return (
-        <footer className="bg-brand-footer" aria-labelledby="footer-heading">
+        <footer className="bg-brand-primaryMid" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="px-6 pt-16 pb-8 mx-auto max-w-7xl sm:pt-24 lg:px-8 lg:py-28">
+            <div className="px-6 py-16 mx-auto max-w-7xl lg:px-8 lg:py-28">
                 <div className="col-span-2 lg:grid lg:grid-cols-2 xl:gap-8">
                     <div>
                         <h3 className="text-2xl font-semibold leading-6 text-white lg:text-3xl">
                             About Us
                         </h3>
-                        <p className="mt-4 text-sm text-gray-900">
+                        <p className="mt-4 text-sm text-gray-300">
                             Garrett Kitchens are an independent kitchen retailer who design, supply
                             &amp; install kitchens and other built in furniture. Working with
                             international manufactures allows us to provide exceptional value for a
@@ -42,7 +42,7 @@ export default function Footer() {
                                         <li key={item.name}>
                                             <a
                                                 href={item.href}
-                                                className="text-sm leading-6 text-gray-900 hover:underline"
+                                                className="text-sm leading-6 text-gray-300 hover:underline"
                                             >
                                                 {item.name}
                                             </a>
@@ -62,7 +62,7 @@ export default function Footer() {
                                             <a
                                                 href={item.href}
                                                 target={item?.target}
-                                                className="text-sm leading-6 text-gray-900 hover:underline"
+                                                className="text-sm leading-6 text-gray-300 hover:underline"
                                             >
                                                 {item.name}
                                             </a>
@@ -74,17 +74,20 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="py-4 bg-brand-darkGreen lg:py-6">
+            <div className="py-4 bg-brand-primaryDark lg:py-6">
                 <div className="px-6 mx-auto max-w-7xl lg:px-8">
                     <div className="flex flex-col gap-8 md:items-end gap-y-2 md:flex-row md:justify-between">
-                        <div>
-                            <p className="text-xs leading-5 text-gray-900">
-                                Garrett Kitchens is a trading name of Garrett Appliances Limited; a
-                                company registered in England.<br></br>© Copyright 2013-23, Garrett
-                                Appliances Ltd - All Rights Reserved.
+                        <div className="md:flex-1 lg:flex-auto">
+                            <p className="text-xs leading-5 text-gray-300">
+                                <span className="block mb-2 lg:mb-0">
+                                    Garrett Kitchens is a trading name of Garrett Appliances
+                                    Limited; a company registered in England.
+                                </span>
+                                © Copyright 2013-23, Garrett Appliances Ltd - All Rights Reserved.
                             </p>
                         </div>
-                        <p className="text-xs leading-5 text-gray-900">
+
+                        <p className="justify-end flex-1 text-xs leading-5 text-gray-300 lg:flex-auto md:flex">
                             Company Reg. No. 8585642<br></br>VAT Reg. No. GB 165 4164 09
                         </p>
                     </div>
