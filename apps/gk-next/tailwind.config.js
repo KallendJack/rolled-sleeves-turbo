@@ -12,6 +12,8 @@ module.exports = {
                     secondary: '#35414c',
                     white: '#FFFFFF',
                     grey: '#F3F3F3',
+                    footer: '#03565c',
+                    darkGreen: '#033d42',
                 },
             },
         },
