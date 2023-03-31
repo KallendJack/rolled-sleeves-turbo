@@ -8,9 +8,14 @@ module.exports = {
             ...sharedConfig.theme.extend,
             colors: {
                 brand: {
+                    // Accent colors
                     primary: '#038F99',
-                    primaryMid: '#03565C',
-                    primaryDark: '#033D42',
+
+                    // Background colors
+                    primaryBgLight: '#03565C',
+                    primaryBgDark: '#033D42',
+
+                    // For text colors we are using Tailwind UI default text colors
                 },
             },
         },

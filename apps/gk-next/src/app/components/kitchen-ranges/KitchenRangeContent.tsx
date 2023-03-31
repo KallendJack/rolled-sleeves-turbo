@@ -55,7 +55,6 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                         >
                             <div className="fixed inset-0 bg-black bg-opacity-25" />
                         </Transition.Child>
-
                         <div className="fixed inset-0 z-40 flex">
                             <Transition.Child
                                 as={Fragment}
@@ -80,7 +79,6 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                             <XMarkIcon className="w-6 h-6" aria-hidden="true" />
                                         </button>
                                     </div>
-
                                     {/* Filters */}
                                     <form className="mt-4">
                                         {filters.map((section) => (
@@ -155,7 +153,6 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                     <div className="pt-12 pb-24 lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
                         <aside>
                             <h2 className="sr-only">Filters</h2>
-
                             <button
                                 type="button"
                                 className="inline-flex items-center lg:hidden"
@@ -213,7 +210,6 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                             <h2 id="product-heading" className="sr-only">
                                 Products
                             </h2>
-
                             <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
                                 {products.map((product) => (
                                     <div

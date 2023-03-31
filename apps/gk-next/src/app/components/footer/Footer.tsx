@@ -14,7 +14,7 @@ const navigation = {
 
 export default function Footer() {
     return (
-        <footer className="bg-brand-primaryMid" aria-labelledby="footer-heading">
+        <footer className="bg-brand-primaryBgLight" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
@@ -74,7 +74,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="py-4 bg-brand-primaryDark lg:py-6">
+            <div className="py-4 bg-brand-primaryBgDark lg:py-6">
                 <div className="px-6 mx-auto max-w-7xl lg:px-8">
                     <div className="flex flex-col gap-8 md:items-end gap-y-2 md:flex-row md:justify-between">
                         <div className="md:flex-1 lg:flex-auto">
@@ -86,7 +86,6 @@ export default function Footer() {
                                 © Copyright 2013-23, Garrett Appliances Ltd - All Rights Reserved.
                             </p>
                         </div>
-
                         <p className="justify-end flex-1 text-xs leading-5 text-gray-300 lg:flex-auto md:flex">
                             Company Reg. No. 8585642<br></br>VAT Reg. No. GB 165 4164 09
                         </p>
