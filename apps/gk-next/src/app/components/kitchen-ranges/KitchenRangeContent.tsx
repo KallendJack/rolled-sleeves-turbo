@@ -1,6 +1,8 @@
 'use client'
 
 import { Fragment, useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PlusIcon } from '@heroicons/react/20/solid'
@@ -145,7 +147,7 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                         </div>
                     </Dialog>
                 </Transition.Root>
-                <div className="max-w-2xl px-4 mx-auto lg:max-w-7xl lg:px-8">
+                <div className="px-6 mx-auto lg:max-w-7xl lg:px-8">
                     <div className="pt-24 pb-10 border-b border-gray-200">
                         <h1 className="text-4xl font-bold tracking-tight text-gray-900">{title}</h1>
                         <p className="mt-4 text-base text-gray-500">{description}</p>
@@ -216,22 +218,23 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                         key={product.id}
                                         className="relative flex flex-col overflow-hidden bg-white border border-gray-200 rounded-lg group"
                                     >
-                                        <div className="bg-gray-200 aspect-h-4 aspect-w-3 sm:aspect-none group-hover:opacity-75 sm:h-96">
-                                            <img
+                                        <div className="relative bg-gray-200 group-hover:opacity-75 h-96">
+                                            <Image
                                                 src={product.imageSrc}
                                                 alt={product.imageAlt}
+                                                fill
                                                 className="object-cover object-center w-full h-full sm:h-full sm:w-full"
                                             />
                                         </div>
                                         <div className="flex flex-col flex-1 p-4 space-y-2">
                                             <h3 className="text-sm font-medium text-gray-900">
-                                                <a href={product.href}>
+                                                <Link href={product.href}>
                                                     <span
                                                         aria-hidden="true"
                                                         className="absolute inset-0"
                                                     />
                                                     {product.name}
-                                                </a>
+                                                </Link>
                                             </h3>
                                             <p className="text-sm text-gray-500">
                                                 {product.description}

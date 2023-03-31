@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const metadata = {
     title: 'Contact Us | Garrett Kitchens',
 }
@@ -5,11 +7,12 @@ export const metadata = {
 export default function Page() {
     return (
         <section className="relative bg-white">
-            <div className="lg:absolute lg:inset-0 lg:right-1/2">
-                <img
-                    className="object-cover w-full h-64 bg-gray-50 sm:h-80 lg:absolute lg:h-full"
+            <div className="relative h-64 sm:h-80 lg:h-auto lg:absolute lg:inset-0 lg:right-1/2">
+                <Image
+                    fill
+                    className="object-cover"
                     src="/assets/home/hero/hero.png"
-                    alt=""
+                    alt="Contact us image"
                 />
             </div>
             <div className="pt-16 pb-24 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">

@@ -1,6 +1,7 @@
-import React, { LinkHTMLAttributes } from 'react'
+import Link from 'next/link'
+import type { LinkProps } from 'next/link'
 
-type ButtonProps = LinkHTMLAttributes<HTMLAnchorElement> & {
+type ButtonProps = LinkProps & {
     type?: 'link' | 'button'
     variant?: 'light' | 'dark'
     children: React.ReactNode
@@ -10,11 +11,11 @@ export default function Button(props: ButtonProps) {
     const { type = 'link', variant = 'light', children, ...restProps } = props
 
     return (
-        <a
+        <Link
             className="inline-block px-8 py-3 mt-8 text-base font-medium text-gray-900 bg-white border border-transparent rounded-md hover:bg-gray-100"
             {...restProps}
         >
             {children}
-        </a>
+        </Link>
     )
 }

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const navigation = {
     ourKitchens: [
         { name: 'Real Kitchens', href: '/real-kitchens' },
@@ -40,12 +42,12 @@ export default function Footer() {
                                 <ul role="list" className="mt-4 space-y-2">
                                     {navigation.ourKitchens.map((item) => (
                                         <li key={item.name}>
-                                            <a
+                                            <Link
                                                 href={item.href}
                                                 className="text-sm leading-6 text-gray-300 hover:underline"
                                             >
                                                 {item.name}
-                                            </a>
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -59,13 +61,13 @@ export default function Footer() {
                                 <ul role="list" className="mt-4 space-y-2">
                                     {navigation.usefulLinks.map((item) => (
                                         <li key={item.name}>
-                                            <a
+                                            <Link
                                                 href={item.href}
                                                 target={item?.target}
                                                 className="text-sm leading-6 text-gray-300 hover:underline"
                                             >
                                                 {item.name}
-                                            </a>
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
