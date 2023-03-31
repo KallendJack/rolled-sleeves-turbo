@@ -9,7 +9,7 @@ module.exports = {
             colors: {
                 brand: {
                     primary: '#038F99',
-                    secondary: '#35414c',
+                    secondary: '#35414C',
                     white: '#FFFFFF',
                     grey: '#F3F3F3',
                     footer: '#03565c',
