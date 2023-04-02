@@ -12,7 +12,7 @@ export default function Page() {
                     fill
                     className="object-cover"
                     src="/assets/home/hero/hero.png"
-                    alt="Contact us image"
+                    alt="Contact Us"
                 />
             </div>
             <div className="pt-16 pb-24 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
