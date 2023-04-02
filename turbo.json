@@ -14,6 +14,11 @@
         },
         "clean": {
             "cache": false
+        },
+        "gk-next#build": {
+            "dependsOn": ["^build"],
+            "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+            "env": ["NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN", "NEXT_PUBLIC_CONTENTFUL_SPACE_ID"]
         }
     }
 }
