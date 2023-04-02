@@ -6,7 +6,7 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
-import { classNames } from 'utils/classNames'
+import { classNames } from 'utils/tailwind/classNames'
 
 const kitchens = [
     {

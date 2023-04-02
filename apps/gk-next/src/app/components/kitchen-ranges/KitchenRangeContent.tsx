@@ -7,21 +7,13 @@ import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PlusIcon } from '@heroicons/react/20/solid'
 
-import { classNames } from 'utils/classNames'
+import type { Kitchen } from 'types/kitchen'
+import { classNames } from 'utils/tailwind/classNames'
 
 type KitchenRangeContentProps = {
     title: string
     description: string
-    products: {
-        id: number
-        name: string
-        href: string
-        price: string
-        description: string
-        options: string
-        imageSrc: string
-        imageAlt: string
-    }[]
+    kitchens: Kitchen[]
     filters: {
         id: string
         name: string
@@ -33,7 +25,7 @@ type KitchenRangeContentProps = {
 }
 
 const KitchenRangeContent = (props: KitchenRangeContentProps) => {
-    const { title, description, products, filters } = props
+    const { title, description, kitchens, filters } = props
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
     return (
@@ -210,43 +202,37 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                             className="mt-6 lg:col-span-2 lg:mt-0 xl:col-span-3"
                         >
                             <h2 id="product-heading" className="sr-only">
-                                Products
+                                Kitchens
                             </h2>
                             <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
-                                {products.map((product) => (
+                                {kitchens.map((kitchen, index) => (
                                     <div
-                                        key={product.id}
+                                        key={index}
                                         className="relative flex flex-col overflow-hidden bg-white border border-gray-200 rounded-lg group"
                                     >
                                         <div className="relative bg-gray-200 group-hover:opacity-75 h-96">
                                             <Image
-                                                src={product.imageSrc}
-                                                alt={product.imageAlt}
                                                 fill
+                                                src={`https:${kitchen.fields.image.fields.file.url}`}
+                                                alt={kitchen.fields.name}
                                                 className="object-cover object-center w-full h-full sm:h-full sm:w-full"
                                             />
                                         </div>
                                         <div className="flex flex-col flex-1 p-4 space-y-2">
                                             <h3 className="text-sm font-medium text-gray-900">
-                                                <Link href={product.href}>
+                                                <Link
+                                                    href={`/kitchen-ranges/${kitchen.fields.type}/${kitchen.fields.slug}`}
+                                                >
                                                     <span
                                                         aria-hidden="true"
                                                         className="absolute inset-0"
                                                     />
-                                                    {product.name}
+                                                    {kitchen.fields.name}
                                                 </Link>
                                             </h3>
                                             <p className="text-sm text-gray-500">
-                                                {product.description}
+                                                {kitchen.fields.description}
                                             </p>
-                                            <div className="flex flex-col justify-end flex-1">
-                                                <p className="text-sm italic text-gray-500">
-                                                    {product.options}
-                                                </p>
-                                                <p className="text-base font-medium text-gray-900">
-                                                    {product.price}
-                                                </p>
-                                            </div>
                                         </div>
                                     </div>
                                 ))}
