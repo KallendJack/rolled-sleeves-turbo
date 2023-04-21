@@ -16,11 +16,9 @@ export default function Page() {
                 />
             </div>
             <div className="pt-16 pb-24 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
-                <div className="grid-cols-2 col-end-6 px-6 lg:px-8">
+                <div className="grid-cols-2 col-end-6 px-4 md:px-6 lg:px-8">
                     <div className="max-w-xl mx-auto lg:mx-0 lg:max-w-md xl:max-w-lg">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-                            Contact Us
-                        </h2>
+                        <h2 className="text-3xl tracking-tight text-gray-900">Contact Us</h2>
                         <p className="mt-2 text-lg leading-8 text-gray-600">
                             Get in touch with one of our friendly kitchen designers about how we can
                             help.

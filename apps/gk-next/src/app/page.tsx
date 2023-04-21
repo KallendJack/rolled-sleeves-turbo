@@ -89,7 +89,7 @@ export default function Page() {
                 </div>
                 <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
                 <div className="relative flex flex-col items-center max-w-3xl px-6 py-32 mx-auto text-center sm:py-64 lg:px-0">
-                    <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">
+                    <h1 className="text-4xl tracking-tight text-white lg:text-6xl">
                         Innovative Designs, Quality Craftmanship
                     </h1>
                     <p className="mt-4 text-xl text-white">
@@ -103,12 +103,9 @@ export default function Page() {
 
             <section
                 aria-labelledby="collection-heading"
-                className="max-w-3xl px-4 py-24 mx-auto sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8"
+                className="max-w-3xl px-4 py-24 mx-auto md:px-6 sm:py-32 lg:max-w-7xl lg:px-8"
             >
-                <h2
-                    id="collection-heading"
-                    className="text-2xl font-bold tracking-tight text-gray-900"
-                >
+                <h2 id="collection-heading" className="text-2xl tracking-tight text-gray-900">
                     Our most popular ranges
                 </h2>
                 <p className="mt-4 text-base text-gray-500">
@@ -129,9 +126,7 @@ export default function Page() {
                                     className="object-cover object-center"
                                 />
                             </div>
-                            <h3 className="mt-4 text-base font-semibold text-gray-900">
-                                {collection.name}
-                            </h3>
+                            <h3 className="mt-4 text-base text-gray-900">{collection.name}</h3>
                             <p className="mt-2 text-sm text-gray-500">{collection.description}</p>
                         </Link>
                     ))}
@@ -140,7 +135,7 @@ export default function Page() {
 
             <section
                 aria-labelledby="comfort-heading"
-                className="px-4 pb-24 mx-auto max-w-7xl sm:px-6 sm:pb-32 lg:px-8"
+                className="px-4 pb-24 mx-auto max-w-7xl md:px-6 sm:pb-32 lg:px-8"
             >
                 <div className="relative overflow-hidden rounded-lg">
                     <div className="absolute inset-0">
@@ -157,7 +152,7 @@ export default function Page() {
                         <div className="relative flex flex-col items-center max-w-3xl mx-auto text-center">
                             <h2
                                 id="comfort-heading"
-                                className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+                                className="text-3xl tracking-tight text-white sm:text-4xl"
                             >
                                 Kitchen trends for 2023
                             </h2>
@@ -178,12 +173,12 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className="px-4 mx-auto max-w-7xl pb-28 sm:px-6 sm:pb-40 lg:px-8">
+            <section className="px-4 mx-auto max-w-7xl pb-28 md:px-6 sm:pb-40 lg:px-8">
                 <div className="max-w-xl mx-auto text-center">
-                    <h2 className="text-lg font-semibold leading-8 tracking-tight text-brand-primary">
+                    <h2 className="text-lg leading-8 tracking-tight text-brand-primary">
                         Testimonials
                     </h2>
-                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    <p className="mt-2 text-3xl tracking-tight text-gray-900 sm:text-4xl">
                         We have worked with thousands of amazing people
                     </p>
                 </div>
@@ -221,12 +216,12 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className="px-4 pb-24 mx-auto max-w-7xl sm:px-6 sm:pb-32 lg:px-8">
-                <div className="pb-20 bg-brand-primaryBgDark sm:pb-24 xl:pb-0">
+            <section className="px-4 pb-24 mx-auto max-w-7xl md:px-6 sm:pb-32 lg:px-8">
+                <div className="pb-20 bg-brand-primaryBg sm:pb-24 xl:pb-0">
                     <div className="flex flex-col items-center px-6 mx-auto max-w-7xl gap-x-8 gap-y-10 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                         <div className="w-full max-w-2xl -mt-8 xl:-mb-8 xl:w-96 xl:flex-none">
                             <div className="relative aspect-[2/1] h-full lg:-mx-8 xl:mx-0 xl:aspect-auto">
-                                <div className="absolute inset-0 object-cover w-full h-full shadow-2xl xl:w-1/2 rounded-2xl bg-brand-primaryBgDark">
+                                <div className="absolute inset-0 object-cover w-full h-full shadow-2xl xl:w-1/2 rounded-2xl bg-brand-primaryBg">
                                     <Image
                                         fill
                                         src="/assets/home/hero/hero.png"
@@ -239,7 +234,7 @@ export default function Page() {
                         <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:pr-8 xl:pl-40 xl:py-24">
                             <figure className="relative isolate">
                                 <div className="leading-8 text-white sm:leading-9">
-                                    <h2 className="mb-8 text-3xl font-bold tracking-tight sm:text-4xl">
+                                    <h2 className="mb-8 text-3xl tracking-tight sm:text-4xl">
                                         Kitchen Brochure
                                     </h2>
                                     <p className="text-xl">

@@ -6,14 +6,18 @@ module.exports = {
         ...sharedConfig.theme,
         extend: {
             ...sharedConfig.theme.extend,
+            fontFamily: {
+                heading: ['var(--font-montserrat)'],
+                body: ['var(--font-raleway)'],
+            },
             colors: {
                 brand: {
                     // Accent colors
-                    primary: '#038F99',
+                    primary: '#7DA19A',
 
                     // Background colors
-                    primaryBgLight: '#03565C',
-                    primaryBgDark: '#033D42',
+                    primaryBg: '#262525',
+                    greyBg: '#F2F2F2',
 
                     // For text colors we are using Tailwind UI default text colors
                 },
