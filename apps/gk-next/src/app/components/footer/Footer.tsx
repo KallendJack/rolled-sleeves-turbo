@@ -16,16 +16,14 @@ const navigation = {
 
 export default function Footer() {
     return (
-        <footer className="bg-brand-primaryBgLight" aria-labelledby="footer-heading">
+        <footer className="bg-brand-primaryBg" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="px-6 py-16 mx-auto max-w-7xl lg:px-8 lg:py-28">
+            <div className="px-4 py-16 mx-auto md:px-6 max-w-7xl lg:px-8 lg:py-28">
                 <div className="col-span-2 lg:grid lg:grid-cols-2 xl:gap-8">
                     <div>
-                        <h3 className="text-2xl font-semibold leading-6 text-white lg:text-3xl">
-                            About Us
-                        </h3>
+                        <h3 className="text-2xl leading-6 text-white lg:text-3xl">About Us</h3>
                         <p className="mt-4 text-sm text-gray-300">
                             Garrett Kitchens are an independent kitchen retailer who design, supply
                             &amp; install kitchens and other built in furniture. Working with
@@ -36,7 +34,7 @@ export default function Footer() {
                     <div className="grid grid-cols-2 gap-8 mt-12 justify-items-start lg:justify-items-end lg:mt-0">
                         <div className="md:grid md:grid-cols-1 md:gap-8">
                             <div className="mt-4 md:mt-0">
-                                <h3 className="text-2xl font-semibold leading-6 text-white lg:text-3xl">
+                                <h3 className="text-2xl leading-6 text-white lg:text-3xl">
                                     Our Kitchens
                                 </h3>
                                 <ul role="list" className="mt-4 space-y-2">
@@ -55,7 +53,7 @@ export default function Footer() {
                         </div>
                         <div className="md:grid md:grid-cols-1 md:gap-8">
                             <div className="mt-4 md:mt-0">
-                                <h3 className="text-2xl font-semibold leading-6 text-white lg:text-3xl">
+                                <h3 className="text-2xl leading-6 text-white lg:text-3xl">
                                     Useful Links
                                 </h3>
                                 <ul role="list" className="mt-4 space-y-2">
@@ -76,11 +74,11 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="py-4 bg-brand-primaryBgDark lg:py-6">
-                <div className="px-6 mx-auto max-w-7xl lg:px-8">
+            <div className="py-4 bg-brand-greyBg lg:py-6">
+                <div className="px-4 mx-auto md:px-6 max-w-7xl lg:px-8">
                     <div className="flex flex-col gap-8 md:items-end gap-y-2 md:flex-row md:justify-between">
                         <div className="md:flex-1 lg:flex-auto">
-                            <p className="text-xs leading-5 text-gray-300">
+                            <p className="text-xs leading-5 text-gray-900">
                                 <span className="block mb-2 lg:mb-0">
                                     Garrett Kitchens is a trading name of Garrett Appliances
                                     Limited; a company registered in England.
@@ -88,7 +86,7 @@ export default function Footer() {
                                 © Copyright 2013-23, Garrett Appliances Ltd - All Rights Reserved.
                             </p>
                         </div>
-                        <p className="justify-end flex-1 text-xs leading-5 text-gray-300 lg:flex-auto md:flex">
+                        <p className="justify-end flex-1 text-xs leading-5 text-gray-900 lg:flex-auto md:flex">
                             Company Reg. No. 8585642<br></br>VAT Reg. No. GB 165 4164 09
                         </p>
                     </div>

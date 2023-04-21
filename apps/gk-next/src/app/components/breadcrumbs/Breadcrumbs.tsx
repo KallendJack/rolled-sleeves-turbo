@@ -12,8 +12,8 @@ export default function Button(props: BreadcrumbsProps) {
     const { breadcrumbs } = props
 
     return (
-        <div className="border-b border-gray-200 bg-brand-primaryBgLight">
-            <nav aria-label="Breadcrumb" className="px-6 mx-auto max-w-7xl lg:px-8">
+        <div className="border-b border-gray-200 bg-brand-primaryBg">
+            <nav aria-label="Breadcrumb" className="px-4 mx-auto md:px-6 max-w-7xl lg:px-8">
                 <ol role="list" className="flex items-center py-4 space-x-4">
                     {breadcrumbs.slice(0, -1).map((breadcrumb) => (
                         <li key={breadcrumb.id}>

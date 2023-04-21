@@ -111,16 +111,17 @@ importers:
         dependencies:
             eslint-config-next:
                 specifier: latest
-                version: 13.2.4(eslint@7.32.0)(typescript@4.9.4)
+                version: 13.3.0(eslint@7.32.0)(typescript@4.9.4)
             eslint-config-prettier:
                 specifier: ^8.3.0
                 version: 8.5.0(eslint@7.32.0)
             eslint-config-turbo:
                 specifier: latest
-                version: 1.8.8(eslint@7.32.0)
+                version: 1.9.3(eslint@7.32.0)
             eslint-plugin-react:
                 specifier: 7.28.0
                 version: 7.28.0(eslint@7.32.0)
+        devDependencies:
             next:
                 specifier: ^13.2.4
                 version: 13.2.4(react-dom@18.2.0)(react@18.2.0)
@@ -512,12 +513,11 @@ packages:
             {
                 integrity: sha512-+Mq3TtpkeeKFZanPturjcXt+KHfKYnLlX6jMLyCrmpq6OOs4i1GqBOAauSkii9QeKCMTYzGppar21JU57b/GEA==,
             }
-        dev: false
 
-    /@next/eslint-plugin-next@13.2.4:
+    /@next/eslint-plugin-next@13.3.0:
         resolution:
             {
-                integrity: sha512-ck1lI+7r1mMJpqLNa3LJ5pxCfOB1lfJncKmRJeJxcJqcngaFwylreLP7da6Rrjr6u2gVRTfmnkSkjc80IiQCwQ==,
+                integrity: sha512-wuGN5qSEjSgcq9fVkH0Y/qIPFjnZtW3ZPwfjJOn7l/rrf6y8J24h/lo61kwqunTyzZJm/ETGfGVU9PUs8cnzEA==,
             }
         dependencies:
             glob: 7.1.7
@@ -532,7 +532,6 @@ packages:
         cpu: [arm]
         os: [android]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@next/swc-android-arm64@13.2.4:
@@ -544,7 +543,6 @@ packages:
         cpu: [arm64]
         os: [android]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@next/swc-darwin-arm64@13.2.4:
@@ -556,7 +554,6 @@ packages:
         cpu: [arm64]
         os: [darwin]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@next/swc-darwin-x64@13.2.4:
@@ -568,7 +565,6 @@ packages:
         cpu: [x64]
         os: [darwin]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@next/swc-freebsd-x64@13.2.4:
@@ -580,7 +576,6 @@ packages:
         cpu: [x64]
         os: [freebsd]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@next/swc-linux-arm-gnueabihf@13.2.4:
@@ -592,7 +587,6 @@ packages:
         cpu: [arm]
         os: [linux]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@next/swc-linux-arm64-gnu@13.2.4:
@@ -604,7 +598,6 @@ packages:
         cpu: [arm64]
         os: [linux]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@next/swc-linux-arm64-musl@13.2.4:
@@ -616,7 +609,6 @@ packages:
         cpu: [arm64]
         os: [linux]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@next/swc-linux-x64-gnu@13.2.4:
@@ -628,7 +620,6 @@ packages:
         cpu: [x64]
         os: [linux]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@next/swc-linux-x64-musl@13.2.4:
@@ -640,7 +631,6 @@ packages:
         cpu: [x64]
         os: [linux]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@next/swc-win32-arm64-msvc@13.2.4:
@@ -652,7 +642,6 @@ packages:
         cpu: [arm64]
         os: [win32]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@next/swc-win32-ia32-msvc@13.2.4:
@@ -664,7 +653,6 @@ packages:
         cpu: [ia32]
         os: [win32]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@next/swc-win32-x64-msvc@13.2.4:
@@ -676,7 +664,6 @@ packages:
         cpu: [x64]
         os: [win32]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@nodelib/fs.scandir@2.1.5:
@@ -735,7 +722,6 @@ packages:
             }
         dependencies:
             tslib: 2.4.1
-        dev: false
 
     /@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.2.7):
         resolution:
@@ -1566,7 +1552,6 @@ packages:
             {
                 integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==,
             }
-        dev: false
 
     /cliui@8.0.1:
         resolution:
@@ -2243,10 +2228,10 @@ packages:
             }
         engines: { node: '>=10' }
 
-    /eslint-config-next@13.2.4(eslint@7.32.0)(typescript@4.9.4):
+    /eslint-config-next@13.3.0(eslint@7.32.0)(typescript@4.9.4):
         resolution:
             {
-                integrity: sha512-lunIBhsoeqw6/Lfkd6zPt25w1bn0znLA/JCL+au1HoEpSb4/PpsOYsYtgV/q+YPsoKIOzFyU5xnb04iZnXjUvg==,
+                integrity: sha512-6YEwmFBX0VjBd3ODGW9df0Is0FLaRFdMN8eAahQG9CN6LjQ28J8AFr19ngxqMSg7Qv6Uca/3VeeBosJh1bzu0w==,
             }
         peerDependencies:
             eslint: ^7.23.0 || ^8.0.0
@@ -2255,7 +2240,7 @@ packages:
             typescript:
                 optional: true
         dependencies:
-            '@next/eslint-plugin-next': 13.2.4
+            '@next/eslint-plugin-next': 13.3.0
             '@rushstack/eslint-patch': 1.2.0
             '@typescript-eslint/parser': 5.44.0(eslint@7.32.0)(typescript@4.9.4)
             eslint: 7.32.0
@@ -2283,16 +2268,16 @@ packages:
             eslint: 7.32.0
         dev: false
 
-    /eslint-config-turbo@1.8.8(eslint@7.32.0):
+    /eslint-config-turbo@1.9.3(eslint@7.32.0):
         resolution:
             {
-                integrity: sha512-+yT22sHOT5iC1sbBXfLIdXfbZuiv9bAyOXsxTxFCWelTeFFnANqmuKB3x274CFvf7WRuZ/vYP/VMjzU9xnFnxA==,
+                integrity: sha512-QG6jxFQkrGSpQqlFKefPdtgUfr20EbU0s4tGGIuGFOcPuJEdsY6VYZpZUxNJvmMcTGqPgMyOPjAFBKhy/DPHLA==,
             }
         peerDependencies:
             eslint: '>6.6.0'
         dependencies:
             eslint: 7.32.0
-            eslint-plugin-turbo: 1.8.8(eslint@7.32.0)
+            eslint-plugin-turbo: 1.9.3(eslint@7.32.0)
         dev: false
 
     /eslint-import-resolver-node@0.3.6:
@@ -2484,10 +2469,10 @@ packages:
             string.prototype.matchall: 4.0.8
         dev: false
 
-    /eslint-plugin-turbo@1.8.8(eslint@7.32.0):
+    /eslint-plugin-turbo@1.9.3(eslint@7.32.0):
         resolution:
             {
-                integrity: sha512-zqyTIvveOY4YU5jviDWw9GXHd4RiKmfEgwsjBrV/a965w0PpDwJgEUoSMB/C/dU310Sv9mF3DSdEjxjJLaw6rA==,
+                integrity: sha512-ZsRtksdzk3v+z5/I/K4E50E4lfZ7oYmLX395gkrUMBz4/spJlYbr+GC8hP9oVNLj9s5Pvnm9rLv/zoj5PVYaVw==,
             }
         peerDependencies:
             eslint: '>6.6.0'
@@ -4056,7 +4041,6 @@ packages:
         hasBin: true
         dependencies:
             js-tokens: 4.0.0
-        dev: false
 
     /lru-cache@6.0.0:
         resolution:
@@ -4328,7 +4312,6 @@ packages:
         transitivePeerDependencies:
             - '@babel/core'
             - babel-plugin-macros
-        dev: false
 
     /node-releases@2.0.6:
         resolution:
@@ -4846,7 +4829,6 @@ packages:
             nanoid: 3.3.4
             picocolors: 1.0.0
             source-map-js: 1.0.2
-        dev: false
 
     /postcss@8.4.20:
         resolution:
@@ -4993,7 +4975,6 @@ packages:
             loose-envify: 1.4.0
             react: 18.2.0
             scheduler: 0.23.0
-        dev: false
 
     /react-is@16.13.1:
         resolution:
@@ -5010,7 +4991,6 @@ packages:
         engines: { node: '>=0.10.0' }
         dependencies:
             loose-envify: 1.4.0
-        dev: false
 
     /read-cache@1.0.0:
         resolution:
@@ -5270,7 +5250,6 @@ packages:
             }
         dependencies:
             loose-envify: 1.4.0
-        dev: false
 
     /semver@5.7.1:
         resolution:
@@ -5623,7 +5602,6 @@ packages:
         dependencies:
             client-only: 0.0.1
             react: 18.2.0
-        dev: false
 
     /supports-color@5.5.0:
         resolution:

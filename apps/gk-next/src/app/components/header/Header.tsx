@@ -40,7 +40,7 @@ export default function Header() {
     return (
         <header className="bg-white border-b border-gray-200">
             <nav
-                className="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8"
+                className="flex items-center justify-between p-4 mx-auto md:p-6 max-w-7xl lg:px-8"
                 aria-label="Global"
             >
                 <div className="flex lg:flex-1">
