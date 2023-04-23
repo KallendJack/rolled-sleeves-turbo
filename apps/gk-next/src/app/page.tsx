@@ -9,55 +9,49 @@ export const metadata = {
 
 const features = [
     {
-        name: 'Quality Kitchens',
-        description:
-            'Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.',
+        name: 'Surrey-Based',
     },
     {
-        name: 'Easy Process',
-        description:
-            'Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.',
+        name: 'Trusted Craftsmen',
     },
     {
-        name: 'Customer Service',
-        description:
-            'Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.',
+        name: 'Bespoke Design',
     },
 ]
 
 const collections = [
     {
-        name: 'Winslow',
+        name: 'Book a Survey',
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-01.jpg',
         imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
-        description:
-            'Keep your phone, keys, and wallet together, so you can lose everything at once.',
+        description: 'We will take accurate measurements and answer your initial questions.',
     },
     {
-        name: 'Winslow',
+        name: 'Showroom Visit',
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-02.jpg',
         imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
-        description: 'The rest of the house will still be a mess, but your desk will look great.',
+        description:
+            'We will present a design scetch for you to look at and pick your kitchen colours, materials and finishes.',
     },
     {
-        name: 'Winslow',
+        name: 'Finalise Design',
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-03.jpg',
         imageAlt:
             'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
         description:
-            'Be more productive than enterprise project managers with a single piece of paper.',
+            'We will send your personalised design and quote, and go over the finer details.',
     },
     {
-        name: 'Winslow',
+        name: 'Place Order',
         href: '#',
         imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-03.jpg',
         imageAlt:
             'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
         description:
-            'Be more productive than enterprise project managers with a single piece of paper.',
+            'We will take a deposit and finalise your order, booking an installation date.',
     },
 ]
 
@@ -108,66 +102,98 @@ export default function Page() {
                 <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
                 <div className="relative flex flex-col items-center max-w-3xl px-6 py-32 mx-auto text-center sm:py-64 lg:px-0">
                     <h1 className="text-4xl tracking-tight text-white lg:text-6xl">
-                        Innovative Designs, Quality Craftmanship
+                        We Design & Install Inspiring Kitchens
                     </h1>
                     <p className="mt-4 text-xl text-white">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae fugit
                         minus a porro. Quis recusandae esse rerum reprehenderit fuga. Deleniti
                         provident.
                     </p>
-                    <Button href="/learn-more">Learn More</Button>
+                    <Button href="/learn-more">Start Your Journey</Button>
                 </div>
             </section>
 
-            <section className="py-24 bg-white sm:py-32">
-                <div className="px-6 mx-auto max-w-7xl lg:px-8">
-                    <div className="max-w-2xl mx-auto lg:text-center">
-                        <h2 className="text-base font-semibold leading-7 text-brand-primary">
-                            Why choose us
+            <section className=" bg-white w-full">
+                <dl className="grid grid-cols-3">
+                    {features.map((feature) => (
+                        <div
+                            key={feature.name}
+                            className="flex flex-col sm:flex-row justify-center gap-4 items-center border border-gray-900 p-6"
+                        >
+                            <img className="bg-red-400 rounded-full w-5 h-5" src="" alt="" />
+
+                            <dt className="flex text-md md:text-lg items-center text-base font-semibold leading-7 text-center text-gray-600 gap-x-3">
+                                {feature.name}
+                            </dt>
+                        </div>
+                    ))}
+                </dl>
+            </section>
+
+            <section
+                aria-labelledby="comfort-heading"
+                className="px-4 py-24 mx-auto max-w-7xl md:px-6 lg:px-8"
+            >
+                <div className="relative px-6 lg:px-16">
+                    <div className="relative flex flex-col items-center max-w-3xl mx-auto text-center">
+                        <h2
+                            id="comfort-heading"
+                            className="text-2xl tracking-tight text-grey-800 sm:text-4xl"
+                        >
+                            Do you feel like your kitchen is missing something? Missing your peronal
+                            touch? Missing fun?
                         </h2>
-                        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                            What makes Garrett Kitchens different?
+                        <p className="mt-3 text-lg text-grey-800">
+                            We understand most kitchens are uninspiring which is why we guide and
+                            empower our customers to be bold with their decisions and love their
+                            unique new kitchens.
                         </p>
-                        <p className="mt-6 text-lg leading-8 text-gray-600">
-                            Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-                            Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In
-                            mi viverra elit nunc.
-                        </p>
-                    </div>
-                    <div className="max-w-2xl mx-auto mt-16 sm:mt-20 lg:mt-24 lg:max-w-none">
-                        <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-                            {features.map((feature) => (
-                                <div key={feature.name} className="flex flex-col">
-                                    <dt className="flex items-center text-base font-semibold leading-7 text-center text-gray-900 gap-x-3">
-                                        {feature.name}
-                                    </dt>
-                                    <dd className="flex flex-col flex-auto mt-4 text-base leading-7 text-gray-600">
-                                        <p className="flex-auto">{feature.description}</p>
-                                    </dd>
-                                </div>
-                            ))}
-                        </dl>
+                        <Link
+                            href="/blog"
+                            className="block w-full px-8 py-3 mt-8 text-base font-medium text-white bg-brand-primary border border-transparent rounded-md hover:bg-gray-100 sm:w-auto"
+                        >
+                            Start Your Journey
+                        </Link>
                     </div>
                 </div>
             </section>
 
             <section
                 aria-labelledby="collection-heading"
-                className="max-w-3xl px-4 py-24 mx-auto md:px-6 sm:py-32 lg:max-w-7xl lg:px-8"
+                className="max-w-3xl px-4 pb-24 mx-auto md:px-6 lg:max-w-7xl lg:px-8"
             >
-                <h2 id="collection-heading" className="text-2xl tracking-tight text-gray-900">
-                    Our most popular ranges
-                </h2>
-                <p className="mt-4 text-base text-gray-500">
-                    Lorem ipsum. Each season, we collaborate with world-class designers to create a
-                    collection inspired by the natural world.
-                </p>
-                <div className="mt-10 space-y-12 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 md:space-y-0">
+                <div className="flex flex-col md:flex-row justify-between">
+                    <div>
+                        <h2
+                            id="collection-heading"
+                            className="text-2xl tracking-tight text-gray-900"
+                        >
+                            Achieve your dream kitchen in 4 easy steps
+                        </h2>
+                        <p className="mt-4 text-base text-gray-500">
+                            Our simple 4 step process offers our customers a stress-free journey in
+                            achieving their dream kitchen, unique to their desires.
+                        </p>
+                    </div>
+
+                    <Link
+                        href="/blog"
+                        className="block w-fit px-8 py-3 mt-8 text-base font-medium text-white bg-brand-primary border border-transparent rounded-md hover:bg-gray-100 sm:w-auto"
+                    >
+                        Find Out More
+                    </Link>
+                </div>
+
+                <div className="mt-10 space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 sm:space-y-0">
                     {collections.map((collection) => (
-                        <Link key={collection.name} href={collection.href} className="block group">
+                        <Link
+                            key={collection.name}
+                            href={collection.href}
+                            className="block group  text-center"
+                        >
                             <div
                                 aria-hidden="true"
-                                className="relative overflow-hidden rounded-lg aspect-h-2 aspect-w-3 lg:aspect-h-6 lg:aspect-w-5 group-hover:opacity-75"
+                                className="relative overflow-hidden aspect-h-2 aspect-w-3 lg:aspect-h-6 lg:aspect-w-7 group-hover:opacity-75"
                             >
                                 <Image
                                     fill
@@ -176,54 +202,39 @@ export default function Page() {
                                     className="object-cover object-center"
                                 />
                             </div>
-                            <h3 className="mt-4 text-base text-gray-900">{collection.name}</h3>
-                            <p className="mt-2 text-sm text-gray-500">{collection.description}</p>
+
+                            <div className="border-x border-b border-gray-400 h-40">
+                                <h3 className="pt-4 text-xl sm:text-base font-bold text-gray-900">
+                                    {collection.name}
+                                </h3>
+
+                                <p className="mt-2 sm:text-sm text-gray-500 px-8">
+                                    {collection.description}
+                                </p>
+                            </div>
                         </Link>
                     ))}
                 </div>
             </section>
 
-            <section
-                aria-labelledby="comfort-heading"
-                className="px-4 pb-24 mx-auto max-w-7xl md:px-6 sm:pb-32 lg:px-8"
-            >
-                <div className="relative overflow-hidden rounded-lg">
-                    <div className="absolute inset-0">
-                        <div className="relative w-full h-full">
-                            <Image
-                                fill
-                                src="/assets/home/hero/hero.png"
-                                alt="Kitchen Trends"
-                                className="object-cover object-center"
-                            />
+            <section className=" bg-white w-full">
+                <dl className="grid grid-cols-3">
+                    {features.map((feature) => (
+                        <div
+                            key={feature.name}
+                            className="flex flex-col sm:flex-row justify-center gap-4 items-center border border-gray-900 p-6"
+                        >
+                            <img className="bg-red-400 rounded-full w-5 h-5" src="" alt="" />
+
+                            <dt className="flex text-md md:text-lg items-center text-base font-semibold leading-7 text-center text-gray-600 gap-x-3">
+                                {feature.name}
+                            </dt>
                         </div>
-                    </div>
-                    <div className="relative px-6 py-32 bg-gray-900 bg-opacity-75 sm:px-12 sm:py-40 lg:px-16">
-                        <div className="relative flex flex-col items-center max-w-3xl mx-auto text-center">
-                            <h2
-                                id="comfort-heading"
-                                className="text-3xl tracking-tight text-white sm:text-4xl"
-                            >
-                                Kitchen trends for 2023
-                            </h2>
-                            <p className="mt-3 text-xl text-white">
-                                The kitchen is one of the most important rooms in the home, and it
-                                is no wonder that people are always looking for new ways to make
-                                their kitchens more stylish, functional and comfortable. In 2023
-                                there are several kitchen trends that are expected to be popular.
-                            </p>
-                            <Link
-                                href="/blog"
-                                className="block w-full px-8 py-3 mt-8 text-base font-medium text-gray-900 bg-white border border-transparent rounded-md hover:bg-gray-100 sm:w-auto"
-                            >
-                                Read Blog
-                            </Link>
-                        </div>
-                    </div>
-                </div>
+                    ))}
+                </dl>
             </section>
 
-            <section className="px-4 mx-auto max-w-7xl pb-28 md:px-6 sm:pb-40 lg:px-8">
+            <section className="px-4 mx-auto max-w-7xl py-24 md:px-6 lg:px-8">
                 <div className="max-w-xl mx-auto text-center">
                     <h2 className="text-lg leading-8 tracking-tight text-brand-primary">
                         Testimonials
@@ -232,6 +243,7 @@ export default function Page() {
                         We have worked with thousands of amazing people
                     </p>
                 </div>
+
                 <div className="flow-root mx-auto mt-16 sm:mt-20 lg:mx-0 lg:max-w-none">
                     <div className="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:inline-flex lg:columns-3">
                         {testimonials.map((testimonial) => (
