@@ -7,6 +7,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 import { classNames } from 'utils/tailwind/classNames'
+import Button from 'components/button/Button'
 
 const kitchens = [
     {
@@ -146,9 +147,9 @@ export default function Header() {
                     </Popover>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="/contact-us" className="text-sm font-semibold leading-6 text-gray-900">
-                        Contact Us <span aria-hidden="true">&rarr;</span>
-                    </a>
+                    <Button href="/contact-us">
+                        Start Journey <span aria-hidden="true">&rarr;</span>
+                    </Button>
                 </div>
             </nav>
             <Dialog
@@ -251,12 +252,9 @@ export default function Header() {
                                 </Disclosure>
                             </div>
                             <div className="py-6">
-                                <a
-                                    href="/contact-us"
-                                    className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                >
-                                    Contact Us
-                                </a>
+                                <Button href="/contact-us">
+                                    Start Journey <span aria-hidden="true">&rarr;</span>
+                                </Button>
                             </div>
                         </div>
                     </div>
