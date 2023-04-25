@@ -100,7 +100,7 @@ export default function Page() {
                     />
                 </div>
                 <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
-                <div className="relative flex flex-col items-center max-w-3xl px-6 py-32 mx-auto text-center sm:py-64 lg:px-0">
+                <div className="relative flex flex-col items-center max-w-4xl px-6 py-32 mx-auto text-center sm:py-64 lg:px-0">
                     <h1 className="text-4xl tracking-tight text-white lg:text-6xl">
                         We Design & Install Inspiring Kitchens
                     </h1>
@@ -110,7 +110,7 @@ export default function Page() {
                         provident.
                     </p>
                     <Button href="/learn-more" className="mt-4">
-                        Start Your Journey <span aria-hidden="true">&rarr;</span>
+                        Start Your Journey
                     </Button>
                 </div>
             </section>
@@ -137,7 +137,7 @@ export default function Page() {
                 className="px-4 py-24 mx-auto max-w-7xl md:px-6 lg:px-8"
             >
                 <div className="relative px-6 lg:px-16">
-                    <div className="relative flex flex-col items-center max-w-3xl mx-auto text-center">
+                    <div className="relative flex flex-col items-center max-w-4xl mx-auto text-center">
                         <h2
                             id="comfort-heading"
                             className="text-2xl tracking-tight text-gray-900 sm:text-4xl"
@@ -150,40 +150,35 @@ export default function Page() {
                             empower our customers to be bold with their decisions and love their
                             unique new kitchens.
                         </p>
-                        <Link
-                            href="/blog"
-                            className="block w-full px-8 py-3 mt-8 text-base font-medium text-white border border-transparent rounded-md bg-brand-primary hover:bg-gray-100 sm:w-auto"
-                        >
+                        <Button href="/blog" className="mt-4 w-fit">
                             Start Your Journey
-                        </Link>
+                        </Button>
                     </div>
                 </div>
             </section>
 
             <section
                 aria-labelledby="collection-heading"
-                className="max-w-3xl px-4 pb-24 mx-auto md:px-6 lg:max-w-7xl lg:px-8"
+                className="max-w-4xl px-4 pb-24 mx-auto md:px-6 lg:max-w-7xl lg:px-8"
             >
-                <div className="flex flex-col justify-between md:flex-row">
-                    <div>
+                <div className="flex flex-col justify-between items-end md:flex-row">
+                    <div className="w-3/5">
                         <h2
                             id="collection-heading"
                             className="text-2xl tracking-tight text-gray-900"
                         >
                             Achieve your dream kitchen in 4 easy steps
                         </h2>
+
                         <p className="mt-4 text-base text-gray-500">
                             Our simple 4 step process offers our customers a stress-free journey in
                             achieving their dream kitchen, unique to their desires.
                         </p>
                     </div>
 
-                    <Link
-                        href="/blog"
-                        className="block px-8 py-3 mt-8 text-base font-medium text-white border border-transparent rounded-md w-fit bg-brand-primary hover:bg-gray-100 sm:w-auto"
-                    >
-                        Find Out More
-                    </Link>
+                    <Button href="/learn-more" className="mt-4 w-fit h-fit">
+                        Start Your Journey <span aria-hidden="true">&rarr;</span>
+                    </Button>
                 </div>
 
                 <div className="mt-10 space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 sm:space-y-0">
@@ -219,7 +214,7 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className="w-full bg-white ">
+            <section className="w-full bg-white">
                 <dl className="grid grid-cols-3">
                     {features.map((feature) => (
                         <div
@@ -236,51 +231,41 @@ export default function Page() {
                 </dl>
             </section>
 
-            <section className="px-4 py-24 mx-auto max-w-7xl md:px-6 lg:px-8">
-                <div className="max-w-xl mx-auto text-center">
-                    <h2 className="text-lg leading-8 tracking-widest uppercase text-brand-secondary">
-                        Testimonials
-                    </h2>
-                    <p className="mt-2 text-3xl text-gray-900 sm:text-4xl">
-                        We have worked with thousands of amazing people
-                    </p>
-                </div>
+            <section
+                aria-labelledby="collection-heading"
+                className="max-w-4xl px-4 py-12 lg:py-24 mx-auto w-full md:px-6 lg:max-w-7xl lg:px-8"
+            >
+                <div className="flex flex-col md:flex-row justify-between gap-12 items-start">
+                    <div className="md:w-1/2 w-full">
+                        <img
+                            src="/assets/home/kitchen-brochure.png"
+                            alt="Brochure"
+                            className="object-cover h-full"
+                        />
+                    </div>
 
-                <div className="flow-root mx-auto mt-16 sm:mt-20 lg:mx-0 lg:max-w-none">
-                    <div className="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:inline-flex lg:columns-3">
-                        {testimonials.map((testimonial) => (
-                            <div
-                                key={testimonial.author.handle}
-                                className="pt-8 sm:inline-block sm:w-full sm:px-4"
-                            >
-                                <figure className="p-8 text-sm leading-6 rounded-2xl bg-gray-50">
-                                    <blockquote className="text-gray-900">
-                                        <p>{`“${testimonial.body}”`}</p>
-                                    </blockquote>
-                                    <figcaption className="flex items-center mt-6 gap-x-4">
-                                        <div className="relative w-10 h-10 rounded-full bg-gray-50">
-                                            <Image
-                                                fill
-                                                className="rounded-full"
-                                                src={testimonial.author.imageUrl}
-                                                alt="Testimonial Author"
-                                            />
-                                        </div>
-                                        <div>
-                                            <div className="font-semibold text-gray-900">
-                                                {testimonial.author.name}
-                                            </div>
-                                            <div className="text-gray-600">{`@${testimonial.author.handle}`}</div>
-                                        </div>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        ))}
+                    <div className="space-y-4 md:w-1/2 w-full">
+                        <h3 className="text-2xl lg:text-4xl text-gray-900 lg:mb-8">
+                            Build a Kitchen That You'll Love
+                        </h3>
+
+                        <ol className="text-lg lg:text-xl space-y-2 md:space-y-6 list-disc list-inside p-4">
+                            <li>A kitchen that you feel happy in</li>
+                            <li>A kitchen that you love to cook in</li>
+                            <li>A kitchen you feel proud of</li>
+                            <li>A kitchen that your friends envy</li>
+                            <li>A kitchen that you feel happy in</li>
+                            <li>A kitchen that's yours</li>
+                        </ol>
+
+                        <Button href="/learn-more" className=" w-fit">
+                            Start Your Journey
+                        </Button>
                     </div>
                 </div>
             </section>
 
-            <section className="px-4 pb-24 mx-auto max-w-7xl md:px-6 sm:pb-32 lg:px-8">
+            <section className="px-4 py-24 mx-auto max-w-7xl md:px-6 sm:pb-32 lg:px-8">
                 <div className="pb-20 bg-brand-primaryBg sm:pb-24 xl:pb-0">
                     <div className="flex flex-col items-center px-6 mx-auto max-w-7xl gap-x-8 gap-y-10 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
                         <div className="w-full max-w-2xl -mt-8 xl:-mb-8 xl:w-96 xl:flex-none">
