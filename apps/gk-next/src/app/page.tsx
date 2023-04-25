@@ -109,7 +109,9 @@ export default function Page() {
                         minus a porro. Quis recusandae esse rerum reprehenderit fuga. Deleniti
                         provident.
                     </p>
-                    <Button href="/learn-more">Start Your Journey</Button>
+                    <Button href="/learn-more" className="mt-4">
+                        Start Your Journey <span aria-hidden="true">&rarr;</span>
+                    </Button>
                 </div>
             </section>
 
