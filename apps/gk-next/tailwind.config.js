@@ -19,7 +19,10 @@ module.exports = {
                     primaryBg: '#262525',
                     greyBg: '#F2F2F2',
 
-                    // For text colors we are using Tailwind UI default text colors
+                    // Text colors
+                    headingText: '#B2A79D',
+                    bodyTextLight: '...',
+                    bodyTextDark: '...',
                 },
             },
         },

@@ -87,9 +87,9 @@ export default function Page() {
                         className="object-cover object-center w-full h-full"
                     />
                 </div>
-                <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
+                <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-75" />
                 <div className="relative flex flex-col items-center max-w-3xl px-6 py-32 mx-auto text-center sm:py-64 lg:px-0">
-                    <h1 className="text-4xl tracking-tight text-white lg:text-6xl">
+                    <h1 className="text-4xl lg:text-6xl">
                         Innovative Designs, Quality Craftmanship
                     </h1>
                     <p className="mt-4 text-xl text-white">
@@ -105,7 +105,7 @@ export default function Page() {
                 aria-labelledby="collection-heading"
                 className="max-w-3xl px-4 py-24 mx-auto md:px-6 sm:py-32 lg:max-w-7xl lg:px-8"
             >
-                <h2 id="collection-heading" className="text-2xl tracking-tight text-gray-900">
+                <h2 id="collection-heading" className="text-2xl">
                     Our most popular ranges
                 </h2>
                 <p className="mt-4 text-base text-gray-500">
@@ -126,7 +126,7 @@ export default function Page() {
                                     className="object-cover object-center"
                                 />
                             </div>
-                            <h3 className="mt-4 text-base text-gray-900">{collection.name}</h3>
+                            <h3 className="mt-4 text-base">{collection.name}</h3>
                             <p className="mt-2 text-sm text-gray-500">{collection.description}</p>
                         </Link>
                     ))}
@@ -150,10 +150,7 @@ export default function Page() {
                     </div>
                     <div className="relative px-6 py-32 bg-gray-900 bg-opacity-75 sm:px-12 sm:py-40 lg:px-16">
                         <div className="relative flex flex-col items-center max-w-3xl mx-auto text-center">
-                            <h2
-                                id="comfort-heading"
-                                className="text-3xl tracking-tight text-white sm:text-4xl"
-                            >
+                            <h2 id="comfort-heading" className="text-3xl sm:text-4xl">
                                 Kitchen trends for 2023
                             </h2>
                             <p className="mt-3 text-xl text-white">
@@ -175,10 +172,8 @@ export default function Page() {
 
             <section className="px-4 mx-auto max-w-7xl pb-28 md:px-6 sm:pb-40 lg:px-8">
                 <div className="max-w-xl mx-auto text-center">
-                    <h2 className="text-lg leading-8 tracking-tight text-brand-primary">
-                        Testimonials
-                    </h2>
-                    <p className="mt-2 text-3xl tracking-tight text-gray-900 sm:text-4xl">
+                    <h2 className="text-lg leading-8">Testimonials</h2>
+                    <p className="mt-2 text-3xl text-gray-900 sm:text-4xl">
                         We have worked with thousands of amazing people
                     </p>
                 </div>
@@ -234,9 +229,7 @@ export default function Page() {
                         <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:pr-8 xl:pl-40 xl:py-24">
                             <figure className="relative isolate">
                                 <div className="leading-8 text-white sm:leading-9">
-                                    <h2 className="mb-8 text-3xl tracking-tight sm:text-4xl">
-                                        Kitchen Brochure
-                                    </h2>
+                                    <h2 className="mb-8 text-3xl sm:text-4xl">Kitchen Brochure</h2>
                                     <p className="text-xl">
                                         Gravida quam mi erat tortor neque molestie. Auctor aliquet
                                         at porttitor a enim nunc suscipit tincidunt nunc. Et non
