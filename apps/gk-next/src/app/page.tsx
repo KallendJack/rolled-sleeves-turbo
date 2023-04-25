@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Button from 'components/button/Button'
+import { ButtonLink } from 'components/button/Button'
 
 export const metadata = {
     title: 'Home | Garrett Kitchens',
@@ -109,9 +109,9 @@ export default function Page() {
                         minus a porro. Quis recusandae esse rerum reprehenderit fuga. Deleniti
                         provident.
                     </p>
-                    <Button href="/learn-more" className="mt-4">
+                    <ButtonLink href="/contact-us" className="mt-4">
                         Start Your Journey <span aria-hidden="true">&rarr;</span>
-                    </Button>
+                    </ButtonLink>
                 </div>
             </section>
 
@@ -307,7 +307,7 @@ export default function Page() {
                                         lorem tortor posuere. Nunc eu scelerisque interdum eget
                                         tellus non nibh scelerisque bibendum.
                                     </p>
-                                    <Button href="/learn-more">Request a Brochure</Button>
+                                    <ButtonLink href="/learn-more">Request a Brochure</ButtonLink>
                                 </div>
                             </figure>
                         </div>

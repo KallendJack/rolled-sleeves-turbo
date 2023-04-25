@@ -7,7 +7,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 import { classNames } from 'utils/tailwind/classNames'
-import Button from 'components/button/Button'
+import { ButtonLink } from 'components/button/Button'
 
 const kitchens = [
     {
@@ -147,9 +147,9 @@ export default function Header() {
                     </Popover>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Button href="/contact-us">
+                    <ButtonLink href="/contact-us">
                         Start Journey <span aria-hidden="true">&rarr;</span>
-                    </Button>
+                    </ButtonLink>
                 </div>
             </nav>
             <Dialog
@@ -252,9 +252,9 @@ export default function Header() {
                                 </Disclosure>
                             </div>
                             <div className="py-6">
-                                <Button href="/contact-us">
+                                <ButtonLink href="/contact-us">
                                     Start Journey <span aria-hidden="true">&rarr;</span>
-                                </Button>
+                                </ButtonLink>
                             </div>
                         </div>
                     </div>

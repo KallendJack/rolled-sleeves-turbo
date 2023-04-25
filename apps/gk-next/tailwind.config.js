@@ -1,4 +1,8 @@
 const sharedConfig = require('tailwind-config/tailwind.config.js')
+const polished = require('polished')
+
+const primary = '#7DA19A'
+const secondary = '#B2A79D'
 
 module.exports = {
     ...sharedConfig,
@@ -13,8 +17,16 @@ module.exports = {
             colors: {
                 brand: {
                     // Accent colors
-                    primary: '#7DA19A',
-                    secondary: '#B2A79D',
+                    primary: primary,
+                    secondary: secondary,
+
+                    // Hover colors
+                    primaryHover: polished.lighten(0.05, primary),
+                    secondaryHover: polished.lighten(0.05, secondary),
+
+                    // Focus colors
+                    primaryFocus: polished.darken(0.05, primary),
+                    secondaryFocus: polished.darken(0.05, secondary),
 
                     // Background colors
                     primaryBg: '#262525',

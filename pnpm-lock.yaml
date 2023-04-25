@@ -94,6 +94,9 @@ importers:
             eslint-config-custom:
                 specifier: workspace:*
                 version: link:../../packages/eslint-config-custom
+            polished:
+                specifier: ^4.2.2
+                version: 4.2.2
             postcss:
                 specifier: ^8.4.20
                 version: 8.4.20
@@ -183,7 +186,6 @@ packages:
         engines: { node: '>=6.9.0' }
         dependencies:
             regenerator-runtime: 0.13.11
-        dev: false
 
     /@commitlint/cli@17.5.0:
         resolution:
@@ -4722,6 +4724,16 @@ packages:
         engines: { node: '>=0.10.0' }
         dev: true
 
+    /polished@4.2.2:
+        resolution:
+            {
+                integrity: sha512-Sz2Lkdxz6F2Pgnpi9U5Ng/WdWAUZxmHrNPoVlm3aAemxoy2Qy7LGjQg4uf8qKelDAUW94F4np3iH2YPf2qefcQ==,
+            }
+        engines: { node: '>=10' }
+        dependencies:
+            '@babel/runtime': 7.20.1
+        dev: true
+
     /postcss-import@14.1.0(postcss@8.4.20):
         resolution:
             {
@@ -5067,7 +5079,6 @@ packages:
             {
                 integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==,
             }
-        dev: false
 
     /regexp.prototype.flags@1.4.3:
         resolution:
