@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Button from 'components/button/Button'
+import { ButtonLink } from 'components/button/Button'
 
 export const metadata = {
     title: 'Home | Garrett Kitchens',
@@ -109,9 +109,9 @@ export default function Page() {
                         minus a porro. Quis recusandae esse rerum reprehenderit fuga. Deleniti
                         provident.
                     </p>
-                    <Button href="/learn-more" className="mt-4">
+                    <ButtonLink href="/contact-us" className="mt-4">
                         Start Your Journey
-                    </Button>
+                    </ButtonLink>
                 </div>
             </section>
 
@@ -161,7 +161,7 @@ export default function Page() {
                 aria-labelledby="collection-heading"
                 className="max-w-4xl px-4 pb-24 mx-auto md:px-6 lg:max-w-7xl lg:px-8"
             >
-                <div className="flex flex-col justify-between items-end md:flex-row">
+                <div className="flex flex-col items-end justify-between md:flex-row">
                     <div className="w-3/5">
                         <h2
                             id="collection-heading"
@@ -176,9 +176,9 @@ export default function Page() {
                         </p>
                     </div>
 
-                    <Button href="/learn-more" className="mt-4 w-fit h-fit">
+                    <ButtonLink href="/learn-more" className="mt-4 w-fit h-fit">
                         Start Your Journey <span aria-hidden="true">&rarr;</span>
-                    </Button>
+                    </ButtonLink>
                 </div>
 
                 <div className="mt-10 space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 sm:space-y-0">
@@ -233,10 +233,10 @@ export default function Page() {
 
             <section
                 aria-labelledby="collection-heading"
-                className="max-w-4xl px-4 py-12 lg:py-24 mx-auto w-full md:px-6 lg:max-w-7xl lg:px-8"
+                className="w-full max-w-4xl px-4 py-12 mx-auto lg:py-24 md:px-6 lg:max-w-7xl lg:px-8"
             >
-                <div className="flex flex-col md:flex-row justify-between gap-12 items-start">
-                    <div className="md:w-1/2 w-full">
+                <div className="flex flex-col items-start justify-between gap-12 md:flex-row">
+                    <div className="w-full md:w-1/2">
                         <img
                             src="/assets/home/kitchen-brochure.png"
                             alt="Brochure"
@@ -244,12 +244,12 @@ export default function Page() {
                         />
                     </div>
 
-                    <div className="space-y-4 md:w-1/2 w-full">
-                        <h3 className="text-2xl lg:text-4xl text-gray-900 lg:mb-8">
+                    <div className="w-full space-y-4 md:w-1/2">
+                        <h3 className="text-2xl text-gray-900 lg:text-4xl lg:mb-8">
                             Build a Kitchen That You'll Love
                         </h3>
 
-                        <ol className="text-lg lg:text-xl space-y-2 md:space-y-6 list-disc list-inside p-4">
+                        <ol className="p-4 space-y-2 text-lg list-disc list-inside lg:text-xl md:space-y-6">
                             <li>A kitchen that you feel happy in</li>
                             <li>A kitchen that you love to cook in</li>
                             <li>A kitchen you feel proud of</li>
@@ -258,9 +258,9 @@ export default function Page() {
                             <li>A kitchen that's yours</li>
                         </ol>
 
-                        <Button href="/learn-more" className=" w-fit">
+                        <ButtonLink href="/learn-more" className=" w-fit">
                             Start Your Journey
-                        </Button>
+                        </ButtonLink>
                     </div>
                 </div>
             </section>
@@ -292,7 +292,7 @@ export default function Page() {
                                         lorem tortor posuere. Nunc eu scelerisque interdum eget
                                         tellus non nibh scelerisque bibendum.
                                     </p>
-                                    <Button href="/learn-more">Request a Brochure</Button>
+                                    <ButtonLink href="/learn-more">Request a Brochure</ButtonLink>
                                 </div>
                             </figure>
                         </div>

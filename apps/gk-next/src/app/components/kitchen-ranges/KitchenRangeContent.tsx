@@ -9,6 +9,7 @@ import { ChevronDownIcon, PlusIcon } from '@heroicons/react/20/solid'
 
 import { classNames } from 'utils/tailwind/classNames'
 import { useKitchens } from 'stores/kitchen'
+import { Button } from 'components/button/Button'
 
 type KitchenRangeContentProps = {
     title: string
@@ -28,6 +29,10 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
 
     const { kitchens } = useKitchens()
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+    const [kitchensToShowCount, setKitchensToShowCount] = useState(6)
+
+    const allKitchensShown = kitchensToShowCount >= kitchens.length
+    const kitchensToShow = kitchens.slice(0, kitchensToShowCount)
 
     return (
         <div className="bg-white">
@@ -204,7 +209,7 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                 Kitchens
                             </h2>
                             <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
-                                {kitchens.map((kitchen, index) => (
+                                {kitchensToShow.map((kitchen, index) => (
                                     <div
                                         key={index}
                                         className="relative flex flex-col overflow-hidden bg-white border border-gray-200 rounded-lg group"
@@ -236,6 +241,16 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                     </div>
                                 ))}
                             </div>
+
+                            {!allKitchensShown && (
+                                <div className="flex justify-center mt-8">
+                                    <Button
+                                        onClick={() => setKitchensToShowCount((count) => count + 6)}
+                                    >
+                                        Load More
+                                    </Button>
+                                </div>
+                            )}
                         </section>
                     </div>
                 </div>

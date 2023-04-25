@@ -1,21 +1,35 @@
+import { ButtonHTMLAttributes } from 'react'
 import Link from 'next/link'
 import type { LinkProps } from 'next/link'
 
-type ButtonProps = LinkProps & {
-    type?: 'link' | 'button'
-    variant?: 'light' | 'dark'
+type BaseButtonProps = {
+    variantColor?: 'light' | 'dark'
     className?: string
     children: React.ReactNode
 }
 
-export default function Button(props: ButtonProps) {
-    const { type = 'link', variant = 'light', className = '', children, ...restProps } = props
+type ButtonProps = BaseButtonProps & ButtonHTMLAttributes<HTMLButtonElement>
+
+type ButtonLinkProps = BaseButtonProps & LinkProps
+
+const baseClasses =
+    'inline-block px-6 py-3 text-xs tracking-widest text-white uppercase bg-brand-primary hover:bg-brand-primaryHover focus:bg-brand-primaryFocus transition-colors'
+
+export function Button(props: ButtonProps) {
+    const { variantColor = 'light', className = '', children, ...restProps } = props
 
     return (
-        <Link
-            className={`inline-block px-6 py-3 text-xs font-thin tracking-widest text-white uppercase bg-brand-primary hover:bg-brand-primary/90 transition-colors ${className}`}
-            {...restProps}
-        >
+        <button className={`${baseClasses} ${className}`} {...restProps}>
+            {children}
+        </button>
+    )
+}
+
+export function ButtonLink(props: ButtonLinkProps) {
+    const { variantColor = 'light', className = '', children, ...restProps } = props
+
+    return (
+        <Link className={`${baseClasses} ${className}`} {...restProps}>
             {children}
         </Link>
     )

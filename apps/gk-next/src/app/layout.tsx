@@ -16,6 +16,8 @@ const raleway = Raleway({
     display: 'swap',
 })
 
+export const revalidate = 60
+
 export const metadata = {
     title: 'Garrett Kitchens',
 }

@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import { Button } from 'components/button/Button'
+
 export const metadata = {
     title: 'Contact Us | Garrett Kitchens',
 }
@@ -146,12 +148,7 @@ export default function Page() {
                                 </div>
                             </div>
                             <div className="flex justify-end pt-8 mt-10 border-t border-gray-900/10">
-                                <button
-                                    type="submit"
-                                    className="rounded-md bg-brand-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-brand-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
-                                >
-                                    Send message
-                                </button>
+                                <Button type="submit">Send message</Button>
                             </div>
                         </form>
                     </div>
