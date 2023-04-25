@@ -150,9 +150,9 @@ export default function Page() {
                             empower our customers to be bold with their decisions and love their
                             unique new kitchens.
                         </p>
-                        <Button href="/blog" className="mt-4 w-fit">
+                        <ButtonLink href="/blog" className="mt-4 w-fit">
                             Start Your Journey
-                        </Button>
+                        </ButtonLink>
                     </div>
                 </div>
             </section>
@@ -246,7 +246,7 @@ export default function Page() {
 
                     <div className="w-full space-y-4 md:w-1/2">
                         <h3 className="text-2xl text-gray-900 lg:text-4xl lg:mb-8">
-                            Build a Kitchen That You'll Love
+                            Build a Kitchen That You&apos;ll Love
                         </h3>
 
                         <ol className="p-4 space-y-2 text-lg list-disc list-inside lg:text-xl md:space-y-6">
@@ -255,7 +255,7 @@ export default function Page() {
                             <li>A kitchen you feel proud of</li>
                             <li>A kitchen that your friends envy</li>
                             <li>A kitchen that you feel happy in</li>
-                            <li>A kitchen that's yours</li>
+                            <li>A kitchen that&apos;s yours</li>
                         </ol>
 
                         <ButtonLink href="/learn-more" className=" w-fit">
