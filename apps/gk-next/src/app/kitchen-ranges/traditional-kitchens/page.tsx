@@ -1,6 +1,6 @@
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import KitchenRangeContent from 'components/kitchen-ranges/KitchenRangeContent'
-import { Kitchen } from 'types/kitchen'
+import KitchenStoreInitializer from 'components/util/KitchenStoreInitializer'
 import { getAllKitchens } from 'utils/contentful/client'
 
 export const metadata = {
@@ -42,12 +42,13 @@ const content = {
 }
 
 export default async function Page() {
-    const kitchens: Kitchen[] = await getAllKitchens()
+    const kitchens = await getAllKitchens()
 
     return (
         <>
+            <KitchenStoreInitializer kitchens={kitchens} />
             <Breadcrumbs breadcrumbs={breadcrumbs} />
-            <KitchenRangeContent kitchens={kitchens} {...content} />
+            <KitchenRangeContent {...content} />
         </>
     )
 }

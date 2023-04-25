@@ -7,13 +7,12 @@ import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PlusIcon } from '@heroicons/react/20/solid'
 
-import type { Kitchen } from 'types/kitchen'
 import { classNames } from 'utils/tailwind/classNames'
+import { useKitchens } from 'stores/kitchen'
 
 type KitchenRangeContentProps = {
     title: string
     description: string
-    kitchens: Kitchen[]
     filters: {
         id: string
         name: string
@@ -25,7 +24,9 @@ type KitchenRangeContentProps = {
 }
 
 const KitchenRangeContent = (props: KitchenRangeContentProps) => {
-    const { title, description, kitchens, filters } = props
+    const { title, description, filters } = props
+
+    const { kitchens } = useKitchens()
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
     return (
