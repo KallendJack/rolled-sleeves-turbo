@@ -99,11 +99,9 @@ export default function Page() {
                         className="object-cover object-center w-full h-full"
                     />
                 </div>
-                <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
+                <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-75" />
                 <div className="relative flex flex-col items-center max-w-3xl px-6 py-32 mx-auto text-center sm:py-64 lg:px-0">
-                    <h1 className="text-4xl tracking-tight text-white lg:text-6xl">
-                        We Design & Install Inspiring Kitchens
-                    </h1>
+                    <h1 className="text-4xl lg:text-6xl">We Design & Install Inspiring Kitchens</h1>
                     <p className="mt-4 text-xl text-white">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae fugit
                         minus a porro. Quis recusandae esse rerum reprehenderit fuga. Deleniti
@@ -113,16 +111,16 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className=" bg-white w-full">
+            <section className="w-full bg-white ">
                 <dl className="grid grid-cols-3">
                     {features.map((feature) => (
                         <div
                             key={feature.name}
-                            className="flex flex-col sm:flex-row justify-center gap-4 items-center border border-gray-900 p-6"
+                            className="flex flex-col items-center justify-center gap-4 p-6 border border-gray-900 sm:flex-row"
                         >
-                            <img className="bg-red-400 rounded-full w-5 h-5" src="" alt="" />
+                            <img className="w-5 h-5 bg-red-400 rounded-full" src="" alt="" />
 
-                            <dt className="flex text-md md:text-lg items-center text-base font-semibold leading-7 text-center text-gray-600 gap-x-3">
+                            <dt className="flex items-center text-base font-semibold leading-7 text-center text-gray-600 text-md md:text-lg gap-x-3">
                                 {feature.name}
                             </dt>
                         </div>
@@ -136,10 +134,7 @@ export default function Page() {
             >
                 <div className="relative px-6 lg:px-16">
                     <div className="relative flex flex-col items-center max-w-3xl mx-auto text-center">
-                        <h2
-                            id="comfort-heading"
-                            className="text-2xl tracking-tight text-grey-800 sm:text-4xl"
-                        >
+                        <h2 id="comfort-heading" className="text-2xl sm:text-4xl">
                             Do you feel like your kitchen is missing something? Missing your peronal
                             touch? Missing fun?
                         </h2>
@@ -150,7 +145,7 @@ export default function Page() {
                         </p>
                         <Link
                             href="/blog"
-                            className="block w-full px-8 py-3 mt-8 text-base font-medium text-white bg-brand-primary border border-transparent rounded-md hover:bg-gray-100 sm:w-auto"
+                            className="block w-full px-8 py-3 mt-8 text-base font-medium text-white border border-transparent rounded-md bg-brand-primary hover:bg-gray-100 sm:w-auto"
                         >
                             Start Your Journey
                         </Link>
@@ -162,12 +157,9 @@ export default function Page() {
                 aria-labelledby="collection-heading"
                 className="max-w-3xl px-4 pb-24 mx-auto md:px-6 lg:max-w-7xl lg:px-8"
             >
-                <div className="flex flex-col md:flex-row justify-between">
+                <div className="flex flex-col justify-between md:flex-row">
                     <div>
-                        <h2
-                            id="collection-heading"
-                            className="text-2xl tracking-tight text-gray-900"
-                        >
+                        <h2 id="collection-heading" className="text-2xl">
                             Achieve your dream kitchen in 4 easy steps
                         </h2>
                         <p className="mt-4 text-base text-gray-500">
@@ -178,7 +170,7 @@ export default function Page() {
 
                     <Link
                         href="/blog"
-                        className="block w-fit px-8 py-3 mt-8 text-base font-medium text-white bg-brand-primary border border-transparent rounded-md hover:bg-gray-100 sm:w-auto"
+                        className="block px-8 py-3 mt-8 text-base font-medium text-white border border-transparent rounded-md w-fit bg-brand-primary hover:bg-gray-100 sm:w-auto"
                     >
                         Find Out More
                     </Link>
@@ -189,7 +181,7 @@ export default function Page() {
                         <Link
                             key={collection.name}
                             href={collection.href}
-                            className="block group  text-center"
+                            className="block text-center group"
                         >
                             <div
                                 aria-hidden="true"
@@ -203,12 +195,10 @@ export default function Page() {
                                 />
                             </div>
 
-                            <div className="border-x border-b border-gray-400 h-40">
-                                <h3 className="pt-4 text-xl sm:text-base font-bold text-gray-900">
-                                    {collection.name}
-                                </h3>
+                            <div className="h-40 border-b border-gray-400 border-x">
+                                <h3 className="pt-4 text-xl sm:text-base">{collection.name}</h3>
 
-                                <p className="mt-2 sm:text-sm text-gray-500 px-8">
+                                <p className="px-8 mt-2 text-gray-500 sm:text-sm">
                                     {collection.description}
                                 </p>
                             </div>
@@ -217,29 +207,27 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className=" bg-white w-full">
-                <dl className="grid grid-cols-3">
+            <section className="w-full bg-white ">
+                <div className="grid grid-cols-3">
                     {features.map((feature) => (
                         <div
                             key={feature.name}
-                            className="flex flex-col sm:flex-row justify-center gap-4 items-center border border-gray-900 p-6"
+                            className="flex flex-col items-center justify-center gap-4 p-6 border border-gray-900 sm:flex-row"
                         >
-                            <img className="bg-red-400 rounded-full w-5 h-5" src="" alt="" />
+                            <img className="w-5 h-5 bg-red-400 rounded-full" src="" alt="" />
 
-                            <dt className="flex text-md md:text-lg items-center text-base font-semibold leading-7 text-center text-gray-600 gap-x-3">
+                            <dt className="flex items-center text-base font-semibold leading-7 text-center text-gray-600 text-md md:text-lg gap-x-3">
                                 {feature.name}
                             </dt>
                         </div>
                     ))}
-                </dl>
+                </div>
             </section>
 
-            <section className="px-4 mx-auto max-w-7xl py-24 md:px-6 lg:px-8">
+            <section className="px-4 py-24 mx-auto max-w-7xl md:px-6 lg:px-8">
                 <div className="max-w-xl mx-auto text-center">
-                    <h2 className="text-lg leading-8 tracking-tight text-brand-primary">
-                        Testimonials
-                    </h2>
-                    <p className="mt-2 text-3xl tracking-tight text-gray-900 sm:text-4xl">
+                    <h2 className="text-lg leading-8">Testimonials</h2>
+                    <p className="mt-2 text-3xl text-gray-900 sm:text-4xl">
                         We have worked with thousands of amazing people
                     </p>
                 </div>
@@ -296,9 +284,7 @@ export default function Page() {
                         <div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:pr-8 xl:pl-40 xl:py-24">
                             <figure className="relative isolate">
                                 <div className="leading-8 text-white sm:leading-9">
-                                    <h2 className="mb-8 text-3xl tracking-tight sm:text-4xl">
-                                        Kitchen Brochure
-                                    </h2>
+                                    <h2 className="mb-8 text-3xl sm:text-4xl">Kitchen Brochure</h2>
                                     <p className="text-xl">
                                         Gravida quam mi erat tortor neque molestie. Auctor aliquet
                                         at porttitor a enim nunc suscipit tincidunt nunc. Et non

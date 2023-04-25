@@ -61,7 +61,7 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                             >
                                 <Dialog.Panel className="relative flex flex-col w-full h-full max-w-xs py-4 pb-6 ml-auto overflow-y-auto bg-white shadow-xl">
                                     <div className="flex items-center justify-between px-4">
-                                        <h2 className="text-lg text-gray-900">Filters</h2>
+                                        <h2 className="text-lg">Filters</h2>
                                         <button
                                             type="button"
                                             className="flex items-center justify-center w-10 h-10 p-2 -mr-2 text-gray-400 hover:text-gray-500"
@@ -139,7 +139,7 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                 </Transition.Root>
                 <div className="px-4 mx-auto md:px-6 lg:max-w-7xl lg:px-8">
                     <div className="pt-24 pb-10 border-b border-gray-200">
-                        <h1 className="text-4xl tracking-tight text-gray-900">{title}</h1>
+                        <h1 className="text-4xl">{title}</h1>
                         <p className="mt-4 text-base text-gray-500">{description}</p>
                     </div>
                     <div className="pt-12 pb-24 lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
@@ -217,7 +217,7 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                             />
                                         </div>
                                         <div className="flex flex-col flex-1 p-4 space-y-2">
-                                            <h3 className="text-sm text-gray-900">
+                                            <h3 className="text-sm">
                                                 <Link
                                                     href={`/kitchen-ranges/${kitchen.fields.type}/${kitchen.fields.slug}`}
                                                 >
