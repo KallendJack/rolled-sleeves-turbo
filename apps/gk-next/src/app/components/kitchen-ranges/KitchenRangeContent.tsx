@@ -227,7 +227,7 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                         <div className="flex flex-col flex-1 p-4 space-y-2">
                                             <h3 className="text-sm text-gray-900">
                                                 <Link
-                                                    href={`/kitchen-ranges/${kitchen.fields.type}/${kitchen.fields.slug}`}
+                                                    href={`/kitchen-ranges/${kitchen.fields.type}-kitchens/${kitchen.fields.slug}`}
                                                 >
                                                     <span
                                                         aria-hidden="true"
