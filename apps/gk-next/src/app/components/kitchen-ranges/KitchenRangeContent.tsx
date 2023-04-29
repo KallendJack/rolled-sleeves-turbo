@@ -11,7 +11,8 @@ import { classNames } from 'utils/tailwind/classNames'
 import { useKitchens } from 'stores/kitchen'
 import { Button } from 'components/button/Button'
 
-type KitchenRangeContentProps = {
+export type KitchenRangeContentProps = {
+    type: 'traditional' | 'modern'
     title: string
     description: string
     filters: {
@@ -25,9 +26,10 @@ type KitchenRangeContentProps = {
 }
 
 const KitchenRangeContent = (props: KitchenRangeContentProps) => {
-    const { title, description, filters } = props
+    const { type, title, description, filters } = props
 
-    const { kitchens } = useKitchens()
+    const { getKitchensByType } = useKitchens()
+    const kitchens = getKitchensByType(type)
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [kitchensToShowCount, setKitchensToShowCount] = useState(6)
 
