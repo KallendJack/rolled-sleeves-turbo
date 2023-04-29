@@ -1,7 +1,10 @@
+'use-client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { ButtonLink } from 'components/button/Button'
+import { Carousel } from './components/carousel/Carousel'
 
 export const metadata = {
     title: 'Home | Garrett Kitchens',
@@ -109,6 +112,7 @@ export default function Page() {
                         minus a porro. Quis recusandae esse rerum reprehenderit fuga. Deleniti
                         provident.
                     </p>
+
                     <ButtonLink href="/contact-us" className="mt-4">
                         Start Your Journey
                     </ButtonLink>
@@ -310,8 +314,22 @@ export default function Page() {
                 </div>
             </section>
 
+            <section className="w-full max-w-4xl px-4 py-12 mx-auto lg:py-24 md:px-6 lg:max-w-7xl lg:px-8">
+                <div className="flex flex-col">
+                    <h2 id="collection-heading" className="text-2xl tracking-tight text-gray-900">
+                        Testimonials
+                    </h2>
+
+                    <Carousel></Carousel>
+
+                    <ButtonLink href="/contact-us" className="mt-12 w-fit self-center">
+                        Start Your Journey
+                    </ButtonLink>
+                </div>
+            </section>
+
             <section className="pt-24 mx-auto md:max-w-7xl lg:py-32 lg:px-8">
-                <div className="bg-brand-primaryBg sm:pb-24 lg:pb-0">
+                <div className="bg-brand-primaryBg pb-24 lg:pb-0">
                     <div className="flex flex-col items-center px-6 mx-auto max-w-7xl gap-x-8 gap-y-10 sm:gap-y-8 lg:px-8 lg:flex-row lg:items-stretch">
                         <div className="w-full max-w-2xl -mt-16 lg:-mb-16 lg:w-96 lg:flex-none">
                             <div className="relative aspect-[2/1] h-full lg:mx-0 lg:aspect-auto">
