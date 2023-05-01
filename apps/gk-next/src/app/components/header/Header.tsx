@@ -52,7 +52,7 @@ export default function Header() {
     return (
         <header className="bg-white border-b border-gray-200">
             <nav
-                className="flex items-center justify-between p-4 mx-auto md:p-6 max-w-7xl lg:px-8"
+                className="flex items-center justify-between p-4 mx-auto md:p-6 max-w-7xl xl:px-8"
                 aria-label="Global"
             >
                 <div className="flex lg:flex-1">
@@ -209,7 +209,7 @@ export default function Header() {
                 onClose={setMobileMenuOpen}
             >
                 <div className="fixed inset-0 z-10" />
-                <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full p-4 overflow-y-auto bg-white md:p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <a href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Garrett Kitchens</span>

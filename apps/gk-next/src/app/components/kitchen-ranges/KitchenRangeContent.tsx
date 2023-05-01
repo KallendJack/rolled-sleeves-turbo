@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PlusIcon } from '@heroicons/react/20/solid'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import { classNames } from 'utils/tailwind/classNames'
 import { useKitchens } from 'stores/kitchen'
@@ -219,7 +220,7 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                         <div className="relative bg-gray-200 group-hover:opacity-75 h-96">
                                             <Image
                                                 fill
-                                                src={`https:${kitchen.fields.image.fields.file.url}`}
+                                                src={`https:${kitchen.fields.images[0].fields.file.url}`}
                                                 alt={kitchen.fields.name}
                                                 className="object-cover object-center w-full h-full sm:h-full sm:w-full"
                                             />
@@ -227,7 +228,7 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                         <div className="flex flex-col flex-1 p-4 space-y-2">
                                             <h3 className="text-sm text-gray-900">
                                                 <Link
-                                                    href={`/kitchen-ranges/${kitchen.fields.type}/${kitchen.fields.slug}`}
+                                                    href={`/kitchen-ranges/${kitchen.fields.type}-kitchens/${kitchen.fields.slug}`}
                                                 >
                                                     <span
                                                         aria-hidden="true"
@@ -236,14 +237,15 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                                     {kitchen.fields.name}
                                                 </Link>
                                             </h3>
-                                            <p className="text-sm text-gray-500">
-                                                {kitchen.fields.description}
+                                            <p className="space-y-3 text-sm text-gray-500">
+                                                {documentToReactComponents(
+                                                    kitchen.fields.description as any,
+                                                )}
                                             </p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
-
                             {!allKitchensShown && (
                                 <div className="flex justify-center mt-8">
                                     <Button

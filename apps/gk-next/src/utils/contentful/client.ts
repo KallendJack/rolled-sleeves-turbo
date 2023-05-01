@@ -23,3 +23,20 @@ export const getAllKitchens = async () => {
 
     return kitchens as Kitchen[]
 }
+
+export const getKitchenBySlug = async (slug: string) => {
+    const res = await client.getEntries({
+        content_type: 'kitchen',
+        'fields.slug': slug,
+    })
+
+    if (!res) {
+        throw new Error('Failed to fetch data')
+    }
+
+    const kitchen = res.items[0]
+
+    useKitchens.setState({ kitchen: kitchen as Kitchen })
+
+    return kitchen as Kitchen
+}

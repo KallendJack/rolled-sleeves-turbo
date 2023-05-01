@@ -6,16 +6,17 @@ import { useKitchens } from 'stores/kitchen'
 import type { Kitchen } from 'types/kitchen'
 
 type KitchenStoreInitializerProps = {
-    kitchens: Kitchen[]
+    kitchens?: Kitchen[]
+    kitchen?: Kitchen
 }
 
 const KitchenStoreInitializer = (props: KitchenStoreInitializerProps) => {
-    const { kitchens } = props
+    const { kitchens = [], kitchen = null } = props
 
     const initialized = useRef(false)
 
     if (!initialized.current) {
-        useKitchens.setState({ kitchens })
+        useKitchens.setState({ kitchens, kitchen })
         initialized.current = true
     }
 
