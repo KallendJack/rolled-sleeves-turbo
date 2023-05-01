@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Disclosure, RadioGroup, Tab } from '@headlessui/react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import { useKitchens } from 'stores/kitchen'
 import { classNames } from 'utils/tailwind/classNames'
@@ -141,10 +142,9 @@ export default function KitchenContent() {
                             <div className="mt-6">
                                 <h3 className="sr-only">Description</h3>
 
-                                <div
-                                    className="space-y-6 text-base text-gray-700"
-                                    dangerouslySetInnerHTML={{ __html: kitchen.description }}
-                                />
+                                <div className="space-y-6 text-base text-gray-700">
+                                    {documentToReactComponents(test.fields.description as any)}
+                                </div>
                             </div>
 
                             <form className="mt-6">

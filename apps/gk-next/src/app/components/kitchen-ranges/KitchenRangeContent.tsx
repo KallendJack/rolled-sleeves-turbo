@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PlusIcon } from '@heroicons/react/20/solid'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import { classNames } from 'utils/tailwind/classNames'
 import { useKitchens } from 'stores/kitchen'
@@ -236,8 +237,10 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                                     {kitchen.fields.name}
                                                 </Link>
                                             </h3>
-                                            <p className="text-sm text-gray-500">
-                                                {kitchen.fields.description}
+                                            <p className="space-y-3 text-sm text-gray-500">
+                                                {documentToReactComponents(
+                                                    kitchen.fields.description as any,
+                                                )}
                                             </p>
                                         </div>
                                     </div>
