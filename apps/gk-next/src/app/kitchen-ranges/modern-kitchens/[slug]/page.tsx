@@ -1,7 +1,7 @@
 import Breadcrumbs from 'components/breadcrumbs/Breadcrumbs'
 import KitchenContent from 'components/kitchen-ranges/KitchenContent'
 import KitchenStoreInitializer from 'components/util/KitchenStoreInitializer'
-import { getKitchenBySlug } from 'utils/contentful/client'
+import { getAllKitchens, getKitchenBySlug } from 'utils/contentful/client'
 
 export const metadata = {
     title: 'Modern Kitchens | Garrett Kitchens',
@@ -15,10 +15,11 @@ const breadcrumbs = [
 
 export default async function Page({ params }: { params: { slug: string } }) {
     const kitchen = await getKitchenBySlug(params.slug)
+    const kitchens = await getAllKitchens()
 
     return (
         <>
-            <KitchenStoreInitializer kitchen={kitchen} />
+            <KitchenStoreInitializer kitchens={kitchens} kitchen={kitchen} />
             <Breadcrumbs breadcrumbs={breadcrumbs} />
             <KitchenContent />
         </>

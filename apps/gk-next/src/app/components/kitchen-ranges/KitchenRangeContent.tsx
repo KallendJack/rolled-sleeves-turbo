@@ -220,7 +220,7 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                         <div className="relative bg-gray-200 group-hover:opacity-75 h-96">
                                             <Image
                                                 fill
-                                                src={`https:${kitchen.fields.image.fields.file.url}`}
+                                                src={`https:${kitchen.fields.images[0].fields.file.url}`}
                                                 alt={kitchen.fields.name}
                                                 className="object-cover object-center w-full h-full sm:h-full sm:w-full"
                                             />
@@ -246,7 +246,6 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                     </div>
                                 ))}
                             </div>
-
                             {!allKitchensShown && (
                                 <div className="flex justify-center mt-8">
                                     <Button
