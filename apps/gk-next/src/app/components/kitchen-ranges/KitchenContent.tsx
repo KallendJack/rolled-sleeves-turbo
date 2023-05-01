@@ -8,6 +8,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useKitchens } from 'stores/kitchen'
 import { classNames } from 'utils/tailwind/classNames'
 import { ButtonLink } from 'components/button/Button'
+import Brochure from 'components/brochure/Brochure'
 
 export default function KitchenContent() {
     const { kitchen, kitchens } = useKitchens()
@@ -29,14 +30,14 @@ export default function KitchenContent() {
                                     {kitchen.fields.images.map((image, index) => (
                                         <Tab
                                             key={index}
-                                            className="relative flex items-center justify-center h-24 text-sm font-medium text-gray-900 uppercase bg-white rounded-md cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
+                                            className="relative flex items-center justify-center h-24 text-sm text-gray-900 uppercase bg-white cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
                                         >
                                             {({ selected }) => (
                                                 <>
                                                     <span className="sr-only">
                                                         {image.fields.description}
                                                     </span>
-                                                    <span className="absolute inset-0 overflow-hidden rounded-md">
+                                                    <span className="absolute inset-0 overflow-hidden">
                                                         <Image
                                                             src={`https:${image.fields.file.url}`}
                                                             alt={image.fields.description}
@@ -49,7 +50,7 @@ export default function KitchenContent() {
                                                             selected
                                                                 ? 'ring-brand-primary'
                                                                 : 'ring-transparent',
-                                                            'pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-2',
+                                                            'pointer-events-none absolute inset-0 ring-2 ring-offset-2',
                                                         )}
                                                         aria-hidden="true"
                                                     />
@@ -65,7 +66,7 @@ export default function KitchenContent() {
                                         <Image
                                             src={`https:${image.fields.file.url}`}
                                             alt={image.fields.description}
-                                            className="object-cover object-center w-full h-full sm:rounded-lg"
+                                            className="object-cover object-center w-full h-full"
                                             fill
                                         />
                                     </Tab.Panel>
@@ -103,7 +104,7 @@ export default function KitchenContent() {
                                                                 open
                                                                     ? 'text-brand-primary'
                                                                     : 'text-gray-900',
-                                                                'text-sm font-medium',
+                                                                'text-sm',
                                                             )}
                                                         >
                                                             At a glance
@@ -144,7 +145,7 @@ export default function KitchenContent() {
                                                                 open
                                                                     ? 'text-brand-primary'
                                                                     : 'text-gray-900',
-                                                                'text-sm font-medium',
+                                                                'text-sm',
                                                             )}
                                                         >
                                                             Stocked Colours
@@ -197,7 +198,7 @@ export default function KitchenContent() {
                                                                 open
                                                                     ? 'text-brand-primary'
                                                                     : 'text-gray-900',
-                                                                'text-sm font-medium',
+                                                                'text-sm',
                                                             )}
                                                         >
                                                             Other Colours
@@ -255,7 +256,7 @@ export default function KitchenContent() {
                             {filteredKitchens.map((kitchen, index) => (
                                 <div key={index}>
                                     <div className="relative">
-                                        <div className="relative w-full overflow-hidden rounded-lg h-72">
+                                        <div className="relative w-full overflow-hidden h-72">
                                             <Image
                                                 src={`https:${kitchen.fields.images[0].fields.file.url}`}
                                                 alt={kitchen.fields.images[0].fields.description}
@@ -264,14 +265,14 @@ export default function KitchenContent() {
                                             />
                                         </div>
                                         <div className="relative mt-4">
-                                            <h3 className="text-sm font-medium text-gray-900">
+                                            <h3 className="text-sm text-gray-900">
                                                 {kitchen.fields.name}
                                             </h3>
                                             <p className="mt-1 text-sm text-gray-500 capitalize">
                                                 {kitchen.fields.type}
                                             </p>
                                         </div>
-                                        <div className="absolute inset-x-0 top-0 flex items-end justify-end p-4 overflow-hidden rounded-lg h-72">
+                                        <div className="absolute inset-x-0 top-0 flex items-end justify-end p-4 overflow-hidden h-72">
                                             <div
                                                 aria-hidden="true"
                                                 className="absolute inset-x-0 bottom-0 opacity-50 h-36 bg-gradient-to-t from-black"
@@ -288,6 +289,15 @@ export default function KitchenContent() {
                             ))}
                         </div>
                     </section>
+                    <Brochure
+                        title="Kitchen Brochure"
+                        image="/assets/home/kitchen-brochure.png"
+                        description={`With our essential kitchen planning guide, it doesn't have to
+                be. We'll walk you through some of our customer's commonly
+                asked questions and guide you through our process of creating your
+                very own unique kitchen.`}
+                        button={<ButtonLink href="/learn-more">Request a Brochure</ButtonLink>}
+                    />
                 </div>
             </div>
         </div>

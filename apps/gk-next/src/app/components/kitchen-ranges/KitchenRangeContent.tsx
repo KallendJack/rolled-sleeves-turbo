@@ -215,7 +215,7 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                 {kitchensToShow.map((kitchen, index) => (
                                     <div
                                         key={index}
-                                        className="relative flex flex-col overflow-hidden bg-white border border-gray-200 rounded-lg group"
+                                        className="relative flex flex-col overflow-hidden bg-white border border-gray-200 group"
                                     >
                                         <div className="relative bg-gray-200 group-hover:opacity-75 h-96">
                                             <Image
