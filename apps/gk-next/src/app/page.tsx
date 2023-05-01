@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { ButtonLink } from 'components/button/Button'
-import { Carousel } from './components/carousel/Carousel'
+import Brochure from 'components/brochure/Brochure'
 
 export const metadata = {
     title: 'Home | Garrett Kitchens',
@@ -165,7 +165,7 @@ export default function Page() {
                 aria-labelledby="collection-heading"
                 className="max-w-4xl px-4 pb-24 mx-auto md:px-6 lg:max-w-7xl lg:px-8"
             >
-                <div className="flex flex-col md:items-end justify-between md:flex-row">
+                <div className="flex flex-col justify-between md:items-end md:flex-row">
                     <div className="md:w-3/5">
                         <h2
                             id="collection-heading"
@@ -269,42 +269,42 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className="bg-white py-12 md:py-32">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
+            <section className="py-12 bg-white md:py-32">
+                <div className="px-6 mx-auto max-w-7xl lg:px-8">
+                    <h2 className="text-lg font-semibold leading-8 text-center text-gray-900">
                         Trusted by the worlds most innovative teams
                     </h2>
-                    <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                    <div className="grid items-center max-w-lg grid-cols-4 mx-auto mt-10 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                         <Image
-                            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                            className="object-contain w-full col-span-2 max-h-12 lg:col-span-1"
                             src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
                             alt="Transistor"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                            className="object-contain w-full col-span-2 max-h-12 lg:col-span-1"
                             src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
                             alt="Reform"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                            className="object-contain w-full col-span-2 max-h-12 lg:col-span-1"
                             src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
                             alt="Tuple"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+                            className="object-contain w-full col-span-2 max-h-12 sm:col-start-2 lg:col-span-1"
                             src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
                             alt="SavvyCal"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+                            className="object-contain w-full col-span-2 col-start-2 max-h-12 sm:col-start-auto lg:col-span-1"
                             src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
                             alt="Statamic"
                             width={158}
@@ -313,56 +313,15 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-
-            <section className="w-full max-w-4xl px-4 py-12 mx-auto lg:py-24 md:px-6 lg:max-w-7xl lg:px-8">
-                <div className="flex flex-col">
-                    <h2 id="collection-heading" className="text-2xl tracking-tight text-gray-900">
-                        Testimonials
-                    </h2>
-
-                    <Carousel></Carousel>
-
-                    <ButtonLink href="/contact-us" className="mt-12 w-fit self-center">
-                        Start Your Journey
-                    </ButtonLink>
-                </div>
-            </section>
-
-            <section className="pt-24 mx-auto md:max-w-7xl lg:py-32 lg:px-8">
-                <div className="bg-brand-primaryBg pb-24 lg:pb-0">
-                    <div className="flex flex-col items-center px-6 mx-auto max-w-7xl gap-x-8 gap-y-10 sm:gap-y-8 lg:px-8 lg:flex-row lg:items-stretch">
-                        <div className="w-full max-w-2xl -mt-16 lg:-mb-16 lg:w-96 lg:flex-none">
-                            <div className="relative aspect-[2/1] h-full lg:mx-0 lg:aspect-auto">
-                                <div className="absolute inset-0 object-cover w-full h-full shadow-2xl lg:w-2/6 xl:w-2/5 rounded-2xl bg-brand-primaryBg">
-                                    <Image
-                                        fill
-                                        src="/assets/home/kitchen-brochure.png"
-                                        alt="Brochure"
-                                        className="object-cover rounded-2xl"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="w-full max-w-2xl lg:max-w-none lg:flex-auto lg:pr-6 xl:pl-40 lg:py-24">
-                            <div className="leading-8 space-y-4 lg:pl-8 lg:space-y-8 text-white sm:leading-9">
-                                <h2 className="tracking-tight text-4xl">
-                                    Planning your dream kitchen can be daunting.
-                                </h2>
-
-                                <p className="text-base xl:text-lg">
-                                    With our essential kitchen planning guide, it doesn&apos;t have
-                                    to be. We&apos;ll walk you through some of our customer&apos;s
-                                    commonly asked questions and guide you through our process of
-                                    creating your very own unique kitchen.
-                                </p>
-
-                                <ButtonLink href="/learn-more">Download Guide</ButtonLink>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Brochure
+                title="Planning your dream kitchen can be daunting."
+                image="/assets/home/kitchen-brochure.png"
+                description={`With our essential kitchen planning guide, it doesn't have to
+                be. We'll walk you through some of our customer's commonly
+                asked questions and guide you through our process of creating your
+                very own unique kitchen.`}
+                button={<ButtonLink href="/learn-more">Download Guide</ButtonLink>}
+            />
         </>
     )
 }
