@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import { ButtonLink } from 'components/button/Button'
 import Brochure from 'components/brochure/Brochure'
+import { Carousel } from './components/carousel/Carousel'
 
 export const metadata = {
     title: 'Home | Garrett Kitchens',
@@ -124,11 +125,11 @@ export default function Page() {
                     {features.map((feature) => (
                         <div
                             key={feature.name}
-                            className="flex flex-col items-center justify-center gap-4 p-6 border border-gray-900 sm:flex-row"
+                            className="flex flex-col items-center justify-center gap-4 p-6 border border-gray-400 sm:flex-row"
                         >
                             <img className="w-5 h-5 bg-red-400 rounded-full" src="" alt="" />
 
-                            <dt className="flex items-center text-base font-semibold leading-7 text-center text-gray-600 text-md md:text-lg gap-x-3">
+                            <dt className="flex items-center text-base font-semibold leading-7 text-center text-gray-500 text-md md:text-lg gap-x-3">
                                 {feature.name}
                             </dt>
                         </div>
@@ -149,7 +150,7 @@ export default function Page() {
                             Do you feel like your kitchen is missing something? Missing your peronal
                             touch? Missing fun?
                         </h2>
-                        <p className="mt-3 text-lg text-grey-800">
+                        <p className="mt-3 text-lg text-grey-500">
                             We understand most kitchens are uninspiring which is why we guide and
                             empower our customers to be bold with their decisions and love their
                             unique new kitchens.
@@ -223,11 +224,11 @@ export default function Page() {
                     {features.map((feature) => (
                         <div
                             key={feature.name}
-                            className="flex flex-col items-center justify-center gap-4 p-6 border border-gray-900 sm:flex-row"
+                            className="flex flex-col items-center justify-center gap-4 p-6 border border-gray-400 sm:flex-row"
                         >
                             <img className="w-5 h-5 bg-red-400 rounded-full" src="" alt="" />
 
-                            <dt className="flex items-center text-base font-semibold leading-7 text-center text-gray-600 text-md md:text-lg gap-x-3">
+                            <dt className="flex items-center text-base font-semibold leading-7 text-center text-gray-500 text-md md:text-lg gap-x-3">
                                 {feature.name}
                             </dt>
                         </div>
@@ -253,7 +254,7 @@ export default function Page() {
                             Build a Kitchen That You&apos;ll Love
                         </h3>
 
-                        <ol className="p-4 space-y-2 text-lg list-disc list-inside lg:text-xl md:space-y-6">
+                        <ol className="p-4 space-y-2 text-lg list-disc list-inside text-gray-500 lg:text-xl md:space-y-6">
                             <li>A kitchen that you feel happy in</li>
                             <li>A kitchen that you love to cook in</li>
                             <li>A kitchen you feel proud of</li>
@@ -269,7 +270,7 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className="py-12 bg-white md:py-32">
+            <section className="py-12 bg-white">
                 <div className="px-6 mx-auto max-w-7xl lg:px-8">
                     <h2 className="text-lg font-semibold leading-8 text-center text-gray-900">
                         Trusted by the worlds most innovative teams
@@ -313,6 +314,21 @@ export default function Page() {
                     </div>
                 </div>
             </section>
+
+            <section className="w-full max-w-4xl px-4 py-12 mx-auto lg:py-24 md:px-6 lg:max-w-7xl lg:px-8">
+                <div className="flex flex-col">
+                    <h2 id="collection-heading" className="text-2xl tracking-tight text-gray-900">
+                        Testimonials
+                    </h2>
+
+                    <Carousel></Carousel>
+
+                    <ButtonLink href="/contact-us" className="mt-8 w-fit self-center">
+                        Start Your Journey
+                    </ButtonLink>
+                </div>
+            </section>
+
             <Brochure
                 title="Planning your dream kitchen can be daunting."
                 image="/assets/home/kitchen-brochure.png"

@@ -24,7 +24,7 @@ export const Carousel = () => {
     return (
         <div className="embla overflow-hidden">
             <div className="flex justify-between">
-                <p className="mt-4 text-base text-gray-500">
+                <p className="mt-2 text-base text-gray-500">
                     What our customers have to say about us.
                 </p>
 
@@ -40,11 +40,11 @@ export const Carousel = () => {
             </div>
 
             <div className="embla__viewport" ref={emblaRef}>
-                <div className="embla__container flex mt-20">
+                <div className="embla__container flex mt-12">
                     <div className="embla__slide min-w-0 flex-[0_0_100%]">
                         <div className="flex justify-between gap-12">
                             <div className="w-2/4 space-y-8">
-                                <p>
+                                <p className="text-gray-500">
                                     Our simple 4 step process offers our customers a stress-free
                                     journey in achieving their dream kitchen, unique to their
                                     desires. Our simple 4 step process offers our customers a
@@ -52,7 +52,7 @@ export const Carousel = () => {
                                     their desires.
                                 </p>
 
-                                <h3 className="text-2xl font-semibold">John Doe</h3>
+                                <h3 className="text-2xl font-semibold text-gray-900">John Doe</h3>
                             </div>
 
                             <div className="w-1/2 relative h-80">
