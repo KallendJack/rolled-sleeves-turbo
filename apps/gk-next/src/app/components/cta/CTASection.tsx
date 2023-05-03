@@ -16,11 +16,11 @@ export default function CTASection(props: CTASectionProps) {
     return (
         <section
             className={twMerge(
-                'pt-sm mx-auto overflow-hidden md:py-sm md:max-w-7xl lg:py-lg lg:px-8',
+                'pt-12 mx-auto overflow-hidden md:py-12 md:max-w-7xl lg:py-24 lg:px-8',
                 className,
             )}
         >
-            <div className="pb-16 md:pb-6 lg:pb-0 bg-brand-greyBg">
+            <div className="pb-sm md:pb-6 lg:pb-0 bg-brand-greyBg">
                 <div className="flex flex-col items-center px-4 mx-auto md:px-6 max-w-7xl gap-x-8 gap-y-10 sm:gap-y-8 lg:px-8 lg:flex-row lg:items-stretch">
                     <div
                         className={`w-full max-w-2xl -mt-16 lg:-mb-16 lg:w-96 lg:flex-none ${
