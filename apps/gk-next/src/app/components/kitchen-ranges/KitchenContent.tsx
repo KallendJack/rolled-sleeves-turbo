@@ -78,13 +78,14 @@ export default function KitchenContent() {
                             <h1 className="text-3xl tracking-tight text-gray-900">
                                 {kitchen.fields.name}
                             </h1>
-                            <div className="mt-3">
+                            <div className="mt-2">
                                 <h2 className="sr-only">Kitchen information</h2>
                             </div>
-
+                            <div className="text-xl text-gray-500 capitalize">
+                                {kitchen.fields.type} Kitchen Style
+                            </div>
                             <div className="mt-6">
                                 <h3 className="sr-only">Description</h3>
-
                                 <div className="space-y-6 text-base text-gray-700">
                                     {documentToReactComponents(kitchen.fields.description as any)}
                                 </div>
@@ -308,7 +309,7 @@ export default function KitchenContent() {
                                                 {kitchen.fields.name}
                                             </h3>
                                             <p className="mt-1 text-sm text-gray-500 capitalize">
-                                                {kitchen.fields.type}
+                                                {kitchen.fields.type} Kitchen Style
                                             </p>
                                         </div>
                                         <div className="absolute inset-x-0 top-0 flex items-end justify-end p-4 overflow-hidden h-72">
