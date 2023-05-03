@@ -4,8 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { ButtonLink } from 'components/button/Button'
-import Brochure from 'components/brochure/Brochure'
-import { Carousel } from './components/carousel/Carousel'
+import CTASection from 'components/cta/CTASection'
+import { Carousel } from 'components/carousel/Carousel'
 
 export const metadata = {
     title: 'Home | Garrett Kitchens',
@@ -254,7 +254,7 @@ export default function Page() {
                             Build a Kitchen That You&apos;ll Love
                         </h3>
 
-                        <ol className="p-4 space-y-2 text-lg list-disc list-inside text-gray-500 lg:text-xl md:space-y-6">
+                        <ol className="p-4 space-y-2 text-lg text-gray-500 list-disc list-inside lg:text-xl md:space-y-6">
                             <li>A kitchen that you feel happy in</li>
                             <li>A kitchen that you love to cook in</li>
                             <li>A kitchen you feel proud of</li>
@@ -323,13 +323,14 @@ export default function Page() {
 
                     <Carousel></Carousel>
 
-                    <ButtonLink href="/contact-us" className="mt-8 w-fit self-center">
+                    <ButtonLink href="/contact-us" className="self-center mt-8 w-fit">
                         Start Your Journey
                     </ButtonLink>
                 </div>
             </section>
 
-            <Brochure
+            <CTASection
+                className="lg:pb-40"
                 title="Planning your dream kitchen can be daunting."
                 image="/assets/home/kitchen-brochure.png"
                 description={`With our essential kitchen planning guide, it doesn't have to

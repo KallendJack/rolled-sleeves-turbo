@@ -20,7 +20,7 @@ export default function Footer() {
             <h2 id="footer-heading" className="sr-only">
                 Footer
             </h2>
-            <div className="px-4 py-16 mx-auto md:px-6 max-w-7xl lg:px-8 lg:py-28">
+            <div className="px-4 mx-auto py-sm md:px-6 max-w-7xl lg:px-8 lg:py-lg">
                 <div className="col-span-2 lg:grid lg:grid-cols-2 xl:gap-8">
                     <div>
                         <h3 className="text-2xl leading-6 text-white lg:text-3xl">About Us</h3>

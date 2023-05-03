@@ -8,29 +8,29 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useKitchens } from 'stores/kitchen'
 import { classNames } from 'utils/tailwind/classNames'
 import { ButtonLink } from 'components/button/Button'
-import Brochure from 'components/brochure/Brochure'
+import CTASection from 'components/cta/CTASection'
 
 export default function KitchenContent() {
-    const { kitchen, kitchens } = useKitchens()
-    const filteredKitchens = kitchens
+    const { kitchen, getKitchensByType } = useKitchens()
+    const filteredKitchens = getKitchensByType(kitchen.fields.type)
         .filter((k) => k.fields.slug !== kitchen.fields.slug)
         .slice(0, 3)
 
     return (
         <div className="bg-white">
             <div className="mx-auto max-w-7xl sm:px-6 sm:pt-16 lg:px-8">
-                <div className="max-w-2xl mx-auto lg:max-w-none">
+                <div className="max-w-2xl mx-auto md:max-w-none">
                     {/* Kitchen */}
                     <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
                         {/* Image gallery */}
                         <Tab.Group as="div" className="flex flex-col-reverse">
                             {/* Image selector */}
-                            <div className="hidden w-full max-w-2xl mx-auto mt-6 sm:block lg:max-w-none">
+                            <div className="hidden w-full max-w-2xl mx-auto mt-6 sm:block md:max-w-none">
                                 <Tab.List className="grid grid-cols-4 gap-6">
                                     {kitchen.fields.images.map((image, index) => (
                                         <Tab
                                             key={index}
-                                            className="relative flex items-center justify-center h-24 text-sm text-gray-900 uppercase bg-white cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring focus:ring-opacity-50 focus:ring-offset-4"
+                                            className="relative flex items-center justify-center h-24 text-sm text-gray-900 uppercase bg-white cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring focus:ring-brand-primary focus:ring-opacity-50 focus:ring-offset-4"
                                         >
                                             {({ selected }) => (
                                                 <>
@@ -128,9 +128,38 @@ export default function KitchenContent() {
                                                     as="div"
                                                     className="pb-6 prose-sm prose"
                                                 >
-                                                    {documentToReactComponents(
-                                                        kitchen.fields.atAGlance as any,
-                                                    )}
+                                                    <div className="mb-2 capitalize">
+                                                        <span className="font-bold">
+                                                            Kitchen Style: &nbsp;
+                                                        </span>
+                                                        {kitchen.fields.style.split('-').join(' ')}
+                                                    </div>
+                                                    <div className="mb-2 capitalize">
+                                                        <span className="font-bold">
+                                                            Door Type: &nbsp;
+                                                        </span>
+                                                        {kitchen.fields.doorType
+                                                            .split('-')
+                                                            .join(' ')}
+                                                    </div>
+                                                    <div className="mb-2 capitalize">
+                                                        <span className="font-bold">
+                                                            Handleless: &nbsp;
+                                                        </span>
+                                                        {kitchen.fields.handleless ? 'Yes' : 'No'}
+                                                    </div>
+                                                    <div className="mb-2 capitalize">
+                                                        <span className="font-bold">
+                                                            Size: &nbsp;
+                                                        </span>
+                                                        Made to Measure
+                                                    </div>
+                                                    <div>
+                                                        <span className="font-bold">
+                                                            Price Range: &nbsp;
+                                                        </span>
+                                                        {kitchen.fields.priceRange}
+                                                    </div>
                                                 </Disclosure.Panel>
                                             </>
                                         )}
@@ -245,9 +274,19 @@ export default function KitchenContent() {
                             </section>
                         </div>
                     </div>
+                    <CTASection
+                        className="border-t border-gray-200 lg:pt-40 mt-sm pt-28 lg:mt-lg md:pb-0 md:pt-28"
+                        title="Kitchen Brochure"
+                        image="/assets/home/kitchen-brochure.png"
+                        description={`With our essential kitchen planning guide, it doesn't have to
+                be. We'll walk you through some of our customer's commonly
+                asked questions and guide you through our process of creating your
+                very own unique kitchen.`}
+                        button={<ButtonLink href="/learn-more">Request a Brochure</ButtonLink>}
+                    />
                     <section
                         aria-labelledby="related-heading"
-                        className="px-4 py-16 mt-10 border-t border-gray-200 sm:px-0"
+                        className="px-4 border-gray-200 lg:border-t py-sm lg:py-lg sm:px-0 lg:mt-lg"
                     >
                         <h2 id="related-heading" className="text-xl text-gray-900">
                             You might also like
@@ -289,7 +328,8 @@ export default function KitchenContent() {
                             ))}
                         </div>
                     </section>
-                    <Brochure
+                    <CTASection
+                        className="border-t border-gray-200 lg:py-40 pt-28 md:pt-28"
                         title="Kitchen Brochure"
                         image="/assets/home/kitchen-brochure.png"
                         description={`With our essential kitchen planning guide, it doesn't have to

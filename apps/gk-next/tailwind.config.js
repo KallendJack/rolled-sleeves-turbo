@@ -33,6 +33,10 @@ module.exports = {
                     greyBg: '#F2F2F2',
                 },
             },
+            spacing: {
+                sm: '3rem',
+                lg: '6rem',
+            },
         },
     },
 }

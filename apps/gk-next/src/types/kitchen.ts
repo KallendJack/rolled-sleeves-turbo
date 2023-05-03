@@ -5,7 +5,10 @@ export interface KitchenFields {
     name: EntryFields.Symbol
     slug: EntryFields.Symbol
     description: EntryFields.RichText
-    atAGlance: EntryFields.RichText
+    style: 'contemporary' | 'other'
+    doorType: 'lay-on' | 'other'
+    handleless: EntryFields.Boolean
+    priceRange: '£' | '££' | '£££' | '££££' | '£££££'
     stockedColours: EntryFields.Symbol[]
     otherColours: EntryFields.Symbol[]
     images: Asset[]
