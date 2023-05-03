@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { ButtonLink } from 'components/button/Button'
-import Brochure from 'components/brochure/Brochure'
+import CTASection from 'components/cta/CTASection'
 
 export const metadata = {
     title: 'Home | Garrett Kitchens',
@@ -310,7 +310,8 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            <Brochure
+            <CTASection
+                className="lg:pb-40"
                 title="Planning your dream kitchen can be daunting."
                 image="/assets/home/kitchen-brochure.png"
                 description={`With our essential kitchen planning guide, it doesn't have to

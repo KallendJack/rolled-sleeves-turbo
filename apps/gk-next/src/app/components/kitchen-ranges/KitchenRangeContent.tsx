@@ -147,11 +147,11 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                     </Dialog>
                 </Transition.Root>
                 <div className="px-4 mx-auto md:px-6 lg:max-w-7xl lg:px-8">
-                    <div className="pt-24 pb-10 border-b border-gray-200">
+                    <div className="pb-10 border-b border-gray-200 pt-lg">
                         <h1 className="text-4xl tracking-tight text-gray-900">{title}</h1>
                         <p className="mt-4 text-base text-gray-500">{description}</p>
                     </div>
-                    <div className="pt-12 pb-24 lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
+                    <div className="pt-sm pb-lg lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
                         <aside>
                             <h2 className="sr-only">Filters</h2>
                             <button

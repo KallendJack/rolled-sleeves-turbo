@@ -8,11 +8,11 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { useKitchens } from 'stores/kitchen'
 import { classNames } from 'utils/tailwind/classNames'
 import { ButtonLink } from 'components/button/Button'
-import Brochure from 'components/brochure/Brochure'
+import CTASection from 'components/cta/CTASection'
 
 export default function KitchenContent() {
-    const { kitchen, kitchens } = useKitchens()
-    const filteredKitchens = kitchens
+    const { kitchen, getKitchensByType } = useKitchens()
+    const filteredKitchens = getKitchensByType(kitchen.fields.type)
         .filter((k) => k.fields.slug !== kitchen.fields.slug)
         .slice(0, 3)
 
@@ -245,9 +245,20 @@ export default function KitchenContent() {
                             </section>
                         </div>
                     </div>
+                    <CTASection
+                        className="border-t border-gray-200 lg:pt-40 mt-sm pt-28 lg:mt-lg md:pb-0 md:pt-28"
+                        title="Kitchen Brochure"
+                        image="/assets/home/kitchen-brochure.png"
+                        description={`With our essential kitchen planning guide, it doesn't have to
+                be. We'll walk you through some of our customer's commonly
+                asked questions and guide you through our process of creating your
+                very own unique kitchen.`}
+                        button={<ButtonLink href="/learn-more">Request a Brochure</ButtonLink>}
+                        // flipped
+                    />
                     <section
                         aria-labelledby="related-heading"
-                        className="px-4 py-16 mt-10 border-t border-gray-200 sm:px-0"
+                        className="px-4 border-t border-gray-200 py-sm lg:py-lg sm:px-0 mt-sm lg:mt-lg"
                     >
                         <h2 id="related-heading" className="text-xl text-gray-900">
                             You might also like
@@ -289,7 +300,8 @@ export default function KitchenContent() {
                             ))}
                         </div>
                     </section>
-                    <Brochure
+                    <CTASection
+                        className="border-t border-gray-200 lg:py-40 pt-28 md:pt-28"
                         title="Kitchen Brochure"
                         image="/assets/home/kitchen-brochure.png"
                         description={`With our essential kitchen planning guide, it doesn't have to
