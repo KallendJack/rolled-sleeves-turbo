@@ -42,7 +42,7 @@ export const Carousel = () => {
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container flex mt-12">
                     <div className="embla__slide min-w-0 flex-[0_0_100%]">
-                        <div className="flex justify-between gap-12">
+                        <div className="flex items-center justify-between gap-12">
                             <div className="w-2/4 space-y-8">
                                 <p className="text-gray-500">
                                     Our simple 4 step process offers our customers a stress-free
