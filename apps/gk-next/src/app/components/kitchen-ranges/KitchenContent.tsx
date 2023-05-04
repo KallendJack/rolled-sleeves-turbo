@@ -1,9 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import Image from 'next/image'
 import { Disclosure, Tab } from '@headlessui/react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 import { useKitchens } from 'stores/kitchen'
 import { classNames } from 'utils/tailwind/classNames'
@@ -63,12 +66,13 @@ export default function KitchenContent() {
                             <Tab.Panels className="w-full aspect-h-1 aspect-w-1">
                                 {kitchen.fields.images.map((image, index) => (
                                     <Tab.Panel key={index}>
-                                        <Image
-                                            src={`https:${image.fields.file.url}`}
-                                            alt={image.fields.description}
-                                            className="object-cover object-center w-full h-full"
-                                            fill
-                                        />
+                                        <Zoom>
+                                            <img
+                                                src={`https:${image.fields.file.url}`}
+                                                alt={image.fields.description}
+                                                className="object-cover object-center w-full h-full"
+                                            />
+                                        </Zoom>
                                     </Tab.Panel>
                                 ))}
                             </Tab.Panels>

@@ -81,6 +81,9 @@ importers:
             react-dom:
                 specifier: ^18.2.0
                 version: 18.2.0(react@18.2.0)
+            react-medium-image-zoom:
+                specifier: ^5.1.5
+                version: 5.1.5(react-dom@18.2.0)(react@18.2.0)
             tailwind-merge:
                 specifier: ^1.12.0
                 version: 1.12.0
@@ -5051,6 +5054,19 @@ packages:
             {
                 integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==,
             }
+        dev: false
+
+    /react-medium-image-zoom@5.1.5(react-dom@18.2.0)(react@18.2.0):
+        resolution:
+            {
+                integrity: sha512-dxqunC1xsaQZV48FM95I7QX+2wuMgOloYAHVw9034S09UGJ66JQgohG9bgkrfKU0cl3b34HCJeswy4RDIOcSiw==,
+            }
+        peerDependencies:
+            react: ^16.8.0 || ^17.0.0 || ^18.0.0
+            react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+        dependencies:
+            react: 18.2.0
+            react-dom: 18.2.0(react@18.2.0)
         dev: false
 
     /react@18.2.0:

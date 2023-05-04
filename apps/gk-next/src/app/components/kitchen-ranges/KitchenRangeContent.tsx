@@ -151,7 +151,7 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                         <h1 className="text-4xl tracking-tight text-gray-900">{title}</h1>
                         <p className="mt-4 text-base text-gray-500">{description}</p>
                     </div>
-                    <div className="pt-sm pb-lg lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
+                    <div className="pt-sm pb-sm lg:pb-lg lg:grid lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
                         <aside>
                             <h2 className="sr-only">Filters</h2>
                             <button
@@ -239,7 +239,7 @@ const KitchenRangeContent = (props: KitchenRangeContentProps) => {
                                             </h3>
                                             <p className="space-y-3 text-sm text-gray-500">
                                                 {documentToReactComponents(
-                                                    kitchen.fields.description as any,
+                                                    kitchen.fields.shortDescription as any,
                                                 )}
                                             </p>
                                         </div>

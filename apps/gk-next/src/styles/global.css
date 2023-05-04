@@ -15,4 +15,10 @@
     h6 {
         font-family: var(--font-montserrat);
     }
+
+    /* For zooming of images on pdps */
+    [data-rmiz],
+    [data-rmiz-content] {
+        height: 100%;
+    }
 }

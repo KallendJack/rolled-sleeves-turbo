@@ -4,6 +4,7 @@ export interface KitchenFields {
     type: 'modern' | 'traditional'
     name: EntryFields.Symbol
     slug: EntryFields.Symbol
+    shortDescription: EntryFields.RichText
     description: EntryFields.RichText
     style: 'contemporary' | 'other'
     doorType: 'lay-on' | 'other'
