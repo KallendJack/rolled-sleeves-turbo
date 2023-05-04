@@ -13,7 +13,7 @@ import { useKitchens } from 'stores/kitchen'
 import { Button } from 'components/button/Button'
 
 export type KitchenRangeContentProps = {
-    type: 'traditional' | 'modern'
+    type: 'traditional' | 'modern' | 'all'
     title: string
     description: string
     filters: {
