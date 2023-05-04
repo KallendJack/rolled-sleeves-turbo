@@ -3,8 +3,13 @@ import KitchenContent from 'components/kitchen-ranges/KitchenContent'
 import KitchenStoreInitializer from 'components/util/KitchenStoreInitializer'
 import { getAllKitchens, getKitchenBySlug } from 'utils/contentful/client'
 
-export const metadata = {
-    title: 'Modern Kitchens | Garrett Kitchens',
+export async function generateMetadata({ params }) {
+    const kitchen = await getKitchenBySlug(params.slug)
+
+    return {
+        title: `${kitchen.fields.name} | Garrett Kitchens`,
+        description: kitchen.fields.shortDescription,
+    }
 }
 
 const breadcrumbs = [
