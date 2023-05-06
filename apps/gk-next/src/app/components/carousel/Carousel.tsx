@@ -30,11 +30,21 @@ export const Carousel = () => {
 
                 <div className="flex gap-x-4">
                     <button className="embla__prev" onClick={scrollPrev}>
-                        Prev
+                        <Image
+                            src="/assets/home/icons/Chevron-left.svg"
+                            alt="Previous Button"
+                            width={45}
+                            height={40}
+                        />
                     </button>
 
                     <button className="embla__next" onClick={scrollNext}>
-                        Next
+                        <Image
+                            src="/assets/home/icons/Chevron-right.svg"
+                            alt="Next Button"
+                            width={45}
+                            height={40}
+                        />
                     </button>
                 </div>
             </div>

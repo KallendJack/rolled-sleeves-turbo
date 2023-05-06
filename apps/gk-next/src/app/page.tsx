@@ -4,8 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { ButtonLink } from 'components/button/Button'
-import CTASection from 'components/cta/CTASection'
 import { Carousel } from 'components/carousel/Carousel'
+import CTASection from 'components/cta/CTASection'
 
 export const metadata = {
     title: 'Home | Garrett Kitchens',
@@ -16,7 +16,7 @@ const collections = [
         number: 1,
         name: 'Book a Survey',
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-01.jpg',
+        imageSrc: '/assets/home/Survey.png',
         imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
         description: 'We will take accurate measurements and answer your initial questions.',
     },
@@ -24,7 +24,7 @@ const collections = [
         number: 2,
         name: 'Showroom Visit',
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-02.jpg',
+        imageSrc: '/assets/home/Showroom-Visit.jpg',
         imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
         description:
             'We will present a design scetch for you to look at and pick your kitchen colours, materials and finishes.',
@@ -33,7 +33,7 @@ const collections = [
         number: 3,
         name: 'Finalise Design',
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-03.jpg',
+        imageSrc: '/assets/home/Finalise.jpg',
         imageAlt:
             'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
         description:
@@ -43,41 +43,11 @@ const collections = [
         number: 4,
         name: 'Place Order',
         href: '#',
-        imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-03.jpg',
+        imageSrc: '/assets/home/Place-Order.png',
         imageAlt:
             'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
         description:
             'We will take a deposit and finalise your order, booking an installation date.',
-    },
-]
-
-const testimonials = [
-    {
-        body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
-        author: {
-            name: 'Leslie Alexander',
-            handle: 'lesliealexander',
-            imageUrl:
-                'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-    },
-    {
-        body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
-        author: {
-            name: 'Leslie Alexander',
-            handle: 'lesliealexander',
-            imageUrl:
-                'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-    },
-    {
-        body: 'Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.',
-        author: {
-            name: 'Leslie Alexander',
-            handle: 'lesliealexander',
-            imageUrl:
-                'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
     },
 ]
 
@@ -115,7 +85,13 @@ export default function Page() {
                 <dl className="grid grid-cols-3 px-4 py-8 lg:px-8 font-heading text-sm md:text-base text-white font-extralight tracking-widest lg:text-lg">
                     <div className="sm:flex-row">
                         <div className="flex flex-col items-center justify-center border-l gap-x-4 border-white py-3 sm:flex-row">
-                            <Image className="w-5 h-5 bg-red-400 rounded-full" src="" alt="" />
+                            <Image
+                                src="/assets/home/icons/Surrey-Based.png"
+                                alt="Surrey-based icon"
+                                className=""
+                                width={30}
+                                height={40}
+                            />
 
                             <p className="flex items-center leading-7 text-center text-md">
                                 Surrey-Based
@@ -125,20 +101,30 @@ export default function Page() {
 
                     <div className="sm:flex-row">
                         <div className="flex flex-col items-center justify-center border-x gap-x-4 border-white py-3 sm:flex-row">
-                            <Image className="w-5 h-5 bg-red-400 rounded-full" src="" alt="" />
+                            <Image
+                                src="/assets/home/icons/Competitive-Pricing.png"
+                                alt="Competitive pricing icon"
+                                width={30}
+                                height={40}
+                            />
 
                             <p className="flex items-center font-extralight leading-7 text-center">
-                                Trusted Craftsmen
+                                Competitive Pricing
                             </p>
                         </div>
                     </div>
 
                     <div className="sm:flex-row">
                         <div className="flex flex-col items-center justify-center border-r gap-x-4 border-white py-3 sm:flex-row">
-                            <Image className="w-5 h-5 bg-red-400 rounded-full" src="" alt="" />
+                            <Image
+                                src="/assets/home/icons/Finest-Quality.png"
+                                alt="Finest quality icon"
+                                width={30}
+                                height={40}
+                            />
 
                             <p className="flex items-center font-extralight leading-7 text-center">
-                                Bespoke Design
+                                Finest Quality
                             </p>
                         </div>
                     </div>
@@ -147,11 +133,11 @@ export default function Page() {
 
             <section
                 aria-labelledby="comfort-heading"
-                className="px-4 py-24 mx-auto max-w-7xl md:px-6 lg:px-8"
+                className="px-4 py-lg mx-auto max-w-7xl md:px-6 lg:px-8"
             >
                 <div className="relative px-6 lg:px-16">
                     <div className="relative flex flex-col items-center max-w-4xl mx-auto text-center">
-                        <h4 className="mb-3 text-sm uppercase tracking-widest text-gray-500">
+                        <h4 className="mb-3 text-sm uppercase tracking-widest text-brand-secondary">
                             Inspired Designs
                         </h4>
 
@@ -175,14 +161,14 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className="w-full bg-gray-100 py-12 lg:py-20">
+            <section className="w-full bg-gray-100 py-sm lg:py-lg">
                 <div
                     aria-labelledby="collection-heading"
                     className="max-w-4xl px-4 mx-auto md:px-6 lg:max-w-7xl lg:px-8"
                 >
                     <div className="flex flex-col justify-between md:items-end md:flex-row">
                         <div className="md:w-3/5">
-                            <h4 className="text-sm uppercase tracking-widest text-gray-500">
+                            <h4 className="text-sm uppercase tracking-widest text-brand-secondary">
                                 A Seamless Experience
                             </h4>
 
@@ -209,7 +195,7 @@ export default function Page() {
                             <Link
                                 key={collection.name}
                                 href={collection.href}
-                                className="block text-center group relative"
+                                className="block text-center group relative border border-gray-400"
                             >
                                 <div className="absolute -top-7 left-0 right-0 text-lg font-body mx-auto w-14 h-14 rounded-full bg-white border border-gray-400 text-gray-900 z-50 flex items-center justify-center">
                                     {collection.number}
@@ -227,10 +213,11 @@ export default function Page() {
                                     />
                                 </div>
 
-                                <div className="h-40 border-b border-gray-400 border-x">
-                                    <h3 className="pt-4 text-lg text-gray-900 font-medium">
+                                <div className="h-40 border-t border-gray-400">
+                                    <h3 className="pt-4 mb-2 text-lg text-gray-900 font-medium">
                                         {collection.name}
                                     </h3>
+                                    <hr className="border-b border-brand-primaryHover w-1/5 mx-auto" />
 
                                     <p className="px-6 mt-3 text-gray-500 sm:text-sm">
                                         {collection.description}
@@ -246,27 +233,45 @@ export default function Page() {
                 <dl className="grid grid-cols-3 px-4 py-8 lg:px-8 font-heading text-sm md:text-base text-white font-extralight tracking-widest lg:text-lg">
                     <div className="sm:flex-row">
                         <div className="flex flex-col items-center justify-center border-l gap-x-4 border-white py-3 sm:flex-row">
-                            <Image className="w-5 h-5 bg-red-400 rounded-full" src="" alt="" />
+                            <Image
+                                src="/assets/home/icons/Bespoke-Design.png"
+                                alt="Surrey-based icon"
+                                className="w-8"
+                                width={30}
+                                height={40}
+                            />
 
                             <p className="flex items-center leading-7 text-center text-md">
-                                Personalised
+                                Bespoke Design
                             </p>
                         </div>
                     </div>
 
                     <div className="sm:flex-row">
                         <div className="flex flex-col items-center justify-center border-x gap-x-4 border-white py-3 sm:flex-row">
-                            <Image className="w-5 h-5 bg-red-400 rounded-full" src="" alt="" />
+                            <Image
+                                src="/assets/home/icons/Trusted-Craftsmen.png"
+                                alt="Surrey-based icon"
+                                className=""
+                                width={30}
+                                height={40}
+                            />
 
                             <p className="flex items-center font-extralight leading-7 text-center">
-                                Competitive Pricing
+                                Trusted Craftsmen
                             </p>
                         </div>
                     </div>
 
                     <div className="sm:flex-row">
                         <div className="flex flex-col items-center justify-center border-r gap-x-4 border-white py-3 sm:flex-row">
-                            <Image className="w-5 h-5 bg-red-400 rounded-full" src="" alt="" />
+                            <Image
+                                src="/assets/home/icons/Stress-Free.png"
+                                alt="Surrey-based icon"
+                                className=""
+                                width={30}
+                                height={40}
+                            />
 
                             <p className="flex items-center font-extralight leading-7 text-center">
                                 Stress-Free
@@ -277,7 +282,7 @@ export default function Page() {
             </section>
             <section
                 aria-labelledby="collection-heading"
-                className="w-full max-w-4xl px-4 py-12 mx-auto lg:py-24 md:px-6 lg:max-w-7xl lg:px-8"
+                className="w-full max-w-4xl px-4 py-sm mx-auto lg:py-lg md:px-6 lg:max-w-7xl lg:px-8"
             >
                 <div className="flex flex-col items-start justify-between gap-12 md:flex-row">
                     <div className="w-full md:w-1/2">
@@ -289,7 +294,7 @@ export default function Page() {
                     </div>
 
                     <div className="w-full md:w-1/2">
-                        <h4 className="text-sm mb-2 uppercase tracking-widest text-gray-500">
+                        <h4 className="text-sm mb-2 uppercase tracking-widest text-brand-secondary">
                             Customers At The Forefront
                         </h4>
 
@@ -313,44 +318,44 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className="bg-brand-primaryBg py-12 lg:py-20">
+            <section className="bg-brand-primaryBg py-sm lg:py-16">
                 <div className="px-6 mx-auto max-w-7xl lg:px-8">
                     <h2 className="text-lg leading-8 text-center text-white">
                         We work with these trusted brands
                     </h2>
 
-                    <div className="grid items-center max-w-lg grid-cols-4 mx-auto mt-10 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                    <div className="grid items-center max-w-lg grid-cols-4 mx-auto mt-6 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                         <Image
                             className="object-contain w-full col-span-2 max-h-12 lg:col-span-1"
-                            src="https://tailwindui.com/img/logos/158x48/transistor-logo-white.svg"
+                            src="/assets/home/brand-logos/Blum.svg"
                             alt="Transistor"
                             width={158}
                             height={48}
                         />
                         <Image
                             className="object-contain w-full col-span-2 max-h-12 lg:col-span-1"
-                            src="https://tailwindui.com/img/logos/158x48/reform-logo-white.svg"
+                            src="/assets/home/brand-logos/BORA.png"
                             alt="Reform"
                             width={158}
                             height={48}
                         />
                         <Image
                             className="object-contain w-full col-span-2 max-h-12 lg:col-span-1"
-                            src="https://tailwindui.com/img/logos/158x48/tuple-logo-white.svg"
+                            src="/assets/home/brand-logos/Bosch.png"
                             alt="Tuple"
                             width={158}
                             height={48}
                         />
                         <Image
                             className="object-contain w-full col-span-2 max-h-12 sm:col-start-2 lg:col-span-1"
-                            src="https://tailwindui.com/img/logos/158x48/savvycal-logo-white.svg"
+                            src="/assets/home/brand-logos/Neff.png"
                             alt="SavvyCal"
                             width={158}
                             height={48}
                         />
                         <Image
                             className="object-contain w-full col-span-2 col-start-2 max-h-12 sm:col-start-auto lg:col-span-1"
-                            src="https://tailwindui.com/img/logos/158x48/statamic-logo-white.svg"
+                            src="/assets/home/brand-logos/Quooker.png"
                             alt="Statamic"
                             width={158}
                             height={48}
@@ -360,9 +365,9 @@ export default function Page() {
             </section>
 
             <section className="w-full bg-gray-100">
-                <div className="w-full max-w-4xl px-4 py-12 mx-auto lg:py-20 md:px-6 lg:max-w-7xl lg:px-8">
+                <div className="w-full max-w-4xl px-4 py-sm mx-auto lg:py-lg md:px-6 lg:max-w-7xl lg:px-8">
                     <div className="flex flex-col">
-                        <h4 className="text-sm uppercase tracking-widest text-gray-500">
+                        <h4 className="text-sm uppercase tracking-widest text-brand-secondary">
                             An exceptional reputation
                         </h4>
 
@@ -383,7 +388,7 @@ export default function Page() {
             </section>
 
             <CTASection
-                className="lg:pb-40"
+                className="lg:py-40"
                 title="Planning your dream kitchen can be daunting."
                 image="/assets/home/kitchen-brochure.png"
                 description={`With our essential kitchen planning guide, it doesn't have to
