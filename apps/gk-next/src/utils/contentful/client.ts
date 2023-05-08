@@ -1,6 +1,8 @@
 import { createClient } from 'contentful'
 
 import { useKitchens } from 'stores/kitchen'
+import { useProjects } from 'stores/projects'
+import type { Project } from 'types/project'
 import type { Kitchen } from 'types/kitchen'
 
 export const client = createClient({
@@ -39,4 +41,37 @@ export const getKitchenBySlug = async (slug: string) => {
     useKitchens.setState({ kitchen: kitchen as Kitchen })
 
     return kitchen as Kitchen
+}
+
+export const getAllProjects = async () => {
+    const res = await client.getEntries({
+        content_type: 'project',
+    })
+
+    if (!res) {
+        throw new Error('Failed to fetch data')
+    }
+
+    const projects = res.items
+
+    useProjects.setState({ projects: projects as Project[] })
+
+    return projects as Project[]
+}
+
+export const getProjectBySlug = async (slug: string) => {
+    const res = await client.getEntries({
+        content_type: 'project',
+        'fields.slug': slug,
+    })
+
+    if (!res) {
+        throw new Error('Failed to fetch data')
+    }
+
+    const project = res.items[0]
+
+    useProjects.setState({ project: project as Project })
+
+    return project as Project
 }

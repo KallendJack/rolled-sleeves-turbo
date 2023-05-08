@@ -9,10 +9,10 @@ import { ChevronDownIcon, PlusIcon } from '@heroicons/react/20/solid'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import { classNames } from 'utils/tailwind/classNames'
-import { useKitchens } from 'stores/kitchen'
+import { useProjects } from 'stores/projects'
 import { Button } from 'components/button/Button'
 
-export type KitchenRangeContentProps = {
+export type ProjectsContentProps = {
     type: 'traditional' | 'modern' | 'all'
     title: string
     description: string
@@ -26,16 +26,15 @@ export type KitchenRangeContentProps = {
     }[]
 }
 
-export default function KitchenRangeContent(props: KitchenRangeContentProps) {
+export default function ProjectsContent(props: ProjectsContentProps) {
     const { type, title, description, filters } = props
 
-    const { getKitchensByType } = useKitchens()
-    const kitchens = getKitchensByType(type)
+    const { projects } = useProjects()
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-    const [kitchensToShowCount, setKitchensToShowCount] = useState(6)
+    const [projectsToShowCount, setProjectsToShowCount] = useState(6)
 
-    const allKitchensShown = kitchensToShowCount >= kitchens.length
-    const kitchensToShow = kitchens.slice(0, kitchensToShowCount)
+    const allProjectsShown = projectsToShowCount >= projects.length
+    const projectsToShow = projects.slice(0, projectsToShowCount)
 
     return (
         <div className="bg-white">
@@ -209,10 +208,10 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
                             className="mt-6 lg:col-span-2 lg:mt-0 xl:col-span-3"
                         >
                             <h2 id="product-heading" className="sr-only">
-                                Kitchens
+                                Projects
                             </h2>
                             <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
-                                {kitchensToShow.map((kitchen, index) => (
+                                {projectsToShow.map((project, index) => (
                                     <div
                                         key={index}
                                         className="relative flex flex-col overflow-hidden bg-white border border-gray-200 group"
@@ -220,36 +219,34 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
                                         <div className="relative bg-gray-200 group-hover:opacity-75 h-96">
                                             <Image
                                                 fill
-                                                src={`https:${kitchen.fields.images[0].fields.file.url}`}
-                                                alt={kitchen.fields.name}
+                                                src={`https:${project.fields.images[0].fields.file.url}`}
+                                                alt={project.fields.name}
                                                 className="object-cover object-center w-full h-full sm:h-full sm:w-full"
                                             />
                                         </div>
                                         <div className="flex flex-col flex-1 p-4 space-y-2">
                                             <h3 className="text-sm text-gray-900">
-                                                <Link
-                                                    href={`/kitchen-ranges/${kitchen.fields.type}-kitchens/${kitchen.fields.slug}`}
-                                                >
+                                                <Link href={`/projects/${project.fields.slug}`}>
                                                     <span
                                                         aria-hidden="true"
                                                         className="absolute inset-0"
                                                     />
-                                                    {kitchen.fields.name}
+                                                    {project.fields.name}
                                                 </Link>
                                             </h3>
                                             <p className="space-y-3 text-sm text-gray-500">
                                                 {documentToReactComponents(
-                                                    kitchen.fields.shortDescription as any,
+                                                    project.fields.shortDescription as any,
                                                 )}
                                             </p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
-                            {!allKitchensShown && (
+                            {!allProjectsShown && (
                                 <div className="flex justify-center mt-8">
                                     <Button
-                                        onClick={() => setKitchensToShowCount((count) => count + 6)}
+                                        onClick={() => setProjectsToShowCount((count) => count + 6)}
                                     >
                                         Load More
                                     </Button>
