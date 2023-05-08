@@ -14,20 +14,9 @@ const breadcrumbs = [
 ]
 
 const content: ProjectsContentProps = {
-    type: 'all',
     title: 'Projects',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
     filters: [
-        {
-            id: 'kitchen-type',
-            name: 'Kitchen Type',
-            options: [
-                { value: 'traditional', label: 'Traditional' },
-                { value: 'modern', label: 'Modern' },
-                { value: 'door', label: 'Door' },
-                { value: 'handleless', label: 'Handleless' },
-            ],
-        },
         {
             id: 'price',
             name: 'Price',

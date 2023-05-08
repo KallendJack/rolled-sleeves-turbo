@@ -14,7 +14,10 @@ import { ButtonLink } from 'components/button/Button'
 import CTASection from 'components/cta/CTASection'
 
 export default function ProjectContent() {
-    const { project } = useProjects()
+    const { project, projects } = useProjects()
+    const filteredProjects = projects
+        .filter((p) => p.fields.slug !== project.fields.slug)
+        .slice(0, 3)
 
     return (
         <div className="bg-white">
@@ -109,7 +112,7 @@ export default function ProjectContent() {
                                                                 'text-sm',
                                                             )}
                                                         >
-                                                            At a glance
+                                                            The Details
                                                         </span>
                                                         <span className="flex items-center ml-6">
                                                             {open ? (
@@ -138,6 +141,12 @@ export default function ProjectContent() {
                                                     </div>
                                                     <div className="mb-2 capitalize">
                                                         <span className="font-bold">
+                                                            Kitchen Range: &nbsp;
+                                                        </span>
+                                                        {project.fields.type}
+                                                    </div>
+                                                    <div className="mb-2 capitalize">
+                                                        <span className="font-bold">
                                                             Door Type: &nbsp;
                                                         </span>
                                                         {project.fields.doorType
@@ -146,15 +155,27 @@ export default function ProjectContent() {
                                                     </div>
                                                     <div className="mb-2 capitalize">
                                                         <span className="font-bold">
-                                                            Handleless: &nbsp;
+                                                            Cabinet Finish: &nbsp;
                                                         </span>
-                                                        {project.fields.handleless ? 'Yes' : 'No'}
+                                                        {project.fields.cabinetFinish
+                                                            .split('-')
+                                                            .join(' ')}
                                                     </div>
                                                     <div className="mb-2 capitalize">
                                                         <span className="font-bold">
-                                                            Size: &nbsp;
+                                                            Cabinet Finish: &nbsp;
                                                         </span>
-                                                        Made to Measure
+                                                        {project.fields.worksurfaceMaterial
+                                                            .split('-')
+                                                            .join(' ')}
+                                                    </div>
+                                                    <div className="mb-2 capitalize">
+                                                        <span className="font-bold">
+                                                            Appliances: &nbsp;
+                                                        </span>
+                                                        {project.fields.appliances
+                                                            .split('-')
+                                                            .join(' ')}
                                                     </div>
                                                     <div>
                                                         <span className="font-bold">
@@ -179,7 +200,7 @@ export default function ProjectContent() {
                                                                 'text-sm',
                                                             )}
                                                         >
-                                                            Stocked Colours
+                                                            Colours Used
                                                         </span>
                                                         <span className="flex items-center ml-6">
                                                             {open ? (
@@ -201,60 +222,7 @@ export default function ProjectContent() {
                                                     className="pb-6 prose-sm prose"
                                                 >
                                                     <div className="flex items-center gap-x-3">
-                                                        {project.fields.stockedColours.map(
-                                                            (colour, index) => {
-                                                                return (
-                                                                    <span
-                                                                        key={index}
-                                                                        style={{
-                                                                            backgroundColor: colour,
-                                                                        }}
-                                                                        className="inline-block w-8 h-8 border border-black rounded-full border-opacity-10"
-                                                                    />
-                                                                )
-                                                            },
-                                                        )}
-                                                    </div>
-                                                </Disclosure.Panel>
-                                            </>
-                                        )}
-                                    </Disclosure>
-                                    <Disclosure as="div">
-                                        {({ open }) => (
-                                            <>
-                                                <h3>
-                                                    <Disclosure.Button className="relative flex items-center justify-between w-full py-6 text-left group">
-                                                        <span
-                                                            className={classNames(
-                                                                open
-                                                                    ? 'text-brand-primary'
-                                                                    : 'text-gray-900',
-                                                                'text-sm',
-                                                            )}
-                                                        >
-                                                            Other Colours
-                                                        </span>
-                                                        <span className="flex items-center ml-6">
-                                                            {open ? (
-                                                                <MinusIcon
-                                                                    className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
-                                                                    aria-hidden="true"
-                                                                />
-                                                            ) : (
-                                                                <PlusIcon
-                                                                    className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
-                                                                    aria-hidden="true"
-                                                                />
-                                                            )}
-                                                        </span>
-                                                    </Disclosure.Button>
-                                                </h3>
-                                                <Disclosure.Panel
-                                                    as="div"
-                                                    className="pb-6 prose-sm prose"
-                                                >
-                                                    <div className="flex items-center gap-x-3">
-                                                        {project.fields.otherColours.map(
+                                                        {project.fields.coloursUsed.map(
                                                             (colour, index) => {
                                                                 return (
                                                                     <span
@@ -277,7 +245,61 @@ export default function ProjectContent() {
                         </div>
                     </div>
                     <CTASection
-                        className="border-t border-gray-200 lg:py-40 mt-sm pt-28 lg:mt-lg md:pb-0 md:pt-28"
+                        className="border-t border-gray-200 lg:pt-40 mt-sm pt-28 lg:mt-lg md:pb-0 md:pt-28"
+                        title="Kitchen Brochure"
+                        image="/assets/home/kitchen-brochure.png"
+                        description={`With our essential kitchen planning guide, it doesn't have to
+                be. We'll walk you through some of our customer's commonly
+                asked questions and guide you through our process of creating your
+                very own unique project.`}
+                        button={<ButtonLink href="/learn-more">Request a Brochure</ButtonLink>}
+                    />
+                    <section
+                        aria-labelledby="related-heading"
+                        className="px-4 border-gray-200 lg:border-t py-sm lg:py-lg sm:px-0 lg:mt-lg"
+                    >
+                        <h2 id="related-heading" className="text-xl text-gray-900">
+                            Other Kitchen Projects
+                        </h2>
+                        <div className="grid grid-cols-1 mt-8 gap-y-12 sm:gap-x-6 md:grid-cols-3 xl:gap-x-8">
+                            {filteredProjects.map((project, index) => (
+                                <div key={index}>
+                                    <div className="relative">
+                                        <div className="relative w-full overflow-hidden h-72">
+                                            <Image
+                                                src={`https:${project.fields.images[0].fields.file.url}`}
+                                                alt={project.fields.images[0].fields.description}
+                                                className="object-cover object-center w-full h-full"
+                                                fill
+                                            />
+                                        </div>
+                                        <div className="relative mt-4">
+                                            <h3 className="text-sm text-gray-900">
+                                                {project.fields.name}
+                                            </h3>
+                                            <p className="mt-1 text-sm text-gray-500 capitalize">
+                                                {project.fields.type} Kitchen Style
+                                            </p>
+                                        </div>
+                                        <div className="absolute inset-x-0 top-0 flex items-end justify-end p-4 overflow-hidden h-72">
+                                            <div
+                                                aria-hidden="true"
+                                                className="absolute inset-x-0 bottom-0 opacity-50 h-36 bg-gradient-to-t from-black"
+                                            />
+                                        </div>
+                                    </div>
+                                    <ButtonLink
+                                        href={`/projects/${project.fields.slug}`}
+                                        className="w-full mt-4 text-center"
+                                    >
+                                        View Project
+                                    </ButtonLink>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                    <CTASection
+                        className="border-t border-gray-200 lg:py-40 pt-28 md:pt-28"
                         title="Kitchen Brochure"
                         image="/assets/home/kitchen-brochure.png"
                         description={`With our essential kitchen planning guide, it doesn't have to

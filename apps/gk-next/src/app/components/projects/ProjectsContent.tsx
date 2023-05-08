@@ -13,7 +13,6 @@ import { useProjects } from 'stores/projects'
 import { Button } from 'components/button/Button'
 
 export type ProjectsContentProps = {
-    type: 'traditional' | 'modern' | 'all'
     title: string
     description: string
     filters: {
@@ -27,7 +26,7 @@ export type ProjectsContentProps = {
 }
 
 export default function ProjectsContent(props: ProjectsContentProps) {
-    const { type, title, description, filters } = props
+    const { title, description, filters } = props
 
     const { projects } = useProjects()
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)

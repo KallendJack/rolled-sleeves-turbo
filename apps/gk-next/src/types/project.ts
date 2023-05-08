@@ -8,10 +8,11 @@ export interface ProjectFields {
     description: EntryFields.RichText
     style: 'contemporary' | 'other'
     doorType: 'lay-on' | 'other'
-    handleless: EntryFields.Boolean
+    cabinetFinish: EntryFields.Symbol
+    worksurfaceMaterial: EntryFields.Symbol
+    appliances: EntryFields.Symbol
     priceRange: '£' | '££' | '£££' | '££££' | '£££££'
-    stockedColours: EntryFields.Symbol[]
-    otherColours: EntryFields.Symbol[]
+    coloursUsed: EntryFields.Symbol[]
     images: Asset[]
 }
 
