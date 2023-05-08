@@ -11,15 +11,15 @@ export const metadata = {
 }
 
 const montserrat = Montserrat({
-    variable: '--font-montserrat',
     subsets: ['latin'],
     display: 'swap',
+    variable: '--font-montserrat',
 })
 
 const raleway = Raleway({
-    variable: '--font-raleway',
     subsets: ['latin'],
     display: 'swap',
+    variable: '--font-raleway',
 })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
