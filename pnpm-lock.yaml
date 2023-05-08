@@ -141,8 +141,8 @@ importers:
                 version: 7.28.0(eslint@7.32.0)
         devDependencies:
             next:
-                specifier: ^13.2.4
-                version: 13.3.4(react-dom@18.2.0)(react@18.2.0)
+                specifier: ^13.4.1
+                version: 13.4.1(react-dom@18.2.0)(react@18.2.0)
 
     packages/tailwind-config:
         devDependencies:
@@ -540,19 +540,11 @@ packages:
             '@jridgewell/sourcemap-codec': 1.4.14
         dev: true
 
-    /@next/env@13.3.4:
-        resolution:
-            {
-                integrity: sha512-oTK/wRV2qga86m/4VdrR1+/56UA6U1Qv3sIgowB+bZjahniZLEG5BmmQjfoGv7ZuLXBZ8Eec6hkL9BqJcrEL2g==,
-            }
-        dev: true
-
     /@next/env@13.4.1:
         resolution:
             {
                 integrity: sha512-eD6WCBMFjLFooLM19SIhSkWBHtaFrZFfg2Cxnyl3vS3DAdFRfnx5TY2RxlkuKXdIRCC0ySbtK9JXXt8qLCqzZg==,
             }
-        dev: false
 
     /@next/eslint-plugin-next@13.3.4:
         resolution:
@@ -563,18 +555,6 @@ packages:
             glob: 7.1.7
         dev: false
 
-    /@next/swc-darwin-arm64@13.3.4:
-        resolution:
-            {
-                integrity: sha512-vux7RWfzxy1lD21CMwZsy9Ej+0+LZdIIj1gEhVmzOQqQZ5N56h8JamrjIVCfDL+Lpj8KwOmFZbPHE8qaYnL2pg==,
-            }
-        engines: { node: '>= 10' }
-        cpu: [arm64]
-        os: [darwin]
-        requiresBuild: true
-        dev: true
-        optional: true
-
     /@next/swc-darwin-arm64@13.4.1:
         resolution:
             {
@@ -584,19 +564,6 @@ packages:
         cpu: [arm64]
         os: [darwin]
         requiresBuild: true
-        dev: false
-        optional: true
-
-    /@next/swc-darwin-x64@13.3.4:
-        resolution:
-            {
-                integrity: sha512-1tb+6JT98+t7UIhVQpKL7zegKnCs9RKU6cKNyj+DYKuC/NVl49/JaIlmwCwK8Ibl+RXxJrK7uSXSIO71feXsgw==,
-            }
-        engines: { node: '>= 10' }
-        cpu: [x64]
-        os: [darwin]
-        requiresBuild: true
-        dev: true
         optional: true
 
     /@next/swc-darwin-x64@13.4.1:
@@ -608,19 +575,6 @@ packages:
         cpu: [x64]
         os: [darwin]
         requiresBuild: true
-        dev: false
-        optional: true
-
-    /@next/swc-linux-arm64-gnu@13.3.4:
-        resolution:
-            {
-                integrity: sha512-UqcKkYTKslf5YAJNtZ5XV1D5MQJIkVtDHL8OehDZERHzqOe7jvy41HFto33IDPPU8gJiP5eJb3V9U26uifqHjw==,
-            }
-        engines: { node: '>= 10' }
-        cpu: [arm64]
-        os: [linux]
-        requiresBuild: true
-        dev: true
         optional: true
 
     /@next/swc-linux-arm64-gnu@13.4.1:
@@ -632,19 +586,6 @@ packages:
         cpu: [arm64]
         os: [linux]
         requiresBuild: true
-        dev: false
-        optional: true
-
-    /@next/swc-linux-arm64-musl@13.3.4:
-        resolution:
-            {
-                integrity: sha512-HE/FmE8VvstAfehyo/XsrhGgz97cEr7uf9IfkgJ/unqSXE0CDshDn/4as6rRid74eDR8/exi7c2tdo49Tuqxrw==,
-            }
-        engines: { node: '>= 10' }
-        cpu: [arm64]
-        os: [linux]
-        requiresBuild: true
-        dev: true
         optional: true
 
     /@next/swc-linux-arm64-musl@13.4.1:
@@ -656,19 +597,6 @@ packages:
         cpu: [arm64]
         os: [linux]
         requiresBuild: true
-        dev: false
-        optional: true
-
-    /@next/swc-linux-x64-gnu@13.3.4:
-        resolution:
-            {
-                integrity: sha512-xU+ugaupGA4SL5aK1ZYEqVHrW3TPOhxVcpaJLfpANm2443J4GfxCmOacu9XcSgy5c51Mq7C9uZ1LODKHfZosRQ==,
-            }
-        engines: { node: '>= 10' }
-        cpu: [x64]
-        os: [linux]
-        requiresBuild: true
-        dev: true
         optional: true
 
     /@next/swc-linux-x64-gnu@13.4.1:
@@ -680,19 +608,6 @@ packages:
         cpu: [x64]
         os: [linux]
         requiresBuild: true
-        dev: false
-        optional: true
-
-    /@next/swc-linux-x64-musl@13.3.4:
-        resolution:
-            {
-                integrity: sha512-cZvmf5KcYeTfIK6bCypfmxGUjme53Ep7hx94JJtGrYgCA1VwEuYdh+KouubJaQCH3aqnNE7+zGnVEupEKfoaaA==,
-            }
-        engines: { node: '>= 10' }
-        cpu: [x64]
-        os: [linux]
-        requiresBuild: true
-        dev: true
         optional: true
 
     /@next/swc-linux-x64-musl@13.4.1:
@@ -704,19 +619,6 @@ packages:
         cpu: [x64]
         os: [linux]
         requiresBuild: true
-        dev: false
-        optional: true
-
-    /@next/swc-win32-arm64-msvc@13.3.4:
-        resolution:
-            {
-                integrity: sha512-7dL+CAUAjmgnVbjXPIpdj7/AQKFqEUL3bKtaOIE1JzJ5UMHHAXCPwzQtibrsvQpf9MwcAmiv8aburD3xH1xf8w==,
-            }
-        engines: { node: '>= 10' }
-        cpu: [arm64]
-        os: [win32]
-        requiresBuild: true
-        dev: true
         optional: true
 
     /@next/swc-win32-arm64-msvc@13.4.1:
@@ -728,19 +630,6 @@ packages:
         cpu: [arm64]
         os: [win32]
         requiresBuild: true
-        dev: false
-        optional: true
-
-    /@next/swc-win32-ia32-msvc@13.3.4:
-        resolution:
-            {
-                integrity: sha512-qplTyzEl1vPkS+/DRK3pKSL0HeXrPHkYsV7U6gboHYpfqoHY+bcLUj3gwVUa9PEHRIoq4vXvPzx/WtzE6q52ng==,
-            }
-        engines: { node: '>= 10' }
-        cpu: [ia32]
-        os: [win32]
-        requiresBuild: true
-        dev: true
         optional: true
 
     /@next/swc-win32-ia32-msvc@13.4.1:
@@ -752,19 +641,6 @@ packages:
         cpu: [ia32]
         os: [win32]
         requiresBuild: true
-        dev: false
-        optional: true
-
-    /@next/swc-win32-x64-msvc@13.3.4:
-        resolution:
-            {
-                integrity: sha512-usdvZT7JHrTuXC+4OKN5mCzUkviFkCyJJTkEz8jhBpucg+T7s83e7owm3oNFzmj5iKfvxU2St6VkcnSgpFvEYA==,
-            }
-        engines: { node: '>= 10' }
-        cpu: [x64]
-        os: [win32]
-        requiresBuild: true
-        dev: true
         optional: true
 
     /@next/swc-win32-x64-msvc@13.4.1:
@@ -776,7 +652,6 @@ packages:
         cpu: [x64]
         os: [win32]
         requiresBuild: true
-        dev: false
         optional: true
 
     /@nodelib/fs.scandir@2.1.5:
@@ -4420,53 +4295,6 @@ packages:
                 integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==,
             }
 
-    /next@13.3.4(react-dom@18.2.0)(react@18.2.0):
-        resolution:
-            {
-                integrity: sha512-sod7HeokBSvH5QV0KB+pXeLfcXUlLrGnVUXxHpmhilQ+nQYT3Im2O8DswD5e4uqbR8Pvdu9pcWgb1CbXZQZlmQ==,
-            }
-        engines: { node: '>=16.8.0' }
-        hasBin: true
-        peerDependencies:
-            '@opentelemetry/api': ^1.1.0
-            fibers: '>= 3.1.0'
-            node-sass: ^6.0.0 || ^7.0.0
-            react: ^18.2.0
-            react-dom: ^18.2.0
-            sass: ^1.3.0
-        peerDependenciesMeta:
-            '@opentelemetry/api':
-                optional: true
-            fibers:
-                optional: true
-            node-sass:
-                optional: true
-            sass:
-                optional: true
-        dependencies:
-            '@next/env': 13.3.4
-            '@swc/helpers': 0.5.1
-            busboy: 1.6.0
-            caniuse-lite: 1.0.30001434
-            postcss: 8.4.14
-            react: 18.2.0
-            react-dom: 18.2.0(react@18.2.0)
-            styled-jsx: 5.1.1(react@18.2.0)
-        optionalDependencies:
-            '@next/swc-darwin-arm64': 13.3.4
-            '@next/swc-darwin-x64': 13.3.4
-            '@next/swc-linux-arm64-gnu': 13.3.4
-            '@next/swc-linux-arm64-musl': 13.3.4
-            '@next/swc-linux-x64-gnu': 13.3.4
-            '@next/swc-linux-x64-musl': 13.3.4
-            '@next/swc-win32-arm64-msvc': 13.3.4
-            '@next/swc-win32-ia32-msvc': 13.3.4
-            '@next/swc-win32-x64-msvc': 13.3.4
-        transitivePeerDependencies:
-            - '@babel/core'
-            - babel-plugin-macros
-        dev: true
-
     /next@13.4.1(react-dom@18.2.0)(react@18.2.0):
         resolution:
             {
@@ -4513,7 +4341,6 @@ packages:
         transitivePeerDependencies:
             - '@babel/core'
             - babel-plugin-macros
-        dev: false
 
     /node-releases@2.0.6:
         resolution:
@@ -6447,7 +6274,6 @@ packages:
             {
                 integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==,
             }
-        dev: false
 
     /zustand@4.3.7(react@18.2.0):
         resolution:
