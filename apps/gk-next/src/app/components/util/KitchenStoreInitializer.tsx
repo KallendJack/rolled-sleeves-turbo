@@ -10,7 +10,7 @@ type KitchenStoreInitializerProps = {
     kitchen?: Kitchen
 }
 
-const KitchenStoreInitializer = (props: KitchenStoreInitializerProps) => {
+export default function KitchenStoreInitializer(props: KitchenStoreInitializerProps) {
     const { kitchens = [], kitchen = null } = props
 
     const initialized = useRef(false)
@@ -22,5 +22,3 @@ const KitchenStoreInitializer = (props: KitchenStoreInitializerProps) => {
 
     return null
 }
-
-export default KitchenStoreInitializer

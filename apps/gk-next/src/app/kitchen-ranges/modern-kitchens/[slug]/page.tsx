@@ -25,7 +25,16 @@ export default async function Page({ params }: { params: { slug: string } }) {
     return (
         <>
             <KitchenStoreInitializer kitchens={kitchens} kitchen={kitchen} />
-            <Breadcrumbs breadcrumbs={breadcrumbs} />
+            <Breadcrumbs
+                breadcrumbs={[
+                    ...breadcrumbs,
+                    {
+                        id: 4,
+                        name: kitchen.fields.name,
+                        href: `/kitchen-ranges/${kitchen.fields.type}-kitchens/${kitchen.fields.slug}`,
+                    },
+                ]}
+            />
             <KitchenContent />
         </>
     )

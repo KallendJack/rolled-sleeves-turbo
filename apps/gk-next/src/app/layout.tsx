@@ -4,23 +4,23 @@ import '../styles/global.css'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 
-const montserrat = Montserrat({
-    variable: '--font-montserrat',
-    subsets: ['latin'],
-    display: 'swap',
-})
-
-const raleway = Raleway({
-    variable: '--font-raleway',
-    subsets: ['latin'],
-    display: 'swap',
-})
-
 export const revalidate = 60
 
 export const metadata = {
     title: 'Garrett Kitchens',
 }
+
+const montserrat = Montserrat({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-montserrat',
+})
+
+const raleway = Raleway({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-raleway',
+})
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
