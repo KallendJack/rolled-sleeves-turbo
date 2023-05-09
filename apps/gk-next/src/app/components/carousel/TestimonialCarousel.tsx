@@ -48,8 +48,8 @@ export const TestimonialCarousel = (props: CarouselProps) => {
 
             <div ref={emblaRef}>
                 <div className="flex mt-4 gap-x-16 sm:mt-12">
-                    {testimonials.map((testimonial) => (
-                        <div className="embla__slide min-w-0 flex-[0_0_100%]">
+                    {testimonials.map((testimonial, index) => (
+                        <div className="embla__slide min-w-0 flex-[0_0_100%]" key={index}>
                             <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-12">
                                 <div className="sm:w-2/4 space-y-4 sm:space-y-8">
                                     <p className="text-gray-500">{testimonial.text}</p>

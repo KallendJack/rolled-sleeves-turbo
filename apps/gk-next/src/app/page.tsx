@@ -87,7 +87,6 @@ export default function Page() {
     return (
         <>
             <section className="relative bg-gray-900">
-                {/* Decorative image and overlay */}
                 <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
                     <Image
                         fill

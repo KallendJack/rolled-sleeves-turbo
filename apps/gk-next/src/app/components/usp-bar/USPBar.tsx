@@ -13,7 +13,7 @@ export default function USPBar(props: USPBarProps) {
         <section className="w-full bg-brand-primaryBg">
             <dl className="grid grid-cols-3 px-4 py-8 lg:px-8 font-heading text-sm md:text-base text-white font-extralight tracking-widest lg:text-lg">
                 {items.map((item, index) => (
-                    <div className="sm:flex-row">
+                    <div className="sm:flex-row" key={index}>
                         <div
                             className={`flex flex-col items-center justify-center border-l gap-x-4 border-white py-3 sm:flex-row ${
                                 index === items.length - 1 ? 'border-r' : ''
