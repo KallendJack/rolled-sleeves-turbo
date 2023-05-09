@@ -8,10 +8,19 @@ type CTASectionProps = HTMLAttributes<HTMLDivElement> & {
     description: string
     button: React.ReactNode
     flipped?: boolean
+    whiteBg?: boolean
 }
 
 export default function CTASection(props: CTASectionProps) {
-    const { title, image, description, button, flipped = false, className = '' } = props
+    const {
+        title,
+        image,
+        description,
+        button,
+        flipped = false,
+        whiteBg = false,
+        className = '',
+    } = props
 
     return (
         <section
@@ -20,7 +29,11 @@ export default function CTASection(props: CTASectionProps) {
                 className,
             )}
         >
-            <div className="pb-sm md:pb-6 lg:pb-0 bg-brand-greyBg">
+            <div
+                className={`pb-sm lg:pb-0 ${
+                    whiteBg ? 'bg-white lg:bg-brand-greyBg md:pb-0' : 'bg-brand-greyBg md:pb-6'
+                }`}
+            >
                 <div className="flex flex-col items-center px-4 mx-auto md:px-6 max-w-7xl gap-x-8 gap-y-10 sm:gap-y-8 lg:px-8 lg:flex-row lg:items-stretch">
                     <div
                         className={`w-full max-w-2xl -mt-16 lg:-mb-16 lg:w-96 lg:flex-none ${
