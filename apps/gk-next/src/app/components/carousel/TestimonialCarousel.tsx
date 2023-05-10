@@ -35,7 +35,7 @@ export const TestimonialCarousel = (props: CarouselProps) => {
     return (
         <div className="overflow-hidden">
             <div className="flex flex-col sm:flex-row justify-between">
-                <p className="mt-2 text-base text-gray-500">
+                <p className="mt-4 text-base text-gray-500">
                     What our customers have to say about us.
                 </p>
 

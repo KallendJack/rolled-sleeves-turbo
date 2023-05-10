@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const navigation = {
     ourKitchens: [
-        { name: 'Real Kitchens', href: '/real-kitchens' },
+        { name: 'Our Projects', href: '/our-projects' },
         { name: 'Modern Kitchens', href: '/modern-kitchens' },
         { name: 'Traditional Kitchens', href: '/traditional-kitchens' },
     ],
