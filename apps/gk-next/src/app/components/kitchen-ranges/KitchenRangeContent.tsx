@@ -221,7 +221,7 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
                                             <Image
                                                 fill
                                                 src={`https:${kitchen.fields.images[0].fields.file.url}`}
-                                                alt={kitchen.fields.name}
+                                                alt={kitchen.fields.images[0].fields.title}
                                                 className="object-cover object-center w-full h-full sm:h-full sm:w-full"
                                             />
                                         </div>

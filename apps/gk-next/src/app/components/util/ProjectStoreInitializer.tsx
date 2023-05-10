@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 
-import { useProjects } from 'stores/projects'
+import { useProjects } from 'stores/project'
 import type { Project } from 'types/project'
 
 type ProjectStoreInitializerProps = {

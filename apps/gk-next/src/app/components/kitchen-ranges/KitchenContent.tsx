@@ -43,7 +43,7 @@ export default function KitchenContent() {
                                                     <span className="absolute inset-0 overflow-hidden">
                                                         <Image
                                                             src={`https:${image.fields.file.url}`}
-                                                            alt={image.fields.description}
+                                                            alt={image.fields.title}
                                                             className="object-cover object-center w-full h-full"
                                                             fill
                                                         />
@@ -69,7 +69,7 @@ export default function KitchenContent() {
                                         <Zoom>
                                             <img
                                                 src={`https:${image.fields.file.url}`}
-                                                alt={image.fields.description}
+                                                alt={image.fields.title}
                                                 className="object-cover object-center w-full h-full"
                                             />
                                         </Zoom>
@@ -303,7 +303,7 @@ export default function KitchenContent() {
                                         <div className="relative w-full overflow-hidden h-72">
                                             <Image
                                                 src={`https:${kitchen.fields.images[0].fields.file.url}`}
-                                                alt={kitchen.fields.images[0].fields.description}
+                                                alt={kitchen.fields.images[0].fields.title}
                                                 className="object-cover object-center w-full h-full"
                                                 fill
                                             />

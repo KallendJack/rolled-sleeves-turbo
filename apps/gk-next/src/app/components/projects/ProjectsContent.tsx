@@ -9,7 +9,7 @@ import { ChevronDownIcon, PlusIcon } from '@heroicons/react/20/solid'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import { classNames } from 'utils/tailwind/classNames'
-import { useProjects } from 'stores/projects'
+import { useProjects } from 'stores/project'
 import { Button } from 'components/button/Button'
 
 export type ProjectsContentProps = {
@@ -219,7 +219,7 @@ export default function ProjectsContent(props: ProjectsContentProps) {
                                             <Image
                                                 fill
                                                 src={`https:${project.fields.images[0].fields.file.url}`}
-                                                alt={project.fields.name}
+                                                alt={project.fields.images[0].fields.title}
                                                 className="object-cover object-center w-full h-full sm:h-full sm:w-full"
                                             />
                                         </div>

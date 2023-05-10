@@ -8,7 +8,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
-import { useProjects } from 'stores/projects'
+import { useProjects } from 'stores/project'
 import { classNames } from 'utils/tailwind/classNames'
 import { ButtonLink } from 'components/button/Button'
 import CTASection from 'components/cta/CTASection'
@@ -43,7 +43,7 @@ export default function ProjectContent() {
                                                     <span className="absolute inset-0 overflow-hidden">
                                                         <Image
                                                             src={`https:${image.fields.file.url}`}
-                                                            alt={image.fields.description}
+                                                            alt={image.fields.title}
                                                             className="object-cover object-center w-full h-full"
                                                             fill
                                                         />
@@ -69,7 +69,7 @@ export default function ProjectContent() {
                                         <Zoom>
                                             <img
                                                 src={`https:${image.fields.file.url}`}
-                                                alt={image.fields.description}
+                                                alt={image.fields.title}
                                                 className="object-cover object-center w-full h-full"
                                             />
                                         </Zoom>
@@ -268,7 +268,7 @@ export default function ProjectContent() {
                                         <div className="relative w-full overflow-hidden h-72">
                                             <Image
                                                 src={`https:${project.fields.images[0].fields.file.url}`}
-                                                alt={project.fields.images[0].fields.description}
+                                                alt={project.fields.images[0].fields.title}
                                                 className="object-cover object-center w-full h-full"
                                                 fill
                                             />

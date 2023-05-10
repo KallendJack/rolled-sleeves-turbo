@@ -1,9 +1,11 @@
 import { createClient } from 'contentful'
 
 import { useKitchens } from 'stores/kitchen'
-import { useProjects } from 'stores/projects'
-import type { Project } from 'types/project'
+import { useProjects } from 'stores/project'
+import { usePosts } from 'stores/post'
 import type { Kitchen } from 'types/kitchen'
+import type { Project } from 'types/project'
+import type { Post } from 'types/post'
 
 export const client = createClient({
     space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -74,4 +76,37 @@ export const getProjectBySlug = async (slug: string) => {
     useProjects.setState({ project: project as Project })
 
     return project as Project
+}
+
+export const getAllPosts = async () => {
+    const res = await client.getEntries({
+        content_type: 'blogPost',
+    })
+
+    if (!res) {
+        throw new Error('Failed to fetch data')
+    }
+
+    const posts = res.items
+
+    usePosts.setState({ posts: posts as Post[] })
+
+    return posts as Post[]
+}
+
+export const getPostBySlug = async (slug: string) => {
+    const res = await client.getEntries({
+        content_type: 'blogPost',
+        'fields.slug': slug,
+    })
+
+    if (!res) {
+        throw new Error('Failed to fetch data')
+    }
+
+    const post = res.items[0]
+
+    usePosts.setState({ post: post as Post })
+
+    return post as Post
 }
