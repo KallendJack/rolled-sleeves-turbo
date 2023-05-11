@@ -11,7 +11,7 @@ export default function USPBar(props: USPBarProps) {
     const { items } = props
     return (
         <section className="w-full bg-brand-primaryBg">
-            <dl className="grid grid-cols-3 px-4 py-8 lg:px-8 font-heading text-sm md:text-base text-white font-extralight tracking-widest lg:text-lg">
+            <dl className="grid grid-cols-3 px-4 py-5 lg:px-8 font-heading text-sm md:text-base text-white font-extralight tracking-widest lg:text-lg">
                 {items.map((item, index) => (
                     <div className="sm:flex-row" key={index}>
                         <div

@@ -56,7 +56,7 @@ export default function CTASection(props: CTASectionProps) {
                             flipped ? 'order-1' : 'order-2'
                         }`}
                     >
-                        <div className="space-y-4 leading-8 lg:pl-8 lg:space-y-8 sm:leading-9">
+                        <div className="space-y-4 leading-8 lg:pl-8 lg:space-y-4 sm:leading-9">
                             <h2 className="text-4xl tracking-tight text-gray-900">{title}</h2>
                             <p className="text-base text-gray-500 xl:text-lg">{description}</p>
                             {button}
