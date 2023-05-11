@@ -8,11 +8,11 @@ type BreadcrumbsProps = {
     }[]
 }
 
-export default function Button(props: BreadcrumbsProps) {
+export default function Breadcrumbs(props: BreadcrumbsProps) {
     const { breadcrumbs } = props
 
     return (
-        <div className="border-b border-gray-200 bg-brand-primaryBg">
+        <div className="bg-brand-primaryBg">
             <nav aria-label="Breadcrumb" className="px-4 mx-auto md:px-6 max-w-7xl lg:px-8">
                 <ol role="list" className="flex items-center py-4 space-x-4">
                     {breadcrumbs.slice(0, -1).map((breadcrumb) => (
