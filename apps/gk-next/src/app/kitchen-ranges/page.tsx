@@ -14,7 +14,7 @@ const breadcrumbs = [
 ]
 
 const content: KitchenRangeContentProps = {
-    type: 'all',
+    type: 'All',
     title: 'Kitchen Ranges',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
     filters: [

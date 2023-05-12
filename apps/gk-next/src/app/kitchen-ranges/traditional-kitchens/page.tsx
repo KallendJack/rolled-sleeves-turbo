@@ -15,7 +15,7 @@ const breadcrumbs = [
 ]
 
 const content: KitchenRangeContentProps = {
-    type: 'traditional',
+    type: 'Traditional',
     title: 'Traditional Kitchens',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
     filters: [

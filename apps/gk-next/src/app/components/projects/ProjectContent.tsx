@@ -133,113 +133,185 @@ export default function ProjectContent() {
                                                     as="div"
                                                     className="pb-6 prose-sm prose"
                                                 >
-                                                    <div className="mb-2 capitalize">
-                                                        <span className="font-bold">
-                                                            Kitchen Style: &nbsp;
-                                                        </span>
-                                                        {project.fields.style.split('-').join(' ')}
-                                                    </div>
+                                                    {project.fields?.kitchenStyle && (
+                                                        <div className="mb-2 capitalize">
+                                                            <span className="font-bold">
+                                                                Kitchen Style: &nbsp;
+                                                            </span>
+                                                            {project.fields.kitchenStyle}
+                                                        </div>
+                                                    )}
                                                     <div className="mb-2 capitalize">
                                                         <span className="font-bold">
                                                             Kitchen Range: &nbsp;
                                                         </span>
                                                         {project.fields.type}
                                                     </div>
-                                                    <div className="mb-2 capitalize">
-                                                        <span className="font-bold">
-                                                            Door Type: &nbsp;
-                                                        </span>
-                                                        {project.fields.doorType
-                                                            .split('-')
-                                                            .join(' ')}
-                                                    </div>
-                                                    <div className="mb-2 capitalize">
-                                                        <span className="font-bold">
-                                                            Cabinet Finish: &nbsp;
-                                                        </span>
-                                                        {project.fields.cabinetFinish
-                                                            .split('-')
-                                                            .join(' ')}
-                                                    </div>
-                                                    <div className="mb-2 capitalize">
-                                                        <span className="font-bold">
-                                                            Cabinet Finish: &nbsp;
-                                                        </span>
-                                                        {project.fields.worksurfaceMaterial
-                                                            .split('-')
-                                                            .join(' ')}
-                                                    </div>
-                                                    <div className="mb-2 capitalize">
-                                                        <span className="font-bold">
-                                                            Appliances: &nbsp;
-                                                        </span>
-                                                        {project.fields.appliances
-                                                            .split('-')
-                                                            .join(' ')}
-                                                    </div>
+                                                    {project.fields?.doorType && (
+                                                        <div className="mb-2 capitalize">
+                                                            <span className="font-bold">
+                                                                Door Type: &nbsp;
+                                                            </span>
+                                                            {project.fields.doorType}
+                                                        </div>
+                                                    )}
+                                                    {project.fields?.cabinetFinish && (
+                                                        <div className="mb-2 capitalize">
+                                                            <span className="font-bold">
+                                                                Cabinet Finish: &nbsp;
+                                                            </span>
+                                                            {project.fields.cabinetFinish}
+                                                        </div>
+                                                    )}
+                                                    {project.fields?.worksurfaceMaterial && (
+                                                        <div className="mb-2 capitalize">
+                                                            <span className="font-bold">
+                                                                Work Surface Material: &nbsp;
+                                                            </span>
+                                                            {project.fields.worksurfaceMaterial}
+                                                        </div>
+                                                    )}
+                                                    {project.fields?.appliances && (
+                                                        <div className="mb-2 capitalize">
+                                                            <span className="font-bold">
+                                                                Appliances: &nbsp;
+                                                            </span>
+                                                            {project.fields.appliances}
+                                                        </div>
+                                                    )}
                                                     <div>
                                                         <span className="font-bold">
-                                                            Price Range: &nbsp;
+                                                            Price Group: &nbsp;
                                                         </span>
-                                                        {project.fields.priceRange}
+                                                        {project.fields.priceGroup}
                                                     </div>
                                                 </Disclosure.Panel>
                                             </>
                                         )}
                                     </Disclosure>
-                                    <Disclosure as="div">
-                                        {({ open }) => (
-                                            <>
-                                                <h3>
-                                                    <Disclosure.Button className="relative flex items-center justify-between w-full py-6 text-left group">
-                                                        <span
-                                                            className={classNames(
-                                                                open
-                                                                    ? 'text-brand-primary'
-                                                                    : 'text-gray-900',
-                                                                'text-sm',
-                                                            )}
-                                                        >
-                                                            Colours Used
-                                                        </span>
-                                                        <span className="flex items-center ml-6">
-                                                            {open ? (
-                                                                <MinusIcon
-                                                                    className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
-                                                                    aria-hidden="true"
-                                                                />
-                                                            ) : (
-                                                                <PlusIcon
-                                                                    className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
-                                                                    aria-hidden="true"
-                                                                />
-                                                            )}
-                                                        </span>
-                                                    </Disclosure.Button>
-                                                </h3>
-                                                <Disclosure.Panel
-                                                    as="div"
-                                                    className="pb-6 prose-sm prose"
-                                                >
-                                                    <div className="flex items-center gap-x-3">
-                                                        {project.fields.coloursUsed.map(
-                                                            (colour, index) => {
-                                                                return (
-                                                                    <span
-                                                                        key={index}
-                                                                        style={{
-                                                                            backgroundColor: colour,
-                                                                        }}
-                                                                        className="inline-block w-8 h-8 border border-black rounded-full border-opacity-10"
+                                    {project.fields?.coloursUsed?.length > 0 && (
+                                        <Disclosure as="div">
+                                            {({ open }) => (
+                                                <>
+                                                    <h3>
+                                                        <Disclosure.Button className="relative flex items-center justify-between w-full py-6 text-left group">
+                                                            <span
+                                                                className={classNames(
+                                                                    open
+                                                                        ? 'text-brand-primary'
+                                                                        : 'text-gray-900',
+                                                                    'text-sm',
+                                                                )}
+                                                            >
+                                                                Colours Used
+                                                            </span>
+                                                            <span className="flex items-center ml-6">
+                                                                {open ? (
+                                                                    <MinusIcon
+                                                                        className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
+                                                                        aria-hidden="true"
                                                                     />
-                                                                )
-                                                            },
-                                                        )}
-                                                    </div>
-                                                </Disclosure.Panel>
-                                            </>
-                                        )}
-                                    </Disclosure>
+                                                                ) : (
+                                                                    <PlusIcon
+                                                                        className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
+                                                                        aria-hidden="true"
+                                                                    />
+                                                                )}
+                                                            </span>
+                                                        </Disclosure.Button>
+                                                    </h3>
+                                                    <Disclosure.Panel
+                                                        as="div"
+                                                        className="pb-6 prose-sm prose"
+                                                    >
+                                                        <div className="flex items-center gap-x-3">
+                                                            {project.fields.coloursUsed.map(
+                                                                (colour, index) => {
+                                                                    return (
+                                                                        <span
+                                                                            key={index}
+                                                                            style={{
+                                                                                backgroundColor:
+                                                                                    colour,
+                                                                            }}
+                                                                            title={colour}
+                                                                            className="inline-block w-12 h-12 border border-black rounded-full border-opacity-10"
+                                                                        />
+                                                                    )
+                                                                },
+                                                            )}
+                                                        </div>
+                                                    </Disclosure.Panel>
+                                                </>
+                                            )}
+                                        </Disclosure>
+                                    )}
+                                    {project.fields?.finishes?.length > 0 && (
+                                        <Disclosure as="div">
+                                            {({ open }) => (
+                                                <>
+                                                    <h3>
+                                                        <Disclosure.Button className="relative flex items-center justify-between w-full py-6 text-left group">
+                                                            <span
+                                                                className={classNames(
+                                                                    open
+                                                                        ? 'text-brand-primary'
+                                                                        : 'text-gray-900',
+                                                                    'text-sm',
+                                                                )}
+                                                            >
+                                                                Finishes
+                                                            </span>
+                                                            <span className="flex items-center ml-6">
+                                                                {open ? (
+                                                                    <MinusIcon
+                                                                        className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
+                                                                        aria-hidden="true"
+                                                                    />
+                                                                ) : (
+                                                                    <PlusIcon
+                                                                        className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
+                                                                        aria-hidden="true"
+                                                                    />
+                                                                )}
+                                                            </span>
+                                                        </Disclosure.Button>
+                                                    </h3>
+                                                    <Disclosure.Panel
+                                                        as="div"
+                                                        className="pb-6 prose-sm prose"
+                                                    >
+                                                        <div className="flex items-center gap-x-3">
+                                                            {project.fields.finishes.map(
+                                                                (finish, index) => {
+                                                                    return (
+                                                                        <span
+                                                                            key={index}
+                                                                            className="relative inline-block w-12 h-12 border border-black rounded-full border-opacity-10"
+                                                                        >
+                                                                            <Image
+                                                                                src={`https:${finish.fields.file.url}`}
+                                                                                alt={
+                                                                                    finish.fields
+                                                                                        .title
+                                                                                }
+                                                                                title={
+                                                                                    finish.fields
+                                                                                        .title
+                                                                                }
+                                                                                fill
+                                                                                className="rounded-full"
+                                                                            />
+                                                                        </span>
+                                                                    )
+                                                                },
+                                                            )}
+                                                        </div>
+                                                    </Disclosure.Panel>
+                                                </>
+                                            )}
+                                        </Disclosure>
+                                    )}
                                 </div>
                             </section>
                         </div>

@@ -1,17 +1,19 @@
 import type { Asset, Entry, EntryFields } from 'contentful'
 
 export interface KitchenFields {
-    type: 'modern' | 'traditional'
+    type: ('Handleless' | 'In-Frame' | 'Modern' | 'Traditional')[]
     name: EntryFields.Symbol
     slug: EntryFields.Symbol
     shortDescription: EntryFields.RichText
     description: EntryFields.RichText
-    style: 'contemporary' | 'other'
-    doorType: 'lay-on' | 'other'
-    handleless: EntryFields.Boolean
-    priceRange: '£' | '££' | '£££' | '££££' | '£££££'
-    stockedColours: EntryFields.Symbol[]
-    otherColours: EntryFields.Symbol[]
+    kitchenStyle?: EntryFields.Symbol
+    doorType?: EntryFields.Symbol
+    handleless?: EntryFields.Boolean
+    size?: EntryFields.Symbol
+    priceGroup: '£' | '££' | '£££' | '££££' | '£££££'
+    stockedColours?: EntryFields.Symbol[]
+    otherColours?: EntryFields.Symbol[]
+    finishes?: Asset[]
     images: Asset[]
 }
 

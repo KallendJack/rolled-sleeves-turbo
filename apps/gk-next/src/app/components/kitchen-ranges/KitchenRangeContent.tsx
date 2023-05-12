@@ -13,7 +13,7 @@ import { useKitchens } from 'stores/kitchen'
 import { Button } from 'components/button/Button'
 
 export type KitchenRangeContentProps = {
-    type: 'traditional' | 'modern' | 'all'
+    type: 'Modern' | 'Traditional' | 'Handleless' | 'In-Frame' | 'All'
     title: string
     description: string
     filters: {
@@ -228,7 +228,9 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
                                         <div className="flex flex-col flex-1 p-4 space-y-2">
                                             <h3 className="text-sm text-gray-900">
                                                 <Link
-                                                    href={`/kitchen-ranges/${kitchen.fields.type}-kitchens/${kitchen.fields.slug}`}
+                                                    href={`/kitchen-ranges/${type.toLowerCase()}-kitchens/${
+                                                        kitchen.fields.slug
+                                                    }`}
                                                 >
                                                     <span
                                                         aria-hidden="true"

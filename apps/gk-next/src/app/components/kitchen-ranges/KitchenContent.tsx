@@ -13,9 +13,15 @@ import { classNames } from 'utils/tailwind/classNames'
 import { ButtonLink } from 'components/button/Button'
 import CTASection from 'components/cta/CTASection'
 
-export default function KitchenContent() {
+type KitchenContentProps = {
+    type: 'Modern' | 'Traditional' | 'Handleless' | 'In-Frame' | 'All'
+}
+
+export default function KitchenContent(props: KitchenContentProps) {
+    const { type } = props
+
     const { kitchen, getKitchensByType } = useKitchens()
-    const filteredKitchens = getKitchensByType(kitchen.fields.type)
+    const filteredKitchens = getKitchensByType(type)
         .filter((k) => k.fields.slug !== kitchen.fields.slug)
         .slice(0, 3)
 
@@ -133,148 +139,226 @@ export default function KitchenContent() {
                                                     as="div"
                                                     className="pb-6 prose-sm prose"
                                                 >
-                                                    <div className="mb-2 capitalize">
-                                                        <span className="font-bold">
-                                                            Kitchen Style: &nbsp;
-                                                        </span>
-                                                        {kitchen.fields.style.split('-').join(' ')}
-                                                    </div>
-                                                    <div className="mb-2 capitalize">
-                                                        <span className="font-bold">
-                                                            Door Type: &nbsp;
-                                                        </span>
-                                                        {kitchen.fields.doorType
-                                                            .split('-')
-                                                            .join(' ')}
-                                                    </div>
+                                                    {kitchen.fields?.kitchenStyle && (
+                                                        <div className="mb-2 capitalize">
+                                                            <span className="font-bold">
+                                                                Kitchen Style: &nbsp;
+                                                            </span>
+                                                            {kitchen.fields.kitchenStyle}
+                                                        </div>
+                                                    )}
+                                                    {kitchen.fields?.doorType && (
+                                                        <div className="mb-2 capitalize">
+                                                            <span className="font-bold">
+                                                                Door Type: &nbsp;
+                                                            </span>
+                                                            {kitchen.fields.doorType}
+                                                        </div>
+                                                    )}
                                                     <div className="mb-2 capitalize">
                                                         <span className="font-bold">
                                                             Handleless: &nbsp;
                                                         </span>
-                                                        {kitchen.fields.handleless ? 'Yes' : 'No'}
+                                                        {kitchen.fields?.handleless ? 'Yes' : 'No'}
                                                     </div>
-                                                    <div className="mb-2 capitalize">
-                                                        <span className="font-bold">
-                                                            Size: &nbsp;
-                                                        </span>
-                                                        Made to Measure
-                                                    </div>
+                                                    {kitchen.fields?.size && (
+                                                        <div className="mb-2 capitalize">
+                                                            <span className="font-bold">
+                                                                Size: &nbsp;
+                                                            </span>
+                                                            {kitchen.fields.size}
+                                                        </div>
+                                                    )}
                                                     <div>
                                                         <span className="font-bold">
-                                                            Price Range: &nbsp;
+                                                            Price Group: &nbsp;
                                                         </span>
-                                                        {kitchen.fields.priceRange}
+                                                        {kitchen.fields.priceGroup}
                                                     </div>
                                                 </Disclosure.Panel>
                                             </>
                                         )}
                                     </Disclosure>
-                                    <Disclosure as="div">
-                                        {({ open }) => (
-                                            <>
-                                                <h3>
-                                                    <Disclosure.Button className="relative flex items-center justify-between w-full py-6 text-left group">
-                                                        <span
-                                                            className={classNames(
-                                                                open
-                                                                    ? 'text-brand-primary'
-                                                                    : 'text-gray-900',
-                                                                'text-sm',
-                                                            )}
-                                                        >
-                                                            Stocked Colours
-                                                        </span>
-                                                        <span className="flex items-center ml-6">
-                                                            {open ? (
-                                                                <MinusIcon
-                                                                    className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
-                                                                    aria-hidden="true"
-                                                                />
-                                                            ) : (
-                                                                <PlusIcon
-                                                                    className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
-                                                                    aria-hidden="true"
-                                                                />
-                                                            )}
-                                                        </span>
-                                                    </Disclosure.Button>
-                                                </h3>
-                                                <Disclosure.Panel
-                                                    as="div"
-                                                    className="pb-6 prose-sm prose"
-                                                >
-                                                    <div className="flex items-center gap-x-3">
-                                                        {kitchen.fields.stockedColours.map(
-                                                            (colour, index) => {
-                                                                return (
-                                                                    <span
-                                                                        key={index}
-                                                                        style={{
-                                                                            backgroundColor: colour,
-                                                                        }}
-                                                                        className="inline-block w-8 h-8 border border-black rounded-full border-opacity-10"
+                                    {kitchen.fields?.stockedColours?.length > 0 && (
+                                        <Disclosure as="div">
+                                            {({ open }) => (
+                                                <>
+                                                    <h3>
+                                                        <Disclosure.Button className="relative flex items-center justify-between w-full py-6 text-left group">
+                                                            <span
+                                                                className={classNames(
+                                                                    open
+                                                                        ? 'text-brand-primary'
+                                                                        : 'text-gray-900',
+                                                                    'text-sm',
+                                                                )}
+                                                            >
+                                                                Stocked Colours
+                                                            </span>
+                                                            <span className="flex items-center ml-6">
+                                                                {open ? (
+                                                                    <MinusIcon
+                                                                        className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
+                                                                        aria-hidden="true"
                                                                     />
-                                                                )
-                                                            },
-                                                        )}
-                                                    </div>
-                                                </Disclosure.Panel>
-                                            </>
-                                        )}
-                                    </Disclosure>
-                                    <Disclosure as="div">
-                                        {({ open }) => (
-                                            <>
-                                                <h3>
-                                                    <Disclosure.Button className="relative flex items-center justify-between w-full py-6 text-left group">
-                                                        <span
-                                                            className={classNames(
-                                                                open
-                                                                    ? 'text-brand-primary'
-                                                                    : 'text-gray-900',
-                                                                'text-sm',
-                                                            )}
-                                                        >
-                                                            Other Colours
-                                                        </span>
-                                                        <span className="flex items-center ml-6">
-                                                            {open ? (
-                                                                <MinusIcon
-                                                                    className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
-                                                                    aria-hidden="true"
-                                                                />
-                                                            ) : (
-                                                                <PlusIcon
-                                                                    className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
-                                                                    aria-hidden="true"
-                                                                />
-                                                            )}
-                                                        </span>
-                                                    </Disclosure.Button>
-                                                </h3>
-                                                <Disclosure.Panel
-                                                    as="div"
-                                                    className="pb-6 prose-sm prose"
-                                                >
-                                                    <div className="flex items-center gap-x-3">
-                                                        {kitchen.fields.otherColours.map(
-                                                            (colour, index) => {
-                                                                return (
-                                                                    <span
-                                                                        key={index}
-                                                                        style={{
-                                                                            backgroundColor: colour,
-                                                                        }}
-                                                                        className="inline-block w-8 h-8 border border-black rounded-full border-opacity-10"
+                                                                ) : (
+                                                                    <PlusIcon
+                                                                        className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
+                                                                        aria-hidden="true"
                                                                     />
-                                                                )
-                                                            },
-                                                        )}
-                                                    </div>
-                                                </Disclosure.Panel>
-                                            </>
-                                        )}
-                                    </Disclosure>
+                                                                )}
+                                                            </span>
+                                                        </Disclosure.Button>
+                                                    </h3>
+                                                    <Disclosure.Panel
+                                                        as="div"
+                                                        className="pb-6 prose-sm prose"
+                                                    >
+                                                        <div className="flex items-center gap-x-3">
+                                                            {kitchen.fields.stockedColours.map(
+                                                                (colour, index) => {
+                                                                    return (
+                                                                        <span
+                                                                            key={index}
+                                                                            style={{
+                                                                                backgroundColor:
+                                                                                    colour,
+                                                                            }}
+                                                                            title={colour}
+                                                                            className="inline-block w-12 h-12 border border-black rounded-full border-opacity-10"
+                                                                        />
+                                                                    )
+                                                                },
+                                                            )}
+                                                        </div>
+                                                    </Disclosure.Panel>
+                                                </>
+                                            )}
+                                        </Disclosure>
+                                    )}
+                                    {kitchen.fields?.otherColours?.length > 0 && (
+                                        <Disclosure as="div">
+                                            {({ open }) => (
+                                                <>
+                                                    <h3>
+                                                        <Disclosure.Button className="relative flex items-center justify-between w-full py-6 text-left group">
+                                                            <span
+                                                                className={classNames(
+                                                                    open
+                                                                        ? 'text-brand-primary'
+                                                                        : 'text-gray-900',
+                                                                    'text-sm',
+                                                                )}
+                                                            >
+                                                                Other Colours
+                                                            </span>
+                                                            <span className="flex items-center ml-6">
+                                                                {open ? (
+                                                                    <MinusIcon
+                                                                        className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
+                                                                        aria-hidden="true"
+                                                                    />
+                                                                ) : (
+                                                                    <PlusIcon
+                                                                        className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
+                                                                        aria-hidden="true"
+                                                                    />
+                                                                )}
+                                                            </span>
+                                                        </Disclosure.Button>
+                                                    </h3>
+                                                    <Disclosure.Panel
+                                                        as="div"
+                                                        className="pb-6 prose-sm prose"
+                                                    >
+                                                        <div className="flex items-center gap-x-3">
+                                                            {kitchen.fields.otherColours.map(
+                                                                (colour, index) => {
+                                                                    return (
+                                                                        <span
+                                                                            key={index}
+                                                                            style={{
+                                                                                backgroundColor:
+                                                                                    colour,
+                                                                            }}
+                                                                            title={colour}
+                                                                            className="inline-block w-12 h-12 border border-black rounded-full border-opacity-10"
+                                                                        />
+                                                                    )
+                                                                },
+                                                            )}
+                                                        </div>
+                                                    </Disclosure.Panel>
+                                                </>
+                                            )}
+                                        </Disclosure>
+                                    )}
+                                    {kitchen.fields?.finishes?.length > 0 && (
+                                        <Disclosure as="div">
+                                            {({ open }) => (
+                                                <>
+                                                    <h3>
+                                                        <Disclosure.Button className="relative flex items-center justify-between w-full py-6 text-left group">
+                                                            <span
+                                                                className={classNames(
+                                                                    open
+                                                                        ? 'text-brand-primary'
+                                                                        : 'text-gray-900',
+                                                                    'text-sm',
+                                                                )}
+                                                            >
+                                                                Finishes
+                                                            </span>
+                                                            <span className="flex items-center ml-6">
+                                                                {open ? (
+                                                                    <MinusIcon
+                                                                        className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
+                                                                        aria-hidden="true"
+                                                                    />
+                                                                ) : (
+                                                                    <PlusIcon
+                                                                        className="block w-6 h-6 text-brand-primary group-hover:text-brand-primaryHover"
+                                                                        aria-hidden="true"
+                                                                    />
+                                                                )}
+                                                            </span>
+                                                        </Disclosure.Button>
+                                                    </h3>
+                                                    <Disclosure.Panel
+                                                        as="div"
+                                                        className="pb-6 prose-sm prose"
+                                                    >
+                                                        <div className="flex items-center gap-x-3">
+                                                            {kitchen.fields.finishes.map(
+                                                                (finish, index) => {
+                                                                    return (
+                                                                        <span
+                                                                            key={index}
+                                                                            className="relative inline-block w-12 h-12 border border-black rounded-full border-opacity-10"
+                                                                        >
+                                                                            <Image
+                                                                                src={`https:${finish.fields.file.url}`}
+                                                                                alt={
+                                                                                    finish.fields
+                                                                                        .title
+                                                                                }
+                                                                                title={
+                                                                                    finish.fields
+                                                                                        .title
+                                                                                }
+                                                                                fill
+                                                                                className="rounded-full"
+                                                                            />
+                                                                        </span>
+                                                                    )
+                                                                },
+                                                            )}
+                                                        </div>
+                                                    </Disclosure.Panel>
+                                                </>
+                                            )}
+                                        </Disclosure>
+                                    )}
                                 </div>
                             </section>
                         </div>
@@ -324,7 +408,9 @@ export default function KitchenContent() {
                                         </div>
                                     </div>
                                     <ButtonLink
-                                        href={`/kitchen-ranges/${kitchen.fields.type}-kitchens/${kitchen.fields.slug}`}
+                                        href={`/kitchen-ranges/${type.toLowerCase()}-kitchens/${
+                                            kitchen.fields.slug
+                                        }`}
                                         className="w-full mt-4 text-center"
                                     >
                                         View Kitchen Range

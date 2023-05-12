@@ -15,7 +15,7 @@ const breadcrumbs = [
 ]
 
 const content: KitchenRangeContentProps = {
-    type: 'modern',
+    type: 'Modern',
     title: 'Modern Kitchens',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
     filters: [
