@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import { Button } from 'components/button/Button'
+import { EnvelopeIcon, PhoneIcon, MapIcon } from '@heroicons/react/24/outline'
 
 export const metadata = {
     title: 'Contact Us | Garrett Kitchens',
@@ -17,15 +18,51 @@ export default function Page() {
                     alt="Contact Us"
                 />
             </div>
-            <div className="pt-16 pb-24 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
+            <div className="py-sm lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
                 <div className="grid-cols-2 col-end-6 px-4 md:px-6 lg:px-8">
-                    <div className="max-w-xl mx-auto lg:mx-0 lg:max-w-md xl:max-w-lg">
+                    <div className="max-w-xl mx-auto lg:mx-0 md:max-w-lg lg:max-w-md xl:max-w-lg">
                         <h2 className="text-3xl tracking-tight text-gray-900">Contact Us</h2>
-                        <p className="mt-2 text-lg leading-8 text-gray-600">
+                        <p className="my-2 text-lg leading-8 text-gray-600">
                             Get in touch with one of our friendly kitchen designers about how we can
                             help.
                         </p>
-                        <form action="#" method="POST" className="mt-16">
+
+                        <div className="flex items-start flex-col sm:flex-row gap-4 sm:gap-0 justify-between mt-4">
+                            <div className="flex items-start gap-x-3">
+                                <MapIcon className="w-5 mt-[5px] text-brand-primaryFocus"></MapIcon>
+
+                                <ul className="text-lg leading-8 text-gray-600">
+                                    <li>Unit 2 IO Trade Centre</li>
+                                    <li>57A Croydon Road</li>
+                                    <li>Croydon</li>
+                                    <li>CR0 4WQ</li>
+                                </ul>
+                            </div>
+
+                            <div className="flex flex-col">
+                                <div className="flex gap-x-3">
+                                    <PhoneIcon className="w-5 text-brand-primaryFocus"></PhoneIcon>
+                                    <a
+                                        className="text-lg leading-8 text-gray-600 hover:text-brand-primaryFocus"
+                                        href="tel:02086190004"
+                                    >
+                                        020 8619 0004
+                                    </a>
+                                </div>
+
+                                <div className="flex gap-x-3">
+                                    <EnvelopeIcon className="w-5 text-brand-primaryFocus"></EnvelopeIcon>
+                                    <a
+                                        className="text-lg leading-8 text-gray-600 hover:text-brand-primaryFocus"
+                                        href="mailto:info@garrettkitchens.co.uk"
+                                    >
+                                        info@garrettkitchens.co.uk
+                                    </a>{' '}
+                                </div>
+                            </div>
+                        </div>
+
+                        <form action="#" method="POST" className="mt-8">
                             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                                 <div>
                                     <label
@@ -124,6 +161,7 @@ export default function Page() {
                                         />
                                     </div>
                                 </div>
+
                                 <div className="sm:col-span-2">
                                     <div className="flex justify-between text-sm leading-6">
                                         <label
