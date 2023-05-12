@@ -112,7 +112,9 @@ export default function Page() {
                         Start Your Journey <span aria-hidden="true">&rarr;</span>
                     </ButtonLink>
 
-                    <ChevronDoubleDownIcon className="w-12 bottom-[6%] absolute z-50 text-white" />
+                    <a href="#scrollLocation" className="ease-in-out duration-200 scroll-smooth">
+                        <ChevronDoubleDownIcon className="w-12 bottom-[6%] animate-bounce absolute z-50 text-white" />
+                    </a>
                 </div>
             </section>
 
@@ -134,6 +136,7 @@ export default function Page() {
             />
 
             <section
+                id="scrollLocation"
                 aria-labelledby="comfort-heading"
                 className="px-4 py-lg mx-auto max-w-7xl md:px-6 lg:px-8"
             >
@@ -375,14 +378,11 @@ export default function Page() {
 
             <CTASection
                 className="pt-28 md:pt-28 lg:py-40"
-                title="Planning your dream kitchen can be daunting."
+                title="Need some design inspiration?"
                 image="/assets/home/kitchen-brochure.png"
-                description={`With our essential kitchen planning guide, it doesn't have to
-                be. We'll walk you through some of our customer's commonly
-                asked questions and guide you through our process of creating your
-                very own unique kitchen.`}
+                description={`With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.`}
                 whiteBg
-                button={<ButtonLink href="/learn-more">Download Guide</ButtonLink>}
+                button={<ButtonLink href="/brochure">Request a Brochure</ButtonLink>}
             />
         </>
     )
