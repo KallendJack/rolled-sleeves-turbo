@@ -50,7 +50,7 @@ export default function TextImgSection(props: TextImgSectionProps) {
                     </div>
                 </div>
 
-                <div className="flex justify-center mt-8">{button}</div>
+                {button && <div className="flex justify-center mt-8">{button}</div>}
             </div>
         </section>
     )
