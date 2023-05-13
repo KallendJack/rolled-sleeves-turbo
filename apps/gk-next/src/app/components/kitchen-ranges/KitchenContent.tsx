@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
+import { useMemo } from 'react'
 import Image from 'next/image'
 import { Disclosure, Tab } from '@headlessui/react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
@@ -24,6 +25,7 @@ export default function KitchenContent(props: KitchenContentProps) {
     const filteredKitchens = getKitchensByType(type)
         .filter((k) => k.fields.slug !== kitchen.fields.slug)
         .slice(0, 3)
+    const kitchenType = useMemo(() => type.toLowerCase(), [type])
 
     return (
         <div className="bg-white">
@@ -408,9 +410,7 @@ export default function KitchenContent(props: KitchenContentProps) {
                                         </div>
                                     </div>
                                     <ButtonLink
-                                        href={`/kitchen-ranges/${type.toLowerCase()}-kitchens/${
-                                            kitchen.fields.slug
-                                        }`}
+                                        href={`/kitchen-ranges/${kitchenType}-kitchens/${kitchen.fields.slug}`}
                                         className="w-full mt-4 text-center"
                                     >
                                         View Kitchen Range

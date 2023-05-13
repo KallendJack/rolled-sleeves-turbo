@@ -1,6 +1,6 @@
 'use client'
 
-import { Fragment, useState } from 'react'
+import { Fragment, useMemo, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Dialog, Disclosure, Transition } from '@headlessui/react'
@@ -36,6 +36,7 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
 
     const allKitchensShown = kitchensToShowCount >= kitchens.length
     const kitchensToShow = kitchens.slice(0, kitchensToShowCount)
+    const kitchenType = useMemo(() => type.toLowerCase(), [type])
 
     return (
         <div className="bg-white">
@@ -228,9 +229,7 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
                                         <div className="flex flex-col flex-1 p-4 space-y-2">
                                             <h3 className="text-sm text-gray-900">
                                                 <Link
-                                                    href={`/kitchen-ranges/${type.toLowerCase()}-kitchens/${
-                                                        kitchen.fields.slug
-                                                    }`}
+                                                    href={`/kitchen-ranges/${kitchenType}-kitchens/${kitchen.fields.slug}`}
                                                 >
                                                     <span
                                                         aria-hidden="true"
