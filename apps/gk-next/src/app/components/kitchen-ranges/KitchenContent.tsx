@@ -214,7 +214,7 @@ export default function KitchenContent(props: KitchenContentProps) {
                                                         as="div"
                                                         className="pb-6 prose-sm prose"
                                                     >
-                                                        <div className="flex items-center gap-x-3">
+                                                        <div className="flex flex-wrap items-center gap-3">
                                                             {kitchen.fields.stockedColours.map(
                                                                 (colour, index) => {
                                                                     return (
@@ -271,7 +271,7 @@ export default function KitchenContent(props: KitchenContentProps) {
                                                         as="div"
                                                         className="pb-6 prose-sm prose"
                                                     >
-                                                        <div className="flex items-center gap-x-3">
+                                                        <div className="flex flex-wrap items-center gap-3">
                                                             {kitchen.fields.otherColours.map(
                                                                 (colour, index) => {
                                                                     return (
@@ -328,7 +328,7 @@ export default function KitchenContent(props: KitchenContentProps) {
                                                         as="div"
                                                         className="pb-6 prose-sm prose"
                                                     >
-                                                        <div className="flex items-center gap-x-3">
+                                                        <div className="flex flex-wrap items-center gap-3">
                                                             {kitchen.fields.finishes.map(
                                                                 (finish, index) => {
                                                                     return (
