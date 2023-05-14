@@ -133,7 +133,7 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
                                                                                 className="w-4 h-4 border-gray-300 rounded text-brand-primary focus:ring-brand-primary"
                                                                                 checked={currentRefinements[
                                                                                     section.id
-                                                                                ].includes(
+                                                                                ]?.includes(
                                                                                     option.value,
                                                                                 )}
                                                                                 onChange={(e) => {
@@ -251,7 +251,7 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
                                                                 className="w-4 h-4 border-gray-300 rounded text-brand-primary focus:ring-brand-primary"
                                                                 checked={currentRefinements[
                                                                     section.id
-                                                                ].includes(option.value)}
+                                                                ]?.includes(option.value)}
                                                                 onChange={(e) => {
                                                                     if (e.target.checked) {
                                                                         setCurrentRefinements(

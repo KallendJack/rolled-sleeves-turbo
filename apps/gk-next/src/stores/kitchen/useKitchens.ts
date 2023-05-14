@@ -42,7 +42,7 @@ export const useKitchens = create<useKitchensProps>((set, get) => ({
 
                 return (
                     hasCommonArrayElements(kitchen.fields.type, typeFilters) &&
-                    priceGroupFilters.includes(kitchen.fields.priceGroup)
+                    priceGroupFilters?.includes(kitchen.fields.priceGroup)
                 )
             })
     },
