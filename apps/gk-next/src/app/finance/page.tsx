@@ -2,6 +2,7 @@ import { ButtonLink } from 'components/button/Button'
 import Hero from 'components/hero/Hero'
 import TextImage from 'components/text-image/TextImage'
 import FourStep from 'components/four-step/FourStep'
+import CTASection from 'components/cta/CTASection'
 import Image from 'next/image'
 
 export default function Page() {
@@ -9,8 +10,8 @@ export default function Page() {
         <>
             <Hero
                 className=""
-                subTitle="Inspired Designs"
-                title="Appliances"
+                subTitle=""
+                title="Finance Options"
                 image="/assets/home/hero/hero.png"
                 description={`A luxury kitchen deserves luxury appliances, which is why weve parntered with some of the leading manufactureres of well-respected appliance brands and hand-selected only the very best to install our clients homes. `}
                 button={
@@ -22,12 +23,11 @@ export default function Page() {
 
             <TextImage
                 className=""
-                subTitle="Modern of classic style"
-                title="An Unbeatable Range"
+                subTitle=""
+                title="Pay upfront"
                 image="/assets/home/hero/hero.png"
                 alt="Some image"
                 flipped
-                whiteBg
                 button=""
                 description={`With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.
                 With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.`}
@@ -35,10 +35,11 @@ export default function Page() {
 
             <TextImage
                 className=""
-                subTitle="Options for every lifestyle"
-                title="Next Level Appliances"
+                subTitle=""
+                title="Buy now, pay later"
                 image="/assets/home/hero/hero.png"
                 alt="Some image"
+                whiteBg
                 button=""
                 description={`With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.
                 With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.`}
@@ -90,7 +91,16 @@ export default function Page() {
                 </div>
             </section>
 
-            <FourStep whiteBg className=""></FourStep>
+            <FourStep className=""></FourStep>
+
+            <CTASection
+                className="pt-[6.5rem] md:pt-[6.5rem] md:py-sm lg:py-32"
+                title="Need some design inspiration?"
+                image="/assets/home/kitchen-brochure.png"
+                description={`With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.`}
+                whiteBg
+                button={<ButtonLink href="/brochure">Request a Brochure</ButtonLink>}
+            />
         </>
     )
 }
