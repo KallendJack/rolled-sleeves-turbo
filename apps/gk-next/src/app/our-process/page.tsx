@@ -11,6 +11,7 @@ export default function Page() {
         <>
             <Hero
                 className=""
+                subTitle=""
                 title="Our Process"
                 image="/assets/home/hero/hero.png"
                 description={`With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.`}
@@ -23,6 +24,7 @@ export default function Page() {
 
             <TextImage
                 className=""
+                subTitle=""
                 title="1. Book a Survey"
                 image="/assets/home/hero/hero.png"
                 alt="Some image"
@@ -35,6 +37,7 @@ export default function Page() {
 
             <TextImage
                 className=""
+                subTitle=""
                 title="2. Visit Our Showroom"
                 image="/assets/home/hero/hero.png"
                 alt="Some image"
@@ -45,6 +48,7 @@ export default function Page() {
 
             <TextImage
                 className=""
+                subTitle=""
                 title="3. Finalise Your Design"
                 image="/assets/home/hero/hero.png"
                 alt="Some image"
@@ -56,6 +60,7 @@ export default function Page() {
             />
 
             <TextImage
+                subTitle=""
                 className=""
                 title="4. Place Your Order"
                 image="/assets/home/hero/hero.png"
