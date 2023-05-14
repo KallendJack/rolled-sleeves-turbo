@@ -20,18 +20,18 @@ const content: KitchenRangeContentProps = {
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
     filters: [
         {
-            id: 'kitchen-type',
+            id: 'type',
             name: 'Kitchen Type',
             options: [
-                { value: 'traditional', label: 'Traditional' },
-                { value: 'modern', label: 'Modern' },
-                { value: 'door', label: 'Door' },
-                { value: 'handleless', label: 'Handleless' },
+                { value: 'Traditional', label: 'Traditional' },
+                { value: 'Modern', label: 'Modern' },
+                { value: 'Handleless', label: 'Handleless' },
+                { value: 'In-Frame', label: 'In-Frame' },
             ],
         },
         {
-            id: 'price',
-            name: 'Price',
+            id: 'priceGroup',
+            name: 'Price Group',
             options: [
                 { value: '£', label: '£' },
                 { value: '££', label: '££' },
