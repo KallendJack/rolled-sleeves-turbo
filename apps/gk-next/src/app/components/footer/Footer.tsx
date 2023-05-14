@@ -2,11 +2,14 @@ import Link from 'next/link'
 
 const navigation = {
     ourKitchens: [
-        { name: 'Our Projects', href: '/our-projects' },
-        { name: 'Modern Kitchens', href: '/modern-kitchens' },
-        { name: 'Traditional Kitchens', href: '/traditional-kitchens' },
+        { name: 'All Kitchens', href: '/kitchen-ranges' },
+        { name: 'Modern Kitchens', href: '/kitchen-ranges/modern-kitchens' },
+        { name: 'Traditional Kitchens', href: '/kitchen-ranges/traditional-kitchens' },
+        { name: 'Handleless Kitchens', href: '/kitchen-ranges/handleless-kitchens' },
+        { name: 'In-Frame Kitchens', href: '/kitchen-ranges/in-frame-kitchens' },
     ],
     usefulLinks: [
+        { name: 'Our Projects', href: '/our-projects' },
         { name: 'Contact Us', href: '/contact-us' },
         { name: 'Privacy Policy', href: '/privacy-policy' },
         { name: 'Customer Care', href: '/customer-care' },
