@@ -85,9 +85,11 @@ export default function ProjectContent() {
                             <div className="mt-2">
                                 <h2 className="sr-only">Project information</h2>
                             </div>
-                            <div className="text-xl text-gray-500 capitalize">
-                                {project.fields.type} Kitchen Style
-                            </div>
+                            {project.fields?.kitchenStyle && (
+                                <div className="text-xl text-gray-500 capitalize">
+                                    {project.fields.kitchenStyle} Kitchen Style
+                                </div>
+                            )}
                             <div className="mt-6">
                                 <h3 className="sr-only">Description</h3>
                                 <div className="space-y-6 text-base text-gray-700">
@@ -349,9 +351,11 @@ export default function ProjectContent() {
                                             <h3 className="text-sm text-gray-900">
                                                 {project.fields.name}
                                             </h3>
-                                            <p className="mt-1 text-sm text-gray-500 capitalize">
-                                                {project.fields.type} Kitchen Style
-                                            </p>
+                                            {project.fields?.kitchenStyle && (
+                                                <p className="mt-1 text-sm text-gray-500 capitalize">
+                                                    {project.fields.kitchenStyle} Kitchen Style
+                                                </p>
+                                            )}
                                         </div>
                                         <div className="absolute inset-x-0 top-0 flex items-end justify-end p-4 overflow-hidden h-72">
                                             <div
@@ -361,7 +365,7 @@ export default function ProjectContent() {
                                         </div>
                                     </div>
                                     <ButtonLink
-                                        href={`/projects/${project.fields.slug}`}
+                                        href={`/our-projects/${project.fields.slug}`}
                                         className="w-full mt-4 text-center"
                                     >
                                         View Project

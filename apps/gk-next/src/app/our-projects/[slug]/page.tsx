@@ -27,7 +27,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <Breadcrumbs
                 breadcrumbs={[
                     ...breadcrumbs,
-                    { id: 3, name: project.fields.name, href: `/projects/${project.fields.slug}` },
+                    {
+                        id: 3,
+                        name: project.fields.name,
+                        href: `/our-projects/${project.fields.slug}`,
+                    },
                 ]}
             />
             <ProjectContent />
