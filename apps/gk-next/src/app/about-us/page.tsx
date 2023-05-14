@@ -2,6 +2,10 @@ import { ButtonLink } from 'components/button/Button'
 import FourStep from 'components/four-step/FourStep'
 import CTASection from 'components/cta/CTASection'
 
+export const metadata = {
+    title: 'About Us | Garrett Kitchens',
+}
+
 export default function Page() {
     return (
         <>
@@ -36,7 +40,7 @@ export default function Page() {
                     />
                 </svg>
                 <div
-                    className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
+                    className="absolute top-0 right-0 -ml-24 overflow-hidden left-1/2 -z-10 transform-gpu blur-3xl lg:ml-24 xl:ml-48"
                     aria-hidden="true"
                 >
                     <div
@@ -48,8 +52,8 @@ export default function Page() {
                     />
                 </div>
                 <div className="overflow-hidden">
-                    <div className="mx-auto max-w-7xl px-6 py-sm pt-lg sm:pt-60 lg:px-8 lg:py-lg">
-                        <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+                    <div className="px-6 mx-auto max-w-7xl py-sm pt-lg sm:pt-60 lg:px-8 lg:py-lg">
+                        <div className="max-w-2xl mx-auto gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                             <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                                     We&apos;re changing the kitchen-buying experience.
@@ -62,25 +66,25 @@ export default function Page() {
                                     tempor esse minim amet fugiat veniam occaecat aliqua.
                                 </p>
                             </div>
-                            <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-                                <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                            <div className="flex justify-end gap-8 mt-14 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+                                <div className="flex-none pt-32 ml-auto space-y-8 w-44 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                                     <div className="relative">
                                         <img
                                             src="/assets/home/Place-Order.png"
                                             alt=""
                                             className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                         />
-                                        <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                                        <div className="absolute inset-0 pointer-events-none rounded-xl ring-1 ring-inset ring-gray-900/10" />
                                     </div>
                                 </div>
-                                <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                                <div className="flex-none mr-auto space-y-8 w-44 sm:mr-0 sm:pt-52 lg:pt-36">
                                     <div className="relative">
                                         <img
                                             src="/assets/home/hero/hero.png"
                                             alt=""
                                             className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                         />
-                                        <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                                        <div className="absolute inset-0 pointer-events-none rounded-xl ring-1 ring-inset ring-gray-900/10" />
                                     </div>
                                     <div className="relative">
                                         <img
@@ -88,17 +92,17 @@ export default function Page() {
                                             alt=""
                                             className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                         />
-                                        <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                                        <div className="absolute inset-0 pointer-events-none rounded-xl ring-1 ring-inset ring-gray-900/10" />
                                     </div>
                                 </div>
-                                <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+                                <div className="flex-none pt-32 space-y-8 w-44 sm:pt-0">
                                     <div className="relative">
                                         <img
                                             src="/assets/home/Showroom-Visit.jpg"
                                             alt=""
                                             className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                         />
-                                        <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                                        <div className="absolute inset-0 pointer-events-none rounded-xl ring-1 ring-inset ring-gray-900/10" />
                                     </div>
                                     <div className="relative">
                                         <img
@@ -106,7 +110,7 @@ export default function Page() {
                                             alt=""
                                             className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                         />
-                                        <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                                        <div className="absolute inset-0 pointer-events-none rounded-xl ring-1 ring-inset ring-gray-900/10" />
                                     </div>
                                 </div>
                             </div>
@@ -115,10 +119,10 @@ export default function Page() {
                 </div>
             </div>
 
-            <section className="py-sm w-full lg:py-lg bg-gray-100">
-                <div className="max-w-4xl mx-auto px-4 lg:max-w-7xl lg:px-8">
+            <section className="w-full bg-gray-100 py-sm lg:py-lg">
+                <div className="max-w-4xl px-4 mx-auto lg:max-w-7xl lg:px-8">
                     <div className="pb-8">
-                        <h2 className="text-2xl tracking-tight lg:text-3xl text-gray-900">
+                        <h2 className="text-2xl tracking-tight text-gray-900 lg:text-3xl">
                             Our Values
                         </h2>
 
@@ -128,9 +132,9 @@ export default function Page() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+                    <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3">
                         <div>
-                            <h4 className="text-gray-900 text-lg">Exceptional Service</h4>
+                            <h4 className="text-lg text-gray-900">Exceptional Service</h4>
 
                             <p className="pt-2 text-gray-500 sm:text-sm">
                                 Lorem ipsum dolor sit amet, connsecutor aduoscubng cult su dououpas
@@ -140,7 +144,7 @@ export default function Page() {
                         </div>
 
                         <div>
-                            <h4 className="text-gray-900 text-lg">Exceptional Service</h4>
+                            <h4 className="text-lg text-gray-900">Exceptional Service</h4>
 
                             <p className="pt-2 text-gray-500 sm:text-sm">
                                 Lorem ipsum dolor sit amet, connsecutor aduoscubng cult su dououpas
@@ -150,7 +154,7 @@ export default function Page() {
                         </div>
 
                         <div>
-                            <h4 className="text-gray-900 text-lg">Exceptional Service</h4>
+                            <h4 className="text-lg text-gray-900">Exceptional Service</h4>
 
                             <p className="pt-2 text-gray-500 sm:text-sm">
                                 Lorem ipsum dolor sit amet, connsecutor aduoscubng cult su dououpas
@@ -161,7 +165,7 @@ export default function Page() {
                         </div>
 
                         <div>
-                            <h4 className="text-gray-900 text-lg">Exceptional Service</h4>
+                            <h4 className="text-lg text-gray-900">Exceptional Service</h4>
 
                             <p className="pt-2 text-gray-500 sm:text-sm">
                                 Lorem ipsum dolor sit amet, connsecutor aduoscubng cult su dououpas
@@ -171,7 +175,7 @@ export default function Page() {
                         </div>
 
                         <div>
-                            <h4 className="text-gray-900 text-lg">Exceptional Service</h4>
+                            <h4 className="text-lg text-gray-900">Exceptional Service</h4>
 
                             <p className="pt-2 text-gray-500 sm:text-sm">
                                 Lorem ipsum dolor sit amet, connsecutor aduoscubng cult su dououpas
@@ -181,7 +185,7 @@ export default function Page() {
                         </div>
 
                         <div>
-                            <h4 className="text-gray-900 text-lg">Exceptional Service</h4>
+                            <h4 className="text-lg text-gray-900">Exceptional Service</h4>
 
                             <p className="pt-2 text-gray-500 sm:text-sm">
                                 Lorem ipsum dolor sit amet, connsecutor aduoscubng cult su dououpas

@@ -1,10 +1,11 @@
-import Image from 'next/image'
-import Link from 'next/link'
-
 import { ButtonLink } from 'components/button/Button'
 import Hero from 'components/hero/Hero'
 import TextImage from 'components/text-image/TextImage'
 import CTASection from 'components/cta/CTASection'
+
+export const metadata = {
+    title: 'Our Process | Garrett Kitchens',
+}
 
 export default function Page() {
     return (
