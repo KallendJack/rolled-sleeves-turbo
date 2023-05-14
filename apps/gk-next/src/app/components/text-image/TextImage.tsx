@@ -4,6 +4,7 @@ import { twMerge } from 'tailwind-merge'
 
 type TextImgSectionProps = HTMLAttributes<HTMLDivElement> & {
     title: string
+    subTitle: string
     description: string
     image: string
     alt: string
@@ -15,6 +16,7 @@ type TextImgSectionProps = HTMLAttributes<HTMLDivElement> & {
 export default function TextImgSection(props: TextImgSectionProps) {
     const {
         title,
+        subTitle,
         image,
         description,
         alt,
@@ -42,6 +44,12 @@ export default function TextImgSection(props: TextImgSectionProps) {
                     </div>
 
                     <div className="relative flex flex-col w-full md:w-1/2 justify-center">
+                        {subTitle && (
+                            <h4 className="text-sm font-semibold uppercase tracking-widest text-brand-secondary">
+                                Inspired Designs
+                            </h4>
+                        )}
+
                         <h1 className="text-2xl tracking-tight text-gray-900 lg:text-3xl">
                             {title}
                         </h1>
@@ -50,7 +58,7 @@ export default function TextImgSection(props: TextImgSectionProps) {
                     </div>
                 </div>
 
-                <div className="flex justify-center mt-8">{button}</div>
+                {button && <div className="flex justify-center mt-8">{button}</div>}
             </div>
         </section>
     )
