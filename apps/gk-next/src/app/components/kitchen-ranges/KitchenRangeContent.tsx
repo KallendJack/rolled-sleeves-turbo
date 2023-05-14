@@ -11,6 +11,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { classNames } from 'utils/tailwind/classNames'
 import { useKitchens } from 'stores/kitchen'
 import { Button } from 'components/button/Button'
+import { removeDuplicates } from 'utils/general/removeDuplicates'
 
 export type KitchenRangeContentProps = {
     type: 'Modern' | 'Traditional' | 'Handleless' | 'In-Frame' | 'All'
@@ -34,8 +35,15 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
         priceGroup: [],
     })
 
-    const { getFilteredKitchens } = useKitchens()
+    const { getFilteredKitchens, getKitchensByType } = useKitchens()
     const kitchens = getFilteredKitchens(type, currentRefinements)
+    const allKitchens = getKitchensByType(type)
+    const types = useMemo(() => {
+        return removeDuplicates(allKitchens.map((kitchen) => kitchen.fields.type).flat())
+    }, [allKitchens])
+    const priceGroups = useMemo(() => {
+        return removeDuplicates(allKitchens.map((kitchen) => kitchen.fields.priceGroup))
+    }, [allKitchens])
 
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [kitchensToShowCount, setKitchensToShowCount] = useState(6)
@@ -118,82 +126,92 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
                                                         <Disclosure.Panel className="px-4 pt-4 pb-2">
                                                             <div className="space-y-6">
                                                                 {section.options.map(
-                                                                    (option, optionIdx) => (
-                                                                        <div
-                                                                            key={option.value}
-                                                                            className="flex items-center"
-                                                                        >
-                                                                            <input
-                                                                                id={`${section.id}-${optionIdx}-mobile`}
-                                                                                name={section.id}
-                                                                                defaultValue={
-                                                                                    option.value
-                                                                                }
-                                                                                type="checkbox"
-                                                                                className="w-4 h-4 border-gray-300 rounded text-brand-primary focus:ring-brand-primary"
-                                                                                checked={currentRefinements[
-                                                                                    section.id
-                                                                                ]?.includes(
-                                                                                    option.value,
-                                                                                )}
-                                                                                onChange={(e) => {
-                                                                                    if (
-                                                                                        e.target
-                                                                                            .checked
-                                                                                    ) {
-                                                                                        setCurrentRefinements(
-                                                                                            (
-                                                                                                prev,
-                                                                                            ) => {
-                                                                                                return {
-                                                                                                    ...prev,
-                                                                                                    [section.id]:
-                                                                                                        [
-                                                                                                            ...prev[
-                                                                                                                section
-                                                                                                                    .id
-                                                                                                            ],
-                                                                                                            e
-                                                                                                                .target
-                                                                                                                .value,
-                                                                                                        ],
-                                                                                                }
-                                                                                            },
-                                                                                        )
-                                                                                    } else {
-                                                                                        setCurrentRefinements(
-                                                                                            (
-                                                                                                prev,
-                                                                                            ) => {
-                                                                                                return {
-                                                                                                    ...prev,
-                                                                                                    [section.id]:
-                                                                                                        prev[
-                                                                                                            section
-                                                                                                                .id
-                                                                                                        ].filter(
-                                                                                                            (
-                                                                                                                item,
-                                                                                                            ) =>
-                                                                                                                item !==
+                                                                    (option, optionIdx) =>
+                                                                        (types?.includes(
+                                                                            option.value,
+                                                                        ) ||
+                                                                            priceGroups?.includes(
+                                                                                option.value,
+                                                                            )) && (
+                                                                            <div
+                                                                                key={option.value}
+                                                                                className="flex items-center"
+                                                                            >
+                                                                                <input
+                                                                                    id={`${section.id}-${optionIdx}-mobile`}
+                                                                                    name={
+                                                                                        section.id
+                                                                                    }
+                                                                                    defaultValue={
+                                                                                        option.value
+                                                                                    }
+                                                                                    type="checkbox"
+                                                                                    className="w-4 h-4 border-gray-300 rounded text-brand-primary focus:ring-brand-primary"
+                                                                                    checked={currentRefinements[
+                                                                                        section.id
+                                                                                    ]?.includes(
+                                                                                        option.value,
+                                                                                    )}
+                                                                                    onChange={(
+                                                                                        e,
+                                                                                    ) => {
+                                                                                        if (
+                                                                                            e.target
+                                                                                                .checked
+                                                                                        ) {
+                                                                                            setCurrentRefinements(
+                                                                                                (
+                                                                                                    prev,
+                                                                                                ) => {
+                                                                                                    return {
+                                                                                                        ...prev,
+                                                                                                        [section.id]:
+                                                                                                            [
+                                                                                                                ...prev[
+                                                                                                                    section
+                                                                                                                        .id
+                                                                                                                ],
                                                                                                                 e
                                                                                                                     .target
                                                                                                                     .value,
-                                                                                                        ),
-                                                                                                }
-                                                                                            },
-                                                                                        )
-                                                                                    }
-                                                                                }}
-                                                                            />
-                                                                            <label
-                                                                                htmlFor={`${section.id}-${optionIdx}-mobile`}
-                                                                                className="ml-3 text-sm text-gray-500"
-                                                                            >
-                                                                                {option.label}
-                                                                            </label>
-                                                                        </div>
-                                                                    ),
+                                                                                                            ],
+                                                                                                    }
+                                                                                                },
+                                                                                            )
+                                                                                        } else {
+                                                                                            setCurrentRefinements(
+                                                                                                (
+                                                                                                    prev,
+                                                                                                ) => {
+                                                                                                    return {
+                                                                                                        ...prev,
+                                                                                                        [section.id]:
+                                                                                                            prev[
+                                                                                                                section
+                                                                                                                    .id
+                                                                                                            ].filter(
+                                                                                                                (
+                                                                                                                    item,
+                                                                                                                ) =>
+                                                                                                                    item !==
+                                                                                                                    e
+                                                                                                                        .target
+                                                                                                                        .value,
+                                                                                                            ),
+                                                                                                    }
+                                                                                                },
+                                                                                            )
+                                                                                        }
+                                                                                    }}
+                                                                                />
+                                                                                <label
+                                                                                    htmlFor={`${section.id}-${optionIdx}-mobile`}
+                                                                                    className="ml-3 text-sm text-gray-500"
+                                                                                >
+                                                                                    {option.label}
+                                                                                </label>
+                                                                            </div>
+                                                                        ),
                                                                 )}
                                                             </div>
                                                         </Disclosure.Panel>
@@ -238,69 +256,77 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
                                                     {section.name}
                                                 </legend>
                                                 <div className="pt-6 space-y-3">
-                                                    {section.options.map((option, optionIdx) => (
-                                                        <div
-                                                            key={option.value}
-                                                            className="flex items-center"
-                                                        >
-                                                            <input
-                                                                id={`${section.id}-${optionIdx}`}
-                                                                name={section.id}
-                                                                defaultValue={option.value}
-                                                                type="checkbox"
-                                                                className="w-4 h-4 border-gray-300 rounded text-brand-primary focus:ring-brand-primary"
-                                                                checked={currentRefinements[
-                                                                    section.id
-                                                                ]?.includes(option.value)}
-                                                                onChange={(e) => {
-                                                                    if (e.target.checked) {
-                                                                        setCurrentRefinements(
-                                                                            (prev) => {
-                                                                                return {
-                                                                                    ...prev,
-                                                                                    [section.id]: [
-                                                                                        ...prev[
-                                                                                            section
-                                                                                                .id
-                                                                                        ],
-                                                                                        e.target
-                                                                                            .value,
-                                                                                    ],
-                                                                                }
-                                                                            },
-                                                                        )
-                                                                    } else {
-                                                                        setCurrentRefinements(
-                                                                            (prev) => {
-                                                                                return {
-                                                                                    ...prev,
-                                                                                    [section.id]:
-                                                                                        prev[
-                                                                                            section
-                                                                                                .id
-                                                                                        ].filter(
-                                                                                            (
-                                                                                                item,
-                                                                                            ) =>
-                                                                                                item !==
-                                                                                                e
-                                                                                                    .target
-                                                                                                    .value,
-                                                                                        ),
-                                                                                }
-                                                                            },
-                                                                        )
-                                                                    }
-                                                                }}
-                                                            />
-                                                            <label
-                                                                htmlFor={`${section.id}-${optionIdx}`}
-                                                                className="ml-3 text-sm text-gray-600"
-                                                            >
-                                                                {option.label}
-                                                            </label>
-                                                        </div>
-                                                    ))}
+                                                    {section.options.map(
+                                                        (option, optionIdx) =>
+                                                            (types?.includes(option.value) ||
+                                                                priceGroups?.includes(
+                                                                    option.value,
+                                                                )) && (
+                                                                <div
+                                                                    key={option.value}
+                                                                    className="flex items-center"
+                                                                >
+                                                                    <input
+                                                                        id={`${section.id}-${optionIdx}`}
+                                                                        name={section.id}
+                                                                        defaultValue={option.value}
+                                                                        type="checkbox"
+                                                                        className="w-4 h-4 border-gray-300 rounded text-brand-primary focus:ring-brand-primary"
+                                                                        checked={currentRefinements[
+                                                                            section.id
+                                                                        ]?.includes(option.value)}
+                                                                        onChange={(e) => {
+                                                                            if (e.target.checked) {
+                                                                                setCurrentRefinements(
+                                                                                    (prev) => {
+                                                                                        return {
+                                                                                            ...prev,
+                                                                                            [section.id]:
+                                                                                                [
+                                                                                                    ...prev[
+                                                                                                        section
+                                                                                                            .id
+                                                                                                    ],
+                                                                                                    e
+                                                                                                        .target
+                                                                                                        .value,
+                                                                                                ],
+                                                                                        }
+                                                                                    },
+                                                                                )
+                                                                            } else {
+                                                                                setCurrentRefinements(
+                                                                                    (prev) => {
+                                                                                        return {
+                                                                                            ...prev,
+                                                                                            [section.id]:
+                                                                                                prev[
+                                                                                                    section
+                                                                                                        .id
+                                                                                                ].filter(
+                                                                                                    (
+                                                                                                        item,
+                                                                                                    ) =>
+                                                                                                        item !==
+                                                                                                        e
+                                                                                                            .target
+                                                                                                            .value,
+                                                                                                ),
+                                                                                        }
+                                                                                    },
+                                                                                )
+                                                                            }
+                                                                        }}
+                                                                    />
+                                                                    <label
+                                                                        htmlFor={`${section.id}-${optionIdx}`}
+                                                                        className="ml-3 text-sm text-gray-600"
+                                                                    >
+                                                                        {option.label}
+                                                                    </label>
+                                                                </div>
+                                                            ),
+                                                    )}
                                                 </div>
                                             </fieldset>
                                         </div>
