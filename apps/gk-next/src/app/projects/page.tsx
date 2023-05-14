@@ -18,8 +18,8 @@ const content: ProjectsContentProps = {
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
     filters: [
         {
-            id: 'price',
-            name: 'Price',
+            id: 'priceGroup',
+            name: 'Price Group',
             options: [
                 { value: '£', label: '£' },
                 { value: '££', label: '££' },
