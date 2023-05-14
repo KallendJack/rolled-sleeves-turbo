@@ -24,7 +24,6 @@ const content: KitchenRangeContentProps = {
             name: 'Kitchen Type',
             options: [
                 { value: 'Traditional', label: 'Traditional' },
-                { value: 'Modern', label: 'Modern' },
                 { value: 'Handleless', label: 'Handleless' },
                 { value: 'In-Frame', label: 'In-Frame' },
             ],

@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     {
                         id: 4,
                         name: kitchen.fields.name,
-                        href: `/kitchen-ranges/${kitchen.fields.type}-kitchens/${kitchen.fields.slug}`,
+                        href: `/kitchen-ranges/modern-kitchens/${kitchen.fields.slug}`,
                     },
                 ]}
             />

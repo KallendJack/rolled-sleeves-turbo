@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
 const breadcrumbs = [
     { id: 1, name: 'Home', href: '/' },
     { id: 2, name: 'Kitchen Ranges', href: '/kitchen-ranges' },
-    { id: 3, name: 'Traditional Kitchens', href: '/kitchen-ranges/traditional-kitchens' },
+    { id: 3, name: 'In-Frame Kitchens', href: '/kitchen-ranges/in-frame-kitchens' },
 ]
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -31,11 +31,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     {
                         id: 4,
                         name: kitchen.fields.name,
-                        href: `/kitchen-ranges/traditional-kitchens/${kitchen.fields.slug}`,
+                        href: `/kitchen-ranges/in-frame-kitchens/${kitchen.fields.slug}`,
                     },
                 ]}
             />
-            <KitchenContent type="Traditional" />
+            <KitchenContent type="In-Frame" />
         </>
     )
 }

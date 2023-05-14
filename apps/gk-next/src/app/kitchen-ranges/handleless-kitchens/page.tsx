@@ -5,26 +5,26 @@ import type { KitchenRangeContentProps } from 'components/kitchen-ranges/Kitchen
 import { getAllKitchens } from 'utils/contentful/client'
 
 export const metadata = {
-    title: 'Kitchen Ranges | Garrett Kitchens',
+    title: 'Handleless Kitchens | Garrett Kitchens',
 }
 
 const breadcrumbs = [
     { id: 1, name: 'Home', href: '/' },
     { id: 2, name: 'Kitchen Ranges', href: '/kitchen-ranges' },
+    { id: 3, name: 'Handleless Kitchens', href: '/kitchen-ranges/handleless-kitchens' },
 ]
 
 const content: KitchenRangeContentProps = {
-    type: 'All',
-    title: 'Kitchen Ranges',
+    type: 'Handleless',
+    title: 'Handleless Kitchens',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
     filters: [
         {
             id: 'type',
             name: 'Kitchen Type',
             options: [
-                { value: 'Traditional', label: 'Traditional' },
                 { value: 'Modern', label: 'Modern' },
-                { value: 'Handleless', label: 'Handleless' },
+                { value: 'Traditional', label: 'Traditional' },
                 { value: 'In-Frame', label: 'In-Frame' },
             ],
         },
