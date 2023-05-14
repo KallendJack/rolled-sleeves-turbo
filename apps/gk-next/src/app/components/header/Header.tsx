@@ -11,6 +11,10 @@ import { ButtonLink } from 'components/button/Button'
 
 const kitchens = [
     {
+        name: 'All Kitchens',
+        href: '/kitchen-ranges',
+    },
+    {
         name: 'Modern Kitchens',
         href: '/kitchen-ranges/modern-kitchens',
     },
@@ -18,24 +22,37 @@ const kitchens = [
         name: 'Traditional Kitchens',
         href: '/kitchen-ranges/traditional-kitchens',
     },
+    {
+        name: 'Handleless Kitchens',
+        href: '/kitchen-ranges/handleless-kitchens',
+    },
+    {
+        name: 'In-Frame Kitchens',
+        href: '/kitchen-ranges/in-frame-kitchens',
+    },
 ]
 
 const about = [
+    {
+        name: 'About Us',
+        href: '/about-us',
+    },
     {
         name: 'Our Process',
         href: '/our-process',
     },
     {
-        name: 'Book A Free Survey',
-        href: '/home-survey',
+        name: 'Our Showroom',
+        href: '/visit-showroom',
     },
     {
-        name: 'Our Showroom',
-        href: '/showroom',
+        name: 'Our Brochures',
+        href: '/request-a-free-brochure',
     },
-]
-
-const appliancesWorktops = [
+    {
+        name: 'Our Blog',
+        href: '/blog',
+    },
     {
         name: 'Appliances',
         href: '/appliances',
@@ -43,6 +60,10 @@ const appliancesWorktops = [
     {
         name: 'Worktops',
         href: '/worktops',
+    },
+    {
+        name: 'Contact Us',
+        href: '/contact-us',
     },
 ]
 
@@ -52,7 +73,7 @@ export default function Header() {
     return (
         <header className="bg-white border-b border-gray-200">
             <nav
-                className="flex items-center justify-between p-4 mx-auto md:p-6 max-w-7xl xl:px-8"
+                className="flex items-center justify-between p-4 mx-auto md:p-6 max-w-7xl lg:px-8"
                 aria-label="Global"
             >
                 <div className="flex lg:flex-1">
@@ -61,7 +82,7 @@ export default function Header() {
                         <Image width="175" height="66" src="/assets/logos/logo.png" alt="Logo" />
                     </a>
                 </div>
-                <div className="flex xl:hidden">
+                <div className="flex lg:hidden">
                     <button
                         type="button"
                         className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -71,7 +92,7 @@ export default function Header() {
                         <Bars3Icon className="w-6 h-6" aria-hidden="true" />
                     </button>
                 </div>
-                <Popover.Group className="hidden xl:flex lg:gap-x-12">
+                <Popover.Group className="hidden lg:flex lg:gap-x-12">
                     <Popover className="relative">
                         <Popover.Button className="flex items-center text-sm font-semibold leading-6 text-gray-900 gap-x-1">
                             Kitchens
@@ -150,53 +171,20 @@ export default function Header() {
                             </Popover.Panel>
                         </Transition>
                     </Popover>
-                    <Popover className="relative">
-                        <Popover.Button className="flex items-center text-sm font-semibold leading-6 text-gray-900 gap-x-1">
-                            Appliances / Worktops
-                            <ChevronDownIcon
-                                className="flex-none w-5 h-5 text-gray-400"
-                                aria-hidden="true"
-                            />
-                        </Popover.Button>
-                        <Transition
-                            as={Fragment}
-                            enter="transition ease-out duration-200"
-                            enterFrom="opacity-0 translate-y-1"
-                            enterTo="opacity-100 translate-y-0"
-                            leave="transition ease-in duration-150"
-                            leaveFrom="opacity-100 translate-y-0"
-                            leaveTo="opacity-0 translate-y-1"
-                        >
-                            <Popover.Panel className="absolute z-10 w-screen max-w-sm mt-3 overflow-hidden bg-white shadow-lg -left-8 top-full rounded-3xl ring-1 ring-gray-900/5">
-                                <div className="p-4">
-                                    {appliancesWorktops.map((item) => (
-                                        <div
-                                            key={item.name}
-                                            className="relative flex items-center p-4 text-sm leading-6 rounded-lg group gap-x-6 hover:bg-gray-50"
-                                        >
-                                            <div className="flex-auto">
-                                                <a
-                                                    href={item.href}
-                                                    className="block font-semibold text-gray-900"
-                                                >
-                                                    {item.name}
-                                                    <span className="absolute inset-0" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </Popover.Panel>
-                        </Transition>
-                    </Popover>
-                    <a href="/projects" className="text-sm font-semibold leading-6 text-gray-900">
+                    <a
+                        href="/book-a-free-survey"
+                        className="text-sm font-semibold leading-6 text-gray-900"
+                    >
+                        Book a Free Survey
+                    </a>
+                    <a
+                        href="/our-projects"
+                        className="text-sm font-semibold leading-6 text-gray-900"
+                    >
                         Our Projects
                     </a>
-                    <a href="/contact-us" className="text-sm font-semibold leading-6 text-gray-900">
-                        Contact
-                    </a>
                 </Popover.Group>
-                <div className="hidden xl:flex lg:flex-1 lg:justify-end">
+                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <ButtonLink href="/contact-us">
                         Start Journey <span aria-hidden="true">&rarr;</span>
                     </ButtonLink>
@@ -204,7 +192,7 @@ export default function Header() {
             </nav>
             <Dialog
                 as="div"
-                className="xl:hidden"
+                className="lg:hidden"
                 open={mobileMenuOpen}
                 onClose={setMobileMenuOpen}
             >
@@ -288,45 +276,17 @@ export default function Header() {
                                         </>
                                     )}
                                 </Disclosure>
-                                <Disclosure as="div" className="-mx-3">
-                                    {({ open }) => (
-                                        <>
-                                            <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
-                                                Appliances / Worktops
-                                                <ChevronDownIcon
-                                                    className={classNames(
-                                                        open ? 'rotate-180' : '',
-                                                        'h-5 w-5 flex-none',
-                                                    )}
-                                                    aria-hidden="true"
-                                                />
-                                            </Disclosure.Button>
-                                            <Disclosure.Panel className="mt-2 space-y-2">
-                                                {[...appliancesWorktops].map((item) => (
-                                                    <Disclosure.Button
-                                                        key={item.name}
-                                                        as="a"
-                                                        href={item.href}
-                                                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
-                                                    >
-                                                        {item.name}
-                                                    </Disclosure.Button>
-                                                ))}
-                                            </Disclosure.Panel>
-                                        </>
-                                    )}
-                                </Disclosure>
                                 <a
-                                    href="/projects"
+                                    href="/book-a-free-survey"
+                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+                                >
+                                    Book a Free Survey
+                                </a>
+                                <a
+                                    href="/our-projects"
                                     className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
                                 >
                                     Our Projects
-                                </a>
-                                <a
-                                    href="/contact-us"
-                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
-                                >
-                                    Contact
                                 </a>
                             </div>
                             <div className="py-6">
