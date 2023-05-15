@@ -1,33 +1,35 @@
-'use client'
-
-import Link from 'next/link'
+import { HTMLAttributes } from 'react'
 import Image from 'next/image'
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { twMerge } from 'tailwind-merge'
 
-import { usePosts } from 'stores/post'
+type ThreeColumnContentProps = HTMLAttributes<HTMLDivElement> & {
+    title: string
+    items: {
+        image: string
+        title: string
+        text: string
+    }[]
+}
 
-export default function BlogList() {
-    const { posts } = usePosts()
+export function ThreeColumnContent(props: ThreeColumnContentProps) {
+    const { title, items, className = '' } = props
 
     return (
-        <section className="py-sm lg:py-lg">
+        <section className={twMerge('py-sm lg:py-lg', className)}>
             <div className="px-4 mx-auto md:px-6 max-w-7xl lg:px-8">
-                <div className="max-w-2xl mx-auto text-center">
+                <div className="mx-auto text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Check Out Our Blog
+                        {title}
                     </h2>
-                    <p className="mt-2 text-lg leading-8 text-gray-600">
-                        Learn more about our kitchens, our process, and our company.
-                    </p>
                 </div>
                 <div className="grid grid-cols-1 mx-auto mt-16 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                    {posts.map((post, index) => (
+                    {items.map((item, index) => (
                         <article key={index} className="flex flex-col items-start">
                             <div className="relative w-full">
                                 <div className="aspect-[16/9] w-full bg-gray-100 sm:aspect-[2/1] lg:aspect-[3/2] relative">
                                     <Image
-                                        src={`https:${post.fields.images[0].fields.file.url}`}
-                                        alt={post.fields.images[0].fields.title}
+                                        src={item.image}
+                                        alt={item.title}
                                         fill
                                         className="object-cover"
                                     />
@@ -35,15 +37,12 @@ export default function BlogList() {
                                 <div className="absolute inset-0 ring-1 ring-inset ring-gray-900/10" />
                             </div>
                             <div className="max-w-xl">
-                                <div className="relative group">
-                                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                                        <Link href={`/blog/${post.fields.slug}`}>
-                                            <span className="absolute inset-0" />
-                                            {post.fields.title}
-                                        </Link>
+                                <div className="relative">
+                                    <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900">
+                                        {item.title}
                                     </h3>
                                     <div className="mt-5 text-sm leading-6 text-gray-600 line-clamp-3">
-                                        {documentToReactComponents(post.fields.shortText as any)}
+                                        {item.text}
                                     </div>
                                 </div>
                             </div>
@@ -54,3 +53,5 @@ export default function BlogList() {
         </section>
     )
 }
+
+export default ThreeColumnContent
