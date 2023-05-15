@@ -10,7 +10,7 @@ export default function Calendly(props: CalendlyProps) {
     const { url } = props
 
     return (
-        <section className="py-sm lg:py-lg lg:pt-sm">
+        <section id="calendly" className="py-sm lg:py-lg lg:pt-sm">
             <InlineWidget url={url} />
         </section>
     )

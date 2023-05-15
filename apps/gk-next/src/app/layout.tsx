@@ -3,6 +3,7 @@ import { Montserrat, Raleway } from 'next/font/google'
 import '../styles/global.css'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
+import ModalVideo from 'components/modal/ModalVideo'
 
 export const revalidate = 60
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Header />
                 <main>{children}</main>
                 <Footer />
+                <ModalVideo />
             </body>
         </html>
     )

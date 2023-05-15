@@ -36,7 +36,7 @@ export default function CTASection(props: CTASectionProps) {
             >
                 <div className="flex flex-col items-center px-4 mx-auto md:px-6 max-w-7xl gap-x-8 gap-y-10 sm:gap-y-8 lg:px-8 lg:flex-row lg:items-stretch">
                     <div
-                        className={`w-full max-w-2xl -mt-16 lg:-mb-16 lg:w-96 lg:flex-none ${
+                        className={`w-full -mt-16 lg:-mb-16 lg:w-96 lg:flex-none ${
                             flipped ? 'order-2' : 'order-1'
                         }`}
                     >
@@ -52,7 +52,7 @@ export default function CTASection(props: CTASectionProps) {
                         </div>
                     </div>
                     <div
-                        className={`z-10 w-full max-w-2xl lg:max-w-none lg:flex-auto lg:pr-6 xl:pl-40 lg:py-lg ${
+                        className={`z-10 w-full lg:max-w-none lg:flex-auto lg:pr-6 xl:pl-40 lg:py-lg ${
                             flipped ? 'order-1' : 'order-2'
                         }`}
                     >
