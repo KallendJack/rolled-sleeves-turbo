@@ -50,7 +50,6 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
 
     const allKitchensShown = kitchensToShowCount >= kitchens.length
     const kitchensToShow = kitchens.slice(0, kitchensToShowCount)
-    const kitchenType = useMemo(() => type.toLowerCase(), [type])
 
     return (
         <div className="bg-white">
@@ -342,39 +341,45 @@ export default function KitchenRangeContent(props: KitchenRangeContentProps) {
                                 Kitchens
                             </h2>
                             <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
-                                {kitchensToShow.map((kitchen, index) => (
-                                    <div
-                                        key={index}
-                                        className="relative flex flex-col overflow-hidden bg-white border border-gray-200 group"
-                                    >
-                                        <div className="relative bg-gray-200 group-hover:opacity-75 h-96">
-                                            <Image
-                                                fill
-                                                src={`https:${kitchen.fields.images[0].fields.file.url}`}
-                                                alt={kitchen.fields.images[0].fields.title}
-                                                className="object-cover object-center w-full h-full sm:h-full sm:w-full"
-                                            />
+                                {kitchensToShow.map((kitchen, index) => {
+                                    const kitchenType = kitchen.fields.type.includes('Traditional')
+                                        ? 'traditional'
+                                        : 'modern'
+
+                                    return (
+                                        <div
+                                            key={index}
+                                            className="relative flex flex-col overflow-hidden bg-white border border-gray-200 group"
+                                        >
+                                            <div className="relative bg-gray-200 group-hover:opacity-75 h-96">
+                                                <Image
+                                                    fill
+                                                    src={`https:${kitchen.fields.images[0].fields.file.url}`}
+                                                    alt={kitchen.fields.images[0].fields.title}
+                                                    className="object-cover object-center w-full h-full sm:h-full sm:w-full"
+                                                />
+                                            </div>
+                                            <div className="flex flex-col flex-1 p-4 space-y-2">
+                                                <h3 className="text-sm text-gray-900">
+                                                    <Link
+                                                        href={`/kitchen-ranges/${kitchenType}-kitchens/${kitchen.fields.slug}`}
+                                                    >
+                                                        <span
+                                                            aria-hidden="true"
+                                                            className="absolute inset-0"
+                                                        />
+                                                        {kitchen.fields.name}
+                                                    </Link>
+                                                </h3>
+                                                <p className="space-y-3 text-sm text-gray-500">
+                                                    {documentToReactComponents(
+                                                        kitchen.fields.shortDescription as any,
+                                                    )}
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div className="flex flex-col flex-1 p-4 space-y-2">
-                                            <h3 className="text-sm text-gray-900">
-                                                <Link
-                                                    href={`/kitchen-ranges/${kitchenType}-kitchens/${kitchen.fields.slug}`}
-                                                >
-                                                    <span
-                                                        aria-hidden="true"
-                                                        className="absolute inset-0"
-                                                    />
-                                                    {kitchen.fields.name}
-                                                </Link>
-                                            </h3>
-                                            <p className="space-y-3 text-sm text-gray-500">
-                                                {documentToReactComponents(
-                                                    kitchen.fields.shortDescription as any,
-                                                )}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
+                                    )
+                                })}
                             </div>
                             {!allKitchensShown && (
                                 <div className="flex justify-center mt-8">

@@ -15,7 +15,7 @@ import { ButtonLink } from 'components/button/Button'
 import CTASection from 'components/cta/CTASection'
 
 type KitchenContentProps = {
-    type: 'Modern' | 'Traditional' | 'Handleless' | 'In-Frame' | 'All'
+    type: 'Modern' | 'Traditional'
 }
 
 export default function KitchenContent(props: KitchenContentProps) {
