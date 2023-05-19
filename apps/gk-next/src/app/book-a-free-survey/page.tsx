@@ -20,7 +20,7 @@ export default async function Page() {
             <HeroSection
                 title="Book a Free Survey"
                 description="Click the button below to get started."
-                image="/assets/home/hero.png"
+                image="/assets/home/hero/hero.png"
                 button={
                     <CalendlyPopupButton url="https://calendly.com/garrettkitchens/home-survey" />
                 }
