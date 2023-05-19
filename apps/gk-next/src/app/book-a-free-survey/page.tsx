@@ -1,17 +1,30 @@
-import { ButtonLink, NormalLink } from 'components/button/Button'
-import Calendly from 'components/calendly/Calendly'
+import dynamic from 'next/dynamic'
+
+import HeroSection from 'components/hero/Hero'
 import CTASection from 'components/cta/CTASection'
 import TextVideo from 'components/text-video/TextVideo'
 import ThreeColumnContent from 'components/three-column-content/ThreeColumnContent'
+import { ButtonLink } from 'components/button/Button'
 
 export const metadata = {
     title: 'Book a Free Survey | Garrett Kitchens',
 }
 
+const CalendlyPopupButton = dynamic(() => import('../components/calendly/CalendlyPopupButton'), {
+    ssr: false,
+})
+
 export default async function Page() {
     return (
         <>
-            <Calendly url="https://calendly.com/garrettkitchens/home-survey" />
+            <HeroSection
+                title="Book a Free Survey"
+                description="Click the button below to get started."
+                image="/assets/home/hero.png"
+                button={
+                    <CalendlyPopupButton url="https://calendly.com/garrettkitchens/home-survey" />
+                }
+            />
             <TextVideo
                 title="Start Your Journey"
                 text={`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
@@ -19,7 +32,9 @@ export default async function Page() {
                 ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
                 impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
                 ratione.`}
-                button={<NormalLink href="#calendly">Start Your Journey</NormalLink>}
+                button={
+                    <CalendlyPopupButton url="https://calendly.com/garrettkitchens/home-survey" />
+                }
                 image="/assets/home/Survey.png"
                 youtubeId="TxdhpRPptY0"
             />

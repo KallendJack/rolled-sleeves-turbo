@@ -4,7 +4,7 @@ import { twMerge } from 'tailwind-merge'
 
 type HeroSectionProps = HTMLAttributes<HTMLDivElement> & {
     title: string
-    subTitle: string
+    subTitle?: string
     image: string
     description: string
     button: React.ReactNode
@@ -28,14 +28,14 @@ export default function HeroSection(props: HeroSectionProps) {
             <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
             <div className="relative flex flex-col items-center max-w-4xl px-6 py-32 mx-auto text-center sm:py-64 lg:px-0">
                 {subTitle && (
-                    <h4 className="text-sm font-semibold uppercase tracking-widest text-brand-secondary">
-                        Inspired Designs
+                    <h4 className="text-sm font-semibold tracking-widest uppercase text-brand-secondary">
+                        {subTitle}
                     </h4>
                 )}
 
                 <h1 className="text-4xl tracking-tight text-white lg:text-6xl">{title}</h1>
 
-                <p className="mt-4 text-xl text-gray-300 mb-4">{description}</p>
+                <p className="mt-4 mb-4 text-xl text-gray-300">{description}</p>
 
                 {button}
             </div>
