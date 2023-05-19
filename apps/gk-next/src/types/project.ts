@@ -12,7 +12,7 @@ export interface ProjectFields {
     worksurfaceMaterial?: EntryFields.Symbol
     appliances?: EntryFields.Symbol
     priceGroup: '£' | '££' | '£££' | '££££' | '£££££'
-    coloursUsed?: EntryFields.Symbol[]
+    coloursUsed?: EntryFields.Object
     finishes?: Asset[]
     images: Asset[]
 }

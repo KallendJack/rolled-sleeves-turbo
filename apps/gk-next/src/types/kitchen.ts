@@ -11,8 +11,8 @@ export interface KitchenFields {
     handleless?: EntryFields.Boolean
     size?: EntryFields.Symbol
     priceGroup: '£' | '££' | '£££' | '££££' | '£££££'
-    stockedColours?: EntryFields.Symbol[]
-    otherColours?: EntryFields.Symbol[]
+    stockedColours?: EntryFields.Object
+    otherColours?: EntryFields.Object
     finishes?: Asset[]
     images: Asset[]
 }

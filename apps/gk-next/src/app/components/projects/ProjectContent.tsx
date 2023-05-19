@@ -234,9 +234,9 @@ export default function ProjectContent() {
                                                                             key={index}
                                                                             style={{
                                                                                 backgroundColor:
-                                                                                    colour,
+                                                                                    colour.value,
                                                                             }}
-                                                                            title={colour}
+                                                                            title={colour.key}
                                                                             className="inline-block w-12 h-12 border border-black rounded-full border-opacity-10"
                                                                         />
                                                                     )
