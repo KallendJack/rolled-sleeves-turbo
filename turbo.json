@@ -18,7 +18,14 @@
         "gk-next#build": {
             "dependsOn": ["^build"],
             "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
-            "env": ["NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN", "NEXT_PUBLIC_CONTENTFUL_SPACE_ID"]
+            "env": [
+                "NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN",
+                "NEXT_PUBLIC_CONTENTFUL_SPACE_ID",
+                "SES_ACCESS_KEY",
+                "SES_SECRET_ACCESS_KEY",
+                "SES_REGION",
+                "SES_EMAIL"
+            ]
         }
     }
 }
