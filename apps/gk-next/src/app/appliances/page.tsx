@@ -57,35 +57,35 @@ export default function Page() {
 
                     <div className="grid items-center max-w-xl grid-cols-3 mx-auto mt-4 justify-items-center gap-x-8 gap-y-10 sm:max-w-2xl md:grid-cols-5 sm:gap-x-10 lg:mx-0 lg:max-w-none">
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
-                            src="/assets/home/brand-logos/Aeg-logo.png"
+                            className="object-contain w-24 h-10 col-span-1 md:w-28 lg:w-full lg:col-span-1"
+                            src="/assets/home/brand-logos/AEG-logo.png"
                             alt="Transistor"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full lg:col-span-1"
                             src="/assets/home/brand-logos/BORA-logo.png"
                             alt="Reform"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full lg:col-span-1"
                             src="/assets/home/brand-logos/Bosch-logo.png"
                             alt="Tuple"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full lg:col-span-1"
                             src="/assets/home/brand-logos/Neff-logo.png"
                             alt="SavvyCal"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-40 md:col-span-2 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-40 lg:col-span-1"
                             src="/assets/home/brand-logos/Quooker-logo.png"
                             alt="Statamic"
                             width={158}

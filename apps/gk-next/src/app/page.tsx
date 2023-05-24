@@ -112,7 +112,10 @@ export default function Page() {
                         Start Your Journey <span aria-hidden="true">&rarr;</span>
                     </ButtonLink>
 
-                    <a href="#scrollLocation" className="duration-200 ease-in-out scroll-smooth">
+                    <a
+                        href="#scrollLocation"
+                        className="duration-200 ease-in-out scroll-smooth flex justify-center"
+                    >
                         <ChevronDoubleDownIcon className="w-12 bottom-[6%] animate-bounce absolute z-50 text-white" />
                     </a>
                 </div>
