@@ -112,7 +112,7 @@ export default function Page() {
                         Start Your Journey <span aria-hidden="true">&rarr;</span>
                     </ButtonLink>
 
-                    <a href="#scrollLocation" className="ease-in-out duration-200 scroll-smooth">
+                    <a href="#scrollLocation" className="duration-200 ease-in-out scroll-smooth">
                         <ChevronDoubleDownIcon className="w-12 bottom-[6%] animate-bounce absolute z-50 text-white" />
                     </a>
                 </div>
@@ -138,17 +138,17 @@ export default function Page() {
             <section
                 id="scrollLocation"
                 aria-labelledby="comfort-heading"
-                className="px-4 py-lg mx-auto max-w-7xl md:px-6 lg:px-8"
+                className="px-4 mx-auto py-lg max-w-7xl md:px-6 lg:px-8"
             >
                 <div className="relative px-6 lg:px-16">
                     <div className="relative flex flex-col items-center max-w-4xl mx-auto text-center">
-                        <h4 className="text-sm font-semibold uppercase tracking-widest text-brand-secondary">
+                        <h4 className="text-sm font-semibold tracking-widest uppercase text-brand-secondary">
                             Inspired Designs
                         </h4>
 
                         <h2
                             id="comfort-heading"
-                            className="text-2xl tracking-tight text-gray-900 mb-6 sm:text-4xl"
+                            className="mb-6 text-2xl tracking-tight text-gray-900 sm:text-4xl"
                         >
                             Do you feel like your kitchen is missing something? Missing your peronal
                             touch? Missing fun?
@@ -173,13 +173,13 @@ export default function Page() {
                 >
                     <div className="flex flex-col justify-between md:items-end md:flex-row">
                         <div className="md:w-3/5">
-                            <h4 className="text-sm font-semibold uppercase tracking-widest text-brand-secondary">
+                            <h4 className="text-sm font-semibold tracking-widest uppercase text-brand-secondary">
                                 A Seamless Experience
                             </h4>
 
                             <h2
                                 id="collection-heading"
-                                className="text-2xl tracking-tight lg:text-3xl text-gray-900"
+                                className="text-2xl tracking-tight text-gray-900 lg:text-3xl"
                             >
                                 Achieve your dream kitchen in 4 easy steps
                             </h2>
@@ -192,7 +192,7 @@ export default function Page() {
 
                         <button
                             // href="/our-process"
-                            className="mt-4 inline-block px-6 py-3 border border-gray-500 text-xs tracking-widest text-gray-900 uppercase hover:text-white bg-white hover:bg-brand-primaryFocus focus:bg-brand-primaryHover transition-colors"
+                            className="inline-block px-6 py-3 mt-4 text-xs tracking-widest text-gray-900 uppercase transition-colors bg-white border border-gray-500 hover:text-white hover:bg-brand-primaryFocus focus:bg-brand-primaryHover"
                         >
                             Learn More
                         </button>
@@ -203,9 +203,9 @@ export default function Page() {
                             <Link
                                 key={collection.name}
                                 href={collection.href}
-                                className="block text-center group relative border border-gray-400"
+                                className="relative block text-center border border-gray-400 group"
                             >
-                                <div className="absolute -top-7 left-0 right-0 text-2xl font-body font-medium mx-auto w-14 h-14 rounded-full bg-white border border-gray-500 text-gray-900 z-50 flex items-center justify-center">
+                                <div className="absolute left-0 right-0 z-50 flex items-center justify-center mx-auto text-2xl font-medium text-gray-900 bg-white border border-gray-500 rounded-full -top-7 font-body w-14 h-14">
                                     {collection.number}
                                 </div>
 
@@ -222,13 +222,13 @@ export default function Page() {
                                 </div>
 
                                 <div className="h-40 border-t border-gray-400">
-                                    <h3 className="pt-4 mb-2 text-lg text-gray-900 font-medium">
+                                    <h3 className="pt-4 mb-2 text-lg font-medium text-gray-900">
                                         {collection.name}
                                     </h3>
 
-                                    <hr className="border-b border-brand-primaryHover w-1/5 mx-auto" />
+                                    <hr className="w-1/5 mx-auto border-b border-brand-primaryHover" />
 
-                                    <p className="px-8 xl:px-6 mt-3 text-gray-500 sm:text-sm">
+                                    <p className="px-8 mt-3 text-gray-500 xl:px-6 sm:text-sm">
                                         {collection.description}
                                     </p>
                                 </div>
@@ -263,23 +263,26 @@ export default function Page() {
 
             <section
                 aria-labelledby="collection-heading"
-                className="w-full max-w-4xl px-4 py-sm mx-auto lg:py-lg md:px-6 lg:max-w-7xl lg:px-8"
+                className="w-full max-w-4xl px-4 mx-auto py-sm lg:py-lg md:px-6 lg:max-w-7xl lg:px-8"
             >
                 <div className="flex flex-col justify-between gap-12 md:flex-row">
                     <div className="w-full md:w-1/2">
-                        <img
-                            src="/assets/home/Testimonial.jpg"
-                            alt="Brochure"
-                            className="object-cover h-full"
-                        />
+                        <div className="relative w-full h-full min-h-[15rem]">
+                            <Image
+                                src="/assets/home/Testimonial.jpg"
+                                alt="Brochure"
+                                className="object-cover"
+                                fill
+                            />
+                        </div>
                     </div>
 
                     <div className="w-full md:w-1/2">
-                        <h4 className="text-sm font-semibold uppercase tracking-widest text-brand-secondary">
+                        <h4 className="text-sm font-semibold tracking-widest uppercase text-brand-secondary">
                             Customers At The Forefront
                         </h4>
 
-                        <h3 className="text-2xl mb-4 text-gray-900 lg:text-3xl">
+                        <h3 className="mb-4 text-2xl text-gray-900 lg:text-3xl">
                             Build a Kitchen That You&apos;ll Love
                         </h3>
 
@@ -302,48 +305,48 @@ export default function Page() {
 
             <section className="bg-brand-primaryBg py-sm lg:py-10">
                 <div className="px-6 mx-auto max-w-7xl lg:px-8">
-                    <h2 className="text-xl lg:text-lg leading-8 text-center text-white">
+                    <h2 className="text-xl leading-8 text-center text-white lg:text-lg">
                         We work with these trusted brands
                     </h2>
 
-                    <div className="grid items-center justify-items-center max-w-xl grid-cols-3 mx-auto mt-4 gap-x-8 gap-y-10 sm:max-w-2xl md:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6">
+                    <div className="grid items-center max-w-xl grid-cols-3 mx-auto mt-4 justify-items-center gap-x-8 gap-y-10 sm:max-w-2xl md:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6">
                         <Image
-                            className="object-contain w-24 md:w-28 lg:w-full col-span-1 md:col-span-2 h-12 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Blum-logo.png"
                             alt="Transistor"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 md:w-28 lg:w-full col-span-1 md:col-span-2 h-12 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/BORA-logo.png"
                             alt="Reform"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 md:w-28 lg:w-full col-span-1 md:col-span-2 h-12 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Bosch-logo.png"
                             alt="Tuple"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 md:w-28 lg:w-full col-span-1 md:col-span-2 h-12 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Consentino-logo.png"
                             alt="Reform"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 md:w-28 lg:w-full col-span-1 md:col-span-2 h-12 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Neff-logo.png"
                             alt="SavvyCal"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 md:w-28 lg:w-40 col-span-1 md:col-span-2 h-12 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-40 md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Quooker-logo.png"
                             alt="Statamic"
                             width={158}
@@ -354,9 +357,9 @@ export default function Page() {
             </section>
 
             <section className="w-full bg-gray-100">
-                <div className="w-full max-w-4xl px-4 py-sm mx-auto lg:py-lg md:px-6 lg:max-w-7xl lg:px-8">
+                <div className="w-full max-w-4xl px-4 mx-auto py-sm lg:py-lg md:px-6 lg:max-w-7xl lg:px-8">
                     <div className="flex flex-col">
-                        <h4 className="text-sm font-semibold uppercase tracking-widest text-brand-secondary">
+                        <h4 className="text-sm font-semibold tracking-widest uppercase text-brand-secondary">
                             An exceptional reputation
                         </h4>
 
