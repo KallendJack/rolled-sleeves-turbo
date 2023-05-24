@@ -22,7 +22,10 @@ export default async function Page() {
                 description="Click the button below to get started."
                 image="/assets/home/hero/hero.png"
                 button={
-                    <CalendlyPopupButton url="https://calendly.com/garrettkitchens/home-survey" />
+                    <CalendlyPopupButton
+                        url="https://calendly.com/garrettkitchens/home-survey"
+                        text="Schedule Now"
+                    />
                 }
             />
             <TextVideo
@@ -33,10 +36,15 @@ export default async function Page() {
                 impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
                 ratione.`}
                 button={
-                    <CalendlyPopupButton url="https://calendly.com/garrettkitchens/home-survey" />
+                    <CalendlyPopupButton
+                        url="https://calendly.com/garrettkitchens/home-survey"
+                        text="Schedule Now"
+                    />
                 }
                 image="/assets/home/Survey.png"
-                youtubeId="TxdhpRPptY0"
+                videoId="TxdhpRPptY0"
+                channel="youtube"
+                className="bg-brand-greyBg"
             />
             <ThreeColumnContent
                 title="What will I get from a free home survey?"

@@ -5,14 +5,14 @@ import ReactModalVideo from 'react-modal-video'
 import { useModalVideo } from 'stores/modal'
 
 export default function ModalVideo() {
-    const { toggle, modalOpen, youtubeId } = useModalVideo()
+    const { toggle, modalOpen, videoId, channel } = useModalVideo()
 
     return (
         <ReactModalVideo
-            channel="youtube"
+            channel={channel}
             isOpen={modalOpen}
             onClose={() => toggle()}
-            videoId={youtubeId}
+            videoId={videoId}
             allowFullScreen
             ratio="16:9"
             animationSpeed={360}

@@ -5,17 +5,18 @@ import { PopupButton } from 'react-calendly'
 
 type CalendlyButtonProps = {
     url: string
+    text: string
 }
 
 export default function CalendlyButton(props: CalendlyButtonProps) {
-    const { url } = props
+    const { url, text } = props
 
     return (
         <Button>
             <PopupButton
                 url={url}
                 rootElement={document.getElementById('body')}
-                text="Schedule Now"
+                text={text}
                 styles={{
                     textTransform: 'uppercase',
                     letterSpacing: '0.1em',
