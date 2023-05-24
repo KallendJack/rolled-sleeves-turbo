@@ -1,8 +1,9 @@
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 
 import TextVideo from 'components/text-video/TextVideo'
 import GoogleMap from 'components/map/GoogleMap'
-import Image from 'next/image'
+import FourStep from 'components/four-step/FourStep'
 
 export const metadata = {
     title: 'Visit Showroom | Garrett Kitchens',
@@ -98,6 +99,7 @@ export default async function Page() {
                     </div>
                 </div>
             </div>
+            <FourStep />
         </>
     )
 }

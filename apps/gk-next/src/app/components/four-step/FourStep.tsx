@@ -1,16 +1,16 @@
+import { HTMLAttributes } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-
-import { ButtonLink } from 'components/button/Button'
-import { HTMLAttributes } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-type FourStepSectionProps = HTMLAttributes<HTMLDivElement> & {
+import { ButtonLink } from 'components/button/Button'
+
+type FourStepProps = HTMLAttributes<HTMLDivElement> & {
     flipped?: boolean
     whiteBg?: boolean
 }
 
-export default function FourStepection(props: FourStepSectionProps) {
+export default function FourStep(props: FourStepProps) {
     const { whiteBg = false, className = '' } = props
 
     const collections = [
@@ -63,13 +63,13 @@ export default function FourStepection(props: FourStepSectionProps) {
                 >
                     <div className="flex flex-col justify-between md:items-end md:flex-row">
                         <div className="md:w-3/5">
-                            <h4 className="text-sm font-semibold uppercase tracking-widest text-brand-secondary">
+                            <h4 className="text-sm font-semibold tracking-widest uppercase text-brand-secondary">
                                 A Seamless Experience
                             </h4>
 
                             <h2
                                 id="collection-heading"
-                                className="text-2xl tracking-tight lg:text-3xl text-gray-900"
+                                className="text-2xl tracking-tight text-gray-900 lg:text-3xl"
                             >
                                 Achieve your dream kitchen in 4 easy steps
                             </h2>
@@ -82,7 +82,7 @@ export default function FourStepection(props: FourStepSectionProps) {
 
                         <button
                             // href="/our-process"
-                            className="mt-4 inline-block px-6 py-3 border border-gray-500 text-xs tracking-widest text-gray-900 uppercase hover:text-white bg-white hover:bg-brand-primaryFocus focus:bg-brand-primaryHover transition-colors"
+                            className="inline-block px-6 py-3 mt-4 text-xs tracking-widest text-gray-900 uppercase transition-colors bg-white border border-gray-500 hover:text-white hover:bg-brand-primaryFocus focus:bg-brand-primaryHover"
                         >
                             Learn More
                         </button>
@@ -93,9 +93,9 @@ export default function FourStepection(props: FourStepSectionProps) {
                             <Link
                                 key={collection.name}
                                 href={collection.href}
-                                className="block text-center group relative border border-gray-400"
+                                className="relative block text-center border border-gray-400 group"
                             >
-                                <div className="absolute -top-7 left-0 right-0 text-2xl font-body font-medium mx-auto w-14 h-14 rounded-full bg-white border border-gray-500 text-gray-900 z-50 flex items-center justify-center">
+                                <div className="absolute left-0 right-0 z-50 flex items-center justify-center mx-auto text-2xl font-medium text-gray-900 bg-white border border-gray-500 rounded-full -top-7 font-body w-14 h-14">
                                     {collection.number}
                                 </div>
 
@@ -112,13 +112,13 @@ export default function FourStepection(props: FourStepSectionProps) {
                                 </div>
 
                                 <div className="h-40 border-t border-gray-400">
-                                    <h3 className="pt-4 mb-2 text-lg text-gray-900 font-medium">
+                                    <h3 className="pt-4 mb-2 text-lg font-medium text-gray-900">
                                         {collection.name}
                                     </h3>
 
-                                    <hr className="border-b border-brand-primaryHover w-1/5 mx-auto" />
+                                    <hr className="w-1/5 mx-auto border-b border-brand-primaryHover" />
 
-                                    <p className="px-8 xl:px-6 mt-3 text-gray-500 sm:text-sm">
+                                    <p className="px-8 mt-3 text-gray-500 xl:px-6 sm:text-sm">
                                         {collection.description}
                                     </p>
                                 </div>
