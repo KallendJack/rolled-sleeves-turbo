@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 import { Button } from 'components/button/Button'
-import Input from 'components/input/Input'
+import { Input, Textarea } from 'components/input/Input'
 
 export default function ContactForm() {
     const { register, handleSubmit, reset } = useForm()
@@ -28,108 +28,59 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit(onSubmit)} className="mt-8">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
-                    <label
-                        htmlFor="first-name"
-                        className="block text-sm font-semibold leading-6 text-gray-900"
-                    >
-                        First name
-                    </label>
-                    <div className="mt-2.5">
-                        <Input
-                            type="text"
-                            autoComplete="given-name"
-                            {...register('firstName', { required: true })}
-                        />
-                    </div>
+                    <Input
+                        label="First name"
+                        type="text"
+                        autoComplete="given-name"
+                        required
+                        {...register('firstName', { required: true })}
+                    />
                 </div>
                 <div>
-                    <label
-                        htmlFor="last-name"
-                        className="block text-sm font-semibold leading-6 text-gray-900"
-                    >
-                        Last name
-                    </label>
-                    <div className="mt-2.5">
-                        <Input
-                            type="text"
-                            autoComplete="family-name"
-                            {...register('lastName', { required: true })}
-                        />
-                    </div>
+                    <Input
+                        label="Last name"
+                        type="text"
+                        autoComplete="family-name"
+                        required
+                        {...register('lastName', { required: true })}
+                    />
                 </div>
                 <div className="sm:col-span-2">
-                    <label
-                        htmlFor="email"
-                        className="block text-sm font-semibold leading-6 text-gray-900"
-                    >
-                        Email
-                    </label>
-                    <div className="mt-2.5">
-                        <Input
-                            type="email"
-                            autoComplete="email"
-                            {...register('email', { required: true })}
-                        />
-                    </div>
+                    <Input
+                        label="Email"
+                        type="email"
+                        autoComplete="email"
+                        required
+                        {...register('email', { required: true })}
+                    />
                 </div>
                 <div className="sm:col-span-2">
-                    <div className="flex justify-between text-sm leading-6">
-                        <label htmlFor="phone" className="block font-semibold text-gray-900">
-                            Phone
-                        </label>
-                        <p id="phone-description" className="text-gray-400">
-                            Optional
-                        </p>
-                    </div>
-                    <div className="mt-2.5">
-                        <Input
-                            type="tel"
-                            autoComplete="tel"
-                            aria-describedby="phone-description"
-                            {...register('phone')}
-                        />
-                    </div>
+                    <Input
+                        label="Phone"
+                        type="tel"
+                        autoComplete="tel"
+                        aria-describedby="phone-description"
+                        {...register('phone')}
+                    />
                 </div>
                 <div className="sm:col-span-2">
-                    <div className="flex justify-between text-sm leading-6">
-                        <label
-                            htmlFor="message"
-                            className="block text-sm font-semibold leading-6 text-gray-900"
-                        >
-                            How can we help you?
-                        </label>
-                        <p id="message-description" className="text-gray-400">
-                            Max 500 characters
-                        </p>
-                    </div>
-                    <div className="mt-2.5">
-                        <textarea
-                            rows={4}
-                            aria-describedby="message-description"
-                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
-                            defaultValue=""
-                            {...register('message', { required: true })}
-                        />
-                    </div>
+                    <Textarea
+                        label="How can we help you?"
+                        rows={4}
+                        aria-describedby="message-description"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                        defaultValue=""
+                        {...register('message', { required: true })}
+                    />
                 </div>
-
                 <div className="sm:col-span-2">
-                    <div className="flex justify-between text-sm leading-6">
-                        <label htmlFor="phone" className="block font-semibold text-gray-900">
-                            Expected Budget
-                        </label>
-                        <p id="phone-description" className="text-gray-400">
-                            Optional
-                        </p>
-                    </div>
-                    <div className="mt-2.5">
-                        <Input
-                            type="text"
-                            autoComplete="expected-budget"
-                            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
-                            {...register('budget')}
-                        />
-                    </div>
+                    <Input
+                        label="Expected Budget"
+                        type="text"
+                        autoComplete="expected-budget"
+                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                        {...register('budget')}
+                    />
                 </div>
             </div>
             <div className="flex justify-end pt-8 mt-10 border-t border-gray-900/10">
