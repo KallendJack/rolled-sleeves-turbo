@@ -2,7 +2,8 @@ import Image from 'next/image'
 
 import FourStep from 'components/four-step/FourStep'
 import { Button } from 'components/button/Button'
-import Input from 'components/input/Input'
+import { Input } from 'components/input/Input'
+import BrochureForm from 'components/form/BrochureForm'
 
 export const metadata = {
     title: 'Request a Free Brochure | Garrett Kitchens',
@@ -19,9 +20,8 @@ export default function Page() {
                             height={400}
                             src="/assets/home/hero/hero.png"
                             alt="image"
-                            className="relative w-full md:w-1/2"
-                        ></Image>
-
+                            className="relative object-cover w-full md:w-1/2"
+                        />
                         <div className="w-full p-4 md:py-8 md:w-1/2">
                             <h2
                                 id="collection-heading"
@@ -29,59 +29,17 @@ export default function Page() {
                             >
                                 Get Our Free Kitchen Brochure
                             </h2>
-
-                            <p>Fill in your details below to download our kitchen brochure.</p>
-                            <p>Don&apos;t forget to save a copy!</p>
-
-                            <form className="flex flex-col gap-4 mt-4 md:w-4/5 lg:w-3/5">
-                                <div>
-                                    <label
-                                        htmlFor="first-name"
-                                        className="block text-sm font-semibold leading-6 text-gray-900"
-                                    >
-                                        What&apos;s your email address?
-                                    </label>
-                                    <div className="mt-2.5">
-                                        <Input type="email" autoComplete="email" />
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label
-                                        htmlFor="first-name"
-                                        className="block text-sm font-semibold leading-6 text-gray-900"
-                                    >
-                                        First name
-                                    </label>
-                                    <div className="mt-2.5">
-                                        <Input type="text" autoComplete="given-name" />
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label
-                                        htmlFor="first-name"
-                                        className="block text-sm font-semibold leading-6 text-gray-900"
-                                    >
-                                        First name
-                                    </label>
-                                    <div className="mt-2.5">
-                                        <Input type="text" autoComplete="family-name" />
-                                    </div>
-                                </div>
-
-                                <div className="flex w-full mt-4 border-gray-900/10">
-                                    <Button type="submit" className="w-full">
-                                        Download Brochure
-                                    </Button>
-                                </div>
-                            </form>
+                            <p className="text-gray-500">
+                                Fill in your details below to download our kitchen brochure.
+                            </p>
+                            <p className="text-gray-500">Don&apos;t forget to save a copy!</p>
+                            <BrochureForm />
                         </div>
                     </div>
                 </div>
             </section>
 
-            <FourStep whiteBg className=""></FourStep>
+            <FourStep whiteBg />
         </>
     )
 }
