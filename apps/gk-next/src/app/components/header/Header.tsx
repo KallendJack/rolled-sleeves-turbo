@@ -79,7 +79,12 @@ export default function Header() {
                 <div className="flex lg:flex-1">
                     <a href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Garrett Kitchens</span>
-                        <Image width="175" height="66" src="/assets/logos/logo.png" alt="Logo" />
+                        <Image
+                            width="150"
+                            height="50"
+                            src="/assets/logos/logo-new.png"
+                            alt="Logo"
+                        />
                     </a>
                 </div>
                 <div className="flex lg:hidden">
@@ -202,9 +207,9 @@ export default function Header() {
                         <a href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Garrett Kitchens</span>
                             <Image
-                                width="175"
-                                height="66"
-                                src="/assets/logos/logo.png"
+                                width="150"
+                                height="50"
+                                src="/assets/logos/logo-new.png"
                                 alt="Logo"
                             />
                         </a>
