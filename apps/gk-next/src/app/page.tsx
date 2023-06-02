@@ -98,7 +98,7 @@ const kitchens = [
         imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
     },
     {
-        name: 'Handeless Kitchens',
+        name: 'Handleless Kitchens',
         href: '#',
         imageSrc: '/assets/home/Survey.png',
         imageAlt:
@@ -348,9 +348,11 @@ export default function Page() {
                                 href={kitchen.href}
                                 className="relative block text-center border border-gray-400 group"
                             >
+                                <div className="absolute w-full h-full z-10 bg-black opacity-40"></div>
+
                                 <div
                                     aria-hidden="true"
-                                    className="relative overflow-hidden h-96 group-hover:opacity-75 flex justify-center items-center"
+                                    className="relative overflow-hidden h-96 group-hover:shadow-lg flex justify-center items-center"
                                 >
                                     <Image
                                         fill
@@ -359,7 +361,7 @@ export default function Page() {
                                         className="object-cover object-center"
                                     />
 
-                                    <h2 className="absolute text-white text-3xl px-6 mx-auto">
+                                    <h2 className="absolute text-white hover:text-white text-3xl z-50 px-6 mx-auto">
                                         {kitchen.name}
                                     </h2>
                                 </div>
