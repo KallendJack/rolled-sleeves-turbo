@@ -26,7 +26,7 @@ const raleway = Raleway({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en" className={`${montserrat.variable} ${raleway.variable}`}>
-            <body id="body">
+            <body id="body" className="mt-[67px] md:mt-[83px] lg:mt-[88px]">
                 <Header />
                 <main>{children}</main>
                 <Footer />

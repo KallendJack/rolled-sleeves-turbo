@@ -1,8 +1,9 @@
 'use client'
 
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { motion, useScroll, AnimatePresence } from 'framer-motion'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
@@ -69,9 +70,22 @@ const about = [
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const { scrollY } = useScroll()
+    const [distanceScrolled, setDistanceScrolled] = useState(0)
+    const hasScrolled = distanceScrolled > 32
+
+    useEffect(() => {
+        return scrollY.on('change', (latest) => {
+            setDistanceScrolled(latest)
+        })
+    }, [])
 
     return (
-        <header className="bg-white border-b border-gray-200">
+        <header
+            className={`fixed top-0 z-50 w-full border-b border-gray-200 transition-all duration-500 ease-in-out ${
+                hasScrolled ? 'bg-white/90 backdrop-blur shadow-sm' : 'bg-white'
+            }`}
+        >
             <nav
                 className="flex items-center justify-between p-4 mx-auto md:p-6 max-w-7xl lg:px-8"
                 aria-label="Global"
