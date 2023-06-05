@@ -1,4 +1,4 @@
-import { Montserrat, Raleway } from 'next/font/google'
+import { Montserrat, Raleway, Alegreya } from 'next/font/google'
 
 import '../styles/global.css'
 import Footer from './components/footer/Footer'
@@ -23,9 +23,19 @@ const raleway = Raleway({
     variable: '--font-raleway',
 })
 
+const alegreya = Alegreya({
+    subsets: ['latin'],
+    weight: '400',
+    display: 'swap',
+    variable: '--font-alegreya',
+})
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className={`${montserrat.variable} ${raleway.variable}`}>
+        <html
+            lang="en"
+            className={`${montserrat.variable} ${raleway.variable} ${alegreya.variable}`}
+        >
             <body id="body" className="mt-[67px] md:mt-[83px] lg:mt-[88px]">
                 <Header />
                 <main>{children}</main>

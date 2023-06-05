@@ -84,6 +84,35 @@ const collections = [
     },
 ]
 
+const kitchens = [
+    {
+        name: 'Modern Kitchens',
+        href: '/kitchen-ranges/modern-kitchens',
+        imageSrc: '/assets/home/Finalise.jpg',
+        imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
+    },
+    {
+        name: 'Traditional Kitchens',
+        href: '/kitchen-ranges/traditional-kitchens',
+        imageSrc: '/assets/home/Showroom-Visit.jpg',
+        imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
+    },
+    {
+        name: 'Handleless Kitchens',
+        href: '/kitchen-ranges/handleless-kitchens',
+        imageSrc: '/assets/home/Survey.png',
+        imageAlt:
+            'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
+    },
+    {
+        name: 'In-Frame Kitchens',
+        href: '/kitchen-ranges/in-frame-kitchens',
+        imageSrc: '/assets/home/Place-Order.png',
+        imageAlt:
+            'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
+    },
+]
+
 export default function Page() {
     return (
         <>
@@ -98,17 +127,12 @@ export default function Page() {
                     />
                 </div>
                 <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
-                <div className="relative flex flex-col items-center max-w-4xl px-6 py-32 mx-auto text-center sm:py-64 lg:px-0">
-                    <h1 className="text-4xl tracking-tight text-white lg:text-6xl">
+                <div className="relative flex flex-col items-center max-w-4xl px-6 pb-20 md:pb-24 pt-72 mx-auto text-center sm:pt-96 lg:px-0">
+                    <h1 className="text-3xl tracking-tight text-white lg:text-4xl font-homeTitle">
                         We Design & Install Inspiring Kitchens
                     </h1>
 
-                    <p className="mt-4 text-xl text-gray-300">
-                        We believe unique, exciting kitchens should be available to all,
-                        irrespective of budget.
-                    </p>
-
-                    <ButtonLink href="/contact-us" className="mt-4">
+                    <ButtonLink href="/book-a-free-survey" className="mt-4">
                         Start Your Journey <span aria-hidden="true">&rarr;</span>
                     </ButtonLink>
 
@@ -116,7 +140,7 @@ export default function Page() {
                         href="#scrollLocation"
                         className="duration-200 ease-in-out scroll-smooth flex justify-center"
                     >
-                        <ChevronDoubleDownIcon className="w-12 bottom-[6%] animate-bounce absolute z-50 text-white" />
+                        <ChevronDoubleDownIcon className="w-8 lg:w-12 bottom-[3%] animate-bounce absolute z-50 text-white" />
                     </a>
                 </div>
             </section>
@@ -162,7 +186,7 @@ export default function Page() {
                             empower our customers to be bold with their decisions and love their
                             unique new kitchens.
                         </p>
-                        <ButtonLink href="/blog" className="w-fit">
+                        <ButtonLink href="/book-a-free-survey" className="w-fit">
                             Start Your Journey <span aria-hidden="true">&rarr;</span>
                         </ButtonLink>
                     </div>
@@ -180,14 +204,7 @@ export default function Page() {
                                 A Seamless Experience
                             </h4>
 
-                            <h2
-                                id="collection-heading"
-                                className="text-2xl tracking-tight text-gray-900 lg:text-3xl"
-                            >
-                                Achieve your dream kitchen in 4 easy steps
-                            </h2>
-
-                            <p className="mt-4 text-base text-gray-500">
+                            <p className="mt-2 text-base text-gray-500">
                                 Our simple 4 step process offers our customers a stress-free journey
                                 in achieving their dream kitchen, unique to their desires.
                             </p>
@@ -240,7 +257,7 @@ export default function Page() {
                     </div>
 
                     <div className="flex justify-center mt-8">
-                        <ButtonLink href="/learn-more" className="w-fit">
+                        <ButtonLink href="/book-a-free-survey" className="w-fit">
                             Start Your Journey <span aria-hidden="true">&rarr;</span>
                         </ButtonLink>
                     </div>
@@ -264,45 +281,57 @@ export default function Page() {
                 ]}
             />
 
-            <section
-                aria-labelledby="collection-heading"
-                className="w-full max-w-4xl px-4 mx-auto py-sm lg:py-lg md:px-6 lg:max-w-7xl lg:px-8"
-            >
-                <div className="flex flex-col justify-between gap-12 md:flex-row">
-                    <div className="w-full md:w-1/2">
-                        <div className="relative w-full h-full min-h-[15rem]">
-                            <Image
-                                src="/assets/home/Testimonial.jpg"
-                                alt="Brochure"
-                                className="object-cover"
-                                fill
-                            />
+            <section className="w-full bg-gray-100 py-sm lg:py-lg">
+                <div
+                    aria-labelledby="collection-heading"
+                    className="max-w-4xl px-4 mx-auto md:px-6 lg:max-w-7xl lg:px-8"
+                >
+                    <div className="flex flex-col justify-between md:items-end md:flex-row">
+                        <div className="md:w-3/5">
+                            <h4 className="text-sm font-semibold tracking-widest uppercase text-brand-secondary">
+                                Our Kitchen Styles
+                            </h4>
+
+                            <p className="mt-2 text-base text-gray-500">
+                                Choose between our modern, traditional, handeless or in-frame
+                                kitchens to find a style that perfectly suits your aesthetic.
+                            </p>
                         </div>
                     </div>
 
-                    <div className="w-full md:w-1/2">
-                        <h4 className="text-sm font-semibold tracking-widest uppercase text-brand-secondary">
-                            Customers At The Forefront
-                        </h4>
+                    <div className="mt-4 lg:mt-10 sm:grid space-y-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 lg:gap-8 sm:space-y-0">
+                        {kitchens.map((kitchen) => (
+                            <Link
+                                key={kitchen.name}
+                                href={kitchen.href}
+                                className="relative block text-center border border-gray-400 group"
+                            >
+                                <div className="absolute w-full h-full z-10 bg-black opacity-40"></div>
 
-                        <h3 className="mb-4 text-2xl text-gray-900 lg:text-3xl">
-                            Build a Kitchen That You&apos;ll Love
-                        </h3>
+                                <div
+                                    aria-hidden="true"
+                                    className="relative overflow-hidden h-96 flex justify-center items-center"
+                                >
+                                    <Image
+                                        fill
+                                        src={kitchen.imageSrc}
+                                        alt={kitchen.imageAlt}
+                                        className="object-cover object-center"
+                                    />
 
-                        <ol className="px-4 space-y-2 text-lg text-gray-500 list-disc list-inside lg:text-xl md:space-y-4">
-                            <li>A kitchen that you feel happy in</li>
-                            <li>A kitchen that you love to cook in</li>
-                            <li>A kitchen that you feel proud of</li>
-                            <li>A kitchen that your friends envy</li>
-                            <li>A kitchen that you feel happy in</li>
-                            <li>A kitchen that&apos;s yours</li>
-                        </ol>
+                                    <h2 className="absolute text-white hover:text-white text-3xl z-50 px-6 mx-auto">
+                                        {kitchen.name}
+                                    </h2>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
-                </div>
-                <div className="flex mt-4 md:justify-center md:mt-8">
-                    <ButtonLink href="/learn-more" className="w-fit">
-                        Start Your Journey <span aria-hidden="true">&rarr;</span>
-                    </ButtonLink>
+
+                    <div className="flex justify-center mt-8">
+                        <ButtonLink href="/kitchen-ranges" className="w-fit">
+                            View All Kitchens <span aria-hidden="true">&rarr;</span>
+                        </ButtonLink>
+                    </div>
                 </div>
             </section>
 
@@ -375,7 +404,7 @@ export default function Page() {
 
                         <TestimonialCarousel testimonials={testimonials} />
 
-                        <ButtonLink href="/contact-us" className="self-center mt-8 w-fit">
+                        <ButtonLink href="/book-a-free-survey" className="self-center mt-8 w-fit">
                             Start Your Journey <span aria-hidden="true">&rarr;</span>
                         </ButtonLink>
                     </div>
