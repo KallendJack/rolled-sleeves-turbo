@@ -143,12 +143,6 @@ export default function ProjectContent() {
                                                             {project.fields.kitchenStyle}
                                                         </div>
                                                     )}
-                                                    <div className="mb-2 capitalize">
-                                                        <span className="font-bold">
-                                                            Kitchen Range: &nbsp;
-                                                        </span>
-                                                        {project.fields.type}
-                                                    </div>
                                                     {project.fields?.doorType && (
                                                         <div className="mb-2 capitalize">
                                                             <span className="font-bold">
