@@ -82,6 +82,7 @@ export default function Header() {
 
     return (
         <header
+            id="header"
             className={`fixed top-0 z-50 w-full border-b border-gray-200 transition-all duration-500 ease-in-out ${
                 hasScrolled ? 'bg-white/90 backdrop-blur shadow-sm' : 'bg-white'
             }`}

@@ -3,11 +3,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { ChevronDoubleDownIcon } from '@heroicons/react/24/outline'
 import { ButtonLink } from 'components/button/Button'
 import { TestimonialCarousel } from 'components/carousel/TestimonialCarousel'
 import CTASection from 'components/cta/CTASection'
 import USPBar from 'components/usp-bar/USPBar'
+import ScrollTo from 'components/scroll/ScrollTo'
 
 const testimonials = [
     {
@@ -127,7 +127,7 @@ export default function Page() {
                     />
                 </div>
                 <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
-                <div className="relative flex flex-col items-center max-w-4xl px-6 pb-20 md:pb-24 pt-72 mx-auto text-center sm:pt-96 lg:px-0">
+                <div className="relative flex flex-col items-center max-w-4xl px-6 pb-20 mx-auto text-center md:pb-24 pt-72 sm:pt-96 lg:px-0">
                     <h1 className="text-3xl tracking-tight text-white lg:text-4xl font-homeTitle">
                         We Design & Install Inspiring Kitchens
                     </h1>
@@ -135,13 +135,7 @@ export default function Page() {
                     <ButtonLink href="/book-a-free-survey" className="mt-4">
                         Start Your Journey <span aria-hidden="true">&rarr;</span>
                     </ButtonLink>
-
-                    <a
-                        href="#scrollLocation"
-                        className="duration-200 ease-in-out scroll-smooth flex justify-center"
-                    >
-                        <ChevronDoubleDownIcon className="w-8 lg:w-12 bottom-[3%] animate-bounce absolute z-50 text-white" />
-                    </a>
+                    <ScrollTo elementId="scroll-to" />
                 </div>
             </section>
 
@@ -163,7 +157,7 @@ export default function Page() {
             />
 
             <section
-                id="scrollLocation"
+                id="scroll-to"
                 aria-labelledby="comfort-heading"
                 className="px-4 mx-auto py-lg max-w-7xl md:px-6 lg:px-8"
             >
@@ -225,7 +219,7 @@ export default function Page() {
                                 href={collection.href}
                                 className="relative block text-center border border-gray-400 group"
                             >
-                                <div className="absolute left-0 right-0 z-50 flex items-center justify-center mx-auto text-2xl font-medium text-gray-900 bg-white border border-gray-500 rounded-full -top-7 font-body w-14 h-14">
+                                <div className="absolute left-0 right-0 z-40 flex items-center justify-center mx-auto text-2xl font-medium text-gray-900 bg-white border border-gray-500 rounded-full -top-7 font-body w-14 h-14">
                                     {collection.number}
                                 </div>
 
@@ -299,18 +293,18 @@ export default function Page() {
                         </div>
                     </div>
 
-                    <div className="mt-4 lg:mt-10 sm:grid space-y-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 lg:gap-8 sm:space-y-0">
+                    <div className="mt-4 space-y-4 lg:mt-10 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 lg:gap-8 sm:space-y-0">
                         {kitchens.map((kitchen) => (
                             <Link
                                 key={kitchen.name}
                                 href={kitchen.href}
                                 className="relative block text-center border border-gray-400 group"
                             >
-                                <div className="absolute w-full h-full z-10 bg-black opacity-40"></div>
+                                <div className="absolute z-10 w-full h-full bg-black opacity-40"></div>
 
                                 <div
                                     aria-hidden="true"
-                                    className="relative overflow-hidden h-96 flex justify-center items-center"
+                                    className="relative flex items-center justify-center overflow-hidden h-96"
                                 >
                                     <Image
                                         fill
@@ -319,7 +313,7 @@ export default function Page() {
                                         className="object-cover object-center"
                                     />
 
-                                    <h2 className="absolute text-white hover:text-white text-3xl z-50 px-6 mx-auto">
+                                    <h2 className="absolute z-40 px-6 mx-auto text-3xl text-white hover:text-white">
                                         {kitchen.name}
                                     </h2>
                                 </div>
