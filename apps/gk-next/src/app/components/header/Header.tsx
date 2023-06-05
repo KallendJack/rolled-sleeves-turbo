@@ -114,7 +114,7 @@ export default function Header() {
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
                     <Popover className="relative">
-                        <Popover.Button className="flex items-center text-sm font-semibold leading-6 text-gray-900 gap-x-1">
+                        <Popover.Button className="flex items-center text-sm font-semibold leading-6 tracking-widest text-gray-900 gap-x-1">
                             Kitchens
                             <ChevronDownIcon
                                 className="flex-none w-5 h-5 text-gray-400"
@@ -140,7 +140,7 @@ export default function Header() {
                                             <div className="flex-auto">
                                                 <a
                                                     href={item.href}
-                                                    className="block font-semibold text-gray-900"
+                                                    className="block font-semibold tracking-widest text-gray-900"
                                                 >
                                                     {item.name}
                                                     <span className="absolute inset-0" />
@@ -153,7 +153,7 @@ export default function Header() {
                         </Transition>
                     </Popover>
                     <Popover className="relative">
-                        <Popover.Button className="flex items-center text-sm font-semibold leading-6 text-gray-900 gap-x-1">
+                        <Popover.Button className="flex items-center text-sm font-semibold leading-6 tracking-widest text-gray-900 gap-x-1">
                             About
                             <ChevronDownIcon
                                 className="flex-none w-5 h-5 text-gray-400"
@@ -179,7 +179,7 @@ export default function Header() {
                                             <div className="flex-auto">
                                                 <a
                                                     href={item.href}
-                                                    className="block font-semibold text-gray-900"
+                                                    className="block font-semibold tracking-widest text-gray-900"
                                                 >
                                                     {item.name}
                                                     <span className="absolute inset-0" />
@@ -193,13 +193,13 @@ export default function Header() {
                     </Popover>
                     <a
                         href="/book-a-free-survey"
-                        className="text-sm font-semibold leading-6 text-gray-900"
+                        className="text-sm font-semibold leading-6 tracking-widest text-gray-900"
                     >
                         Book a Free Survey
                     </a>
                     <a
                         href="/our-projects"
-                        className="text-sm font-semibold leading-6 text-gray-900"
+                        className="text-sm font-semibold leading-6 tracking-widest text-gray-900"
                     >
                         Our Projects
                     </a>
@@ -243,7 +243,7 @@ export default function Header() {
                                 <Disclosure as="div" className="-mx-3">
                                     {({ open }) => (
                                         <>
-                                            <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
+                                            <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 tracking-widest">
                                                 Kitchens
                                                 <ChevronDownIcon
                                                     className={classNames(
@@ -259,7 +259,7 @@ export default function Header() {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
-                                                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+                                                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 tracking-widest text-gray-900 rounded-lg hover:bg-gray-50"
                                                     >
                                                         {item.name}
                                                     </Disclosure.Button>
@@ -271,7 +271,7 @@ export default function Header() {
                                 <Disclosure as="div" className="-mx-3">
                                     {({ open }) => (
                                         <>
-                                            <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
+                                            <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50 tracking-widest">
                                                 About
                                                 <ChevronDownIcon
                                                     className={classNames(
@@ -287,7 +287,7 @@ export default function Header() {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
-                                                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+                                                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 tracking-widest text-gray-900 rounded-lg hover:bg-gray-50"
                                                     >
                                                         {item.name}
                                                     </Disclosure.Button>
@@ -298,13 +298,13 @@ export default function Header() {
                                 </Disclosure>
                                 <a
                                     href="/book-a-free-survey"
-                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 tracking-widest text-gray-900 rounded-lg hover:bg-gray-50"
                                 >
                                     Book a Free Survey
                                 </a>
                                 <a
                                     href="/our-projects"
-                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 tracking-widest text-gray-900 rounded-lg hover:bg-gray-50"
                                 >
                                     Our Projects
                                 </a>
