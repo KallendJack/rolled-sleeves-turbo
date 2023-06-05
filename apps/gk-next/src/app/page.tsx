@@ -87,26 +87,26 @@ const collections = [
 const kitchens = [
     {
         name: 'Modern Kitchens',
-        href: '#',
+        href: '/kitchen-ranges/modern-kitchens',
         imageSrc: '/assets/home/Finalise.jpg',
         imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
     },
     {
         name: 'Traditional Kitchens',
-        href: '#',
+        href: '/kitchen-ranges/traditional-kitchens',
         imageSrc: '/assets/home/Showroom-Visit.jpg',
         imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
     },
     {
         name: 'Handleless Kitchens',
-        href: '#',
+        href: '/kitchen-ranges/handleless-kitchens',
         imageSrc: '/assets/home/Survey.png',
         imageAlt:
             'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
     },
     {
         name: 'In-Frame Kitchens',
-        href: '#',
+        href: '/kitchen-ranges/in-frame-kitchens',
         imageSrc: '/assets/home/Place-Order.png',
         imageAlt:
             'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
@@ -132,7 +132,7 @@ export default function Page() {
                         We Design & Install Inspiring Kitchens
                     </h1>
 
-                    <ButtonLink href="/contact-us" className="mt-4">
+                    <ButtonLink href="/book-a-free-survey" className="mt-4">
                         Start Your Journey <span aria-hidden="true">&rarr;</span>
                     </ButtonLink>
 
@@ -186,7 +186,7 @@ export default function Page() {
                             empower our customers to be bold with their decisions and love their
                             unique new kitchens.
                         </p>
-                        <ButtonLink href="/blog" className="w-fit">
+                        <ButtonLink href="/book-a-free-survey" className="w-fit">
                             Start Your Journey <span aria-hidden="true">&rarr;</span>
                         </ButtonLink>
                     </div>
@@ -257,7 +257,7 @@ export default function Page() {
                     </div>
 
                     <div className="flex justify-center mt-8">
-                        <ButtonLink href="/learn-more" className="w-fit">
+                        <ButtonLink href="/book-a-free-survey" className="w-fit">
                             Start Your Journey <span aria-hidden="true">&rarr;</span>
                         </ButtonLink>
                     </div>
@@ -281,48 +281,6 @@ export default function Page() {
                 ]}
             />
 
-            {/* <section
-                aria-labelledby="collection-heading"
-                className="w-full max-w-4xl px-4 mx-auto py-sm lg:py-lg md:px-6 lg:max-w-7xl lg:px-8"
-            >
-                <div className="flex flex-col justify-between gap-12 md:flex-row">
-                    <div className="w-full md:w-1/2">
-                        <div className="relative w-full h-full min-h-[15rem]">
-                            <Image
-                                src="/assets/home/Testimonial.jpg"
-                                alt="Brochure"
-                                className="object-cover"
-                                fill
-                            />
-                        </div>
-                    </div>
-
-                    <div className="w-full md:w-1/2">
-                        <h4 className="text-sm font-semibold tracking-widest uppercase text-brand-secondary">
-                            Customers At The Forefront
-                        </h4>
-
-                        <h3 className="mb-4 text-2xl text-gray-900 lg:text-3xl">
-                            Build a Kitchen That You&apos;ll Love
-                        </h3>
-
-                        <ol className="px-4 space-y-2 text-lg text-gray-500 list-disc list-inside lg:text-xl md:space-y-4">
-                            <li>A kitchen that you feel happy in</li>
-                            <li>A kitchen that you love to cook in</li>
-                            <li>A kitchen that you feel proud of</li>
-                            <li>A kitchen that your friends envy</li>
-                            <li>A kitchen that you feel happy in</li>
-                            <li>A kitchen that&apos;s yours</li>
-                        </ol>
-                    </div>
-                </div>
-                <div className="flex mt-4 md:justify-center md:mt-8">
-                    <ButtonLink href="/learn-more" className="w-fit">
-                        Start Your Journey <span aria-hidden="true">&rarr;</span>
-                    </ButtonLink>
-                </div>
-            </section> */}
-
             <section className="w-full bg-gray-100 py-sm lg:py-lg">
                 <div
                     aria-labelledby="collection-heading"
@@ -341,7 +299,7 @@ export default function Page() {
                         </div>
                     </div>
 
-                    <div className="mt-16 space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 sm:space-y-0">
+                    <div className="mt-4 lg:mt-10 sm:grid space-y-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 lg:gap-8 sm:space-y-0">
                         {kitchens.map((kitchen) => (
                             <Link
                                 key={kitchen.name}
@@ -352,7 +310,7 @@ export default function Page() {
 
                                 <div
                                     aria-hidden="true"
-                                    className="relative overflow-hidden h-96 group-hover:shadow-lg flex justify-center items-center"
+                                    className="relative overflow-hidden h-96 flex justify-center items-center"
                                 >
                                     <Image
                                         fill
@@ -446,7 +404,7 @@ export default function Page() {
 
                         <TestimonialCarousel testimonials={testimonials} />
 
-                        <ButtonLink href="/contact-us" className="self-center mt-8 w-fit">
+                        <ButtonLink href="/book-a-free-survey" className="self-center mt-8 w-fit">
                             Start Your Journey <span aria-hidden="true">&rarr;</span>
                         </ButtonLink>
                     </div>
