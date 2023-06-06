@@ -2,6 +2,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { Disclosure, Tab } from '@headlessui/react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
@@ -140,7 +141,19 @@ export default function ProjectContent() {
                                                             <span className="font-bold">
                                                                 Kitchen Style: &nbsp;
                                                             </span>
-                                                            {project.fields.kitchenStyle}
+                                                            {project.fields?.kitchenStyleLink ? (
+                                                                <Link
+                                                                    href={
+                                                                        project.fields
+                                                                            .kitchenStyleLink
+                                                                    }
+                                                                    className="text-brand-primary hover:underline"
+                                                                >
+                                                                    {project.fields.kitchenStyle}
+                                                                </Link>
+                                                            ) : (
+                                                                project.fields.kitchenStyle
+                                                            )}
                                                         </div>
                                                     )}
                                                     {project.fields?.doorType && (

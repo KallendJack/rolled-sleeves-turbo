@@ -7,6 +7,7 @@ export interface KitchenFields {
     shortDescription: EntryFields.RichText
     description: EntryFields.RichText
     kitchenStyle?: EntryFields.Symbol
+    kitchenStyleLink?: EntryFields.Symbol
     doorType?: EntryFields.Symbol
     handleless?: EntryFields.Boolean
     size?: EntryFields.Symbol

@@ -3,6 +3,7 @@
 
 import { useMemo } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Disclosure, Tab } from '@headlessui/react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
@@ -148,7 +149,19 @@ export default function KitchenContent(props: KitchenContentProps) {
                                                             <span className="font-bold">
                                                                 Kitchen Style: &nbsp;
                                                             </span>
-                                                            {kitchen.fields.kitchenStyle}
+                                                            {kitchen.fields?.kitchenStyleLink ? (
+                                                                <Link
+                                                                    href={
+                                                                        kitchen.fields
+                                                                            .kitchenStyleLink
+                                                                    }
+                                                                    className="text-brand-primary hover:underline"
+                                                                >
+                                                                    {kitchen.fields.kitchenStyle}
+                                                                </Link>
+                                                            ) : (
+                                                                kitchen.fields.kitchenStyle
+                                                            )}
                                                         </div>
                                                     )}
                                                     {kitchen.fields?.doorType && (
