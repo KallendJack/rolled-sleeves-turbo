@@ -5,16 +5,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Disclosure, Tab } from '@headlessui/react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
+import { PlayCircleIcon } from '@heroicons/react/20/solid'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
 import { useProjects } from 'stores/project'
+import { useModalVideo } from 'stores/modal'
 import { classNames } from 'utils/tailwind/classNames'
 import { ButtonLink } from 'components/button/Button'
 import CTASection from 'components/cta/CTASection'
 
 export default function ProjectContent() {
+    const { setVideoId, setChannel, toggle } = useModalVideo()
     const { project, projects } = useProjects()
     const filteredProjects = projects
         .filter((p) => p.fields.slug !== project.fields.slug)
@@ -62,6 +65,36 @@ export default function ProjectContent() {
                                             )}
                                         </Tab>
                                     ))}
+                                    {project.fields?.videos?.map((video, index) => (
+                                        <Tab
+                                            key={index}
+                                            className="relative flex items-center justify-center h-24 text-sm text-gray-900 uppercase bg-white cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring focus:ring-brand-primary focus:ring-opacity-50 focus:ring-offset-4"
+                                        >
+                                            {({ selected }) => (
+                                                <>
+                                                    <span className="sr-only">{video}</span>
+                                                    <span className="absolute inset-0 overflow-hidden">
+                                                        <Image
+                                                            src={`https://img.youtube.com/vi/${video}/maxresdefault.jpg`}
+                                                            alt={video}
+                                                            className="object-cover object-center w-full h-full"
+                                                            fill
+                                                        />
+                                                    </span>
+                                                    <PlayCircleIcon className="absolute w-10 text-white -translate-x-1/2 -translate-y-1/2 cursor-pointer top-1/2 left-1/2" />
+                                                    <span
+                                                        className={classNames(
+                                                            selected
+                                                                ? 'ring-brand-primary'
+                                                                : 'ring-transparent',
+                                                            'pointer-events-none absolute inset-0 ring-2 ring-offset-2',
+                                                        )}
+                                                        aria-hidden="true"
+                                                    />
+                                                </>
+                                            )}
+                                        </Tab>
+                                    ))}
                                 </Tab.List>
                             </div>
                             <Tab.Panels className="w-full aspect-h-1 aspect-w-1">
@@ -74,6 +107,24 @@ export default function ProjectContent() {
                                                 className="object-cover object-center w-full h-full"
                                             />
                                         </Zoom>
+                                    </Tab.Panel>
+                                ))}
+                                {project.fields?.videos?.map((video, index) => (
+                                    <Tab.Panel key={index}>
+                                        <img
+                                            src={`https://img.youtube.com/vi/${video}/0.jpg`}
+                                            alt={video}
+                                            className="object-cover object-center w-full h-full"
+                                        />
+                                        <PlayCircleIcon
+                                            className="absolute w-24 text-white -translate-x-1/2 -translate-y-1/2 cursor-pointer md:w-32 top-1/2 left-1/2"
+                                            onClick={(e) => {
+                                                e.preventDefault()
+                                                setVideoId(video)
+                                                setChannel('youtube')
+                                                toggle()
+                                            }}
+                                        />
                                     </Tab.Panel>
                                 ))}
                             </Tab.Panels>

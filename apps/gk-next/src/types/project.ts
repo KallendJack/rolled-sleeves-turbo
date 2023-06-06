@@ -16,6 +16,7 @@ export interface ProjectFields {
     coloursUsed?: EntryFields.Object
     finishes?: Asset[]
     images: Asset[]
+    videos?: EntryFields.Symbol[]
 }
 
 export type Project = Entry<ProjectFields>

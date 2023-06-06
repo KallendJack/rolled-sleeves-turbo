@@ -16,6 +16,7 @@ export interface KitchenFields {
     otherColours?: EntryFields.Object
     finishes?: Asset[]
     images: Asset[]
+    videos?: EntryFields.Symbol[]
 }
 
 export type Kitchen = Entry<KitchenFields>
