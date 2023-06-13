@@ -139,7 +139,7 @@ export default function ProjectContent() {
                             </div>
                             {project.fields?.kitchenStyle && (
                                 <div className="text-xl text-gray-500 capitalize">
-                                    {project.fields.kitchenStyle} Kitchen Range
+                                    {project.fields.kitchenStyle} Kitchen Style
                                 </div>
                             )}
                             <div className="mt-6">
@@ -190,7 +190,7 @@ export default function ProjectContent() {
                                                     {project.fields?.kitchenStyle && (
                                                         <div className="mb-2 capitalize">
                                                             <span className="font-bold">
-                                                                Kitchen Style: &nbsp;
+                                                                Kitchen Range: &nbsp;
                                                             </span>
                                                             {project.fields?.kitchenStyleLink ? (
                                                                 <Link
