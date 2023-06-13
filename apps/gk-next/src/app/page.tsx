@@ -88,26 +88,26 @@ const kitchens = [
     {
         name: 'Modern Kitchens',
         href: '/kitchen-ranges/modern-kitchens',
-        imageSrc: '/assets/home/Finalise.jpg',
+        imageSrc: '/assets/home/Modern.jpg',
         imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
     },
     {
         name: 'Traditional Kitchens',
         href: '/kitchen-ranges/traditional-kitchens',
-        imageSrc: '/assets/home/Showroom-Visit.jpg',
+        imageSrc: '/assets/home/Traditional.jpg',
         imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
     },
     {
         name: 'Handleless Kitchens',
         href: '/kitchen-ranges/handleless-kitchens',
-        imageSrc: '/assets/home/Survey.png',
+        imageSrc: '/assets/home/Handleless.jpg',
         imageAlt:
             'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
     },
     {
         name: 'In-Frame Kitchens',
         href: '/kitchen-ranges/in-frame-kitchens',
-        imageSrc: '/assets/home/Place-Order.png',
+        imageSrc: '/assets/home/In-frame.jpg',
         imageAlt:
             'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
     },
@@ -126,8 +126,8 @@ export default function Page() {
                         className="object-cover object-center w-full h-full"
                     />
                 </div>
-                <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
-                <div className="relative flex flex-col items-center max-w-4xl px-6 pb-20 mx-auto text-center md:pb-24 pt-72 sm:pt-96 lg:px-0">
+                <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-30" />
+                <div className="relative flex flex-col justify-end pb-24 xl:pb-32 items-center max-w-4xl px-6 h-screen -mt-14 md:-mt-[5rem] lg:-mt-[5rem] xl:-mt-20 mx-auto text-center lg:px-0">
                     <h1 className="text-3xl tracking-tight text-white lg:text-4xl font-homeTitle">
                         We Design & Install Inspiring Kitchens
                     </h1>
@@ -139,7 +139,7 @@ export default function Page() {
                 </div>
             </section>
 
-            <USPBar
+            {/* <USPBar
                 items={[
                     {
                         image: '/assets/home/icons/Surrey-Based.png',
@@ -154,7 +154,7 @@ export default function Page() {
                         text: 'Finest Quality',
                     },
                 ]}
-            />
+            /> */}
 
             <section
                 id="scroll-to"
@@ -212,7 +212,7 @@ export default function Page() {
                         </button>
                     </div>
 
-                    <div className="mt-16 space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 sm:space-y-0">
+                    <div className="mt-16 space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-3 sm:space-y-0">
                         {collections.map((collection) => (
                             <Link
                                 key={collection.name}
@@ -293,7 +293,7 @@ export default function Page() {
                         </div>
                     </div>
 
-                    <div className="mt-4 space-y-4 lg:mt-10 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 lg:gap-8 sm:space-y-0">
+                    <div className="mt-4 space-y-4 lg:mt-10 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-2 lg:gap-3 sm:space-y-0">
                         {kitchens.map((kitchen) => (
                             <Link
                                 key={kitchen.name}
