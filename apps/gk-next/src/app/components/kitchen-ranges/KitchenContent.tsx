@@ -198,7 +198,7 @@ export default function KitchenContent(props: KitchenContentProps) {
                                                     {kitchen.fields?.kitchenStyle && (
                                                         <div className="mb-2 capitalize">
                                                             <span className="font-bold">
-                                                                Kitchen Style: &nbsp;
+                                                                Kitchen Range: &nbsp;
                                                             </span>
                                                             {kitchen.fields?.kitchenStyleLink ? (
                                                                 <Link
