@@ -1,13 +1,13 @@
-'use-client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { ButtonLink } from 'components/button/Button'
 import { TestimonialCarousel } from 'components/carousel/TestimonialCarousel'
+
 import CTASection from 'components/cta/CTASection'
 import USPBar from 'components/usp-bar/USPBar'
 import ScrollTo from 'components/scroll/ScrollTo'
+import HeroCarousel from 'components/carousel/HeroCarousel'
 
 const testimonials = [
     {
@@ -116,28 +116,7 @@ const kitchens = [
 export default function Page() {
     return (
         <>
-            <section className="relative bg-gray-900">
-                <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-                    <Image
-                        fill
-                        priority
-                        src="/assets/home/hero/hero.png"
-                        alt="Hero"
-                        className="object-cover object-center w-full h-full"
-                    />
-                </div>
-                <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-30" />
-                <div className="relative flex flex-col justify-end pb-24 xl:pb-32 items-center max-w-4xl px-6 h-screen -mt-14 md:-mt-[5rem] lg:-mt-[5rem] xl:-mt-20 mx-auto text-center lg:px-0">
-                    <h1 className="text-3xl tracking-tight text-white lg:text-4xl font-homeTitle">
-                        We Design & Install Inspiring Kitchens
-                    </h1>
-
-                    <ButtonLink href="/book-a-free-survey" className="mt-4">
-                        Start Your Journey <span aria-hidden="true">&rarr;</span>
-                    </ButtonLink>
-                    <ScrollTo elementId="scroll-to" />
-                </div>
-            </section>
+            <HeroCarousel />
 
             {/* <USPBar
                 items={[
