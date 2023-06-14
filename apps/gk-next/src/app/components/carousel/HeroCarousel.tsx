@@ -42,7 +42,8 @@ export default function HeroCarousel() {
                 <MotionConfig transition={{ duration: 0.7, delay: 0.2 }}>
                     <AnimatePresence initial={false}>
                         <motion.img
-                            className="absolute top-0 left-0"
+                            alt="Hero"
+                            className="object-cover object-center absolute top-0 left-0 w-full h-full"
                             key={images[currentImageIndex]}
                             style={{ y: 0 }}
                             initial="hidden"
@@ -50,7 +51,6 @@ export default function HeroCarousel() {
                             exit="exiting"
                             variants={heroImageVariants}
                             src={images[currentImageIndex]}
-                            alt="src"
                         />
                     </AnimatePresence>
                 </MotionConfig>
