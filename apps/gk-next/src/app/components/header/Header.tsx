@@ -14,6 +14,7 @@ const kitchens = [
     {
         name: 'All Kitchens',
         href: '/kitchen-ranges',
+        bold: true,
     },
     {
         name: 'Modern Kitchens',
@@ -35,7 +36,7 @@ const kitchens = [
 
 const about = [
     {
-        name: 'About Us',
+        name: 'Why Us',
         href: '/about-us',
     },
     {
@@ -54,14 +55,14 @@ const about = [
         name: 'Our Blog',
         href: '/blog',
     },
-    {
-        name: 'Appliances',
-        href: '/appliances',
-    },
-    {
-        name: 'Worktops',
-        href: '/worktops',
-    },
+    // {
+    //     name: 'Appliances',
+    //     href: '/appliances',
+    // },
+    // {
+    //     name: 'Worktops',
+    //     href: '/worktops',
+    // },
     {
         name: 'Contact Us',
         href: '/contact-us',
@@ -140,7 +141,9 @@ export default function Header() {
                                             <div className="flex-auto">
                                                 <a
                                                     href={item.href}
-                                                    className="block font-semibold tracking-widest text-gray-900"
+                                                    className={`block tracking-widest text-gray-900 ${
+                                                        item?.bold ? 'font-bold' : ''
+                                                    }`}
                                                 >
                                                     {item.name}
                                                     <span className="absolute inset-0" />
@@ -179,7 +182,7 @@ export default function Header() {
                                             <div className="flex-auto">
                                                 <a
                                                     href={item.href}
-                                                    className="block font-semibold tracking-widest text-gray-900"
+                                                    className="block tracking-widest text-gray-900"
                                                 >
                                                     {item.name}
                                                     <span className="absolute inset-0" />
@@ -192,12 +195,6 @@ export default function Header() {
                         </Transition>
                     </Popover>
                     <a
-                        href="/book-a-free-survey"
-                        className="text-sm font-semibold leading-6 tracking-widest text-gray-900"
-                    >
-                        Book a Free Survey
-                    </a>
-                    <a
                         href="/our-projects"
                         className="text-sm font-semibold leading-6 tracking-widest text-gray-900"
                     >
@@ -205,8 +202,8 @@ export default function Header() {
                     </a>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <ButtonLink href="/contact-us">
-                        Start Journey <span aria-hidden="true">&rarr;</span>
+                    <ButtonLink href="/book-a-free-survey">
+                        Book a Free Survey<span aria-hidden="true">&rarr;</span>
                     </ButtonLink>
                 </div>
             </nav>
@@ -259,7 +256,7 @@ export default function Header() {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
-                                                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 tracking-widest text-gray-900 rounded-lg hover:bg-gray-50"
+                                                        className="block py-2 pl-6 pr-3 text-sm leading-7 tracking-widest text-gray-900 rounded-lg hover:bg-gray-50"
                                                     >
                                                         {item.name}
                                                     </Disclosure.Button>
@@ -287,7 +284,7 @@ export default function Header() {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
-                                                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 tracking-widest text-gray-900 rounded-lg hover:bg-gray-50"
+                                                        className="block py-2 pl-6 pr-3 tracking-widest text-gray-900 rounded-lg text-smleading-7 hover:bg-gray-50"
                                                     >
                                                         {item.name}
                                                     </Disclosure.Button>
@@ -297,12 +294,6 @@ export default function Header() {
                                     )}
                                 </Disclosure>
                                 <a
-                                    href="/book-a-free-survey"
-                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 tracking-widest text-gray-900 rounded-lg hover:bg-gray-50"
-                                >
-                                    Book a Free Survey
-                                </a>
-                                <a
                                     href="/our-projects"
                                     className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 tracking-widest text-gray-900 rounded-lg hover:bg-gray-50"
                                 >
@@ -310,8 +301,8 @@ export default function Header() {
                                 </a>
                             </div>
                             <div className="py-6">
-                                <ButtonLink href="/contact-us">
-                                    Start Journey <span aria-hidden="true">&rarr;</span>
+                                <ButtonLink href="/book-a-free-survey">
+                                    Book a Free Survey <span aria-hidden="true">&rarr;</span>
                                 </ButtonLink>
                             </div>
                         </div>

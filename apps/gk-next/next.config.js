@@ -8,6 +8,14 @@ module.exports = {
             },
             {
                 protocol: 'https',
+                hostname: 'assets.ctfassets.net',
+            },
+            {
+                protocol: 'https',
+                hostname: 'downloads.ctfassets.net',
+            },
+            {
+                protocol: 'https',
                 hostname: 'img.youtube.com',
             },
             {

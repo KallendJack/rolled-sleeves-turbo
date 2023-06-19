@@ -87,6 +87,9 @@ importers:
             react:
                 specifier: ^18.2.0
                 version: 18.2.0
+            react-bnb-gallery:
+                specifier: ^1.4.4
+                version: 1.4.4(react-dom@18.2.0)(react@18.2.0)
             react-calendly:
                 specifier: ^4.1.1
                 version: 4.1.1(react-dom@18.2.0)(react@18.2.0)
@@ -1522,6 +1525,26 @@ packages:
             clean-stack: 2.2.0
             indent-string: 4.0.0
 
+    /airbnb-prop-types@2.16.0(react@18.2.0):
+        resolution:
+            {
+                integrity: sha512-7WHOFolP/6cS96PhKNrslCLMYAI8yB1Pp6u6XmxozQOiZbsI5ycglZr5cHhBFfuRcQQjzCMith5ZPZdYiJCxUg==,
+            }
+        peerDependencies:
+            react: ^0.14 || ^15.0.0 || ^16.0.0-alpha
+        dependencies:
+            array.prototype.find: 2.2.1
+            function.prototype.name: 1.1.5
+            is-regex: 1.1.4
+            object-is: 1.1.5
+            object.assign: 4.1.4
+            object.entries: 1.1.6
+            prop-types: 15.8.1
+            prop-types-exact: 1.2.0
+            react: 18.2.0
+            react-is: 16.13.1
+        dev: false
+
     /ajv@6.12.6:
         resolution:
             {
@@ -1784,6 +1807,18 @@ packages:
                 integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==,
             }
         engines: { node: '>=8' }
+
+    /array.prototype.find@2.2.1:
+        resolution:
+            {
+                integrity: sha512-I2ri5Z9uMpMvnsNrHre9l3PaX+z9D0/z6F7Yt2u15q7wt0I62g5kX6xUKR1SJiefgG+u2/gJUmM8B47XRvQR6w==,
+            }
+        dependencies:
+            call-bind: 1.0.2
+            define-properties: 1.1.4
+            es-abstract: 1.20.4
+            es-shim-unscopables: 1.0.0
+        dev: false
 
     /array.prototype.flat@1.3.1:
         resolution:
@@ -2835,6 +2870,13 @@ packages:
         dependencies:
             inherits: 2.0.4
             safe-buffer: 5.2.1
+        dev: false
+
+    /classnames@2.3.2:
+        resolution:
+            {
+                integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==,
+            }
         dev: false
 
     /clean-css@4.1.11:
@@ -5181,6 +5223,32 @@ packages:
             {
                 integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==,
             }
+
+    /focus-trap-react@7.0.1(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
+        resolution:
+            {
+                integrity: sha512-12TxHtVntj/sCsT3bwB3pPK+3rACMFLO7LBfk4nKrw1HERRmO/oc0+woD9vZKffxo5zkxkz9amc9rou9reVnpA==,
+            }
+        peerDependencies:
+            prop-types: ^15.7.2
+            react: ^16.0.0
+            react-dom: ^16.0.0
+        dependencies:
+            focus-trap: 5.1.0
+            prop-types: 15.8.1
+            react: 18.2.0
+            react-dom: 18.2.0(react@18.2.0)
+        dev: false
+
+    /focus-trap@5.1.0:
+        resolution:
+            {
+                integrity: sha512-CkB/nrO55069QAUjWFBpX6oc+9V90Qhgpe6fBWApzruMq5gnlh90Oo7iSSDK7pKiV5ugG6OY2AXM5mxcmL3lwQ==,
+            }
+        dependencies:
+            tabbable: 4.0.0
+            xtend: 4.0.2
+        dev: false
 
     /follow-redirects@1.15.2(debug@4.3.2):
         resolution:
@@ -8202,6 +8270,17 @@ packages:
                 integrity: sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==,
             }
 
+    /object-is@1.1.5:
+        resolution:
+            {
+                integrity: sha512-3cyDsyHgtmi7I7DfSSI2LDp6SK2lwvtbg0p0R1e0RvTqF5ceGx+K2dfSjm1bKDMVCFEDAQvy+o8c6a7VujOddw==,
+            }
+        engines: { node: '>= 0.4' }
+        dependencies:
+            call-bind: 1.0.2
+            define-properties: 1.1.4
+        dev: false
+
     /object-keys@1.1.1:
         resolution:
             {
@@ -9203,6 +9282,17 @@ packages:
             }
         engines: { node: '>=0.4.0' }
 
+    /prop-types-exact@1.2.0:
+        resolution:
+            {
+                integrity: sha512-K+Tk3Kd9V0odiXFP9fwDHUYRyvK3Nun3GVyPapSIs5OBkITAm15W0CPFD/YKTkMUAbc0b9CUwRQp2ybiBIq+eA==,
+            }
+        dependencies:
+            has: 1.0.3
+            object.assign: 4.1.4
+            reflect.ownkeys: 0.2.0
+        dev: false
+
     /prop-types@15.8.1:
         resolution:
             {
@@ -9394,6 +9484,30 @@ packages:
             strip-json-comments: 2.0.1
         dev: false
 
+    /react-bnb-gallery@1.4.4(react-dom@18.2.0)(react@18.2.0):
+        resolution:
+            {
+                integrity: sha512-shD4GuIqAS03Xe2k4XEqLBQV/JkZG1ywJqc2fwKN9REj20vOjRhs4Vsbt3yBXbzbgPD1sPdBWfEdM1ZCMXKBIw==,
+            }
+        peerDependencies:
+            react: ^15.0.0 || ^16.0.0
+            react-dom: ^15.0.0 || ^16.0.0
+        dependencies:
+            airbnb-prop-types: 2.16.0(react@18.2.0)
+            ajv: 6.12.6
+            classnames: 2.3.2
+            focus-trap-react: 7.0.1(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
+            lodash: 4.17.21
+            object.assign: 4.1.4
+            object.values: 1.1.6
+            prop-types: 15.8.1
+            react: 18.2.0
+            react-dom: 18.2.0(react@18.2.0)
+            react-portal: 4.2.2(react-dom@18.2.0)(react@18.2.0)
+        optionalDependencies:
+            typescript: 3.9.10
+        dev: false
+
     /react-calendly@4.1.1(react-dom@18.2.0)(react@18.2.0):
         resolution:
             {
@@ -9495,6 +9609,20 @@ packages:
             - utf-8-validate
             - zen-observable
             - zenObservable
+        dev: false
+
+    /react-portal@4.2.2(react-dom@18.2.0)(react@18.2.0):
+        resolution:
+            {
+                integrity: sha512-vS18idTmevQxyQpnde0Td6ZcUlv+pD8GTyR42n3CHUQq9OHi1C4jDE4ZWEbEsrbrLRhSECYiao58cvocwMtP7Q==,
+            }
+        peerDependencies:
+            react: ^16.0.0-0 || ^17.0.0-0 || ^18.0.0-0
+            react-dom: ^16.0.0-0 || ^17.0.0-0 || ^18.0.0-0
+        dependencies:
+            prop-types: 15.8.1
+            react: 18.2.0
+            react-dom: 18.2.0(react@18.2.0)
         dev: false
 
     /react-transition-group@4.4.5(react-dom@18.2.0)(react@18.2.0):
@@ -9620,6 +9748,13 @@ packages:
         dependencies:
             indent-string: 4.0.0
             strip-indent: 3.0.0
+
+    /reflect.ownkeys@0.2.0:
+        resolution:
+            {
+                integrity: sha512-qOLsBKHCpSOFKK1NUOCGC5VyeufB6lEsFe92AL2bhIJsacZS1qdoOZSbPk3MYKuT2cFlRDnulKXuuElIrMjGUg==,
+            }
+        dev: false
 
     /regenerator-runtime@0.11.1:
         resolution:
@@ -10876,6 +11011,13 @@ packages:
             acorn-node: 1.8.2
         dev: false
 
+    /tabbable@4.0.0:
+        resolution:
+            {
+                integrity: sha512-H1XoH1URcBOa/rZZWxLxHCtOdVUEev+9vo5YdYhC9tCY4wnybX+VQrCYuy9ubkg69fCBxCONJOSLGfw0DWMffQ==,
+            }
+        dev: false
+
     /table@6.8.1:
         resolution:
             {
@@ -11361,6 +11503,17 @@ packages:
                 integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==,
             }
         dev: false
+
+    /typescript@3.9.10:
+        resolution:
+            {
+                integrity: sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==,
+            }
+        engines: { node: '>=4.2.0' }
+        hasBin: true
+        requiresBuild: true
+        dev: false
+        optional: true
 
     /typescript@4.9.4:
         resolution:

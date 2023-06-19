@@ -19,10 +19,10 @@
         "next": "^13.4.1",
         "node-ses": "^3.0.3",
         "react": "^18.2.0",
+        "react-bnb-gallery": "^1.4.4",
         "react-calendly": "^4.1.1",
         "react-dom": "^18.2.0",
         "react-hook-form": "^7.43.9",
-        "react-medium-image-zoom": "^5.1.5",
         "react-modal-video": "^2.0.0",
         "tailwind-merge": "^1.12.0",
         "zustand": "^4.3.7"
