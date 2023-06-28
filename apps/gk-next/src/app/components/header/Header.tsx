@@ -35,14 +35,14 @@ const kitchens = [
 ]
 
 const about = [
-    {
-        name: 'Why Us',
-        href: '/about-us',
-    },
-    {
-        name: 'Our Process',
-        href: '/our-process',
-    },
+    // {
+    //     name: 'Why Us',
+    //     href: '/about-us',
+    // },
+    // {
+    //     name: 'Our Process',
+    //     href: '/our-process',
+    // },
     {
         name: 'Our Showroom',
         href: '/visit-showroom',
