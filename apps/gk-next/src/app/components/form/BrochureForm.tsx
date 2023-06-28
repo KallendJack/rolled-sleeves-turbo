@@ -60,7 +60,12 @@ export default function BrochureForm() {
                     Download Brochure
                 </Button>
             </div>
-            <a ref={pdfRef} className="hidden" href="/pdf/the-kitchen-book.pdf" download />
+            <a
+                ref={pdfRef}
+                className="hidden"
+                href="/pdf/Garrett-Kitchens-Kitchen-Brochure.pdf"
+                download
+            />
         </form>
     )
 }
