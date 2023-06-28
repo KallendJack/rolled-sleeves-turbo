@@ -445,7 +445,7 @@ export default function ProjectContent() {
                                             </div>
                                         </div>
                                         <ButtonLink
-                                            href={`/our-projects/${project.fields.slug}`}
+                                            href={`/our-work/${project.fields.slug}`}
                                             className="w-full mt-4 text-center"
                                         >
                                             View Project

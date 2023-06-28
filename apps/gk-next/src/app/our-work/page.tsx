@@ -5,16 +5,16 @@ import type { ProjectsContentProps } from 'components/projects/ProjectsContent'
 import { getAllProjects } from 'utils/contentful/client'
 
 export const metadata = {
-    title: 'Our Projects | Garrett Kitchens',
+    title: 'Our Work | Garrett Kitchens',
 }
 
 const breadcrumbs = [
     { id: 1, name: 'Home', href: '/' },
-    { id: 2, name: 'Our Projects', href: '/our-projects' },
+    { id: 2, name: 'Our Work', href: '/our-work' },
 ]
 
 const content: ProjectsContentProps = {
-    title: 'Our Projects',
+    title: 'Our Work',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
     filters: [
         {

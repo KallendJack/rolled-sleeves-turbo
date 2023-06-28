@@ -195,10 +195,10 @@ export default function Header() {
                         </Transition>
                     </Popover>
                     <a
-                        href="/our-projects"
+                        href="/our-work"
                         className="text-sm font-semibold leading-6 tracking-widest text-gray-900"
                     >
-                        Our Projects
+                        Our Work
                     </a>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -294,10 +294,10 @@ export default function Header() {
                                     )}
                                 </Disclosure>
                                 <a
-                                    href="/our-projects"
+                                    href="/our-work"
                                     className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 tracking-widest text-gray-900 rounded-lg hover:bg-gray-50"
                                 >
-                                    Our Projects
+                                    Our Work
                                 </a>
                             </div>
                             <div className="py-6">

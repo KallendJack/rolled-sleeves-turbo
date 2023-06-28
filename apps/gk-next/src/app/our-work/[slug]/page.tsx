@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
 
 const breadcrumbs = [
     { id: 1, name: 'Home', href: '/' },
-    { id: 2, name: 'Our Projects', href: '/our-projects' },
+    { id: 2, name: 'Our Work', href: '/our-work' },
 ]
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -30,7 +30,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     {
                         id: 3,
                         name: project.fields.name,
-                        href: `/our-projects/${project.fields.slug}`,
+                        href: `/our-work/${project.fields.slug}`,
                     },
                 ]}
             />

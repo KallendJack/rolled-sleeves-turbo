@@ -9,7 +9,7 @@ const navigation = {
         { name: 'In-Frame Kitchens', href: '/kitchen-ranges/in-frame-kitchens' },
     ],
     usefulLinks: [
-        { name: 'Our Projects', href: '/our-projects' },
+        { name: 'Our Work', href: '/our-work' },
         { name: 'Contact Us', href: '/contact-us' },
         { name: 'Privacy Policy', href: '/privacy-policy' },
         { name: 'Customer Care', href: '/customer-care' },

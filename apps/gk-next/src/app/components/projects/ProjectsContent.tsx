@@ -342,7 +342,7 @@ export default function ProjectsContent(props: ProjectsContentProps) {
                                         </div>
                                         <div className="flex flex-col flex-1 p-4 space-y-2">
                                             <h3 className="text-sm text-gray-900">
-                                                <Link href={`/our-projects/${project.fields.slug}`}>
+                                                <Link href={`/our-work/${project.fields.slug}`}>
                                                     <span
                                                         aria-hidden="true"
                                                         className="absolute inset-0"
