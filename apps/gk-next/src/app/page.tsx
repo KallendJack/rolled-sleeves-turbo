@@ -6,36 +6,34 @@ import { TestimonialCarousel } from 'components/carousel/TestimonialCarousel'
 
 import CTASection from 'components/cta/CTASection'
 import USPBar from 'components/usp-bar/USPBar'
-import ScrollTo from 'components/scroll/ScrollTo'
 import HeroCarousel from 'components/carousel/HeroCarousel'
 
 const testimonials = [
     {
-        name: 'John Doe, Croydon',
-        text: `Our simple 4 step process offers our customers a stress-free
-            journey in achieving their dream kitchen, unique to their
-            desires. Our simple 4 step process offers our customers a
-            stress-free journey in achieving their dream kitchen, unique to
-            their desires.`,
+        name: 'Lucy, Ashtead',
+        text: `If you’re looking for a truly customised kitchen
+        experience then Garrett’s is the right choice! From start to finish, their
+        attention to detail and commitment to creating a unique kitchen
+        space was evident. We couldn’t be happier with our new kitchen!`,
         image: '/assets/home/Testimonial.jpg',
     },
     {
-        name: 'John Doe, Croydon',
-        text: `Our simple 4 step process offers our customers a stress-free
-            journey in achieving their dream kitchen, unique to their
-            desires. Our simple 4 step process offers our customers a
-            stress-free journey in achieving their dream kitchen, unique to
-            their desires.`,
-        image: '/assets/home/Testimonial.jpg',
+        name: 'Mark, Little Canfield',
+        text: `Mike & Becky were extremely patient with us,
+        making sure our vision was brought to life. The personalised
+        approach, along with their extensive range of high quality products
+        made the entire process seamless and enjoyable. Would
+        recommend.`,
+        image: '/assets/home/Testimonial2.jpg',
     },
     {
-        name: 'John Doe, Croydon',
-        text: `Our simple 4 step process offers our customers a stress-free
-            journey in achieving their dream kitchen, unique to their
-            desires. Our simple 4 step process offers our customers a
-            stress-free journey in achieving their dream kitchen, unique to
-            their desires.`,
-        image: '/assets/home/Testimonial.jpg',
+        name: 'Aaron, Walton-On-The-Hill',
+        text: `Our experience with Garrett Kitchens
+        was fantastic and we would highly recommend them to anyone
+        looking for a new kitchen. Becky was a pleasure to work with, keeping
+        us informed throughout the process and always willing to help, and
+        with great attention to detail!`,
+        image: '/assets/home/Testimonial3.jpg',
     },
 ]
 
@@ -49,38 +47,36 @@ const collections = [
         name: 'Book a Survey',
         href: '#',
         imageSrc: '/assets/home/Finalise.jpg',
-        imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
-        description: 'We will take accurate measurements and answer your initial questions.',
+        imageAlt: 'Paper and kitchen design plan',
+        description: 'We’ll take accurate measurements & an initial brief.',
     },
     {
         number: 2,
         name: 'Showroom Visit',
         href: '#',
         imageSrc: '/assets/home/Showroom-Visit.jpg',
-        imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
+        imageAlt: 'Kitchen showroom.',
         description:
-            'We will present a design scetch for you to look at and pick your kitchen colours, materials and finishes.',
+            'We’ll show you our initial design concept & guide you in selecting materials, colours & finishes.',
     },
     {
         number: 3,
-        name: 'Finalise Design',
+        name: 'Finalise & Order',
         href: '#',
-        imageSrc: '/assets/home/Survey.png',
+        imageSrc: '/assets/home/Survey.jpg',
 
-        imageAlt:
-            'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
+        imageAlt: 'Design on a wall',
         description:
-            'We will send your personalised design and quote, and go over the finer details.',
+            'We’ll go over your final design & quote in detail, take a deposit & place your order.',
     },
     {
         number: 4,
-        name: 'Place Order',
+        name: 'Delivery & Installation',
         href: '#',
         imageSrc: '/assets/home/Place-Order.png',
         imageAlt:
             'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
-        description:
-            'We will take a deposit and finalise your order, booking an installation date.',
+        description: 'We’ll deliver and install your new kitchen on the agreed date.',
     },
 ]
 
@@ -94,7 +90,7 @@ const kitchens = [
     {
         name: 'Traditional Kitchens',
         href: '/kitchen-ranges/traditional-kitchens',
-        imageSrc: '/assets/home/Traditional.jpg',
+        imageSrc: '/assets/home/Traditional-Kitchens.jpg',
         imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
     },
     {
@@ -118,23 +114,6 @@ export default function Page() {
         <>
             <HeroCarousel />
 
-            {/* <USPBar
-                items={[
-                    {
-                        image: '/assets/home/icons/Surrey-Based.png',
-                        text: 'Surrey-Based',
-                    },
-                    {
-                        image: '/assets/home/icons/Competitive-Pricing.png',
-                        text: 'Competitive Pricing',
-                    },
-                    {
-                        image: '/assets/home/icons/Finest-Quality.png',
-                        text: 'Finest Quality',
-                    },
-                ]}
-            /> */}
-
             <section
                 id="scroll-to"
                 aria-labelledby="comfort-heading"
@@ -150,14 +129,14 @@ export default function Page() {
                             id="comfort-heading"
                             className="mb-6 text-2xl tracking-tight text-gray-900 sm:text-4xl"
                         >
-                            Do you feel like your kitchen is missing something? Missing your peronal
-                            touch? Missing fun?
+                            <span className="font-bold">We understand</span> how frustrating it can
+                            be working with inexperienced & uninspired designers.
                         </h2>
 
                         <p className="mb-8 text-lg text-gray-500">
-                            We understand most kitchens are uninspiring which is why we guide and
-                            empower our customers to be bold with their decisions and love their
-                            unique new kitchens.
+                            As kitchen design specialists, we work closely with our customers to
+                            create kitchens that combine clever functionality with stunning creative
+                            design.
                         </p>
                         <ButtonLink href="/book-a-free-survey" className="w-fit">
                             Start Your Journey <span aria-hidden="true">&rarr;</span>
@@ -230,7 +209,7 @@ export default function Page() {
                     </div>
 
                     <div className="flex justify-center mt-8">
-                        <ButtonLink href="/book-a-free-survey" className="w-fit">
+                        <ButtonLink href="/contact-us" className="w-fit">
                             Start Your Journey <span aria-hidden="true">&rarr;</span>
                         </ButtonLink>
                     </div>
@@ -245,11 +224,11 @@ export default function Page() {
                     },
                     {
                         image: '/assets/home/icons/Trusted-Craftsmen.png',
-                        text: 'Trusted Craftsmen',
+                        text: 'UK-Manufactured',
                     },
                     {
                         image: '/assets/home/icons/Stress-Free.png',
-                        text: 'Stress-Free',
+                        text: 'Exceptional Value',
                     },
                 ]}
             />
@@ -314,48 +293,48 @@ export default function Page() {
                         We work with these trusted brands
                     </h2>
 
-                    <div className="grid items-center max-w-xl grid-cols-3 mx-auto mt-4 justify-items-center gap-x-8 gap-y-10 sm:max-w-2xl md:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6">
+                    <div className="grid items-center max-w-xl grid-cols-3 mx-auto mt-4 justify-items-center gap-x-10 gap-y-6 sm:max-w-2xl md:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6">
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-20 lg:w-32 md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Blum-logo.png"
                             alt="Transistor"
-                            width={158}
-                            height={48}
+                            width={60}
+                            height={28}
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-20 lg:w-32 md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/BORA-logo.png"
                             alt="Reform"
-                            width={158}
-                            height={48}
+                            width={60}
+                            height={28}
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-20 lg:w-32 md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Bosch-logo.png"
                             alt="Tuple"
-                            width={158}
-                            height={48}
+                            width={60}
+                            height={28}
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-20 lg:w-32 md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Consentino-logo.png"
                             alt="Reform"
-                            width={158}
-                            height={48}
+                            width={60}
+                            height={28}
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-20 lg:w-32 md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Neff-logo.png"
                             alt="SavvyCal"
-                            width={158}
-                            height={48}
+                            width={60}
+                            height={28}
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-40 md:col-span-2 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-20 lg:w-32 md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Quooker-logo.png"
                             alt="Statamic"
-                            width={158}
-                            height={48}
+                            width={60}
+                            height={28}
                         />
                     </div>
                 </div>
@@ -388,7 +367,8 @@ export default function Page() {
                 className="pt-[6.5rem] md:pt-[6.5rem] md:py-sm lg:py-32"
                 title="Need some design inspiration?"
                 image="/assets/home/kitchen-brochure.png"
-                description={`With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.`}
+                description={`With a wide variety of styles, colours, and features, our Kitchen Brochure is
+                sure to inspire you with ideas for your next, unique kitchen.`}
                 whiteBg
                 button={<ButtonLink href="/brochure">Request a Brochure</ButtonLink>}
             />

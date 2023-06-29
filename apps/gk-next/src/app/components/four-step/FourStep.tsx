@@ -127,7 +127,7 @@ export default function FourStep(props: FourStepProps) {
                     </div>
 
                     <div className="flex justify-center mt-8">
-                        <ButtonLink href="/learn-more" className="w-fit">
+                        <ButtonLink href="/contact-us" className="w-fit">
                             Start Your Journey <span aria-hidden="true">&rarr;</span>
                         </ButtonLink>
                     </div>

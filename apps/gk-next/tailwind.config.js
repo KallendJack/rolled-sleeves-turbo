@@ -13,7 +13,7 @@ module.exports = {
             fontFamily: {
                 heading: ['var(--font-montserrat)'],
                 body: ['var(--font-raleway)'],
-                homeTitle: ['var(--font-alegreya)'],
+                homeTitle: ['var(--font-sourceserif4)'],
             },
             colors: {
                 brand: {

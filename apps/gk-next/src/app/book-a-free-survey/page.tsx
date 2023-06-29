@@ -42,7 +42,7 @@ export default async function Page() {
                     />
                 }
                 image="/assets/home/Survey.png"
-                videoId="TxdhpRPptY0"
+                videoId="HA5LpO5XcyA"
                 channel="youtube"
                 className="bg-brand-greyBg"
             />
