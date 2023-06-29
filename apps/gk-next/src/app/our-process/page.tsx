@@ -17,7 +17,7 @@ export default function Page() {
                 image="/assets/home/hero/hero.png"
                 description={`With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.`}
                 button={
-                    <ButtonLink href="/brochure">
+                    <ButtonLink href="/request-a-free-brochure">
                         Start Your Journey <span aria-hidden="true">&rarr;</span>
                     </ButtonLink>
                 }
@@ -69,7 +69,7 @@ export default function Page() {
                 description={`With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.
                 With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.`}
                 button={
-                    <ButtonLink href="/brochure">
+                    <ButtonLink href="/request-a-free-brochure">
                         Start your journey <span aria-hidden="true">&rarr;</span>
                     </ButtonLink>
                 }
@@ -81,7 +81,9 @@ export default function Page() {
                 image="/assets/home/kitchen-brochure.png"
                 description={`With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.`}
                 whiteBg
-                button={<ButtonLink href="/brochure">Request a Brochure </ButtonLink>}
+                button={
+                    <ButtonLink href="/request-a-free-brochure">Request a Brochure </ButtonLink>
+                }
             />
         </>
     )

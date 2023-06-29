@@ -370,7 +370,7 @@ export default function Page() {
                 description={`With a wide variety of styles, colours, and features, our Kitchen Brochure is
                 sure to inspire you with ideas for your next, unique kitchen.`}
                 whiteBg
-                button={<ButtonLink href="/brochure">Request a Brochure</ButtonLink>}
+                button={<ButtonLink href="/request-a-free-brochure">Request a Brochure</ButtonLink>}
             />
         </>
     )

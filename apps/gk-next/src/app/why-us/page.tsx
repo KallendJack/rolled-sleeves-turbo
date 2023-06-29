@@ -181,7 +181,7 @@ export default function Page() {
                 image="/assets/home/kitchen-brochure.png"
                 description={`With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.`}
                 whiteBg
-                button={<ButtonLink href="/brochure">Request a Brochure</ButtonLink>}
+                button={<ButtonLink href="/request-a-free-brochure">Request a Brochure</ButtonLink>}
             />
         </>
     )

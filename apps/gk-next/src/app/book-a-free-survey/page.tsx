@@ -80,7 +80,7 @@ export default async function Page() {
                 image="/assets/home/kitchen-brochure.png"
                 description={`With our essential kitchen planning guide, We'll walk you through some of our customer's commonly asked questions and guide you through the process of creating your very own unique kitchen.`}
                 whiteBg
-                button={<ButtonLink href="/brochure">Download Guide</ButtonLink>}
+                button={<ButtonLink href="/request-a-free-brochure">Download Guide</ButtonLink>}
             />
         </>
     )
