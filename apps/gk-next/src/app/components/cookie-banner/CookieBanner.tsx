@@ -42,12 +42,6 @@ export default function CookieBanner() {
                     <Button onClick={handleAcceptCookies} className="border border-brand-primary">
                         Accept all
                     </Button>
-                    <Button
-                        onClick={handleRejectCookies}
-                        className="text-gray-900 uppercase transition-colors bg-white border border-gray-500 hover:text-white hover:bg-brand-primaryFocus focus:bg-brand-primaryHover"
-                    >
-                        Reject all
-                    </Button>
                 </div>
             </div>
         )
