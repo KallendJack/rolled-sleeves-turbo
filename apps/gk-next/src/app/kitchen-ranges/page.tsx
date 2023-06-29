@@ -16,7 +16,10 @@ const breadcrumbs = [
 const content: KitchenRangeContentProps = {
     type: 'All',
     title: 'Kitchen Ranges',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+    description: `Browse our stunning collection of kitchen ranges for some inspiration for
+    your new project. Whether you’re looking for a traditional shaker kitchen, a
+    modern kitchen, or a handleless kitchen, we’ve got plenty of styles to suit
+    your personality.`,
     filters: [
         {
             id: 'type',

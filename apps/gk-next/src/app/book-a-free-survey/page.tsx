@@ -30,11 +30,10 @@ export default async function Page() {
             />
             <TextVideo
                 title="Start Your Journey"
-                text={`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-                ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-                ratione.`}
+                text={`The first step towards achieving your dream kitchen is to book a free home
+                survey with us. One of our experienced designers will attend and take
+                accurate measurements, along with an initial brief. We’ll then start to
+                create a design around your budget, lifestyle, and preferences.`}
                 button={
                     <CalendlyPopupButton
                         url="https://calendly.com/garrettkitchens/home-survey"
@@ -52,29 +51,26 @@ export default async function Page() {
                     {
                         title: 'Kitchen Measurements',
                         image: '/assets/home/Survey.png',
-                        text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                        impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-                        ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                        impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-                        ratione.`,
+                        text: `Eliminate the stress of taking your own measurements and leave it to one
+                        of our design specialists. Taking accurate measurements of your kitchen
+                        space is crucial in terms of making sure your kitchen not only looks great
+                        but fits and functions perfectly.`,
                     },
                     {
                         title: 'Consultation With Designer',
                         image: '/assets/home/Survey.png',
-                        text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                        impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-                        ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                        impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-                        ratione.`,
+                        text: `After taking measurements, your designer will offer advice on how to get
+                        the best from your space. We will not only ensure the furniture fits but will
+                        also make sure the design works in practice, is functional, and contains all
+                        the elements you need.`,
                     },
                     {
-                        title: 'Initial Brief',
+                        title: 'Bespoke Design',
                         image: '/assets/home/Survey.png',
-                        text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                        impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-                        ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                        impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-                        ratione.`,
+                        text: `Using the details from your home survey, we will then create a 3D plan,
+                        making adjustments along the way to ensure it is exactly how you want it.
+                        You can sit back and relax knowing that every aspect of your new kitchen is
+                        going to meet, and exceed, your expectations.`,
                     },
                 ]}
             />

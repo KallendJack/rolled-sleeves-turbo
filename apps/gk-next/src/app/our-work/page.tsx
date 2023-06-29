@@ -15,7 +15,7 @@ const breadcrumbs = [
 
 const content: ProjectsContentProps = {
     title: 'Our Work',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+    description: 'A selection of our completed projects.',
     filters: [
         {
             id: 'priceGroup',

@@ -3,7 +3,7 @@
 import { Fragment, useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
-import { motion, useScroll, AnimatePresence } from 'framer-motion'
+import { useScroll } from 'framer-motion'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
@@ -37,7 +37,7 @@ const kitchens = [
 const about = [
     // {
     //     name: 'Why Us',
-    //     href: '/about-us',
+    //     href: '/why-us',
     // },
     // {
     //     name: 'Our Process',

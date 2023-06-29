@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { ButtonLink } from 'components/button/Button'
 import ScrollTo from 'components/scroll/ScrollTo'
 import { useEffect, useState } from 'react'
@@ -43,7 +42,7 @@ export default function HeroCarousel() {
                     <AnimatePresence initial={false}>
                         <motion.img
                             alt="Hero"
-                            className="object-cover object-center absolute top-0 left-0 w-full h-full"
+                            className="absolute top-0 left-0 object-cover object-center w-full h-full"
                             key={images[currentImageIndex]}
                             style={{ y: 0 }}
                             initial="hidden"

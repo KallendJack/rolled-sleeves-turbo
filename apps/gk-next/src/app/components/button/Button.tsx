@@ -1,6 +1,7 @@
 import { ButtonHTMLAttributes, LinkHTMLAttributes } from 'react'
 import Link from 'next/link'
 import type { LinkProps } from 'next/link'
+import { twMerge } from 'tailwind-merge'
 
 type BaseButtonProps = {
     variant?: 'solid' | 'outline'
@@ -21,7 +22,7 @@ export function Button(props: ButtonProps) {
     const { variant = 'solid', className = '', children, ...restProps } = props
 
     return (
-        <button className={`${baseClasses} ${className}`} {...restProps}>
+        <button className={twMerge(baseClasses, className)} {...restProps}>
             {children}
         </button>
     )
@@ -31,7 +32,7 @@ export function ButtonLink(props: ButtonLinkProps) {
     const { variant = 'solid', className = '', children, ...restProps } = props
 
     return (
-        <Link className={`${baseClasses} ${className}`} {...restProps}>
+        <Link className={twMerge(baseClasses, className)} {...restProps}>
             {children}
         </Link>
     )
@@ -41,7 +42,7 @@ export function NormalLink(props: NormalLinkProps) {
     const { variant = 'solid', className = '', children, ...restProps } = props
 
     return (
-        <a className={`${baseClasses} ${className}`} {...restProps}>
+        <a className={twMerge(baseClasses, className)} {...restProps}>
             {children}
         </a>
     )

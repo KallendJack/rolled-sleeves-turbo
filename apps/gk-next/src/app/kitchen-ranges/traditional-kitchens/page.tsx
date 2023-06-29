@@ -17,7 +17,10 @@ const breadcrumbs = [
 const content: KitchenRangeContentProps = {
     type: 'Traditional',
     title: 'Traditional Kitchens',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+    description: `Our traditional kitchen ranges feature the classic shaker door in smooth
+    and woodgrained finishes. With our experienced designers, we’ll be able to
+    find the right range to match your personality and create a unique kitchen
+    that is beautiful and functional.`,
     filters: [
         {
             id: 'type',

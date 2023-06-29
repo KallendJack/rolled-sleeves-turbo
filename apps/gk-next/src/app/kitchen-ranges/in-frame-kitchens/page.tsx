@@ -17,7 +17,9 @@ const breadcrumbs = [
 const content: KitchenRangeContentProps = {
     type: 'In-Frame',
     title: 'In-Frame Kitchens',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+    description: `Traditional in-frame kitchens create unique, lasting spaces that use classic
+    joinery techniques for stunning, bold, and durable kitchens. Get some
+    inspiration by browsing some of our in-frame kitchens.`,
     filters: [
         {
             id: 'type',
