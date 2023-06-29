@@ -18,7 +18,7 @@ export default function Page() {
                         <Image
                             width={500}
                             height={400}
-                            src="/assets/home/hero/hero.png"
+                            src="/assets/brochure/brochure_mockup_5.png"
                             alt="image"
                             className="relative object-cover w-full md:w-1/2"
                         />
@@ -49,7 +49,7 @@ export default function Page() {
                         <Image
                             width={200}
                             height={250}
-                            src="/assets/home/hero/hero.png"
+                            src="/assets/brochure/Kitchen Ranges v1.jpg"
                             alt="image"
                             className="relative object-cover w-full mb-4"
                         />
@@ -68,8 +68,8 @@ export default function Page() {
                     <div className="text-center w-full md:w-[33%]">
                         <Image
                             width={200}
-                            height={250}
-                            src="/assets/home/hero/hero.png"
+                            height={200}
+                            src="/assets/brochure/Internal Solutions v1.jpg"
                             alt="image"
                             className="relative object-cover w-full mb-4"
                         />
@@ -88,7 +88,7 @@ export default function Page() {
                         <Image
                             width={200}
                             height={250}
-                            src="/assets/home/hero/hero.png"
+                            src="/assets/brochure/Beyond the Kitchen.png"
                             alt="image"
                             className="relative object-cover w-full mb-4"
                         />

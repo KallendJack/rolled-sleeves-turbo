@@ -30,7 +30,7 @@ export default async function Page() {
                         text="Book Appointment"
                     />
                 }
-                image="/assets/home/Survey.png"
+                image="/assets/showroom/Video Thumbnail.jpg"
                 videoId="674952430"
                 channel="vimeo"
             />
@@ -62,7 +62,7 @@ export default async function Page() {
                             <div className="flex-auto w-0 lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
                                 <div className="relative aspect-[7/5] w-[37rem] max-w-none bg-gray-50 object-cover">
                                     <Image
-                                        src="/assets/home/hero/hero.png"
+                                        src="/assets/showroom/Kitchens on display 1.jpg"
                                         alt=""
                                         fill
                                         className="object-cover"
@@ -73,7 +73,7 @@ export default async function Page() {
                                 <div className="flex self-end justify-end flex-none order-first w-64 lg:w-auto">
                                     <div className="relative aspect-[4/3] w-[24rem] max-w-none flex-none bg-gray-50 ">
                                         <Image
-                                            src="/assets/home/Showroom-Visit.jpg"
+                                            src="/assets/showroom/Kitchens on display 2.jpg"
                                             alt=""
                                             fill
                                             className="object-cover"
@@ -83,7 +83,7 @@ export default async function Page() {
                                 <div className="flex justify-end flex-auto w-96 lg:w-auto lg:flex-none">
                                     <div className="relative aspect-[7/5] w-[37rem] max-w-none flex-none bg-gray-50">
                                         <Image
-                                            src="/assets/home/Testimonial.jpg"
+                                            src="/assets/showroom/Kitchens on display 3.jpg"
                                             alt=""
                                             fill
                                             className="object-cover "
@@ -93,7 +93,7 @@ export default async function Page() {
                                 <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                                     <div className="relative aspect-[4/3] w-[24rem] max-w-none bg-gray-50">
                                         <Image
-                                            src="/assets/home/Place-Order.png"
+                                            src="/assets/showroom/Kitchens on display 4.jpg"
                                             alt=""
                                             fill
                                             className="object-cover"

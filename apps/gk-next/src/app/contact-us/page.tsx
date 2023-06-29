@@ -14,7 +14,7 @@ export default function Page() {
                 <Image
                     fill
                     className="object-cover"
-                    src="/assets/home/hero/hero.png"
+                    src="/assets/contact/main-image.jpg"
                     alt="Contact Us"
                 />
             </div>
