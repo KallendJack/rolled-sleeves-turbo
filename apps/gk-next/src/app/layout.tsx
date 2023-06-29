@@ -1,5 +1,5 @@
 import Script from 'next/script'
-import { Montserrat, Raleway, Alegreya } from 'next/font/google'
+import { Montserrat, Raleway, Alegreya, Source_Serif_4 } from 'next/font/google'
 
 import '../styles/global.css'
 import Footer from './components/footer/Footer'
@@ -19,6 +19,13 @@ const montserrat = Montserrat({
     variable: '--font-montserrat',
 })
 
+const sourceserif4 = Source_Serif_4({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: '400',
+    variable: '--font-sourceserif4',
+})
+
 const raleway = Raleway({
     subsets: ['latin'],
     display: 'swap',
@@ -36,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html
             lang="en"
-            className={`${montserrat.variable} ${raleway.variable} ${alegreya.variable}`}
+            className={`${montserrat.variable} ${raleway.variable} ${alegreya.variable} ${sourceserif4.variable}`}
         >
             <Script
                 src="https://www.googletagmanager.com/gtag/js?id=G-0H8S67J6VR"

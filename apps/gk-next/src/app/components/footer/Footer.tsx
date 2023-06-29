@@ -28,7 +28,7 @@ export default function Footer() {
                     <div>
                         <h3 className="text-2xl leading-6 text-white lg:text-3xl">About Us</h3>
                         <p className="mt-4 text-sm text-gray-300">
-                            Garrett Kitchens are an independent kitchen retailer who design, supply
+                            Garrett Kitchens are an independent kitchen studio who design, supply
                             &amp; install kitchens and other built in furniture. Working with
                             international manufactures allows us to provide exceptional value for a
                             range of styles and budgets.
