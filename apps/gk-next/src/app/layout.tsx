@@ -5,6 +5,7 @@ import '../styles/global.css'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import ModalVideo from 'components/modal/ModalVideo'
+import CookieBanner from 'components/cookie-banner/CookieBanner'
 
 export const revalidate = 60
 
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <main>{children}</main>
                 <Footer />
                 <ModalVideo />
+                <CookieBanner />
             </body>
         </html>
     )
