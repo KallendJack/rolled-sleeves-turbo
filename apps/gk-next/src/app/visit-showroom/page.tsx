@@ -17,12 +17,13 @@ export default async function Page() {
     return (
         <>
             <TextVideo
-                title="Design Your Dream Kitchen"
-                text={`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-                ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-                impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis
-                ratione.`}
+                title="Visit Our Showroom"
+                text={`While you can explore our kitchen ranges online or with our brochure,
+                nothing compares to experiencing the quality of our kitchens firsthand at
+                our dedicated showroom. Here, you’ll have the opportunity to see them up
+                close and personal, accompanied by your designer who will be readily
+                available to answer any questions, offer expert advice, and help you turn
+                your dream kitchen into reality.`}
                 button={
                     <CalendlyPopupButton
                         url="https://calendly.com/garrettkitchens/book-showroom-visit"
@@ -42,14 +43,19 @@ export default async function Page() {
                                 Kitchens on display
                             </h2>
                             <p className="mt-6 text-xl leading-8 text-gray-600">
-                                Quasi est quaerat. Sit molestiae et. Provident ad dolorem occaecati
-                                eos iste. Soluta rerum quidem minus ut molestiae velit error quod.
-                                Excepturi quidem expedita molestias quas.
+                                Our showroom hosts a variety of unique displays for you to look at
+                                and walk around. Take your time to appreciate the finer details of
+                                elegant cabinet handles, premium worktops, functional internal
+                                storage solutions, and more. These features are sure to ignite your
+                                imagination and inspire your own kitchen design.
                             </p>
                             <p className="mt-6 text-xl leading-7 text-gray-600">
-                                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                                fugiat. Quasi aperiam sit non sit neque reprehenderit.
+                                As official partners of renowned brands like Neff, Bosch, and
+                                Quooker, our showroom proudly showcases an extensive range of
+                                appliances, fully functional and ready for you to experience
+                                firsthand. Feel the quality, test the functionality, and immerse
+                                yourself in the possibilities before making that all-important
+                                decision.
                             </p>
                         </div>
                         <div className="flex flex-wrap items-start justify-end max-w-2xl gap-6 sm:gap-8 lg:contents">

@@ -17,7 +17,8 @@ const breadcrumbs = [
 const content: KitchenRangeContentProps = {
     type: 'Handleless',
     title: 'Handleless Kitchens',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+    description: `Browse our range of handleless kitchens for some inspiration and get an
+    idea of how your new space could look with the help of our designers.`,
     filters: [
         {
             id: 'type',
