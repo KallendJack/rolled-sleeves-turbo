@@ -34,7 +34,7 @@ export default function CookieBanner() {
                     We use cookies to ensure that we give you the best experience on the Garrett
                     Kitchens website. By continuing, you agree to our use of cookies. See our&nbsp;
                     <a href="/privacy-policy" className="font-semibold text-brand-primary">
-                        privacy policy.
+                        privacy policy
                     </a>
                     .
                 </p>
