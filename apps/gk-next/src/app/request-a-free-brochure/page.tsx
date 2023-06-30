@@ -49,7 +49,7 @@ export default function Page() {
                         <Image
                             width={200}
                             height={250}
-                            src="/assets/brochure/Kitchen Ranges v1.jpg"
+                            src="/assets/brochure/Kitchen Ranges v1.png"
                             alt="image"
                             className="relative object-cover w-full mb-4"
                         />
@@ -69,7 +69,7 @@ export default function Page() {
                         <Image
                             width={200}
                             height={200}
-                            src="/assets/brochure/Internal Solutions v1.jpg"
+                            src="/assets/brochure/Internal Solutions v1.png"
                             alt="image"
                             className="relative object-cover w-full mb-4"
                         />
@@ -88,7 +88,7 @@ export default function Page() {
                         <Image
                             width={200}
                             height={250}
-                            src="/assets/brochure/Beyond the Kitchen.png"
+                            src="/assets/brochure/Beyond the Kitchen.jpg"
                             alt="image"
                             className="relative object-cover w-full mb-4"
                         />
@@ -99,7 +99,7 @@ export default function Page() {
 
                         <p className="text-gray-500">
                             Throughout this brochure, you will also find fabulous examples of
-                            pantries, bathrooms, and laundry rooms, all of which combine clever
+                            pantries, bedrooms, and laundry rooms, all of which combine clever
                             functionality with stunning creative design.
                         </p>
                     </div>

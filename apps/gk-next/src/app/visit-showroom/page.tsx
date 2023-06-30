@@ -31,8 +31,8 @@ export default async function Page() {
                     />
                 }
                 image="/assets/showroom/Video Thumbnail.jpg"
-                videoId="674952430"
-                channel="vimeo"
+                videoId="TxdhpRPptY0"
+                channel="youtube"
             />
             <GoogleMap />
             <div className="overflow-hidden py-sm lg:py-lg">

@@ -48,7 +48,7 @@ const about = [
         href: '/visit-showroom',
     },
     {
-        name: 'Our Brochures',
+        name: 'Our Brochure',
         href: '/request-a-free-brochure',
     },
     {
