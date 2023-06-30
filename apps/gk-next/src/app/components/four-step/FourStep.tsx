@@ -17,7 +17,7 @@ export default function FourStep(props: FourStepProps) {
         {
             number: 1,
             name: 'Book a Survey',
-            href: '#',
+            href: '/book-a-free-survey',
             imageSrc: '/assets/home/Finalise.jpg',
             imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
             description: 'We will take accurate measurements and answer your initial questions.',
@@ -25,7 +25,7 @@ export default function FourStep(props: FourStepProps) {
         {
             number: 2,
             name: 'Showroom Visit',
-            href: '#',
+            href: '/book-a-free-survey',
             imageSrc: '/assets/home/Showroom-Visit.jpg',
             imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
             description:
@@ -34,9 +34,8 @@ export default function FourStep(props: FourStepProps) {
         {
             number: 3,
             name: 'Finalise Design',
-            href: '#',
-            imageSrc: '/assets/home/Survey.png',
-
+            href: '/book-a-free-survey',
+            imageSrc: '/assets/home/SurveyFin.jpg',
             imageAlt:
                 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
             description:
@@ -45,7 +44,7 @@ export default function FourStep(props: FourStepProps) {
         {
             number: 4,
             name: 'Place Order',
-            href: '#',
+            href: '/book-a-free-survey',
             imageSrc: '/assets/home/Place-Order.png',
             imageAlt:
                 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
@@ -80,12 +79,12 @@ export default function FourStep(props: FourStepProps) {
                             </p>
                         </div>
 
-                        <button
-                            // href="/our-process"
+                        <ButtonLink
+                            href="/contact-us"
                             className="inline-block px-6 py-3 mt-4 text-xs tracking-widest text-gray-900 uppercase transition-colors bg-white border border-gray-500 hover:text-white hover:bg-brand-primaryFocus focus:bg-brand-primaryHover"
                         >
                             Learn More
-                        </button>
+                        </ButtonLink>
                     </div>
 
                     <div className="mt-16 space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 sm:space-y-0">
@@ -127,7 +126,7 @@ export default function FourStep(props: FourStepProps) {
                     </div>
 
                     <div className="flex justify-center mt-8">
-                        <ButtonLink href="/contact-us" className="w-fit">
+                        <ButtonLink href="/book-a-free-survey" className="w-fit">
                             Start Your Journey <span aria-hidden="true">&rarr;</span>
                         </ButtonLink>
                     </div>

@@ -45,7 +45,7 @@ const collections = [
     {
         number: 1,
         name: 'Book a Survey',
-        href: '#',
+        href: '/book-a-free-survey',
         imageSrc: '/assets/home/Finalise.jpg',
         imageAlt: 'Paper and kitchen design plan',
         description: 'We’ll take accurate measurements & an initial brief.',
@@ -53,7 +53,7 @@ const collections = [
     {
         number: 2,
         name: 'Showroom Visit',
-        href: '#',
+        href: '/book-a-free-survey',
         imageSrc: '/assets/home/Showroom-Visit.jpg',
         imageAlt: 'Kitchen showroom.',
         description:
@@ -62,9 +62,8 @@ const collections = [
     {
         number: 3,
         name: 'Finalise & Order',
-        href: '#',
-        imageSrc: '/assets/home/Survey.jpg',
-
+        href: '/book-a-free-survey',
+        imageSrc: '/assets/home/SurveyFin.jpg',
         imageAlt: 'Design on a wall',
         description:
             'We’ll go over your final design & quote in detail, take a deposit & place your order.',
@@ -72,7 +71,7 @@ const collections = [
     {
         number: 4,
         name: 'Delivery & Installation',
-        href: '#',
+        href: '/book-a-free-survey',
         imageSrc: '/assets/home/Place-Order.png',
         imageAlt:
             'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
@@ -162,12 +161,12 @@ export default function Page() {
                             </p>
                         </div>
 
-                        <button
-                            // href="/our-process"
+                        <ButtonLink
+                            href="/contact-us"
                             className="inline-block px-6 py-3 mt-4 text-xs tracking-widest text-gray-900 uppercase transition-colors bg-white border border-gray-500 hover:text-white hover:bg-brand-primaryFocus focus:bg-brand-primaryHover"
                         >
                             Learn More
-                        </button>
+                        </ButtonLink>
                     </div>
 
                     <div className="mt-16 space-y-12 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-3 sm:space-y-0">
@@ -209,7 +208,7 @@ export default function Page() {
                     </div>
 
                     <div className="flex justify-center mt-8">
-                        <ButtonLink href="/contact-us" className="w-fit">
+                        <ButtonLink href="/book-a-free-survey" className="w-fit">
                             Start Your Journey <span aria-hidden="true">&rarr;</span>
                         </ButtonLink>
                     </div>
@@ -223,11 +222,11 @@ export default function Page() {
                         text: 'Bespoke Design',
                     },
                     {
-                        image: '/assets/home/icons/Trusted-Craftsmen.png',
+                        image: '/assets/home/icons/UK-v2.png',
                         text: 'UK-Manufactured',
                     },
                     {
-                        image: '/assets/home/icons/Stress-Free.png',
+                        image: '/assets/home/icons/EV-v2.png',
                         text: 'Exceptional Value',
                     },
                 ]}
@@ -366,7 +365,7 @@ export default function Page() {
             <CTASection
                 className="pt-[6.5rem] md:pt-[6.5rem] md:py-sm lg:py-32"
                 title="Need some design inspiration?"
-                image="/assets/home/kitchen-brochure.png"
+                image="/assets/home/brochureImg.jpg"
                 description={`With a wide variety of styles, colours, and features, our Kitchen Brochure is
                 sure to inspire you with ideas for your next, unique kitchen.`}
                 whiteBg
