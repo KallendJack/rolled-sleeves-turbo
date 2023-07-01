@@ -94,7 +94,7 @@ export default function FourStep(props: FourStepProps) {
                                 href={collection.href}
                                 className="relative block text-center border border-gray-400 group"
                             >
-                                <div className="absolute left-0 right-0 z-50 flex items-center justify-center mx-auto text-2xl font-medium text-gray-900 bg-white border border-gray-500 rounded-full -top-7 font-body w-14 h-14">
+                                <div className="absolute left-0 right-0 z-40 flex items-center justify-center mx-auto text-2xl font-medium text-gray-900 bg-white border border-gray-500 rounded-full -top-7 font-body w-14 h-14">
                                     {collection.number}
                                 </div>
 

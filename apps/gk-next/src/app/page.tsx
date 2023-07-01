@@ -128,14 +128,13 @@ export default function Page() {
                             id="comfort-heading"
                             className="mb-6 text-2xl tracking-tight text-gray-900 sm:text-4xl"
                         >
-                            <span className="font-bold">We understand</span> how frustrating it can
-                            be working with inexperienced & uninspired designers.
+                            <span className="font-bold">We design</span> kitchens you won&apos;t
+                            find anywhere else, because we bring the kitchen in your mind to life.
                         </h2>
 
                         <p className="mb-8 text-lg text-gray-500">
-                            As kitchen design specialists, we work closely with our customers to
-                            create kitchens that combine clever functionality with stunning creative
-                            design.
+                            Functional shouldn&apos;t be boring. Create something unique with us;
+                            something inspirational, create your space. A space like no other.
                         </p>
                         <ButtonLink href="/book-a-free-survey" className="w-fit">
                             Start Your Journey <span aria-hidden="true">&rarr;</span>
@@ -294,46 +293,40 @@ export default function Page() {
 
                     <div className="grid items-center max-w-xl grid-cols-3 mx-auto mt-4 justify-items-center gap-x-10 gap-y-6 sm:max-w-2xl md:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6">
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-20 lg:w-32 md:col-span-2 lg:col-span-1"
-                            src="/assets/home/brand-logos/Blum-logo.png"
-                            alt="Transistor"
-                            width={60}
-                            height={28}
+                            width="96"
+                            height="36"
+                            src="/assets/home/brand-logos/Blum-v2.png"
+                            alt="Blum"
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-20 lg:w-32 md:col-span-2 lg:col-span-1"
-                            src="/assets/home/brand-logos/BORA-logo.png"
-                            alt="Reform"
-                            width={60}
-                            height={28}
+                            width="96"
+                            height="36"
+                            src="/assets/home/brand-logos/BORA-v2.png"
+                            alt="BORA"
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-20 lg:w-32 md:col-span-2 lg:col-span-1"
-                            src="/assets/home/brand-logos/Bosch-logo.png"
-                            alt="Tuple"
-                            width={60}
-                            height={28}
+                            width="96"
+                            height="36"
+                            src="/assets/home/brand-logos/bosh-v2.png"
+                            alt="Bosch"
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-20 lg:w-32 md:col-span-2 lg:col-span-1"
-                            src="/assets/home/brand-logos/Consentino-logo.png"
-                            alt="Reform"
-                            width={60}
-                            height={28}
+                            width="96"
+                            height="36"
+                            src="/assets/home/brand-logos/Consentino-v2.png"
+                            alt="Consentino"
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-20 lg:w-32 md:col-span-2 lg:col-span-1"
-                            src="/assets/home/brand-logos/Neff-logo.png"
-                            alt="SavvyCal"
-                            width={60}
-                            height={28}
+                            width="96"
+                            height="36"
+                            src="/assets/home/brand-logos/Neff-v2.png"
+                            alt="Neff"
                         />
                         <Image
-                            className="object-contain w-24 h-12 col-span-1 md:w-20 lg:w-32 md:col-span-2 lg:col-span-1"
-                            src="/assets/home/brand-logos/Quooker-logo.png"
-                            alt="Statamic"
-                            width={60}
-                            height={28}
+                            width="96"
+                            height="36"
+                            src="/assets/home/brand-logos/Quooker-v2.png"
+                            alt="Quooker"
                         />
                     </div>
                 </div>

@@ -46,13 +46,14 @@ export default function Page() {
 
                 <div className="flex flex-col w-full gap-8 px-4 mx-auto md:flex-row lg:gap-12 md:px-6 md:max-w-4xl lg:px-8 lg:max-w-7xl">
                     <div className="text-center w-full md:w-[33%]">
-                        <Image
-                            width={200}
-                            height={250}
-                            src="/assets/brochure/Kitchen Ranges v1.png"
-                            alt="image"
-                            className="relative object-cover w-full mb-4"
-                        />
+                        <div className="h-[250px] relative mb-5">
+                            <Image
+                                fill
+                                src="/assets/brochure/Kitchen Ranges v1.jpg"
+                                alt="image"
+                                className="relative object-cover w-full mb-4"
+                            />
+                        </div>
 
                         <h2 className="mb-4 text-xl tracking-tight text-gray-900 lg:text-2xl">
                             Kitchen Ranges
@@ -66,13 +67,14 @@ export default function Page() {
                     </div>
 
                     <div className="text-center w-full md:w-[33%]">
-                        <Image
-                            width={200}
-                            height={200}
-                            src="/assets/brochure/Internal Solutions v1.png"
-                            alt="image"
-                            className="relative object-cover w-full mb-4"
-                        />
+                        <div className="h-[250px] relative mb-5">
+                            <Image
+                                fill
+                                src="/assets/brochure/Internal Solutions v1.jpg"
+                                alt="image"
+                                className="relative object-cover w-full mb-4"
+                            />
+                        </div>
 
                         <h2 className="mb-4 text-xl tracking-tight text-gray-900 lg:text-2xl">
                             Internal Solutions
@@ -85,13 +87,14 @@ export default function Page() {
                     </div>
 
                     <div className="text-center w-full md:w-[33%]">
-                        <Image
-                            width={200}
-                            height={250}
-                            src="/assets/brochure/Beyond the Kitchen.jpg"
-                            alt="image"
-                            className="relative object-cover w-full mb-4"
-                        />
+                        <div className="h-[250px] relative mb-5">
+                            <Image
+                                fill
+                                src="/assets/brochure/Beyond the Kitchen.png"
+                                alt="image"
+                                className="relative object-cover w-full mb-4"
+                            />
+                        </div>
 
                         <h2 className="mb-4 text-xl tracking-tight text-gray-900 lg:text-2xl">
                             Beyond the Kitchen

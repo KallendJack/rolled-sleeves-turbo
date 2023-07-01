@@ -76,11 +76,12 @@ export default async function Page() {
             />
             <CTASection
                 className="pt-[6.5rem] md:pt-[6.5rem] md:py-sm lg:py-32"
-                title="Planning your dream kitchen can be daunting."
-                image="/assets/home/kitchen-brochure.png"
-                description={`With our essential kitchen planning guide, We'll walk you through some of our customer's commonly asked questions and guide you through the process of creating your very own unique kitchen.`}
+                title="Need some design inspiration?"
+                image="/assets/home/brochureImg.jpg"
+                description={`With a wide variety of styles, colours, and features, our Kitchen Brochure is
+                sure to inspire you with ideas for your next, unique kitchen.`}
                 whiteBg
-                button={<ButtonLink href="/request-a-free-brochure">Download Guide</ButtonLink>}
+                button={<ButtonLink href="/request-a-free-brochure">Request a Brochure</ButtonLink>}
             />
         </>
     )

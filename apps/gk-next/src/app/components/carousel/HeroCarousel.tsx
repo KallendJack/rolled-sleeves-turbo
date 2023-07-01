@@ -58,7 +58,7 @@ export default function HeroCarousel() {
 
             <div className="relative flex flex-col justify-end pb-24 xl:pb-32 items-center max-w-4xl px-6 h-screen -mt-14 md:-mt-[5rem] lg:-mt-[5rem] xl:-mt-20 mx-auto text-center lg:px-0">
                 <h1 className="text-3xl tracking-tight text-white lg:text-4xl font-homeTitle">
-                    We Design & Install Inspiring Kitchens
+                    We design and install inspiring kitchens
                 </h1>
 
                 <ButtonLink href="/book-a-free-survey" className="mt-4">
