@@ -301,13 +301,13 @@ export default function Page() {
                         <Image
                             width="96"
                             height="36"
-                            src="/assets/home/brand-logos/BORA-v2.png"
+                            src="/assets/home/brand-logos/Bora-v2.png"
                             alt="BORA"
                         />
                         <Image
                             width="96"
                             height="36"
-                            src="/assets/home/brand-logos/bosh-v2.png"
+                            src="/assets/home/brand-logos/Bosh-v2.png"
                             alt="Bosch"
                         />
                         <Image
@@ -319,7 +319,7 @@ export default function Page() {
                         <Image
                             width="96"
                             height="36"
-                            src="/assets/home/brand-logos/Neff-v2.png"
+                            src="/assets/home/brand-logos/NEFF-v2.png"
                             alt="Neff"
                         />
                         <Image
