@@ -55,6 +55,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Script id="microsoft-analytics" strategy="afterInteractive">
                 {`(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"142002251", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");`}
             </Script>
+            <Script id="tawk" strategy="afterInteractive">
+                {`var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/5ccc88f32846b90c57acc14b/default';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+                })();`}
+            </Script>
             <body id="body" className="mt-[67px] md:mt-[83px] lg:mt-[88px]">
                 <Header />
                 <main>{children}</main>

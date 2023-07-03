@@ -128,8 +128,8 @@ export default function Page() {
                             id="comfort-heading"
                             className="mb-6 text-2xl tracking-tight text-gray-900 sm:text-4xl"
                         >
-                            <span className="font-bold">We design</span> kitchens you won&apos;t
-                            find anywhere else, because we bring the kitchen in your mind to life.
+                            We design kitchens you won&apos;t find anywhere else, because we bring
+                            the kitchen in your mind to life.
                         </h2>
 
                         <p className="mb-8 text-lg text-gray-500">
@@ -293,6 +293,12 @@ export default function Page() {
 
                     <div className="grid items-center max-w-xl grid-cols-3 mx-auto mt-4 justify-items-center gap-x-10 gap-y-6 sm:max-w-2xl md:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6">
                         <Image
+                            width="52"
+                            height="36"
+                            src="/assets/home/brand-logos/AEG-logo.png"
+                            alt="AEG"
+                        />
+                        <Image
                             width="96"
                             height="36"
                             src="/assets/home/brand-logos/Blum-v2.png"
@@ -309,12 +315,6 @@ export default function Page() {
                             height="36"
                             src="/assets/home/brand-logos/Bosh-v2.png"
                             alt="Bosch"
-                        />
-                        <Image
-                            width="96"
-                            height="36"
-                            src="/assets/home/brand-logos/Consentino-v2.png"
-                            alt="Consentino"
                         />
                         <Image
                             width="96"

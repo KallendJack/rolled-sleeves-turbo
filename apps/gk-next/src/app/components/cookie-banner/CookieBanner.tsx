@@ -29,7 +29,7 @@ export default function CookieBanner() {
 
     if (showBanner)
         return (
-            <div className="fixed inset-x-0 bottom-0 z-50 flex flex-col justify-between p-6 bg-white gap-x-8 gap-y-4 ring-1 ring-gray-900/10 md:flex-row md:items-center lg:px-8">
+            <div className="fixed inset-x-0 bottom-0 z-50 flex flex-col justify-between p-6 bg-white gap-x-8 gap-y-4 ring-1 ring-gray-900/10 md:flex-row md:items-center lg:pl-8 md:pr-28">
                 <p className="max-w-4xl text-sm leading-6 text-gray-900">
                     We use cookies to ensure that we give you the best experience on the Garrett
                     Kitchens website. By continuing, you agree to our use of cookies. See our&nbsp;
