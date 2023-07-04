@@ -454,16 +454,6 @@ export default function KitchenContent(props: KitchenContentProps) {
                                 </section>
                             </div>
                         </div>
-                        <CTASection
-                            className="border-t border-gray-200 lg:pt-40 mt-sm pt-28 lg:mt-lg md:pb-0 md:pt-28"
-                            title="Kitchen Brochure"
-                            image="/assets/home/kitchen-brochure.png"
-                            description={`With our essential kitchen planning guide, it doesn't have to
-                be. We'll walk you through some of our customer's commonly
-                asked questions and guide you through our process of creating your
-                very own unique kitchen.`}
-                            button={<ButtonLink href="/learn-more">Request a Brochure</ButtonLink>}
-                        />
                         <section
                             aria-labelledby="related-heading"
                             className="px-4 border-gray-200 lg:border-t py-sm lg:py-lg sm:px-0 lg:mt-lg"
@@ -512,13 +502,16 @@ export default function KitchenContent(props: KitchenContentProps) {
                         </section>
                         <CTASection
                             className="border-t border-gray-200 lg:py-40 pt-28 md:pt-28"
-                            title="Kitchen Brochure"
-                            image="/assets/home/kitchen-brochure.png"
-                            description={`With our essential kitchen planning guide, it doesn't have to
-                be. We'll walk you through some of our customer's commonly
-                asked questions and guide you through our process of creating your
-                very own unique kitchen.`}
-                            button={<ButtonLink href="/learn-more">Request a Brochure</ButtonLink>}
+                            title="Need some design inspiration?"
+                            image="/assets/home/brochureImg.jpg"
+                            description={`With a wide variety of styles, colours, and features, our Kitchen Brochure is
+                            sure to inspire you with ideas for your next, unique kitchen.`}
+                            whiteBg
+                            button={
+                                <ButtonLink href="/request-a-free-brochure">
+                                    Request a Brochure
+                                </ButtonLink>
+                            }
                         />
                     </div>
                 </div>

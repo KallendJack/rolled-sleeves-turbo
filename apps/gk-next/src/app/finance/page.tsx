@@ -47,41 +47,41 @@ export default function Page() {
 
             <section className="bg-brand-primaryBg py-sm lg:py-10">
                 <div className="px-6 mx-auto max-w-7xl lg:px-8">
-                    <h2 className="text-xl lg:text-lg leading-8 text-center text-white">
+                    <h2 className="text-xl leading-8 text-center text-white lg:text-lg">
                         We work with these trusted brands
                     </h2>
 
-                    <div className="grid items-center justify-items-center max-w-xl grid-cols-3 mx-auto mt-4 gap-x-8 gap-y-10 sm:max-w-2xl md:grid-cols-5 sm:gap-x-10 lg:mx-0 lg:max-w-none">
+                    <div className="grid items-center max-w-xl grid-cols-3 mx-auto mt-4 justify-items-center gap-x-8 gap-y-10 sm:max-w-2xl md:grid-cols-5 sm:gap-x-10 lg:mx-0 lg:max-w-none">
                         <Image
-                            className="object-contain w-24 md:w-28 lg:w-full col-span-1 md:col-span-2 h-12 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Aeg-logo.png"
                             alt="Transistor"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 md:w-28 lg:w-full col-span-1 md:col-span-2 h-12 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/BORA-logo.png"
                             alt="Reform"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 md:w-28 lg:w-full col-span-1 md:col-span-2 h-12 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Bosch-logo.png"
                             alt="Tuple"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 md:w-28 lg:w-full col-span-1 md:col-span-2 h-12 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-full md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Neff-logo.png"
                             alt="SavvyCal"
                             width={158}
                             height={48}
                         />
                         <Image
-                            className="object-contain w-24 md:w-28 lg:w-40 col-span-1 md:col-span-2 h-12 lg:col-span-1"
+                            className="object-contain w-24 h-12 col-span-1 md:w-28 lg:w-40 md:col-span-2 lg:col-span-1"
                             src="/assets/home/brand-logos/Quooker-logo.png"
                             alt="Statamic"
                             width={158}
@@ -96,8 +96,9 @@ export default function Page() {
             <CTASection
                 className="pt-[6.5rem] md:pt-[6.5rem] md:py-sm lg:py-32"
                 title="Need some design inspiration?"
-                image="/assets/home/kitchen-brochure.png"
-                description={`With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.`}
+                image="/assets/home/brochureImg.jpg"
+                description={`With a wide variety of styles, colours, and features, our Kitchen Brochure is
+                sure to inspire you with ideas for your next, unique kitchen.`}
                 whiteBg
                 button={<ButtonLink href="/request-a-free-brochure">Request a Brochure</ButtonLink>}
             />
