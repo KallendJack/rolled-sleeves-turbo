@@ -10,7 +10,26 @@ import CookieBanner from 'components/cookie-banner/CookieBanner'
 export const revalidate = 60
 
 export const metadata = {
-    title: 'Garrett Kitchens',
+    title: 'Unique kitchens that inspire | Luxury kitchen designers | Garrett Kitchens',
+    description:
+        'We are an independent kitchen studio who design, supply & install inspiring kitchens and other built in furniture. With a passion for quality, design, and craftsmanship, we are dedicated to helping you create a unique kitchen design that is perfect for your space.',
+    openGraph: {
+        title: 'Unique kitchens that inspire | Luxury kitchen designers | Garrett Kitchens',
+        description:
+            'We are an independent kitchen studio who design, supply & install inspiring kitchens and other built in furniture. With a passion for quality, design, and craftsmanship, we are dedicated to helping you create a unique kitchen design that is perfect for your space.',
+        url: 'https://www.garrettkitchens.co.uk',
+        siteName: 'Garrett Kitchens',
+        images: [
+            {
+                url: 'https://www.garrettkitchens.co.uk/assets/logos/logo-new.png',
+            },
+        ],
+        locale: 'en-GB',
+        type: 'website',
+    },
+    icons: {
+        icon: '/favicons/favicon-32x32.png',
+    },
 }
 
 const montserrat = Montserrat({

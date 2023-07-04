@@ -37,10 +37,6 @@ const testimonials = [
     },
 ]
 
-export const metadata = {
-    title: 'Home | Garrett Kitchens',
-}
-
 const collections = [
     {
         number: 1,
