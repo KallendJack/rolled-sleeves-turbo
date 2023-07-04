@@ -78,12 +78,11 @@ export default function Page() {
             <CTASection
                 className="pt-28 md:pt-28 lg:py-32"
                 title="Need some design inspiration?"
-                image="/assets/home/kitchen-brochure.png"
-                description={`With a wide choice of colours, styles, and finishing features, our Kitchen Brochure showcases all the products we offer in designing your dream kitchen.`}
+                image="/assets/home/brochureImg.jpg"
+                description={`With a wide variety of styles, colours, and features, our Kitchen Brochure is
+                sure to inspire you with ideas for your next, unique kitchen.`}
                 whiteBg
-                button={
-                    <ButtonLink href="/request-a-free-brochure">Request a Brochure </ButtonLink>
-                }
+                button={<ButtonLink href="/request-a-free-brochure">Request a Brochure</ButtonLink>}
             />
         </>
     )
